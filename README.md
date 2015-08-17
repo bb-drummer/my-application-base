@@ -1,4 +1,4 @@
-# Swim-DB Web-Application
+# ZendFramework2 application base
 
 ## Introduction
 
@@ -47,7 +47,8 @@ Execute the 'sql/install.sql' into that database your previously created.
 
 (COMMING SOON)
 Open the setup inside your browser (http://myappliction.tld/setup) and follow the steps... 
-
+or
+maybe we handle this via `composer install/update` script...
 
 ### Web Server Setup
 
