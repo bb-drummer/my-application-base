@@ -1,0 +1,41 @@
+<pre class="debuginfo">
+<strong>Module:</strong>     Admin &raquo;
+<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
+<strong>Action:</strong>     <?php echo $this->action ?>
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<label>
+			<span class="panel-title"><?php echo $this->translate("Neue Berechtigung hinzufügen"); ?></span>
+		</label>
+	</div>
+	<div class="panel-body">
+		<?php
+			$form->setAttribute('action', $this->url('admin/acledit', array('action' => 'addacl')));
+			$oRoles = $form->get('aclroles_id');
+			$valueoptions = array();
+			foreach ($roles as $role) {
+				$valueoptions[$role->aclroles_id] = $role->rolename;
+			}
+			$oRoles->setValueOptions($valueoptions);
+			$oResources = $form->get('aclresources_id');
+			$valueoptions = array();
+			foreach ($resources as $resource) {
+				$valueoptions[$resource->aclresources_id] = $resource->resourcename;
+			}
+			$oResources->setValueOptions($valueoptions);
+			$form->prepare();
+			echo $this->form()->openTag($form);
+			echo $this->formHidden($form->get('acl_id'));
+			echo $this->formRow($form->get('aclroles_id'));
+			echo $this->formRow($form->get('aclresources_id'));
+			echo '<hr />';
+			echo $this->formRow($form->get('state'));
+			echo '<hr />';
+			echo $this->formSubmit($form->get('submit'));
+			echo $this->formReset($form->get('reset'));
+			echo $this->form()->closeTag();
+		?>
+	</div>
+</div>

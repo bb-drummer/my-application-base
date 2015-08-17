@@ -1,0 +1,29 @@
+<pre class="debuginfo">
+<strong>Module:</strong>     Admin &raquo;
+<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
+<strong>Action:</strong>     <?php echo $this->action ?>
+</pre>
+
+<div class="navbar-subnav">
+    <a href="<?php echo $this->url('admin/acledit', array('action'=>'addrole'));?>"><?php echo $this->translate("Rolle hinzufügen")?></a>
+	|
+    <a href="<?php echo $this->url('admin/acledit', array('action'=>'roles'));?>"><?php echo $this->translate("Rollen bearteiten")?></a>
+	|
+	<a href="<?php echo $this->url('admin/acledit', array('action'=>'addresource'));?>"><?php echo $this->translate("Resource hinzufügen")?></a>
+	|
+	<a href="<?php echo $this->url('admin/acledit', array('action'=>'resources'));?>"><?php echo $this->translate("Resourcen bearteiten")?></a>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<label>
+			<span class="panel-title"><?php echo $this->translate("Berechtigungen verwalten"); ?></span>
+		</label>
+	</div>
+	<div class="panel-body">
+	
+		<?php include 'index.matrix.phtml'; ?>
+		
+		<?php echo $this->output ?>
+	</div>
+</div>

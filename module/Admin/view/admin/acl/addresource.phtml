@@ -1,0 +1,27 @@
+<pre class="debuginfo">
+<strong>Module:</strong>     Admin &raquo;
+<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
+<strong>Action:</strong>     <?php echo $this->action ?>
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<label>
+			<span class="panel-title"><?php echo $this->translate("Neue Resource hinzufügen"); ?></span>
+		</label>
+	</div>
+	<div class="panel-body">
+		<?php
+			$form->setAttribute('action', $this->url('admin/acledit', array('action' => 'addresource')));
+			$form->prepare();
+			echo $this->form()->openTag($form);
+			echo $this->formHidden($form->get('aclresources_id'));
+			echo $this->formRow($form->get('resourceslug'));
+			echo $this->formRow($form->get('resourcename'));
+			echo '<hr />';
+			echo $this->formSubmit($form->get('submit'));
+			echo $this->formReset($form->get('reset'));
+			echo $this->form()->closeTag();
+		?>
+	</div>
+</div>

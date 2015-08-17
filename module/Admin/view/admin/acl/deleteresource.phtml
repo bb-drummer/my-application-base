@@ -1,0 +1,34 @@
+<pre class="debuginfo">
+<strong>Module:</strong>     Admin &raquo;
+<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
+<strong>Action:</strong>     <?php echo $this->action ?>
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<label>
+			<span class="panel-title"><?php echo $this->translate("Resource entfernen"); ?></span>
+		</label>
+	</div>
+	<div class="panel-body">
+		<p><?php echo $this->translate("Resource wirklich entfernen?"); ?></p>
+		<p>
+			'<?php echo $this->escapeHtml($aclresource->resourcename); ?>' - 
+			'<?php echo $this->escapeHtml($aclresource->resourceslug); ?>'?
+		</p>
+		<?php
+		$url = $this->url('admin/acledit', array(
+		    'action'	=> 'deleteresource',
+		    'acl_id'	=> (int)$acl_id,
+		));
+		?>
+		<form action="<?php echo $url; ?>" method="post">
+			<div>
+				<input type="hidden" name="id" value="<?php echo (int)$acl_id; ?>" />
+				<input type="submit" name="del" value="<?php echo $this->translate("entfernen"); ?>" />
+				<input type="submit" name="abort" value="<?php echo $this->translate("abbrechen"); ?>" />
+			</div>
+		</form>
+	</div>
+</div>
+	

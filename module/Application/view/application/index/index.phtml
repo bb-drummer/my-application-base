@@ -1,0 +1,8 @@
+<div class="jumbotron alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h1><?php echo sprintf($this->translate('Welcome to %s[MyApplication]%s'), '<span class="appname">', '</span>') ?></h1>
+    <p><?php echo sprintf($this->translate('Congratulations! You have successfully installed the %sMyApplication application%s.<br />You are currently running <b>Zend Framework version %s</b> with <b>php version %s</b>.<br /><small>This panel will disapear as soon as the "_DEV_" file is deleted from root directory.</small>'), '<a href="'.$this->url('application/default', array('action' => 'about')).'">', '</a>', \Zend\Version\Version::VERSION, phpversion()) ?></p>
+    <p><a class="btn btn-success btn-lg" href="//gitlab.dragon-projects.de:81/groups/zf2" target="_blank"><?php echo $this->translate('Follow on our GitLab') ?> &raquo;</a></p>
+</div>
+
+<?php include 'development_info.phtml'; ?>
