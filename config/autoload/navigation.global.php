@@ -14,7 +14,7 @@ return array(
 				'resource'		=> 'mvc:yourmodule.resource',
 				'pages' => array(
 					array(
-						'label' 		=> 'YourModule Item',
+						'label' 		=> 'YourModule Action/Item',
 						'route' 		=> 'yourmodule/route',
 						'resource'		=> 'mvc:yourmodule.resource',
 						'controller'	=> 'your_controller',
@@ -50,6 +50,17 @@ return array(
 						'label'			=> 'Logout',
 						'route'			=> 'zfcuser/logout',
 						'resource'		=> 'mvc:user',
+					),
+					array(
+						'label'			=> 'Benutzer-Bestätigung',
+						'route'			=> 'userconfirmation',
+						'visible'		=> false,
+					),
+					array(
+						'label'			=> 'Benutzer-Aktivierung',
+						'route'			=> 'useractivation',
+						'resource'		=> 'mvc:admin',
+						'visible'		=> false,
 					),
 				),
 			),

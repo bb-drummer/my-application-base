@@ -9,12 +9,27 @@
 
 namespace Admin;
 
+use Zend\Controller\Action;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
+use Zend\Mail\Message;
+use Zend\Mail\Transport\Smtp as SmtpTransport;
+use Zend\Mail\Transport\SmtpOptions;
+use Zend\Mime\Message as MimeMessage;
+use Zend\Mime\Part as MimePart;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Permissions\Acl\Acl as ZendAcl;
 use Zend\Permissions\Acl\Role\GenericRole;
 use Zend\Permissions\Acl\Resource\GenericResource;
+use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\ServiceLocatorAwareInterface;
+use Zend\View\Model\ViewModel;
+use Zend\View\Renderer\PhpRenderer;
+
+use Admin\Controller\RedirectCallback;
+use Admin\Controller\ZfcuserController;
 use Admin\Model\User;
 use Admin\Model\UserTable;
 use Admin\Model\Settings;
@@ -25,18 +40,12 @@ use Admin\Model\Aclrole;
 use Admin\Model\AclroleTable;
 use Admin\Model\Aclresource;
 use Admin\Model\AclresourceTable;
-use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\TableGateway\TableGateway;
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\ServiceLocatorAwareInterface;
-use Zend\Controller\Action;
-use Admin\Controller\RedirectCallback;
-use Admin\Controller\ZfcuserController;
 
 
 class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterface
 {
-	
+
+	protected $appconfig;
 	protected $serviceLocator;
 	
 	public function getAutoloaderConfig()
@@ -64,9 +73,161 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 		$eventManager		= $e->getApplication()->getEventManager();
 		$moduleRouteListener = new ModuleRouteListener();
 		$moduleRouteListener->attach($eventManager);
-
+		
+		$this->setAppConfig($e->getApplication()->getConfig());
+		
 		$this->initAcl($e);
-		$e->getApplication()->getEventManager()->attach('dispatch', array($this, 'checkAcl'));
+		$eventManager->attach('dispatch', array($this, 'checkAcl'));
+		
+		$em = \Zend\EventManager\StaticEventManager::getInstance();
+		$em->attach('ZfcUser\Service\User', 'register', array($this, 'userRegisterBeforeInsert'));
+		$em->attach('ZfcUser\Service\User', 'register.post', array($this, 'userRegisterAfterInsert'));
+		
+	}
+	
+	public function userRegisterBeforeInsert($e) {
+		$user = $e->getParam('user');  // User account object
+		$form = $e->getParam('form');  // Form object
+
+		// Perform your custom action here
+		if (empty($user->getAclrole())) { 
+			$user->setAclrole('user');
+		}
+		if (empty($user->getToken())) { 
+			$user->setToken($this->createUserToken($user));
+		}
+		
+		$config = $this->getAppConfig();
+		$user->setState(0);
+		if (!$config["zfcuser_user_must_confirm"] && !$config["zfcuser_admin_must_activate"]) {
+			$user->setState(1);
+			//$user->setState($config["zfcuser"]["default_user_state"]);
+		}
+	}
+	
+	public function userRegisterAfterInsert($e) {
+		$user = $e->getParam('user');  // User account object
+		$form = $e->getParam('form');  // Form object
+		// Perform your custom action here
+		
+		$config = $this->getAppConfig();
+		if ($config["zfcuser_user_must_confirm"]) {
+			$this->sendConfirmationMail($user);
+		} else if ($config["zfcuser_admin_must_activate"]) {
+			$this->sendActivationMail($user);
+		} else {
+			$user->setState(1);
+		}
+	}
+	
+	public function createUserToken (\Admin\Entity\User $user) {
+		$slug = uniqid( md5( time().$_SERVER["REMOTE_ADDR"].$user->getEmail() ), true );
+		return $slug;
+	}
+	
+	public function sendConfirmationMail (\Admin\Entity\User $user) {
+
+		$config = $this->getAppConfig();
+
+		$viewRender = new PhpRenderer();
+		$viewRender->resolver()->addPath(__DIR__.'/view/');
+		
+		$mailModel = new ViewModel();
+		$mailModel->setVariables($user->__getArrayCopy());
+		$mailModel->setVariable('confirmation_url', $config["zfcuser_mail_http_basepath"].'/confirmuserregistration/' . $user->getId() . '/' . $user->getToken());
+
+		$mailModel->setTemplate('mails/userconfirm_html');
+		$htmlMarkup = $viewRender->render($mailModel);
+		
+		$html = new MimePart($htmlMarkup);
+		$html->type = "text/html";
+		
+		$body = new MimeMessage();
+		$body->setParts(array($html));
+		
+		$message = new Message();
+		$message->addFrom($config["zfcuser_admin_from_email"])
+		        ->addTo($user->getEmail())
+		        ->addBcc($config["zfcuser_admin_to_email"])
+		        ->setSubject($config["zfcuser_confirm_subject"]);
+		$message->getHeaders()->addHeaderLine('X-Mailer', '[myApplication]/php');
+		$message->setBody($body);		
+
+		$transport = new SmtpTransport();
+		$options   = new SmtpOptions($config["zfcuser_smtp"]);
+		$transport->setOptions($options);
+		$transport->send($message);
+		
+	}
+	
+	public function sendActivationMail (\Admin\Entity\User $user) {
+
+		$config = $this->getAppConfig();
+
+		$viewRender = new PhpRenderer();
+		$viewRender->resolver()->addPath(__DIR__.'/view/');
+		
+		$mailModel = new ViewModel();
+		$mailModel->setVariables($user->__getArrayCopy());
+		$mailModel->setVariable('activation_url', $config["zfcuser_mail_http_basepath"].'/activateuser/' . $user->getId() . '/' . $user->getToken());
+
+		$mailModel->setTemplate('mails/useractivate_html');
+		$htmlMarkup = $viewRender->render($mailModel);
+		
+		$html = new MimePart($htmlMarkup);
+		$html->type = "text/html";
+		
+		$body = new MimeMessage();
+		$body->setParts(array($html));
+		
+		$message = new Message();
+		$message->addFrom($config["zfcuser_admin_from_email"])
+		        ->addReplyTo($user->getEmail())
+		        ->addTo($config["zfcuser_admin_to_email"])
+		        ->setSubject($config["zfcuser_activate_subject"]);
+		$message->getHeaders()->addHeaderLine('X-Mailer', '[myApplication]/php');
+		$message->setBody($body);		
+
+		$transport = new SmtpTransport();
+		$options   = new SmtpOptions($config["zfcuser_smtp"]);
+		$transport->setOptions($options);
+		$transport->send($message);
+		
+	}
+	
+	public function sendActivationNotificationMail (\Admin\Entity\User $user) {
+
+		$config = $this->getAppConfig();
+
+		$viewRender = new PhpRenderer();
+		$viewRender->resolver()->addPath(__DIR__.'/view/');
+		
+		$mailModel = new ViewModel();
+		$mailModel->setVariables($user->__getArrayCopy());
+		$mailModel->setVariable('login_url', $config["zfcuser_mail_http_basepath"].'/user/login');
+
+		$mailModel->setTemplate('mails/useractivatecomplete_html');
+		$htmlMarkup = $viewRender->render($mailModel);
+		
+		$html = new MimePart($htmlMarkup);
+		$html->type = "text/html";
+		
+		$body = new MimeMessage();
+		$body->setParts(array($html));
+		
+		$message = new Message();
+		$message->addFrom($config["zfcuser_admin_from_email"])
+		        ->addTo($user->getEmail())
+		        ->addBcc($config["zfcuser_admin_to_email"])
+		        ->setSubject($config["zfcuser_activate_subject"]);
+		$message->getHeaders()->addHeaderLine('X-Mailer', '[myApplication]/php');
+		$message->setBody($body);		
+
+		$transport = new SmtpTransport();
+		$options   = new SmtpOptions($config["zfcuser_smtp"]);
+		$transport->setOptions($options);
+		$transport->send($message);
+		
 	}
 	
 	public function initAcl(MvcEvent $e) {
@@ -134,10 +295,31 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 					//location to page or what ever
 					$response->getHeaders()->addHeaderLine('Location', $e->getRequest()->getBaseUrl() . '/user/login?redirect=' . $e->getRequest()->getRequestUri() );
 					$response->setStatusCode(301);
-			
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Set app config
+	 *
+	 * @param $appconfig
+	 * @return Module
+	 */
+	public function setAppConfig($appconfig)
+	{
+		$this->appconfig = $appconfig;
+		return $this;
+	}
+
+	/**
+	 * Retrieve app config
+	 *
+	 * @return $appconfig
+	 */
+	public function getAppConfig()
+	{
+		return $this->appconfig;
 	}
 	
 	/**

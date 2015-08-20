@@ -10,7 +10,7 @@ class UserTable
 
     public function __construct(TableGateway $tableGateway)
     {
-        $this->tableGateway = $tableGateway;
+        $this->setTableGateway($tableGateway);
     }
 
     public function fetchAll()
@@ -60,4 +60,16 @@ class UserTable
     {
         $this->tableGateway->delete(array('user_id' => $id));
     }
+    
+    public function getTableGateway()
+    {
+    	return $this->tableGateway;
+    }
+    
+    public function setTableGateway(TableGateway $tableGateway)
+    {
+    	$this->tableGateway = $tableGateway;
+    }
+    
+    
 }

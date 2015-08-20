@@ -64,10 +64,10 @@
 		              ->setMinDepth(0)
 		              ->setPartial('partial/breadcrumb.phtml');
 		    
-				echo $this->flashMessenger()->render('info', array('info alert flashmessages'));
-				echo $this->flashMessenger()->render('warning', array('warning alert flashmessages'));
 				echo $this->flashMessenger()->render('error', array('error alert flashmessages'));
+				echo $this->flashMessenger()->render('warning', array('warning alert flashmessages'));
 				echo $this->flashMessenger()->render('success', array('success alert flashmessages'));
+				echo $this->flashMessenger()->render('info', array('info alert flashmessages'));
 			
 				echo $this->content;
 			?>

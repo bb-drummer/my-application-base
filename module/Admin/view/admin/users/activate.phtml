@@ -21,7 +21,7 @@
 $url = $this->url('admin/default', array(
     'controller' => 'users',
     'action'     => 'delete',
-    'user_id'    => $user->user_id,
+    'id'         => $user->user_id,
 ));
 ?>
 <form action="<?php echo $url; ?>" method="post">

@@ -40,11 +40,12 @@ return array(
                     'default' => array(
                         'type'    => 'Segment',
                         'options' => array(
-                            'route'    => '/[:controller[/:action[/:user_id]]]',
+                            'route'    => '/[:controller[/:action[/:user_id[/:token]]]]',
                             'constraints' => array(
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'user_id'    => '[0-9]*',
+                                'token'      => '.*',
                             ),
                             'defaults' => array(
                             	'action'	 => 'index'
@@ -79,11 +80,50 @@ return array(
                     ),
                 ),
             ),
+
+			'userconfirmation' => array(
+				'type'    => 'Segment',
+				'options' => array(
+					'route'    => '/confirmuserregistration[/:user_id[/:confirmtoken]]',
+					'constraints' => array(
+						'user_id'		=> '[a-zA-Z0-9_-]*',
+						'confirmtoken'	=> '.*',
+					),
+					'defaults' => array(
+						'controller' => 'Admin\Controller\Users',
+						'action'	 => 'confirm'
+					),
+				),
+                'may_terminate' => true,
+                'child_routes' => array(),
+			),
+        	'useractivation' => array(
+				'type'    => 'Segment',
+				'options' => array(
+					'route'    => '/activateuser[/:user_id[/:activatetoken]]',
+					'constraints' => array(
+						'user_id'		=> '[a-zA-Z0-9_-]*',
+						'activatetoken'	=> '.*',
+					),
+					'defaults' => array(
+						'controller' => 'Admin\Controller\Users',
+						'action'	 => 'activate'
+					),
+				),
+                'may_terminate' => true,
+                'child_routes' => array(),
+			),
         ),
     ),
     'view_manager' => array(
+		'template_map' => array(
+			'mails/userconfirm_html'	=> __DIR__ . '/../view/mails/userconfirm_html.phtml',
+			'mails/userconfirm_txt'		=> __DIR__ . '/../view/mails/userconfirm_txt.phtml',
+			'mails/useractivate_html'	=> __DIR__ . '/../view/mails/useractivate_html.phtml',
+			'mails/useractivate_txt'	=> __DIR__ . '/../view/mails/useractivate_txt.phtml',
+		),
         'template_path_stack' => array(
-            'Admin' => __DIR__ . '/../view',
+            'admin' => __DIR__ . '/../view',
         ),
     ),
 );
