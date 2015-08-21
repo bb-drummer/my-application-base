@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: xampp2.mysql.local:5506
--- Erstellungszeit: 17. Aug 2015 um 10:44
+-- Erstellungszeit: 21. Aug 2015 um 19:38
 -- Server Version: 5.1.44
 -- PHP-Version: 5.6.5
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `acl` (
   `aclresources_id` bigint(10) NOT NULL,
   `state` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT 'allow',
   PRIMARY KEY (`acl_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 --
 -- Daten für Tabelle `acl`
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `aclresource` (
   `resourcename` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`aclresources_id`),
   UNIQUE KEY `resourceslug` (`resourceslug`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 --
 -- Daten für Tabelle `aclresource`
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `aclrole` (
   `rolename` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`aclroles_id`),
   UNIQUE KEY `roleslug` (`roleslug`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 --
 -- Daten für Tabelle `aclrole`
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `value` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`settings_id`),
   UNIQUE KEY `type_name` (`type`,`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 --
 -- Daten für Tabelle `settings`
@@ -129,12 +129,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `state` smallint(5) NOT NULL DEFAULT '1',
   `aclrole` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT 'swimmer',
+  `token` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 --
 -- Daten für Tabelle `user`
 --
 
-INSERT INTO `user` (`user_id`, `display_name`, `username`, `email`, `street`, `city`, `phone`, `password`, `state`, `aclrole`) VALUES
-(1, 'System-Administrator', 'sysadmin', 'webmaster@myapplication.tld', '', '', '', '$2y$14$aNr/FPiS.Kbw8/ZYiOaXpum/4RrX7AGMaxA5vV6OIHUi1kr.w6GgC', 1, 'admin');
+INSERT INTO `user` (`user_id`, `display_name`, `username`, `email`, `street`, `city`, `phone`, `password`, `state`, `aclrole`, `token`) VALUES
+(1, 'System-Administrator', 'sysadmin', 'webmaster@myapplication.tld', '', '', '', '$2y$14$aNr/FPiS.Kbw8/ZYiOaXpum/4RrX7AGMaxA5vV6OIHUi1kr.w6GgC', 1, 'admin', '');
