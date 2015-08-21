@@ -62,7 +62,7 @@ example.
 Adjust settings in 'config/app.local.dist.php', and rename the file to 'config/app.local.php'.
 
 Create a database and adjust database settings in your 'config/app.local.php' file.
-Execute the 'sql/install.sql' into that database your previously created.
+Execute the 'sql/install.sql' into that database you previously created.
 
     mysql --user=yourdbuser --password="yourdbpassword" yourdbname < /path/to/myapp/sql/install.sql
 
