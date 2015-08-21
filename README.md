@@ -13,7 +13,7 @@ If you need further assistance, please do not hesitate to contact the applicatio
 
 ## Features
 
-* public user registration with optional email confirmation and activation
+* public user registration with optional email verification and activation
 * user management
 * role, resources and acl management
 * basic settings record editing
@@ -25,6 +25,7 @@ If you need further assistance, please do not hesitate to contact the applicatio
 * finish support module
 * finish backup module
 * finish setup routine for installation and/or application update.
+* clean up the language mix :D
 
 
 
