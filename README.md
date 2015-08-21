@@ -57,10 +57,14 @@ You would then invoke `composer` to install dependencies per the previous
 example.
 
 
-### Database Setup
+### Application Setup
 
-Create a database and adjust database settings in 'config/database.local.dist.php', and rename the file to 'config/database.local.php'
+Adjust settings in 'config/app.local.dist.php', and rename the file to 'config/app.local.php'.
+
+Create a database and adjust database settings in your 'config/app.local.php' file.
 Execute the 'sql/install.sql' into that database your previously created.
+
+    mysql --user=yourdbuser --password="yourdbpassword" yourdbname < /path/to/myapp/sql/install.sql
 
 #### TODO
 Open the setup inside your browser (http://myappliction.tld/setup) and follow the steps... 
