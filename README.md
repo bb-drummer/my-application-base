@@ -16,6 +16,7 @@ If you need further assistance, please do not hesitate to contact the applicatio
 * public user registration with optional email confirmation and activation
 * user management
 * role, resources and acl management
+* basic settings record editing
 * prepared help, support and about section
 
 
