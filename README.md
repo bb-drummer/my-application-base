@@ -7,11 +7,23 @@ Just do a checkout from our GitLab and modify and/or extend it to your needs.
 This Construct is bases upon ZF2s skeleton application and ZF-Commons' ZFC-User module.
 This very basic application includes modules to manage users and ACL settings, login, logout and user registration, a name/type based and maintainable options list.
 
-(COMMING SOON) It also contains a database backup module and a default setup routine for installation and/or application update.
-
 Please, take a look into the application's User Help section to get some guidance around this application.
 
 If you need further assistance, please do not hesitate to contact the applications support channel.
+
+## Features
+
+* public user registration with optional email confirmation and activation
+* user management
+* role, resources and acl management
+* prepared help, support and about section
+
+
+### TODO
+
+* finish support module
+* finish backup module
+* finish setup routine for installation and/or application update.
 
 
 
@@ -48,10 +60,11 @@ example.
 Create a database and adjust database settings in 'config/database.local.dist.php', and rename the file to 'config/database.local.php'
 Execute the 'sql/install.sql' into that database your previously created.
 
-(COMMING SOON)
+#### TODO
 Open the setup inside your browser (http://myappliction.tld/setup) and follow the steps... 
 or
 maybe we handle this via `composer install/update` script...
+
 
 ### Web Server Setup
 
@@ -85,10 +98,9 @@ project and you should be ready to go! It should look something like below:
 
 
 
-
-
 ## LICENCE
 
+please see LICENCE file in project's root directory
 
 
 ## COPYRIGHT
