@@ -25,6 +25,7 @@ If you need further assistance, please do not hesitate to contact the applicatio
 * finish support module
 * finish backup module
 * finish setup routine for installation and/or application update.
+* clean up the language mix :D
 
 
 
