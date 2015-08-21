@@ -39,7 +39,7 @@ and use `composer` to install dependencies:
     curl -s https://getcomposer.org/installer | php --
     
     cd my/project/dir
-    git checkout http://gitlab.dragon-projects.de:81/zf2/application-base.git
+    git clone http://gitlab.dragon-projects.de:81/zf2/application-base.git
     cd application-base
     php composer.phar self-update
     php composer.phar install
