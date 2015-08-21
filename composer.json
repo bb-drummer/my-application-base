@@ -1,5 +1,5 @@
 {
-  "name" : "[BB] ZF2BaseApp",
+  "name" : "BB/ZF2BaseApp",
   "description" : "My Web-Application",
   "version" : "1.0",
   "require" : {
