@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: xampp2.mysql.local:5506
--- Erstellungszeit: 21. Aug 2015 um 19:38
+-- Erstellungszeit: 21. Aug 2015 um 19:59
 -- Server Version: 5.1.44
 -- PHP-Version: 5.6.5
 
@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 -- Tabellenstruktur für Tabelle `acl`
 --
 
+DROP TABLE IF EXISTS `acl`;
 CREATE TABLE IF NOT EXISTS `acl` (
   `acl_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `aclroles_id` bigint(10) NOT NULL,
@@ -49,6 +50,7 @@ INSERT INTO `acl` (`acl_id`, `aclroles_id`, `aclresources_id`, `state`) VALUES
 -- Tabellenstruktur für Tabelle `aclresource`
 --
 
+DROP TABLE IF EXISTS `aclresource`;
 CREATE TABLE IF NOT EXISTS `aclresource` (
   `aclresources_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `resourceslug` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -72,6 +74,7 @@ INSERT INTO `aclresource` (`aclresources_id`, `resourceslug`, `resourcename`) VA
 -- Tabellenstruktur für Tabelle `aclrole`
 --
 
+DROP TABLE IF EXISTS `aclrole`;
 CREATE TABLE IF NOT EXISTS `aclrole` (
   `aclroles_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `roleslug` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -95,6 +98,7 @@ INSERT INTO `aclrole` (`aclroles_id`, `roleslug`, `rolename`) VALUES
 -- Tabellenstruktur für Tabelle `settings`
 --
 
+DROP TABLE IF EXISTS `settings`;
 CREATE TABLE IF NOT EXISTS `settings` (
   `settings_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) COLLATE utf8_bin NOT NULL,
@@ -118,6 +122,7 @@ INSERT INTO `settings` (`settings_id`, `type`, `name`, `value`) VALUES
 -- Tabellenstruktur für Tabelle `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `display_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
