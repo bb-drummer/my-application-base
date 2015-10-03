@@ -17,7 +17,7 @@
      			))
 				->prependStylesheet($this->basePath($themePath . 'css/app.css'))
 				->prependStylesheet($this->basePath($themePath . 'css/jquery.gridster.min.css'))
-                ->prependStylesheet($this->basePath($themePath . 'js/fancy-box/jquery.fancybox.css'))
+                ->prependStylesheet($this->basePath($themePath . 'js/fancy-box/source/jquery.fancybox.css'))
 				->prependStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap-theme.min.css'))
 				->prependStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap.min.css'));
 
@@ -29,7 +29,7 @@
 				->prependFile($this->basePath($themePath . 'js/app.js'))
 				->prependFile($this->basePath($themePath . 'js/doubletaptogo.min.js'))
 				->prependFile($this->basePath($themePath . 'js/bootstrap/bootstrap.min.js'))
-                ->prependFile($this->basePath($themePath . 'js/fancy-box/jquery.fancybox.pack.js'))
+                ->prependFile($this->basePath($themePath . 'js/fancy-box/source/jquery.fancybox.pack.js'))
 				->prependFile($this->basePath($themePath . 'js/jquery.gridster.min.js'))
 				->prependFile($this->basePath($themePath . 'js/jquery/jquery.min.js'))
 				->prependFile($this->basePath($themePath . 'js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
