@@ -3,7 +3,8 @@
 .buildpath
 .project
 *cache*
-*vendor*
+vendor*
+themes/
 data/
 components/
 public/assets
