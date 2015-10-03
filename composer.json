@@ -5,9 +5,11 @@
   "require" : {
     "php" : ">=5.3.3",
     "zendframework/zendframework" : "dev-master",
+    
     "zf-commons/zfc-user" : ">=1.2.2",
     "neilime/zf2-assets-bundle" : ">=3.4.1",
     "dudapiotr/zftable" : ">=3.1",
+    
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "components/foundation" : ">=5.5.2",
@@ -15,12 +17,16 @@
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
     
-    "themes/bootstrap-taurus" : "dev-master"
+    "themes/zf2-remark" : "dev-master",
+    "themes/zf2-taurus" : "dev-master"
   },
   
   "repositories" : [ {
     "type" : "git",
-    "url" : "git@gitlab.dragon-projects.de:themes/bootstrap-taurus.git"
+    "url" : "git@gitlab.dragon-projects.de:themes/zf2-remark.git"
+  } , {
+    "type" : "git",
+    "url" : "git@gitlab.dragon-projects.de:themes/zf2-taurus.git"
   } ],
   
   "license" : "BSD-3-Clause",
