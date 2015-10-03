@@ -14,18 +14,21 @@
     "twitter/bootstrap" : ">=v3.3.5",
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
+    
     "themes/bootstrap-taurus" : "dev-master"
   },
+  
   "repositories" : [ {
     "type" : "git",
     "url" : "git@gitlab.dragon-projects.de:themes/bootstrap-taurus.git"
   } ],
+  
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
   "type" : "project",
   "scripts" : {
-    "post-install-cmd" : [ "./shell/post-cmd.theme-default.sh" ],
-    "post-update-cmd" : [ "./shell/post-cmd.theme-default.sh" ],
+    "post-install-cmd" : [ "./shell/files.components.sh", "./shell/files.themes.sh" ],
+    "post-update-cmd" : [ "./shell/files.components.sh", "./shell/files.themes.sh" ],
     "never-to-be-executed" : [ "rm -rf components" ]
   },
   "homepage" : "http://dragon-projects.net/"
