@@ -37,8 +37,8 @@
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
   "type" : "project",
   "scripts" : {
-    "post-install-cmd" : [ "./shell/files.components.sh", "./shell/files.themes.sh" ],
-    "post-update-cmd" : [ "./shell/files.components.sh", "./shell/files.themes.sh" ],
+    "post-install-cmd" : [ "chmod -R ugoa+rx ./shell", "./shell/files.components.sh", "./shell/files.themes.sh" ],
+    "post-update-cmd" : [ "chmod -R ugoa+rx ./shell", "./shell/files.components.sh", "./shell/files.themes.sh" ],
     "never-to-be-executed" : [ "rm -rf components" ]
   },
   "homepage" : "http://dragon-projects.net/"
