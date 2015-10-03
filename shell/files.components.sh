@@ -1,4 +1,4 @@
-mkdir public/assets/themes/zf2-basic
+mkdir -p public/assets/themes/zf2-basic
 
 rm -rf public/assets/themes/zf2-basic/*
 cp -r vendor/themes/zf2-basic/assets/* public/assets/themes/zf2-basic/
