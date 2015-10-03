@@ -6,6 +6,7 @@
 *vendor*
 data/
 components/
+public/assets
 public/js/*/*
 public/css/*/*
 composer.lock
