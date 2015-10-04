@@ -4,6 +4,7 @@ return array(
 		'default' => array(
 			array(
 				'label' => 'Dashboard',
+				'icon'	=> 'home',
 				'route' => 'home',
 			),
 			/*array(
@@ -24,6 +25,7 @@ return array(
 			),*/
 			array(
 				'label' => 'Account',
+				'icon'	=> 'user',
 				'route' => 'zfcuser',
 				'pages'			=> array(
 					array(
@@ -66,11 +68,13 @@ return array(
 			),
 			array(
 				'label'			=> 'Admin',
+				'icon'			=> 'cogs',
 				'route'			=> 'admin',
 				'resource'		=> 'mvc:admin',
 				'pages'			=> array(
 					array(
 						'label'			=> 'Benutzer',
+						'icon'			=> 'user',
 						'route'			=> 'admin/default',
 						'controller'	=> 'users',
 						'resource'		=> 'mvc:admin',
@@ -103,6 +107,7 @@ return array(
 					),
 					array(
 						'label' 		=> 'Rechte',
+						'icon'			=> 'lock',
 						'route'			=> 'admin/acledit',
 						'action' 		=> 'index',
 						'resource'		=> 'mvc:admin',
@@ -116,6 +121,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Rollen',
+								'icon'			=> 'group',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'roles',
 								'resource'		=> 'mvc:admin',
@@ -143,6 +149,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Resourcen',
+								'icon'			=> 'list-ul',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'resources',
 								'resource'		=> 'mvc:admin',
@@ -246,6 +253,7 @@ return array(
 			),
 			array(
 				'label'			=> 'Hilfe',
+				'icon'			=> 'question-sign',
 				'route'			=> 'application/default',
 				'controller'	=> 'index',
 				'action' 		=> 'notimplementedyet',
