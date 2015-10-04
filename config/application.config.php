@@ -4,9 +4,9 @@ return array(
     'modules' => array(
         'ZfcBase',
         'ZfcUser',
-        'ZeTheme',
         'Application',
     	'Admin',
+        'ZeTheme',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -72,22 +72,5 @@ return array(
 			'message_separator_string' => '</span><br /><span>'
 		)
 	),
-		
-	'ze_theme' => array(
-		'default_theme' => "zf2-basic",
-		'custom_theme_path' => true,
-		'theme_paths' => array(
-			__DIR__ . "/../themes/{theme}/",
-		),
-		'routes' => array(
-			// 'theme_name' => array('route_names'),
-		),
-		'adapters' => array(
-			"ZeTheme\Adapter\Configuration",
-			"ZeTheme\Adapter\Route",
-			"ZeTheme\Adapter\Session",
-		),
-	),
-		
 		
 );
