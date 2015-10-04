@@ -1,9 +1,12 @@
+rm -rf public/assets/themes/zf2-basic
+rm -rf themes/zf2-basic/*
 mkdir -p public/assets/themes/zf2-basic
 mkdir -p themes/zf2-basic
 
 rm -rf public/assets/themes/zf2-basic/*
 cp -r vendor/themes/zf2-basic/assets/* public/assets/themes/zf2-basic/
 cp -r vendor/themes/zf2-basic/view themes/zf2-basic/
+cp -r vendor/themes/zf2-basic/config.php themes/zf2-basic/
 
 mkdir -p public/assets/themes/zf2-basic/js/modernizr
 cp -r vendor/components/modernizr/modernizr.js public/assets/themes/zf2-basic/js/modernizr/
