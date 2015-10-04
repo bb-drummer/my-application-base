@@ -93,6 +93,7 @@ return array(
 		),
 		'factories' => array(
 			'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            //'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
 		),
 		'aliases' => array(
 			'translator' => 'MvcTranslator',
