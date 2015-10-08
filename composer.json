@@ -1,40 +1,34 @@
 {
   "name" : "BB/ZF2BaseApp",
   "description" : "My Web-Application",
-  "version" : "1.0",
+  "version" : "1.0.0.1",
   "require" : {
     "php" : ">=5.3.3",
     "zendframework/zendframework" : "dev-master",
-    
     "zf-commons/zfc-user" : ">=1.2.2",
     "neilime/zf2-assets-bundle" : ">=3.4.1",
-    "zendexperts/ze-theme": "dev-master",
+    "zendexperts/ze-theme" : "dev-master",
     "dudapiotr/zftable" : ">=3.1",
-    
-    
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "components/foundation" : ">=5.5.2",
     "twitter/bootstrap" : ">=v3.3.5",
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
-    
     "themes/zf2-basic" : "dev-master",
     "themes/zf2-remark" : "dev-master",
     "themes/zf2-taurus" : "dev-master"
   },
-  
   "repositories" : [ {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
-  } , {
+  }, {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-remark.git"
-  } , {
+  }, {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-taurus.git"
   } ],
-  
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
   "type" : "project",
