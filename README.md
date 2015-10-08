@@ -18,6 +18,7 @@ If you need further assistance, please do not hesitate to contact the applicatio
 * role, resources and acl management
 * basic settings record editing
 * prepared help, support and about section
+* basic theming
 
 
 ### TODO
