@@ -26,13 +26,13 @@
   
   "repositories" : [ {
     "type" : "git",
-    "url" : "http://dragon-projects.de:81/themes/zf2-basic.git"
+    "url" : "git@gitlab.dragon-projects.de:themes/zf2-basic.git"
   } , {
     "type" : "git",
-    "url" : "http://dragon-projects.de:81/themes/zf2-remark.git"
+    "url" : "git@gitlab.dragon-projects.de:themes/zf2-remark.git"
   } , {
     "type" : "git",
-    "url" : "http://dragon-projects.de:81/themes/zf2-taurus.git"
+    "url" : "git@gitlab.dragon-projects.de:themes/zf2-taurus.git"
   } ],
   
   "license" : "BSD-3-Clause",
