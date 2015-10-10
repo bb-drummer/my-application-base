@@ -12,6 +12,7 @@
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "components/foundation" : ">=5.5.2",
+    "components/html5-boilerplate" : ">=4.3.0",
     "twitter/bootstrap" : ">=v3.3.5",
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
