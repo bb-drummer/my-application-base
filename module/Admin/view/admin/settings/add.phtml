@@ -25,8 +25,8 @@
 				<?php echo $this->formInput($form->get('value')); ?>
 			</div>
 			<?php echo $this->formHidden($form->get('settings_id')); ?>
-			<?php echo $this->formSubmit($form->get('submit'), array("attributes" => array("class" => "btn"))); ?>
-			<?php echo $this->formReset($form->get('reset'), array("attributes" => array("class" => "btn"))); ?>
+			<?php echo $this->formSubmit($form->get('submit'))->setAttribute('class', 'btn'); ?>
+			<?php echo $this->formReset($form->get('reset'))->setAttribute('class', 'btn'); ?>
 		<?php echo $this->form()->closeTag($form); ?>
 		
 		<?php
