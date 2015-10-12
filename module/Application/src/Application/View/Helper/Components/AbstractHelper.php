@@ -15,13 +15,14 @@ use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\EventManagerInterface;
 use Zend\I18n\Translator\TranslatorInterface as Translator;
 use Zend\I18n\Translator\TranslatorAwareInterface;
-use Zend\Navigation;
-use Zend\Navigation\Page\AbstractPage;
+//use Zend\Navigation;
+//use Zend\Navigation\Page\AbstractPage;
 use Zend\Permissions\Acl;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\View;
 use Zend\View\Exception;
+use Application\View\Helper\Components;
 
 /**
  * Base class for navigational helpers
@@ -195,7 +196,7 @@ abstract class AbstractHelper extends \Zend\View\Helper\AbstractHtmlElement impl
      */
     public function findActive($container, $minDepth = null, $maxDepth = -1)
     {
-        $this->parseContainer($container);
+        //$this->parseContainer($container);
         if (!is_int($minDepth)) {
             $minDepth = $this->getMinDepth();
         }
@@ -547,7 +548,7 @@ abstract class AbstractHelper extends \Zend\View\Helper\AbstractHtmlElement impl
      */
     public function setContainer($container = null)
     {
-        $this->parseContainer($container);
+        //$this->parseContainer($container);
         $this->container = $container;
 
         return $this;
@@ -566,7 +567,7 @@ abstract class AbstractHelper extends \Zend\View\Helper\AbstractHtmlElement impl
     public function getContainer()
     {
         if (null === $this->container) {
-            $this->container = new Navigation\Navigation();
+            $this->container = new \Application\View\Helper\Components();
         }
 
         return $this->container;

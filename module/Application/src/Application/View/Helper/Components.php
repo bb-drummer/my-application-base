@@ -17,14 +17,14 @@ use Zend\Mvc\Application;
 /**
  * Proxy helper for retrieving navigational helpers and forwarding calls
  */
-class Components extends Bootstrap\AbstractHelper
+class Components extends Components\AbstractHelper
 {
     /**
      * View helper namespace
      *
      * @var string
      */
-    const NS = 'Application\View\Helper\Bootstrap';
+    const NS = 'Application\View\Helper\Components';
 
     /**
      * Default proxy to use in {@link render()}
@@ -70,7 +70,7 @@ class Components extends Bootstrap\AbstractHelper
      * Helper entry point
      *
      * @param  string|AbstractContainer $container container to operate on
-     * @return Navigation
+     * @return Components
      */
     public function __invoke($options = array())
     {
@@ -86,12 +86,7 @@ class Components extends Bootstrap\AbstractHelper
      *
      * Examples of usage from a view script or layout:
      * <code>
-     * // proxy to Menu helper and render container:
-     * echo $this->bootstrap()->menu();
-     *
-     * // proxy to Breadcrumbs helper and set indentation:
-     * $this->bootstrap()->breadcrumbs()->setIndent(8);
-     *
+     *   echo $this->Components()->Widget(...);
      * </code>
      *
      * @param  string $method             helper name or method name in container
@@ -127,21 +122,21 @@ class Components extends Bootstrap\AbstractHelper
      */
     public function render($container = null)
     {
-        return $this->findHelper($this->getDefaultProxy())->render($container);
+        return '';
     }
 
     /**
      * Returns the helper matching $proxy
      *
      * The helper must implement the interface
-     * {@link Application\View\Helper\Bootstrap\Helper}.
+     * {@link Application\View\Helper\Components\HelperInterface}.
      *
      * @param string $proxy  helper name
      * @param bool   $strict [optional] whether exceptions should be
      *                                  thrown if something goes
      *                                  wrong. Default is true.
      * @throws Exception\RuntimeException if $strict is true and helper cannot be found
-     * @return \Application\\View\Helper\Bootstrap\HelperInterface  helper instance
+     * @return \Application\View\Helper\Components\HelperInterface  helper instance
      */
     public function findHelper($proxy, $strict = true)
     {
@@ -294,10 +289,10 @@ class Components extends Bootstrap\AbstractHelper
     /**
      * Set manager for retrieving navigation helpers
      *
-     * @param  Bootstrap\PluginManager $plugins
-     * @return Bootstrap
+     * @param  Components\PluginManager $plugins
+     * @return Components
      */
-    public function setPluginManager(Bootstrap\PluginManager $plugins)
+    public function setPluginManager(Components\PluginManager $plugins)
     {
         $renderer = $this->getView();
         if ($renderer) {
@@ -314,12 +309,12 @@ class Components extends Bootstrap\AbstractHelper
      * Lazy-loads an instance of Navigation\HelperLoader if none currently
      * registered.
      *
-     * @return Bootstrap\PluginManager
+     * @return Components\PluginManager
      */
     public function getPluginManager()
     {
         if (null === $this->plugins) {
-            $this->setPluginManager(new Bootstrap\PluginManager());
+            $this->setPluginManager(new Components\PluginManager());
         }
 
         return $this->plugins;

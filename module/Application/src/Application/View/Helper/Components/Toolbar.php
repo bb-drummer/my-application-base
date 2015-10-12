@@ -14,9 +14,8 @@ namespace Application\View\Helper\Components;
  * render nothing
  *
  */
-class Panel extends AbstractHelper implements \Zend\ServiceManager\ServiceLocatorAwareInterface
+class Toolbar extends AbstractHelper implements \Zend\ServiceManager\ServiceLocatorAwareInterface
 {
-
 	
 	/**
 	 * header content string/value(s)
@@ -72,7 +71,7 @@ class Panel extends AbstractHelper implements \Zend\ServiceManager\ServiceLocato
 	 *
 	 * @var string
 	 */
-	protected $componentClass = 'panel';
+	protected $componentClass = 'toolbar toolbar-nav';
 	
 	/**
 	 * header's class-name
@@ -290,5 +289,5 @@ class Panel extends AbstractHelper implements \Zend\ServiceManager\ServiceLocato
 	}
 
 
-	
+
 }

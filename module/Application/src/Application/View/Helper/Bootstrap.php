@@ -70,7 +70,7 @@ class Bootstrap extends Bootstrap\AbstractHelper
      * Helper entry point
      *
      * @param  string|AbstractContainer $container container to operate on
-     * @return Navigation
+     * @return Bootstrap
      */
     public function __invoke($container = null)
     {
