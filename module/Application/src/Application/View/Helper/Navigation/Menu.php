@@ -32,6 +32,13 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
     protected $subUlClass = 'dropdown-menu';
 
     /**
+     * CSS class to use for the 1. level (NOT root level!) ul sub-menu element
+     *
+     * @var string
+     */
+    protected $subUlClassLevel1 = 'dropdown-menu';
+
+	/**
      * CSS class to use for the active li sub-menu element
      *
      * @var string
@@ -53,11 +60,28 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
     protected $iconPrefixClass = 'icon-';
 
     /**
-     * HREF to use for the sub-menu toggle element's HREF attribute
+     * HREF string to use for the sub-menu toggle element's HREF attribute, 
+     * to override current page's href/'htmlify' setting
      *
      * @var string
      */
     protected $hrefSubToggleOverride = null;
+
+    /**
+     * View helper entry point:
+     * Retrieves helper and optionally sets container to operate on
+     *
+     * @param  AbstractContainer $container [optional] container to operate on
+     * @return self
+     */
+    public function __invoke($container = null)
+    {
+        if (null !== $container) {
+            $this->setContainer($container);
+        }
+
+        return $this;
+    }
 
     /**
 	 * recursively create Bootstrap compatible multi-level UL navigation
@@ -68,65 +92,72 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
 	 * @param number $maxlevel
 	 * 
 	 * @return string
+	 * 
+	 * @TODO: WATCH BEHAVIOUR! maybe, we have to add 'renderNormalMenu' and 'renderDeepestMenu' as well :/
 	 */
 	public function render($container = null, $level = 0)
 	{
 		/* @var $escaper \Zend\View\Helper\EscapeHtmlAttr */
-        $escaper = $this->view->plugin('escapeHtmlAttr');
+		$escaper = $this->view->plugin('escapeHtmlAttr');
 		/* @var $navigation \Zend\View\Helper\Navigation */
-        $navigation = $this->view->navigation(); //plugin('navigation');
-        /* @var $maxlevel number */
-        $maxlevel = $this->getMaxDepth();
-        /* @var $isBelowMaxLevel boolean */
+		$navigation = $this->view->navigation(); // ; // ->view->plugin('navigation'); // ->view->navigation(); //
+		/* @var $maxlevel number */
+		$maxlevel = $this->getMaxDepth();
+		/* @var $isBelowMaxLevel boolean */
 		$isBelowMaxLevel = ($maxlevel > $level) || ($maxlevel === null) || ($maxlevel === false);
-
-	    if (null === $container) {
-            $container = $this->getContainer();
-        }
-        
-        
-        // @TODO setzen/holen der Bootstrap Klassen via 'setter/getter' !
-        
-        
+	
+		if (null === $container) {
+			$container = $this->getContainer();
+		}
+	
 		/* @var $html string the menu html string */
-		$html = '<ul class="' . ($level == 0 ? $navigation->menu()->getUlClass() : $navigation->menu()->getSubUlClass()) . ' level_' . $level . '">' . PHP_EOL;
+		$html = '<ul class="' . ($level == 0 ? $this->getUlClass() : ($level == 1 ? $this->getSubUlClassLevel1() : $this->getSubUlClass())) . ' level_' . $level . '">' . PHP_EOL;
 		foreach ($container as $page):
-			if ($navigation->accept($page)):
-				$classnames = array();
-				if (!empty($navigation->menu()->getDefaultLiClass())) { $classnames[] = $navigation->menu()->getDefaultLiClass(); }
-				if (!empty($page->pages) && $isBelowMaxLevel) { $classnames[] = ($level == 0 ? $navigation->menu()->getSubLiClassLevel0() : $navigation->menu()->getSubLiClass()); }
-				if ($page->isActive(true)) { $classnames[] = $navigation->menu()->getLiActiveClass(); }
-				
-				$html .= '<li class="'.(implode(" ", $classnames)).'">' . PHP_EOL;
-				if (!empty($page->pages) && $isBelowMaxLevel) {
-					$href = (!empty($navigation->menu()->getHrefSubToggleOverride()) ? $navigation->menu()->getHrefSubToggleOverride() : $page->getHref());
-					$html .= '<a class="dropdown-toggle" data-toggle="' . ($level == 0 ? $navigation->menu()->getSubLiClassLevel0() : $navigation->menu()->getSubLiClass()) . '" href="' . $href . '">' . PHP_EOL .
-						($page->get('icon') ? '<span class="' . $navigation->menu()->getIconPrefixClass() . '' . $page->get('icon') . '"></span> ' : '' ) . PHP_EOL .
-						$page->getLabel() .
-					'</a>' . PHP_EOL;
-				} else {
-					$html .= '<a href="' . $page->getHref() . '">' . PHP_EOL .
-						($page->get('icon') ? '<span class="' . $navigation->menu()->getIconPrefixClass() . '' . $page->get('icon') . '"></span> ' : '' ) . PHP_EOL .
-						$page->getLabel().
-					'</a>' . PHP_EOL;
-				}
-				if (!empty($page->pages)):
-					// ... ;
-					if ( $isBelowMaxLevel ) {
-						$html .= $this->render( $page->pages, $level+1 );
-					}
-				endif;
-				
-				$html .= '</li>' . PHP_EOL;
-			endif;
+		if ($navigation->accept($page)):
+		$classnames = array();
+	
+		if (!empty($this->getDefaultLiClass())) {
+			$classnames[] = $this->getDefaultLiClass();
+		}
+		if (!empty($page->pages) && $isBelowMaxLevel) {
+			$classnames[] = ($level == 0 ? $this->getSubLiClassLevel0() : $this->getSubLiClass());
+		}
+		if ($page->isActive(true)) {
+			$classnames[] = $this->getLiActiveClass();
+		}
+	
+		$html .= '<li class="'.(implode(" ", $classnames)).'">' . PHP_EOL;
+		if (!empty($page->pages) && $isBelowMaxLevel) {
+			$href = (
+					!empty($this->getHrefSubToggleOverride()) ?
+					$this->getHrefSubToggleOverride() : $page->getHref()
+					);
+			$html .= '<a class="dropdown-toggle" data-toggle="' . ($level == 0 ? $this->getSubLiClassLevel0() : $this->getSubLiClass()) . '" href="' . $href . '">' . PHP_EOL .
+			($page->get('icon') ? '<span class="' . $this->getIconPrefixClass() . '' . $page->get('icon') . '"></span> ' : '' ) . PHP_EOL .
+			$page->getLabel() .
+			'</a>' . PHP_EOL;
+		} else {
+			$html .= '<a href="' . $page->getHref() . '">' . PHP_EOL .
+			($page->get('icon') ? '<span class="' . $this->getIconPrefixClass() . '' . $page->get('icon') . '"></span> ' : '' ) . PHP_EOL .
+			$page->getLabel().
+			'</a>' . PHP_EOL;
+		}
+		if (!empty($page->pages)):
+		// ... ;
+		if ( $isBelowMaxLevel ) {
+			$html .= $this->render( $page->pages, $level+1 );
+		}
+		endif;
+	
+		$html .= '</li>' . PHP_EOL;
+		endif;
 		endforeach;
 		$html .= '</ul>' . PHP_EOL;
-		
+	
 		return $html;
-        
+	
 		//return 'this is my menu (render)';
 	}
-	
 	
 	/**
 	 * @return the $defaultLiClass
@@ -159,6 +190,21 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
 	}
 
 	/**
+	 * @return the $subUlClassLevel1
+	 */
+	public function getSubUlClassLevel1() {
+		return $this->subUlClassLevel1;
+	}
+
+	/**
+	 * @param string $subUlClassLevel1
+	 */
+	public function setSubUlClassLevel1($subUlClassLevel1) {
+		$this->subUlClassLevel1 = $subUlClassLevel1;
+		return $this;
+	}
+
+	/**
 	 * @return the $subLiClass
 	 */
 	public function getSubLiClass() {
@@ -184,7 +230,7 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
 	 * @param string $subLiClassLevel0
 	 */
 	public function setSubLiClassLevel0($subLiClassLevel0) {
-		$this->subLiClass = $subLiClassLevel0;
+		$this->subLiClassLevel0 = $subLiClassLevel0;
 		return $this;
 	}
 	
