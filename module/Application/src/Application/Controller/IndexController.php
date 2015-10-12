@@ -35,4 +35,9 @@ class IndexController extends BaseActionController
     {
         return new ViewModel();
     }
+    
+    public function testAction()
+    {
+        return new ViewModel();
+    }
 }

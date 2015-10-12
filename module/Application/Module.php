@@ -43,9 +43,9 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 		$serviceManager = $application->getServiceManager();
 
 		// override or add a view helper
-		/** @var $pm \Zend\View\Helper\Navigation\PluginManager */
-		$pm = $serviceManager->get('ViewHelperManager')->get('Navigation')->getPluginManager();
-		//$pm->setInvokableClass('menu', '\Application\View\Helper\Navigation\Menu');
+		// /** @var $pm \Zend\View\Helper\Navigation\PluginManager */
+		// $pm = $serviceManager->get('ViewHelperManager')->get('Navigation')->getPluginManager();
+		// $pm->setInvokableClass('menu', '\Application\View\Helper\Navigation\Menu');
 		
 	}
 
@@ -130,6 +130,23 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 					}
 					
 					return $bootstrap;
+				},
+				'components' => function(HelperPluginManager $pm) {
+					$this->setServiceLocator($pm->getServiceLocator());
+					$acl = $this->getAcl(); 
+					
+					$components = $pm->get('Application\View\Helper\Components');
+					$components->setAcl($acl);
+					
+					$oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
+					if ( $oAuth->hasIdentity() ) {
+						$oUser = $oAuth->getIdentity();
+						$components->setRole( $oUser->getAclrole() );
+					} else {
+						$components->setRole('public');
+					}
+					
+					return $components;
 				}
 			)
 		);

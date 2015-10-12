@@ -6,6 +6,16 @@ return array(
 				'label' => 'Dashboard',
 				'icon'	=> 'home',
 				'route' => 'home',
+				'pages'			=> array(
+					array(
+						'label'			=> 'Test-Page',
+						'icon'			=> 'warning-sign',
+						'route'			=> 'application/default',
+						'controller' 	=> 'index',
+						'action' 		=> 'test',
+						'resource'		=> 'mvc:admin',
+					),
+				),
 			),
 			/*array(
 				'label'			=> 'YourModule',
