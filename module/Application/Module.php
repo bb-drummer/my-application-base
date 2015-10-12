@@ -38,6 +38,15 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 		$moduleRouteListener = new ModuleRouteListener();
 		$moduleRouteListener->attach($eventManager);
 
+		$application = $e->getApplication();
+		/** @var $serviceManager \Zend\ServiceManager\ServiceManager */
+		$serviceManager = $application->getServiceManager();
+
+		// override or add a view helper
+		/** @var $pm \Zend\View\Helper\Navigation\PluginManager */
+		$pm = $serviceManager->get('ViewHelperManager')->get('Navigation')->getPluginManager();
+		//$pm->setInvokableClass('menu', '\Application\View\Helper\Navigation\Menu');
+		
 	}
 
 	public function getApplicationConfig()
@@ -104,6 +113,23 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 					}
 					
 					return $navigation;
+				},
+				'bootstrap' => function(HelperPluginManager $pm) {
+					$this->setServiceLocator($pm->getServiceLocator());
+					$acl = $this->getAcl(); 
+					
+					$bootstrap = $pm->get('Application\View\Helper\Bootstrap');
+					$bootstrap->setAcl($acl);
+					
+					$oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
+					if ( $oAuth->hasIdentity() ) {
+						$oUser = $oAuth->getIdentity();
+						$bootstrap->setRole( $oUser->getAclrole() );
+					} else {
+						$bootstrap->setRole('public');
+					}
+					
+					return $bootstrap;
 				}
 			)
 		);

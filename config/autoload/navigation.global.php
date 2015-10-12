@@ -30,26 +30,31 @@ return array(
 				'pages'			=> array(
 					array(
 						'label'			=> 'Login',
+						'icon'			=> 'log-in',
 						'route'			=> 'zfcuser/login',
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
 						'label'			=> 'Registrierung',
+						'icon'			=> 'link',
 						'route'			=> 'zfcuser/register',
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
 						'label'			=> 'E-Mail ändern',
+						'icon'			=> 'envelope',
 						'route'			=> 'zfcuser/changeemail',
 						'resource'		=> 'mvc:user',
 					),
 					array(
 						'label'			=> 'Passwort ändern',
+						'icon'			=> 'lock',
 						'route'			=> 'zfcuser/changepassword',
 						'resource'		=> 'mvc:user',
 					),
 					array(
 						'label'			=> 'Logout',
+						'icon'			=> 'log-out',
 						'route'			=> 'zfcuser/logout',
 						'resource'		=> 'mvc:user',
 					),
@@ -68,7 +73,7 @@ return array(
 			),
 			array(
 				'label'			=> 'Admin',
-				'icon'			=> 'cogs',
+				'icon'			=> 'cog',
 				'route'			=> 'admin',
 				'resource'		=> 'mvc:admin',
 				'pages'			=> array(
@@ -114,6 +119,7 @@ return array(
 						'pages'			=> array(
 							array(
 								'label'			=> 'ACL',
+								'icon'			=> 'asterisk',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'index',
 								'resource'		=> 'mvc:admin',
@@ -121,7 +127,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Rollen',
-								'icon'			=> 'group',
+								'icon'			=> 'user',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'roles',
 								'resource'		=> 'mvc:admin',
@@ -149,7 +155,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Resourcen',
-								'icon'			=> 'list-ul',
+								'icon'			=> 'list-alt',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'resources',
 								'resource'		=> 'mvc:admin',
@@ -179,6 +185,7 @@ return array(
 					),
 					array(
 						'label' 		=> 'Einstellungen',
+						'icon'			=> 'cog',
 						'route'			=> 'admin/settingsedit',
 						'action' 		=> 'index',
 						'resource'		=> 'mvc:admin',
@@ -208,12 +215,14 @@ return array(
 					),
 					array(
 						'label'			=> 'System',
+						'icon'			=> 'credit-card',
 						'route'			=> 'system',
 						'action'	    => 'index',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(
 								'label'			=> 'Systeminfo',
+								'icon'			=> 'info-sign',
 								'route'			=> 'system',
 								'action' 		=> 'info',
 								'resource'		=> 'mvc:admin',
@@ -221,6 +230,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Backup',
+								'icon'			=> 'duplicate',
 								'route'			=> 'system',
 								'action' 		=> 'backup',
 								'resource'		=> 'mvc:admin',
@@ -228,6 +238,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Setup',
+								'icon'			=> 'wrench',
 								'route'			=> 'setup',
 								'action' 		=> 'index',
 								//'resource'		=> 'mvc:admin',
@@ -260,18 +271,21 @@ return array(
 				'pages'			=> array(
 					array(
 						'label'			=> 'Hilfe',
+						'icon'			=> 'question-sign',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'help',
 					),
 					array(
 						'label'			=> 'Online-Support',
+						'icon'			=> 'envelope',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'support',
 					),
 					array(
 						'label' 		=> 'Über MyApplication',
+						'icon'			=> 'info-sign',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'about',

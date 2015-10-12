@@ -126,7 +126,15 @@ return array(
 			'zfc-user' => __DIR__ . '/../view',
 		),
 	),
-	// Placeholder for console routes
+		
+	'navigation_helpers' => array (
+	    'invokables' => array(
+	    	// override or add a view helper
+	        //'menu' => '\Application\View\Helper\Navigation\Menu',
+	    ),
+	),
+		
+    // Placeholder for console routes
 	'console' => array(
 		'router' => array(
 			'routes' => array(
