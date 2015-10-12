@@ -34,6 +34,13 @@ class Navbar extends \Application\View\Helper\Navigation\Menu
     protected $subUlClass = 'dropdown-menu';
 
     /**
+     * CSS class to use for the 1. level (NOT root level!) ul sub-menu element
+     *
+     * @var string
+     */
+    protected $subUlClassLevel1 = 'dropdown-menu';
+
+	/**
      * CSS class to use for the active li sub-menu element
      *
      * @var string
@@ -104,7 +111,7 @@ class Navbar extends \Application\View\Helper\Navigation\Menu
         }
         
         /* @var $html string the menu html string */
-		$html = '<ul class="' . ($level == 0 ? $this->getUlClass() : $this->getSubUlClass()) . ' level_' . $level . '">' . PHP_EOL;
+		$html = '<ul class="' . ($level == 0 ? $this->getUlClass() : ($level == 1 ? $this->getSubUlClassLevel1() : $this->getSubUlClass())) . ' level_' . $level . '">' . PHP_EOL;
 		foreach ($container as $page):
 			if ($navigation->accept($page)):
 				$classnames = array();
@@ -180,6 +187,21 @@ class Navbar extends \Application\View\Helper\Navigation\Menu
 	 */
 	public function setSubUlClass($subUlClass) {
 		$this->subUlClass = $subUlClass;
+		return $this;
+	}
+
+	/**
+	 * @return the $subUlClassLevel1
+	 */
+	public function getSubUlClassLevel1() {
+		return $this->subUlClassLevel1;
+	}
+
+	/**
+	 * @param string $subUlClassLevel1
+	 */
+	public function setSubUlClassLevel1($subUlClassLevel1) {
+		$this->subUlClassLevel1 = $subUlClassLevel1;
 		return $this;
 	}
 

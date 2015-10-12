@@ -27,8 +27,9 @@ class PluginManager extends HelperPluginManager
      * @var array
      */
     protected $invokableClasses = [
-        'void'			=> 'Application\View\Helper\Bootstrap\Void',
-        'navbar'		=> 'Application\View\Helper\Bootstrap\Navbar',
+        'void'				=> 'Application\View\Helper\Bootstrap\Void',
+        'navbar'			=> 'Application\View\Helper\Bootstrap\Navbar',
+        'breadcrumbs'		=> 'Application\View\Helper\Bootstrap\Breadcrumbs',
     ];
 
     /**
