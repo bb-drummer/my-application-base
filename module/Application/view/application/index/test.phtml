@@ -1,10 +1,12 @@
 <?php 
 
+	$oBootstrap = $this->Bootstrap();
 	$oComponents = $this->Components();
 	echo '<pre>void: ' . $oComponents->Void() . '</pre>' . PHP_EOL ;
 	echo '<pre>toolbar: ' . $oComponents->Toolbar() . '</pre>' . PHP_EOL ;
 	echo '<pre>dashboard: ' . $oComponents->Dashboard() . '</pre>' . PHP_EOL ;
 	echo '<pre>widget: ' . $oComponents->Widget() . '</pre>' . PHP_EOL ;
+	echo '<pre>widget: ' . $oBootstrap->Components()->Widget() . '</pre>' . PHP_EOL ;
 	echo '<pre>panel: ' . $oComponents->Panel() . '</pre>' . PHP_EOL ;
 
 ?>
