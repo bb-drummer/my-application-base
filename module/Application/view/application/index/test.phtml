@@ -1,12 +1,66 @@
 <?php 
-
 	$oBootstrap = $this->Bootstrap();
 	$oComponents = $this->Components();
-	echo '<pre>void: ' . $oComponents->Void() . '</pre>' . PHP_EOL ;
-	echo '<pre>toolbar: ' . $oComponents->Toolbar() . '</pre>' . PHP_EOL ;
-	echo '<pre>dashboard: ' . $oComponents->Dashboard() . '</pre>' . PHP_EOL ;
-	echo '<pre>widget: ' . $oComponents->Widget() . '</pre>' . PHP_EOL ;
-	echo '<pre>widget: ' . $oBootstrap->Components()->Widget() . '</pre>' . PHP_EOL ;
-	echo '<pre>panel: ' . $oComponents->Panel() . '</pre>' . PHP_EOL ;
-
+	
 ?>
+<div class="clearfix"><?php echo $oComponents->Toolbar()->setContent("the toolbar content..."); ?></div>
+
+<div class="clearfix"><?php echo $oComponents->Dashboard(); ?></div>
+
+<div class="clearfix"><?php echo ($block = $oComponents->Block()
+	->setHeader("Here come the header...")
+	->setFooter("Here come the footer...")
+	->render()
+); ?></div>
+
+<div class="clearfix"><?php echo $someContent = $oComponents()->Void(array(
+	'tagname'	 => 'div',
+	'class' => 'panel',
+))->setContent("here comes some content..."); ?></div>
+<div class="clearfix"><?php 
+
+	$body = $oComponents()->Void(array(
+			'tagname'	=> 'div',
+			'classnames'=> 'panel-body',
+	))->setContent("<em>content, content, content...</em>");
+	
+	$header = $oComponents()->Void( 
+		array(
+			'tagname'		=> 'div',
+			'classnames'	=> 'panel-heading',
+			'content'		=> array(
+				'tagname'		=> 'h3',
+				'classnames'	=> 'panel-title',
+				'content'		=> 'my header...'
+			)
+		) 
+	);
+	$panel = $oComponents()->Panel()
+		->setHeader( $header
+		)
+		->setContent( array(
+			array(
+				'tagname'		=> 'div',
+				'classnames'	=> 'panel-body',
+				'content'		=> 'here comes the widget content...'
+			),
+			array(
+				'tagname'		=> 'div',
+				'classnames'	=> 'panel-body',
+				'content'		=> array(
+					'<p>here comes more content...</p>',
+					'<p>here comes more content...</p>',
+					'<p>here comes more content...</p>',
+					$someContent
+				)
+			),
+			$body
+		) )
+	;
+	
+ 	$panel->setTagname('section');
+	echo $panel->render();
+	
+?></div>
+
+<?php //echo $oComponents->Void(); /* this really does nothing, it is just a view helper plugin default :D */ ?>

@@ -27,10 +27,11 @@ class PluginManager extends HelperPluginManager
      * @var array
      */
     protected $invokableClasses = [
-        'void'				=> 'Application\View\Helper\Components\Void',
-        'toolbar'			=> 'Application\View\Helper\Components\Toolbar',
+        'block'				=> 'Application\View\Helper\Components\Block',
         'dashboard'			=> 'Application\View\Helper\Components\Dashboard',
         'panel'				=> 'Application\View\Helper\Components\Panel',
+        'toolbar'			=> 'Application\View\Helper\Components\Toolbar',
+        'void'				=> 'Application\View\Helper\Components\Void',
         'widget'			=> 'Application\View\Helper\Components\Widget',
     ];
 

@@ -14,11 +14,11 @@ namespace Application\View\Helper\Components;
  * render nothing
  *
  */
-class Widget extends Void
+class Block extends Void
 {
 	protected $tagname = 'div';
 	
-	protected $classnames = 'widget';
+	protected $classnames = 'block block-drop-shadow';
 	
 	/**
 	 * View helper entry point:
