@@ -18,12 +18,16 @@
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
     "themes/zf2-basic" : "dev-master",
+    "themes/zf2-adminlte" : "dev-master",
     "themes/zf2-remark" : "dev-master",
     "themes/zf2-taurus" : "dev-master"
   },
   "repositories" : [ {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
+  }, {
+    "type" : "git",
+    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-adminlte.git"
   }, {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-remark.git"

@@ -14,4 +14,13 @@ rm -rf themes/remark/*
 cp -r vendor/themes/zf2-remark/assets/* public/assets/themes/remark/
 cp -r vendor/themes/zf2-remark/view themes/remark/
 cp -r vendor/themes/zf2-remark/config.php themes/remark/
-#rm -rf vendor/themes/zf2-taurus
+#rm -rf vendor/themes/zf2-remark
+
+mkdir -p public/assets/themes/adminlte
+mkdir -p themes/adminlte
+rm -rf public/assets/themes/adminlte/*
+rm -rf themes/adminlte/*
+cp -r vendor/themes/zf2-adminlte/assets/* public/assets/themes/adminlte/
+cp -r vendor/themes/zf2-adminlte/view themes/adminlte/
+cp -r vendor/themes/zf2-adminlte/config.php themes/adminlte/
+#rm -rf vendor/themes/zf2-adminlte
