@@ -9,6 +9,7 @@
     "neilime/zf2-assets-bundle" : ">=3.4.1",
     "zendexperts/ze-theme" : "dev-master",
     "dudapiotr/zftable" : ">=3.1",
+    "org_heigl/piwik" : ">=1.0",
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "components/foundation" : ">=5.5.2",
