@@ -5,6 +5,7 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'Application',
+    	'OrgHeiglPiwik',
     	'Admin',
         'ZeTheme',
     ),
