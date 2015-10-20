@@ -37,6 +37,7 @@ return array(
 				'label' => 'Account',
 				'icon'	=> 'user',
 				'route' => 'zfcuser',
+				'badge' => array('type' => 'warning', 'value' => '!!!', 'title' => 'Remember to change your password after registration!'),
 				'pages'			=> array(
 					array(
 						'label'			=> 'Login',
