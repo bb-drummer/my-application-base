@@ -339,7 +339,7 @@ class Menu extends \Zend\View\Helper\Navigation\Menu implements \Zend\ServiceMan
 		
 		// does page have a href?
 		$href = (
-			!empty($this->getHrefSubToggleOverride()) ?
+			!empty($page->pages) && !empty($this->getHrefSubToggleOverride()) ?
 				$this->getHrefSubToggleOverride() : $page->getHref()
 		);
 		$element = 'a';
