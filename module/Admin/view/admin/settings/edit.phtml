@@ -22,15 +22,23 @@
 			));
 			$form->prepare();
 		
-			echo $this->form()->openTag($form);
-			echo $this->formHidden($form->get('settings_id'));
-			echo $this->formRow($form->get('type'));
-			echo $this->formRow($form->get('name'));
-			echo $this->formRow($form->get('value'));
-			echo '<hr />';
-			echo $this->formSubmit($form->get('submit'));
-			echo $this->formReset($form->get('reset'));
-			echo $this->form()->closeTag();
-		?>
+			echo $this->form()->openTag($form); ?>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('type')); ?>
+				<?php echo $this->formInput($form->get('type')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('name')); ?>
+				<?php echo $this->formInput($form->get('name')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('value')); ?>
+				<?php echo $this->formInput($form->get('value')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<hr />
+			<?php echo $this->formHidden($form->get('settings_id')); ?>
+			<?php echo $this->formSubmit($form->get('submit')->setAttributes(array('class' =>'btn btn-default'))); ?>
+			<?php echo $this->formReset($form->get('reset')->setAttributes(array('class' =>'btn btn-default'))); ?>
+		<?php echo $this->form()->closeTag($form); ?>
 	</div>
 </div>

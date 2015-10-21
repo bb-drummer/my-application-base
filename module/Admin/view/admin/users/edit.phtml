@@ -11,7 +11,7 @@
 		</label>
 	</div>
 	<div class="panel-body">
-		<?php
+		<?php 
 			$form = $this->form;
 			$form->setAttribute('action', $this->url(
 			    'admin/default',
@@ -23,23 +23,50 @@
 			));
 			$form->prepare();
 		
-			echo $this->form()->openTag($form);
-			echo $this->formHidden($form->get('user_id'));
-			echo $this->formRow($form->get('display_name'));
-			echo $this->formRow($form->get('username'));
-			echo $this->formRow($form->get('email'));
-			echo $this->formRow($form->get('password'));
-			echo '<hr />';
-			echo $this->formRow($form->get('street'));
-			echo $this->formRow($form->get('city'));
-			echo $this->formRow($form->get('phone'));
-			echo '<hr />';
-			echo $this->formRow($form->get('state'));
-			echo $this->formRow($form->get('aclrole'));
-			echo '<hr />';
-			echo $this->formSubmit($form->get('submit'));
-			echo $this->formReset($form->get('reset'));
-			echo $this->form()->closeTag();
-		?>
+			echo $this->form()->openTag($form); ?>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('username')); ?>
+				<?php echo $this->formInput($form->get('username')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('email')); ?>
+				<?php echo $this->formInput($form->get('email')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('display_name')); ?>
+				<?php echo $this->formInput($form->get('display_name')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('password')); ?>
+				<?php echo $this->formInput($form->get('password')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<hr />
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('street')); ?>
+				<?php echo $this->formInput($form->get('street')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('city')); ?>
+				<?php echo $this->formInput($form->get('city')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('phone')); ?>
+				<?php echo $this->formInput($form->get('phone')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<hr />
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('aclrole')); ?>
+				<?php echo $this->formSelect($form->get('aclrole')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<hr />
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('state')); ?>
+				<?php echo $this->formSelect($form->get('state')->setAttributes(array('class' => 'form-control'))); ?>
+			</div>
+			<hr />
+			<?php echo $this->formHidden($form->get('user_id')); ?>
+			<?php echo $this->formSubmit($form->get('submit')->setAttributes(array('class' =>'btn btn-default'))); ?>
+			<?php echo $this->formReset($form->get('reset')->setAttributes(array('class' =>'btn btn-default'))); ?>
+		<?php echo $this->form()->closeTag($form); ?>
 	</div>
 </div>

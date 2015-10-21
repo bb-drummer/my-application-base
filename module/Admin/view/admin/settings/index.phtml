@@ -15,28 +15,29 @@
 		</label>
 	</div>
 	<div class="panel-body">
-		
-		<table class="table">
-			<tr>
-			    <th><?php echo $this->translate("Type")?></th>
-			    <th><?php echo $this->translate("Name")?></th>
-			    <th><?php echo $this->translate("Wert")?></th>
-			    <th>&nbsp;</th>
-			</tr>
-			<?php foreach ($settingsdata as $settings) : ?>
-			<tr>
-			    <td><?php echo $this->escapeHtml($settings->type);?></td>
-			    <td><?php echo $this->escapeHtml($settings->name);?></td>
-			    <td><?php echo $this->escapeHtml($settings->value);?></td>
-			    <td>
-			        <a href="<?php echo $this->url('admin/settingsedit',
-			            array('action'=>'edit', 'set_id' => $settings->settings_id));?>"><?php echo $this->translate("ändern"); ?></a>
-			        <a href="<?php echo $this->url('admin/settingsedit',
-			            array('action'=>'delete', 'set_id' => $settings->settings_id));?>"><?php echo $this->translate("entfernen"); ?></a>
-			    </td>
-			</tr>
-			<?php endforeach; ?>
-		</table>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<tr>
+				    <th><?php echo $this->translate("Type")?></th>
+				    <th><?php echo $this->translate("Name")?></th>
+				    <th><?php echo $this->translate("Wert")?></th>
+				    <th>&nbsp;</th>
+				</tr>
+				<?php foreach ($settingsdata as $settings) : ?>
+				<tr>
+				    <td><?php echo $this->escapeHtml($settings->type);?></td>
+				    <td><?php echo $this->escapeHtml($settings->name);?></td>
+				    <td><?php echo $this->escapeHtml($settings->value);?></td>
+				    <td>
+				        <a class="btn btn-default btn-xs" href="<?php echo $this->url('admin/settingsedit',
+				            array('action'=>'edit', 'set_id' => $settings->settings_id));?>"><?php echo $this->translate("ändern"); ?></a>
+				        <a class="btn btn-default btn-xs" href="<?php echo $this->url('admin/settingsedit',
+				            array('action'=>'delete', 'set_id' => $settings->settings_id));?>"><?php echo $this->translate("entfernen"); ?></a>
+				    </td>
+				</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
 	<?php echo $this->output ?>
 	</div>
 </div>

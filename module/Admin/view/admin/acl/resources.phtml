@@ -15,25 +15,27 @@
 		</label>
 	</div>
 	<div class="panel-body">
-		<table class="table">
-			<tr>
-			    <th><?php echo $this->translate("Resource-Slug")?></th>
-			    <th><?php echo $this->translate("Resource-Name")?></th>
-			    <th>&nbsp;</th>
-			</tr>
-			<?php foreach ($resources as $resource) : ?>
-			<tr>
-			    <td><?php echo $this->escapeHtml($resource->resourceslug);?></td>
-			    <td><?php echo $this->escapeHtml($resource->resourcename);?></td>
-			    <td>
-			        <a href="<?php echo $this->url('admin/acledit',
-			            array('action'=>'editresource', 'acl_id' => $resource->aclresources_id));?>"><?php echo $this->translate("ändern"); ?></a>
-			        <a href="<?php echo $this->url('admin/acledit',
-			            array('action'=>'deleteresource', 'acl_id' => $resource->aclresources_id));?>"><?php echo $this->translate("entfernen"); ?></a>
-			    </td>
-			</tr>
-			<?php endforeach; ?>
-		</table>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<tr>
+				    <th><?php echo $this->translate("Resource-Slug")?></th>
+				    <th><?php echo $this->translate("Resource-Name")?></th>
+				    <th>&nbsp;</th>
+				</tr>
+				<?php foreach ($resources as $resource) : ?>
+				<tr>
+				    <td><?php echo $this->escapeHtml($resource->resourceslug);?></td>
+				    <td><?php echo $this->escapeHtml($resource->resourcename);?></td>
+				    <td>
+				        <a class="btn btn-default btn-xs" href="<?php echo $this->url('admin/acledit',
+				            array('action'=>'editresource', 'acl_id' => $resource->aclresources_id));?>"><?php echo $this->translate("ändern"); ?></a>
+				        <a class="btn btn-default btn-xs" href="<?php echo $this->url('admin/acledit',
+				            array('action'=>'deleteresource', 'acl_id' => $resource->aclresources_id));?>"><?php echo $this->translate("entfernen"); ?></a>
+				    </td>
+				</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
 		<?php echo $this->output ?>
 	</div>
 </div>

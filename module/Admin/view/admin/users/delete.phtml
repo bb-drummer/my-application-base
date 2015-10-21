@@ -26,9 +26,9 @@ $url = $this->url('admin/default', array(
 ?>
 <form action="<?php echo $url; ?>" method="post">
 <div>
-     <input type="hidden" name="id" value="<?php echo (int) $user->user_id; ?>" />
-     <input type="submit" name="del" value="<?php echo $this->translate("entfernen"); ?>" />
-     <input type="submit" name="abort" value="<?php echo $this->translate("abbrechen"); ?>" />
+     <input class="btn btn-default" type="hidden" name="id" value="<?php echo (int) $user->user_id; ?>" />
+     <input class="btn btn-default" type="submit" name="del" value="<?php echo $this->translate("entfernen"); ?>" />
+     <input class="btn btn-default" type="submit" name="abort" value="<?php echo $this->translate("abbrechen"); ?>" />
  </div>
  </form>	</div>
 </div>
