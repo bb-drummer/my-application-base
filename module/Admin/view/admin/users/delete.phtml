@@ -1,9 +1,3 @@
-<pre class="debuginfo">
-<strong>Module:</strong>     Users &raquo;
-<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
-<strong>Action:</strong>     <?php echo $this->action ?>
-</pre>
-
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<label>
@@ -11,25 +5,26 @@
 		</label>
 	</div>
 	<div class="panel-body">
-<p><?php echo $this->translate("Benutzer wirklich entfernen?"); ?></p>
-<p>
-	'<?php echo $this->escapeHtml($user->username); ?>' - 
-	'<?php echo $this->escapeHtml($user->display_name); ?>' - 
-	'<?php echo $this->escapeHtml($user->email); ?>'?
-</p>
-<?php
-$url = $this->url('admin/default', array(
-    'controller' => 'users',
-    'action'     => 'delete',
-    'user_id'    => $user->user_id,
-));
-?>
-<form action="<?php echo $url; ?>" method="post">
-<div>
-     <input class="btn btn-default" type="hidden" name="id" value="<?php echo (int) $user->user_id; ?>" />
-     <input class="btn btn-default" type="submit" name="del" value="<?php echo $this->translate("entfernen"); ?>" />
-     <input class="btn btn-default" type="submit" name="abort" value="<?php echo $this->translate("abbrechen"); ?>" />
- </div>
- </form>	</div>
+		<p><?php echo $this->translate("Benutzer wirklich entfernen?"); ?></p>
+		<p>
+			'<?php echo $this->escapeHtml($user->username); ?>' - 
+			'<?php echo $this->escapeHtml($user->display_name); ?>' - 
+			'<?php echo $this->escapeHtml($user->email); ?>'?
+		</p>
+		<?php
+		$url = $this->url('admin/default', array(
+		    'controller' => 'users',
+		    'action'     => 'delete',
+		    'user_id'    => $user->user_id,
+		));
+		?>
+		<form action="<?php echo $url; ?>" method="post">
+			<div>
+				<input class="btn btn-default" type="hidden" name="id" value="<?php echo (int) $user->user_id; ?>" />
+				<input class="btn btn-default" type="submit" name="del" value="<?php echo $this->translate("entfernen"); ?>" />
+				<a class="btn btn-danger" href="<?php echo $this->url('admin/default'); ?>"><?php echo $this->translate("abbrechen"); ?></a>
+			</div>
+		</form>
+	</div>
 </div>
 	

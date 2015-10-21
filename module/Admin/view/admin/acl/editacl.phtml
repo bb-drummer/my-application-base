@@ -1,9 +1,3 @@
-<pre class="debuginfo">
-<strong>Module:</strong>     Admin &raquo;
-<strong>Controller:</strong> <?php echo $this->controller ?> &raquo;
-<strong>Action:</strong>     <?php echo $this->action ?>
-</pre>
-
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<label>
@@ -12,7 +6,7 @@
 	</div>
 	<div class="panel-body">
 		<?php
-			$form->setAttribute('action', $this->url('admin/acledit', array('action' => 'addacl')));
+			$form->setAttribute('action', $this->url('admin/acledit', array('action' => 'editacl')));
 			$oRoles = $form->get('aclroles_id');
 			$valueoptions = array();
 			foreach ($roles as $role) {
@@ -26,16 +20,28 @@
 			}
 			$oResources->setValueOptions($valueoptions);
 			$form->prepare();
-			echo $this->form()->openTag($form);
-			echo $this->formHidden($form->get('acl_id'));
-			echo $this->formRow($form->get('aclroles_id'));
-			echo $this->formRow($form->get('aclresources_id'));
-			echo '<hr />';
-			echo $this->formRow($form->get('state'));
-			echo '<hr />';
-			echo $this->formSubmit($form->get('submit'));
-			echo $this->formReset($form->get('reset'));
-			echo $this->form()->closeTag();
-		?>
+			echo $this->form()->openTag($form); ?>
+			<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('aclroles_id')))) ? ' has-error' : '' ?>">
+				<?php echo $this->formLabel($form->get('aclroles_id')); ?>
+				<?php echo $this->formSelect($form->get('aclroles_id')->setAttributes(array('class' => 'form-control'))); ?>
+				<?php echo $this->formElementErrors($form->get('aclroles_id')); ?>
+			</div>
+			<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('aclresources_id')))) ? ' has-error' : '' ?>">
+				<?php echo $this->formLabel($form->get('aclresources_id')); ?>
+				<?php echo $this->formSelect($form->get('aclresources_id')->setAttributes(array('class' => 'form-control'))); ?>
+				<?php echo $this->formElementErrors($form->get('aclresources_id')); ?>
+			</div>
+			<hr />
+			<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('state')))) ? ' has-error' : '' ?>">
+				<?php echo $this->formLabel($form->get('state')); ?>
+				<?php echo $this->formSelect($form->get('state')->setAttributes(array('class' => 'form-control'))); ?>
+				<?php echo $this->formElementErrors($form->get('state')); ?>
+			</div>
+			<hr />
+			<?php echo $this->formHidden($form->get('acl_id')); ?>
+			<?php echo $this->formSubmit($form->get('submit')->setAttributes(array('class' =>'btn btn-default'))); ?>
+			<?php echo $this->formReset($form->get('reset')->setAttributes(array('class' =>'btn btn-default'))); ?>
+			<a class="btn btn-danger" href="<?php echo $this->url('admin/acledit'); ?>"><?php echo $this->translate("abbrechen"); ?></a>
+		<?php echo $this->form()->closeTag($form); ?>
 	</div>
 </div>

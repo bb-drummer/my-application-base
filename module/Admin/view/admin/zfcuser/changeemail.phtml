@@ -20,24 +20,29 @@
 			
 			?>
 			<?php echo $this->form()->openTag($form) ?>
-				<div class="form-group">
-					<?php echo $this->formLabel($form->get('newIdentity')); ?>
+				<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('newIdentity')))) ? ' has-error' : '' ?>">
+					<?php echo $this->formLabel($form->get('newIdentity')->setAttributes(array('class' => 'control-label'))); ?>
 					<?php echo $this->formInput($form->get('newIdentity')->setAttributes(array('class' => 'form-control'))); ?>
+					<?php echo $this->formElementErrors($form->get('newIdentity')); ?>
 				</div>
-				<div class="form-group">
-					<?php echo $this->formLabel($form->get('newIdentityVerify')); ?>
+				<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('newIdentityVerify')))) ? ' has-error' : '' ?>">
+					<?php echo $this->formLabel($form->get('newIdentityVerify')->setAttributes(array('class' => 'control-label'))); ?>
 					<?php echo $this->formInput($form->get('newIdentityVerify')->setAttributes(array('class' => 'form-control'))); ?>
+					<?php echo $this->formElementErrors($form->get('newIdentityVerify')); ?>
 				</div>
-				<div class="form-group">
-					<?php echo $this->formLabel($form->get('credential')); ?>
+				<hr />
+				<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('credential')))) ? ' has-error' : '' ?>">
+					<?php echo $this->formLabel($form->get('credential')->setAttributes(array('class' => 'control-label'))); ?>
 					<?php echo $this->formInput($form->get('credential')->setAttributes(array('class' => 'form-control'))); ?>
+					<?php echo $this->formElementErrors($form->get('credential')); ?>
 				</div>
+				<hr />
 			    <?php if ($this->redirect): ?>
 			    <input type="hidden" name="redirect" value="<?php echo $this->redirect ?>" />
 			    <?php endif ?>
 				<?php echo $this->formHidden($form->get('identity')); ?>
 				<input class="btn btn-default" type="submit" name="submit" value="<?php echo $this->translate("speichern"); ?>" />
-				<input class="btn btn-default" type="button" name="abort" value="<?php echo $this->translate("abrechen"); ?>" />
+				<a class="btn btn-default" href="<?php echo $this->url('zfcuser') ?>"><?php echo $this->translate("abrechen"); ?></a>
 			<?php echo $this->form()->closeTag() ?>
 		</section>
 	</div>

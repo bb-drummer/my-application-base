@@ -11,25 +11,22 @@
 		?>
 		
 		<?php echo $this->form()->openTag($form) ?>
-		
-		    <dl class="zend_form">
-		        <?php echo $this->formElementErrors($form->get('identity')) ?>
-		
-		        <dt><?php echo $this->formLabel($form->get('identity')) ?></dt>
-		        <dd><?php echo $this->formInput($form->get('identity')) ?></dd>
-		
-		        <dt><?php echo $this->formLabel($form->get('credential')) ?></dt>
-		        <dd><?php echo $this->formInput($form->get('credential')) ?></dd>
-		
-		        <?php if ($this->redirect): ?>
-		            <input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
-		        <?php endif ?>
-		
-		        <dd><?php echo $this->formButton($form->get('submit')) ?></dd>
-		    </dl>
-		
+			<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('identity')))) ? ' has-error' : '' ?>">
+				<?php echo $this->formLabel($form->get('identity')); ?>
+				<?php echo $this->formInput($form->get('identity')->setAttributes(array('class' => 'form-control'))); ?>
+				<?php echo $this->formElementErrors($form->get('identity')); ?>
+			</div>
+			<div class="form-group<?php echo (!empty($this->formElementErrors($form->get('credential')))) ? ' has-error' : '' ?>">
+				<?php echo $this->formLabel($form->get('credential')); ?>
+				<?php echo $this->formInput($form->get('credential')->setAttributes(array('class' => 'form-control'))); ?>
+				<?php echo $this->formElementErrors($form->get('credential')); ?>
+			</div>
+			<hr />
+			<?php echo $this->formSubmit($form->get('submit')->setAttributes(array('class' =>'btn btn-default', 'value' => $this->translate('Login')))); ?>
+			<a class="btn btn-danger" href="<?php echo $this->url('home'); ?>"><?php echo $this->translate("abbrechen"); ?></a>
+	        <?php if ($this->redirect): ?><input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" /><?php endif ?>
 		<?php echo $this->form()->closeTag() ?>
-		
+		<br />
 		<?php if ($this->enableRegistration) : ?>
 		<p class="enabled_registration">
 			<?php echo $this->translate('Noch nicht registriert?'); ?>
