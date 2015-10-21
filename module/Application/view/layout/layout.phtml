@@ -16,31 +16,15 @@
         			'href' => $this->basePath($themePath . 'img/favicon.ico')
      			))
 				->prependStylesheet($this->basePath($themePath . 'css/app.css'))
-				->prependStylesheet($this->basePath($themePath . 'css/jquery.gridster.min.css'))
-                ->prependStylesheet($this->basePath($themePath . 'js/fancy-box/source/jquery.fancybox.css'))
 				->prependStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap-theme.min.css'))
 				->prependStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap.min.css'));
 
         	echo $this->headLink();
 		?>
-        <!-- Scripts -->
-        <?php 
-        	$this->headScript()
-				->prependFile($this->basePath($themePath . 'js/app.js'))
-				->prependFile($this->basePath($themePath . 'js/doubletaptogo.min.js'))
-				->prependFile($this->basePath($themePath . 'js/bootstrap/bootstrap.min.js'))
-                ->prependFile($this->basePath($themePath . 'js/fancy-box/source/jquery.fancybox.pack.js'))
-				->prependFile($this->basePath($themePath . 'js/jquery.gridster.min.js'))
-				->prependFile($this->basePath($themePath . 'js/jquery/jquery.min.js'))
-				->prependFile($this->basePath($themePath . 'js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
-				->prependFile($this->basePath($themePath . 'js/html5shiv.js'),   'text/javascript', array('conditional' => 'lt IE 9',));
-        	
-        	echo $this->headScript(); 
-        ?>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -50,46 +34,61 @@
                     <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath($themePath.'img/zf2-logo.png') ?>" alt="MyApplication" />&nbsp;<?php echo $this->translate('MyApplication') ?></a>
                 </div>
 				<div class="collapse navbar-collapse">
-					<nav>
-					    <?php
-					    	echo $this->navigation('navigation')
-					              ->menu()
-					              //->setMinDepth(0)
-					              //->setMaxDepth(0)
-					              ->setUlClass('nav navbar-nav');
-					    ?>
-				    </nav>
+					<?php
+						$oTwitterBootstrap = $this->bootstrap();
+						$oNavBar = $oTwitterBootstrap->Navbar('navigation')
+							->setUlClass('nav navbar-nav')
+							->setMinDepth(0)
+							->setMaxDepth(3)
+							->setIconPrefixClass('glyphicon glyphicon-')
+						;
+						echo $oNavBar->render();
+					?>
 				</div> 
             </div>
         </nav>
-        <div class="container">
+        <div class="container-fluid">
+			<?php 
+				$oBreadcrumbs = $oTwitterBootstrap->Breadcrumbs('navigation')
+					->setHeader( $this->translate('Du bist hier :') )
+					->setMinDepth(0)
+				;
+				echo $oBreadcrumbs->render(); 
+			?>
             <?php
-		    	echo $this->navigation('navigation')
-		              ->breadcrumbs()
-		              ->setMinDepth(0)
-		              ->setPartial('partial/breadcrumb.phtml');
-		    
 				echo $this->flashMessenger()->render('error', array('error alert flashmessages'));
 				echo $this->flashMessenger()->render('warning', array('warning alert flashmessages'));
 				echo $this->flashMessenger()->render('success', array('success alert flashmessages'));
 				echo $this->flashMessenger()->render('info', array('info alert flashmessages'));
-			
+			?>
+			<?php
 				echo $this->content;
 			?>
             <hr>
             <footer>
                 <p>
-                	<span class="copyright">&copy; <?php echo date('Y') ?> by <a href="//dragon-projects.net" target="_blank">[dragon-projects.net]</a> - <?php echo $this->translate('All rights reserved.') ?></span>
-                	<span class="poweredby">
+                	<span class="pull-left copyright">&copy; <?php echo date('Y') ?> by <a href="//dragon-projects.net" target="_blank">[dragon-projects.net]</a> - <?php echo $this->translate('All rights reserved.') ?></span>
+                	<span class="pull-right poweredby">
                 		Powered by &nbsp;
                 		<a href="http://php.net" target="_blank"><img src="<?php echo $this->basePath($themePath.'img/php-logo.gif') ?>" height="20" alt="php" /></a> &nbsp;
                 		<a href="http://framework.zend.com" target="_blank"><img src="<?php echo $this->basePath($themePath.'img/zf2-logo.png') ?>" height="16" alt="ZendFramework 2" /></a> &nbsp;
                 		<a href="http://www.w3.org/html/" target="_blank"><img src="<?php echo $this->basePath($themePath.'img/html5-badge-h-solo.png') ?>" height="16" alt="HTML5" /></a> &nbsp;
                 		<a href="http://jquery.com" target="_blank"><img src="<?php echo $this->basePath($themePath.'img/jquery-logo.png') ?>" height="16" alt="jQuery" /></a>
                 	</span>
-                </p>
+               </p>
             </footer>
         </div> <!-- /container -->
+        <!-- Scripts -->
+        <?php 
+        	$this->headScript()
+				->prependFile($this->basePath($themePath . 'js/app.js'))
+				->prependFile($this->basePath($themePath . 'js/bootstrap/bootstrap.min.js'))
+				->prependFile($this->basePath($themePath . 'js/jquery/jquery.min.js'))
+				->prependFile($this->basePath($themePath . 'js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+        	;
+        	
+        	echo $this->headScript(); 
+        ?>
         <?php echo $this->inlineScript() ?>
     </body>
 </html>
