@@ -1,5 +1,13 @@
 <?php
 return array(
+	'app' => array(
+		'title'				=> '[MyApplication]',
+		'short_title'		=> 'MyApp',
+		'favicon'			=> 'img/favicon.png',
+		'apple_touch_icon'	=> 'img/apple-touch-icon.png',
+		'logo'				=> 'img/zf2-logo.png',
+	),
+		
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'ZfcBase',
