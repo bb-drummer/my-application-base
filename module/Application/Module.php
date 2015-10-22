@@ -114,7 +114,7 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 					
 					return $navigation;
 				},
-				'bootstrap' => function(HelperPluginManager $pm) {
+				/*'bootstrap' => function(HelperPluginManager $pm) {
 					$this->setServiceLocator($pm->getServiceLocator());
 					$acl = $this->getAcl(); 
 					
@@ -130,8 +130,8 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 					}
 					
 					return $bootstrap;
-				},
-				'components' => function(HelperPluginManager $pm) {
+				},*/
+				/*'components' => function(HelperPluginManager $pm) {
 					$this->setServiceLocator($pm->getServiceLocator());
 					$acl = $this->getAcl(); 
 					
@@ -147,7 +147,7 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 					}
 					
 					return $components;
-				}
+				}*/
 			)
 		);
 	}
