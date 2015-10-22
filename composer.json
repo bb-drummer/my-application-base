@@ -1,6 +1,6 @@
 {
-  "name" : "BB/ZF2BaseApp",
-  "description" : "My Web-Application",
+  "name" : "my-application/application-base",
+  "description" : "My Web-Application (http://my-application.net)",
   "version" : "1.0.0.1",
   "require" : {
     "php" : ">=5.3.3",
@@ -20,7 +20,14 @@
     "themes/zf2-basic" : "dev-master",
     "themes/zf2-adminlte" : "dev-master",
     "themes/zf2-remark" : "dev-master",
-    "themes/zf2-taurus" : "dev-master"
+    "themes/zf2-taurus" : "dev-master",
+    "my-application/module-admin" : "dev-master",
+    "my-application/module-twbs-api" : "dev-master"
+  },
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "master"
+    }
   },
   "repositories" : [ {
     "type" : "git",
@@ -34,6 +41,12 @@
   }, {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-taurus.git"
+  }, {
+    "type" : "git",
+    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-admin.git"
+  }, {
+    "type" : "git",
+    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-twbs-api.git"
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],

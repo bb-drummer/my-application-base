@@ -7,6 +7,7 @@ return array(
         'Application',
     	'OrgHeiglPiwik',
     	'Admin',
+    	'TwitterBootstrapAPI',
         'ZeTheme',
     ),
 
