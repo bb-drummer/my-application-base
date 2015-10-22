@@ -24,7 +24,7 @@ use Zend\Permissions\Acl\Resource\GenericResource;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 
-class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareInterface
+class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInterface
 {
 	protected $Acl;
 	protected $AclTable;
@@ -181,6 +181,9 @@ class Module // implements AutoloaderProviderInterface //, ServiceLocatorAwareIn
 	{
 		return array(
 			'factories' => array(
+				'Application\Acl' =>  function($sm) {
+					return $this->getAcl();
+				},
 			),
 		);
 	}
