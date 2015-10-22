@@ -10,6 +10,8 @@
     "zendexperts/ze-theme" : "dev-master",
     "dudapiotr/zftable" : ">=3.1",
     "org_heigl/piwik" : ">=1.0",
+    "my-application/module-admin" : "dev-master",
+    "my-application/module-twbs-api" : "dev-master",
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "components/foundation" : ">=5.5.2",
@@ -20,9 +22,7 @@
     "themes/zf2-basic" : "dev-master",
     "themes/zf2-adminlte" : "dev-master",
     "themes/zf2-remark" : "dev-master",
-    "themes/zf2-taurus" : "dev-master",
-    "my-application/module-admin" : "dev-master",
-    "my-application/module-twbs-api" : "dev-master"
+    "themes/zf2-taurus" : "dev-master"
   },
   "extra" : {
     "branch-alias" : {
