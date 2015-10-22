@@ -181,7 +181,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	{
 		return array(
 			'factories' => array(
-				'Application\Acl' =>  function($sm) {
+				'ApplicationAcl' =>  function($sm) {
 					return $this->getAcl();
 				},
 			),
@@ -195,7 +195,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 		$sm = $this->getServiceLocator();
 		$acl = new Acl();
 		$oAcls = $sm->get('\Admin\Model\AclTable');
-		$oRoles = $this->getAclroleTable();
+		$oRoles =  $sm->get('\Admin\Model\AclroleTable'); //$this->getAclroleTable();
 		$aRoles = $oRoles->fetchAll()->toArray();
 		foreach ($aRoles as $key => $role) {
 			$acl->addRole(new GenericRole($role['roleslug']));
