@@ -9,7 +9,7 @@ return array(
 				'pages'			=> array(
 					array(
 						'label'			=> 'Test-Page',
-						'icon'			=> 'warning-sign',
+						'icon'			=> 'exclamation-triangle',
 						'route'			=> 'application/default',
 						'controller' 	=> 'index',
 						'action' 		=> 'test',
@@ -41,7 +41,7 @@ return array(
 				'pages'			=> array(
 					array(
 						'label'			=> 'Login',
-						'icon'			=> 'log-in',
+						'icon'			=> 'power-off',
 						'route'			=> 'zfcuser/login',
 						'resource'		=> 'mvc:nouser',
 					),
@@ -65,7 +65,7 @@ return array(
 					),
 					array(
 						'label'			=> 'Logout',
-						'icon'			=> 'log-out',
+						'icon'			=> 'power-off',
 						'route'			=> 'zfcuser/logout',
 						'resource'		=> 'mvc:user',
 					),
@@ -84,7 +84,7 @@ return array(
 			),
 			array(
 				'label'			=> 'Admin',
-				'icon'			=> 'cog',
+				'icon'			=> 'cogs',
 				'route'			=> 'admin',
 				'resource'		=> 'mvc:admin',
 				'pages'			=> array(
@@ -226,14 +226,14 @@ return array(
 					),
 					array(
 						'label'			=> 'System',
-						'icon'			=> 'credit-card',
+						'icon'			=> 'desktop',
 						'route'			=> 'system',
 						'action'	    => 'index',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(
 								'label'			=> 'Systeminfo',
-								'icon'			=> 'info-sign',
+								'icon'			=> 'info-circle',
 								'route'			=> 'system',
 								'action' 		=> 'info',
 								'resource'		=> 'mvc:admin',
@@ -241,7 +241,7 @@ return array(
 							),
 							array(
 								'label'			=> 'Backup',
-								'icon'			=> 'duplicate',
+								'icon'			=> 'copy',
 								'route'			=> 'system',
 								'action' 		=> 'backup',
 								'resource'		=> 'mvc:admin',
@@ -257,12 +257,14 @@ return array(
 								'pages' => array(
 									array(
 										'label' 		=> 'Installation',
+										'icon'			=> 'magic',
 										'route' 		=> 'setup',
 										//'resource'		=> 'mvc:admin',
 										'action' 		=> 'install',
 									),
 									array(
 										'label' 		=> 'Update',
+										'icon'			=> 'refresh',
 										'route' 		=> 'setup',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'update',
@@ -275,14 +277,14 @@ return array(
 			),
 			array(
 				'label'			=> 'Hilfe',
-				'icon'			=> 'question-sign',
+				'icon'			=> 'question-circle',
 				'route'			=> 'application/default',
 				'controller'	=> 'index',
 				'action' 		=> 'notimplementedyet',
 				'pages'			=> array(
 					array(
 						'label'			=> 'Hilfe',
-						'icon'			=> 'question-sign',
+						'icon'			=> 'question-circle',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'help',
@@ -296,7 +298,7 @@ return array(
 					),
 					array(
 						'label' 		=> 'Über MyApplication',
-						'icon'			=> 'info-sign',
+						'icon'			=> 'info-circle',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'about',
