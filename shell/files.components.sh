@@ -36,6 +36,10 @@ cp -r vendor/twitter/bootstrap/dist/js/bootstrap.min.js public/assets/themes/zf2
 cp -r vendor/twitter/bootstrap/dist/css public/assets/themes/zf2-basic/css/bootstrap/
 cp -r vendor/twitter/bootstrap/dist/fonts public/assets/themes/zf2-basic/css/bootstrap/
 
+mkdir -p public/assets/themes/zf2-basic/css/fontawesome
+cp -r vendor/fontawesome/font-awesome/css public/assets/themes/zf2-basic/css/fontawesome/
+cp -r vendor/fontawesome/font-awesome/fonts public/assets/themes/zf2-basic/css/fontawesome/
+
 mkdir -p public/assets/themes/zf2-basic/js/fancy-box
 cp -r vendor/newerton/fancy-box/source public/assets/themes/zf2-basic/js/fancy-box
 
