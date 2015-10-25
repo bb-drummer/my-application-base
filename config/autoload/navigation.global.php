@@ -3,12 +3,12 @@ return array(
 	'navigation' => array(
 		'default' => array(
 			array(
-				'label' => 'Dashboard',
+				'label' => 'home',
 				'icon'	=> 'home',
 				'route' => 'home',
 				'pages'			=> array(
 					array(
-						'label'			=> 'Test-Page',
+						'label'			=> 'test page',
 						'icon'			=> 'exclamation-triangle',
 						'route'			=> 'application/default',
 						'controller' 	=> 'index',
@@ -34,48 +34,48 @@ return array(
 				),
 			),*/
 			array(
-				'label' => 'Account',
+				'label' => 'account',
 				'icon'	=> 'user',
 				'route' => 'zfcuser',
 				'badge' => array('type' => 'warning', 'value' => '!!!', 'title' => 'Remember to change your password after registration!'),
 				'pages'			=> array(
 					array(
-						'label'			=> 'Login',
+						'label'			=> 'login',
 						'icon'			=> 'power-off',
 						'route'			=> 'zfcuser/login',
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
-						'label'			=> 'Registrierung',
+						'label'			=> 'register',
 						'icon'			=> 'link',
 						'route'			=> 'zfcuser/register',
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
-						'label'			=> 'E-Mail ändern',
+						'label'			=> 'change email',
 						'icon'			=> 'envelope',
 						'route'			=> 'zfcuser/changeemail',
 						'resource'		=> 'mvc:user',
 					),
 					array(
-						'label'			=> 'Passwort ändern',
+						'label'			=> 'change password',
 						'icon'			=> 'lock',
 						'route'			=> 'zfcuser/changepassword',
 						'resource'		=> 'mvc:user',
 					),
 					array(
-						'label'			=> 'Logout',
+						'label'			=> 'logout',
 						'icon'			=> 'power-off',
 						'route'			=> 'zfcuser/logout',
 						'resource'		=> 'mvc:user',
 					),
 					array(
-						'label'			=> 'Benutzer-Bestätigung',
+						'label'			=> 'user confirmation',
 						'route'			=> 'userconfirmation',
 						'visible'		=> false,
 					),
 					array(
-						'label'			=> 'Benutzer-Aktivierung',
+						'label'			=> 'user activation',
 						'route'			=> 'useractivation',
 						'resource'		=> 'mvc:admin',
 						'visible'		=> false,
@@ -83,20 +83,20 @@ return array(
 				),
 			),
 			array(
-				'label'			=> 'Admin',
+				'label'			=> 'admin',
 				'icon'			=> 'cogs',
 				'route'			=> 'admin',
 				'resource'		=> 'mvc:admin',
 				'pages'			=> array(
 					array(
-						'label'			=> 'Benutzer',
+						'label'			=> 'users',
 						'icon'			=> 'user',
 						'route'			=> 'admin/default',
 						'controller'	=> 'users',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(
-								'label'			=> 'Neu',
+								'label'			=> 'add',
 								'route'			=> 'admin/default',
 								'controller'	=> 'users',
 								'action' 		=> 'add',
@@ -104,7 +104,7 @@ return array(
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Bearbeiten',
+								'label'			=> 'edit',
 								'route'			=> 'admin/default',
 								'controller'	=> 'users',
 								'action' 		=> 'edit',
@@ -112,7 +112,7 @@ return array(
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Entfernen',
+								'label'			=> 'delete',
 								'route'			=> 'admin/default',
 								'controller'	=> 'users',
 								'action' 		=> 'delete',
@@ -122,7 +122,7 @@ return array(
 						),
 					),
 					array(
-						'label' 		=> 'Rechte',
+						'label' 		=> 'permissions',
 						'icon'			=> 'lock',
 						'route'			=> 'admin/acledit',
 						'action' 		=> 'index',
@@ -137,7 +137,7 @@ return array(
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Rollen',
+								'label'			=> 'roles',
 								'icon'			=> 'user',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'roles',
@@ -145,19 +145,19 @@ return array(
 								'visible'		=> true,
 								'pages' => array(
 									array(
-										'label' 		=> 'Rolle hinzufügen',
+										'label' 		=> 'add',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'addrole',
 									),
 									array(
-										'label' 		=> 'Rolle ändern',
+										'label' 		=> 'edit',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'editrole',
 									),
 									array(
-										'label' 		=> 'Rolle entfernen',
+										'label' 		=> 'delete',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'deleterole',
@@ -165,7 +165,7 @@ return array(
 								),
 							),
 							array(
-								'label'			=> 'Resourcen',
+								'label'			=> 'resources',
 								'icon'			=> 'list-alt',
 								'route'			=> 'admin/acledit',
 								'action' 		=> 'resources',
@@ -173,19 +173,19 @@ return array(
 								'visible'		=> true,
 								'pages' => array(
 									array(
-										'label' 		=> 'Resource hinzufügen',
+										'label' 		=> 'add',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'addresource',
 									),
 									array(
-										'label' 		=> 'Resource ändern',
+										'label' 		=> 'edit',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'editresource',
 									),
 									array(
-										'label' 		=> 'Resource entfernen',
+										'label' 		=> 'delete',
 										'route' 		=> 'admin/acledit',
 										'resource'		=> 'mvc:admin',
 										'action' 		=> 'deleteresource',
@@ -195,28 +195,28 @@ return array(
 						),
 					),
 					array(
-						'label' 		=> 'Einstellungen',
+						'label' 		=> 'settings',
 						'icon'			=> 'cog',
 						'route'			=> 'admin/settingsedit',
 						'action' 		=> 'index',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(
-								'label'			=> 'Neu',
+								'label'			=> 'add',
 								'route'			=> 'admin/settingsedit',
 								'action' 		=> 'add',
 								'resource'		=> 'mvc:admin',
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Bearbeiten',
+								'label'			=> 'edit',
 								'route'			=> 'admin/settingsedit',
 								'action' 		=> 'edit',
 								'resource'		=> 'mvc:admin',
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Entfernen',
+								'label'			=> 'delete',
 								'route'			=> 'admin/settingsedit',
 								'action' 		=> 'delete',
 								'resource'		=> 'mvc:admin',
@@ -225,14 +225,14 @@ return array(
 						),
 					),
 					array(
-						'label'			=> 'System',
+						'label'			=> 'system',
 						'icon'			=> 'desktop',
 						'route'			=> 'system',
 						'action'	    => 'index',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(
-								'label'			=> 'Systeminfo',
+								'label'			=> 'info',
 								'icon'			=> 'info-circle',
 								'route'			=> 'system',
 								'action' 		=> 'info',
@@ -240,7 +240,7 @@ return array(
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Backup',
+								'label'			=> 'backup',
 								'icon'			=> 'copy',
 								'route'			=> 'system',
 								'action' 		=> 'backup',
@@ -248,7 +248,7 @@ return array(
 								'visible'		=> true,
 							),
 							array(
-								'label'			=> 'Setup',
+								'label'			=> 'setup',
 								'icon'			=> 'wrench',
 								'route'			=> 'setup',
 								'action' 		=> 'index',
@@ -256,14 +256,14 @@ return array(
 								'visible'		=> true,
 								'pages' => array(
 									array(
-										'label' 		=> 'Installation',
+										'label' 		=> 'install',
 										'icon'			=> 'magic',
 										'route' 		=> 'setup',
 										//'resource'		=> 'mvc:admin',
 										'action' 		=> 'install',
 									),
 									array(
-										'label' 		=> 'Update',
+										'label' 		=> 'update',
 										'icon'			=> 'refresh',
 										'route' 		=> 'setup',
 										'resource'		=> 'mvc:admin',
@@ -276,28 +276,28 @@ return array(
 				),
 			),
 			array(
-				'label'			=> 'Hilfe',
+				'label'			=> 'help',
 				'icon'			=> 'question-circle',
 				'route'			=> 'application/default',
 				'controller'	=> 'index',
 				'action' 		=> 'notimplementedyet',
 				'pages'			=> array(
 					array(
-						'label'			=> 'Hilfe',
+						'label'			=> 'help',
 						'icon'			=> 'question-circle',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'help',
 					),
 					array(
-						'label'			=> 'Online-Support',
+						'label'			=> 'online support',
 						'icon'			=> 'envelope',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'support',
 					),
 					array(
-						'label' 		=> 'Über MyApplication',
+						'label' 		=> 'about MyApplication',
 						'icon'			=> 'info-circle',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
