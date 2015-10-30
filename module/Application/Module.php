@@ -32,7 +32,32 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	protected $AclresourceTable;
 	protected $serviceLocator;
 
-	public function onBootstrap(MvcEvent $e)
+	/*public function init(ModuleManager $mm)
+    {
+        $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__,
+        'dispatch', function($e) {
+            $e->getTarget()->layout('layout/layout');
+        });
+    }  */  
+    
+    public function init(ModuleManager $mm)
+    {
+        $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
+        	$oController = $e->getTarget();
+        	$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+        	if ( $oController->getRequest()->isXmlHttpRequest() ) {
+        		if ( strpos($sAccept, 'text/html') !== false ) {
+        			$oController->layout('layout/ajax');
+        		} else {
+            		$oController->layout('layout/json');
+        		}
+        	} else {
+            	$oController->layout('layout/layout');
+        	}
+        });
+    }    
+    
+    public function onBootstrap(MvcEvent $e)
 	{
 		$eventManager		= $e->getApplication()->getEventManager();
 		$moduleRouteListener = new ModuleRouteListener();

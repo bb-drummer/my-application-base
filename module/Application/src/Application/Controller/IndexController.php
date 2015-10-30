@@ -40,4 +40,9 @@ class IndexController extends BaseActionController
     {
         return new ViewModel();
     }
+    
+    public function xhrtestAction()
+    {
+        return new ViewModel();
+    }
 }
