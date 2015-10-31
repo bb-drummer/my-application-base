@@ -93,19 +93,19 @@ return array(
 		),
 		'factories' => array(
 			'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-            //'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+            'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
 		),
 		'aliases' => array(
-			'translator' => 'MvcTranslator',
+			//'translator' => 'MvcTranslator',
 		),
 	),
 	'translator' => array(
 		'locale' => 'en_US',
 		'translation_file_patterns' => array(
 			array(
-				'type'	 => 'gettext',
-				'base_dir' => __DIR__ . '/../language',
-				'pattern'  => '%s.mo',
+				'type'		=> 'gettext',
+				'base_dir'	=> __DIR__ . '/../language',
+				'pattern'	=> '%s.mo',
 			),
 		),
 	),
