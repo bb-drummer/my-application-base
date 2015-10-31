@@ -2,9 +2,9 @@
 /**
  * Zend Framework (http://framework.zend.com/)
  *
- * @link	  http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
+ * @link		http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
  * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
+ * @license	http://framework.zend.com/license/new-bsd New BSD License
  */
 
 namespace Application;
@@ -33,32 +33,24 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	protected $AclresourceTable;
 	protected $serviceLocator;
 
-	/*public function init(ModuleManager $mm)
-    {
-        $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__,
-        'dispatch', function($e) {
-            $e->getTarget()->layout('layout/layout');
-        });
-    }  */  
-    
-    public function init(ModuleManager $mm)
-    {
-        $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
-        	$oController = $e->getTarget();
-        	$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
-        	if ( $oController->getRequest()->isXmlHttpRequest() ) {
-        		if ( strpos($sAccept, 'text/html') !== false ) {
-        			$oController->layout('layout/ajax');
-        		} else {
-            		$oController->layout('layout/json');
-        		}
-        	} else {
-            	$oController->layout('layout/layout');
-        	}
-        });
-    }    
-    
-    public function onBootstrap(MvcEvent $e)
+	public function init(ModuleManager $mm)
+	{
+		$mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
+			$oController = $e->getTarget();
+			$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+			if ( $oController->getRequest()->isXmlHttpRequest() ) {
+				if ( strpos($sAccept, 'text/html') !== false ) {
+					$oController->layout('layout/ajax');
+				} else {
+					$oController->layout('layout/json');
+				}
+			} else {
+				$oController->layout('layout/layout');
+			}
+		});
+	}	
+	
+	public function onBootstrap(MvcEvent $e)
 	{
 		$eventManager		= $e->getApplication()->getEventManager();
 		$moduleRouteListener = new ModuleRouteListener();
@@ -77,8 +69,8 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 
 	public function getApplicationConfig()
 	{
-		$applicationGlobalConfigFile  = __DIR__ . '/../../config/application.config.php';
-		$genericGlobalConfigFile  = __DIR__ . '/../../config/autoload/global.php';
+		$applicationGlobalConfigFile	= __DIR__ . '/../../config/application.config.php';
+		$genericGlobalConfigFile	= __DIR__ . '/../../config/autoload/global.php';
 		
 		$localConfigs = array();
 		$files = scandir(__DIR__ . '/../../config/autoload/');
@@ -99,7 +91,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	public function getConfig()
 	{
 		$moduleGlobalConfigFile = __DIR__ . '/config/module.config.php';
-		$moduleLocalConfigFile  = __DIR__ . '/../../config/autoload/vhosts.local.php';
+		$moduleLocalConfigFile	= __DIR__ . '/../../config/autoload/vhosts.local.php';
 		
 		return array_merge_recursive(
 			( is_readable($moduleGlobalConfigFile) ? include $moduleGlobalConfigFile : array() ),
@@ -140,40 +132,6 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 					
 					return $navigation;
 				},
-				/*'bootstrap' => function(HelperPluginManager $pm) {
-					$this->setServiceLocator($pm->getServiceLocator());
-					$acl = $this->getAcl(); 
-					
-					$bootstrap = $pm->get('Application\View\Helper\Bootstrap');
-					$bootstrap->setAcl($acl);
-					
-					$oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
-					if ( $oAuth->hasIdentity() ) {
-						$oUser = $oAuth->getIdentity();
-						$bootstrap->setRole( $oUser->getAclrole() );
-					} else {
-						$bootstrap->setRole('public');
-					}
-					
-					return $bootstrap;
-				},*/
-				/*'components' => function(HelperPluginManager $pm) {
-					$this->setServiceLocator($pm->getServiceLocator());
-					$acl = $this->getAcl(); 
-					
-					$components = $pm->get('Application\View\Helper\Components');
-					$components->setAcl($acl);
-					
-					$oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
-					if ( $oAuth->hasIdentity() ) {
-						$oUser = $oAuth->getIdentity();
-						$components->setRole( $oUser->getAclrole() );
-					} else {
-						$components->setRole('public');
-					}
-					
-					return $components;
-				}*/
 			)
 		);
 	}
@@ -181,7 +139,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	/**
 	 * Set serviceManager instance
 	 *
-	 * @param  ServiceLocatorInterface $serviceLocator
+	 * @param	ServiceLocatorInterface $serviceLocator
 	 * @return void
 	 */
 	public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
@@ -207,7 +165,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 	{
 		return array(
 			'factories' => array(
-				'ApplicationAcl' =>  function($sm) {
+				'ApplicationAcl' =>	function($sm) {
 					return $this->getAcl();
 				},
 			),
@@ -221,7 +179,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 		$sm = $this->getServiceLocator();
 		$acl = new Acl();
 		$oAcls = $sm->get('\Admin\Model\AclTable');
-		$oRoles =  $sm->get('\Admin\Model\AclroleTable'); //$this->getAclroleTable();
+		$oRoles =	$sm->get('\Admin\Model\AclroleTable'); //$this->getAclroleTable();
 		$aRoles = $oRoles->fetchAll()->toArray();
 		foreach ($aRoles as $key => $role) {
 			$acl->addRole(new GenericRole($role['roleslug']));
