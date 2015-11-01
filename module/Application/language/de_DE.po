@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-01 01:32+0100\n"
-"PO-Revision-Date: 2015-11-01 01:39+0100\n"
+"POT-Creation-Date: 2015-11-01 18:02+0100\n"
+"PO-Revision-Date: 2015-11-01 18:05+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -17,6 +17,146 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: *.css\n"
+
+#: module/Application/language/navigation.msgIds.php:6
+msgid "home"
+msgstr "Startseite"
+
+#: module/Application/language/navigation.msgIds.php:7
+msgid "details"
+msgstr ""
+
+#: module/Application/language/navigation.msgIds.php:8
+msgid "add"
+msgstr "hinzufügen"
+
+#: module/Application/language/navigation.msgIds.php:9
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:27
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:27
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:29
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:27
+msgid "edit"
+msgstr "ändern"
+
+#: module/Application/language/navigation.msgIds.php:10
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:24
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:29
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:29
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:23
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:31
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:22
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:29
+msgid "delete"
+msgstr "entfernen"
+
+#: module/Application/language/navigation.msgIds.php:11
+msgid "overview"
+msgstr "Übersicht"
+
+#: module/Application/language/navigation.msgIds.php:12
+msgid "account"
+msgstr "Profil"
+
+#: module/Application/language/navigation.msgIds.php:13
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
+msgid "change email"
+msgstr "E-Mail-Adresse ändern"
+
+#: module/Application/language/navigation.msgIds.php:14
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
+msgid "change password"
+msgstr "Passwort ändern"
+
+#: module/Application/language/navigation.msgIds.php:15
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:56
+msgid "register"
+msgstr "registrieren"
+
+#: module/Application/language/navigation.msgIds.php:16
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
+msgid "login"
+msgstr "anmelden"
+
+#: module/Application/language/navigation.msgIds.php:17
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
+msgid "logout"
+msgstr "abmelden"
+
+#: module/Application/language/navigation.msgIds.php:18
+msgid "user confirmation"
+msgstr "Bestätigung"
+
+#: module/Application/language/navigation.msgIds.php:19
+msgid "user activation"
+msgstr "Aktivierung"
+
+#: module/Application/language/navigation.msgIds.php:20
+msgid "admin"
+msgstr "Administration"
+
+#: module/Application/language/navigation.msgIds.php:21
+msgid "user"
+msgstr "Benutzer"
+
+#: module/Application/language/navigation.msgIds.php:22
+msgid "permissions"
+msgstr "Berechtigungen"
+
+#: module/Application/language/navigation.msgIds.php:23
+msgid "ACL"
+msgstr "ACL"
+
+#: module/Application/language/navigation.msgIds.php:24
+msgid "roles"
+msgstr "Rollen"
+
+#: module/Application/language/navigation.msgIds.php:25
+msgid "resources"
+msgstr "Ressourcen"
+
+#: module/Application/language/navigation.msgIds.php:26
+msgid "settings"
+msgstr "Einstellungen"
+
+#: module/Application/language/navigation.msgIds.php:27
+msgid "system"
+msgstr "System"
+
+#: module/Application/language/navigation.msgIds.php:28
+msgid "info"
+msgstr "Info"
+
+#: module/Application/language/navigation.msgIds.php:29
+msgid "backup"
+msgstr "Backup"
+
+#: module/Application/language/navigation.msgIds.php:30
+msgid "setup"
+msgstr "Einrichtung"
+
+#: module/Application/language/navigation.msgIds.php:31
+msgid "install"
+msgstr "Installation"
+
+#: module/Application/language/navigation.msgIds.php:32
+msgid "update"
+msgstr "Update"
+
+#: module/Application/language/navigation.msgIds.php:33
+msgid "help"
+msgstr "Hilfe"
+
+#: module/Application/language/navigation.msgIds.php:34
+msgid "support"
+msgstr "Support"
+
+#: module/Application/language/navigation.msgIds.php:35
+msgid "about"
+msgstr "Über…"
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:158
@@ -977,18 +1117,6 @@ msgstr "Ressource entfernen"
 msgid "Do you really want to delete this resource?"
 msgstr "Möchten Sie wirklich diese Ressource löschen?"
 
-#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:24
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:29
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:29
-#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:23
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:31
-#: vendor/my-application/module-admin/view/admin/users/delete.phtml:22
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:29
-msgid "delete"
-msgstr "entfernen"
-
 #: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:4
 msgid "delete role"
 msgstr "Rolle entfernen"
@@ -1027,14 +1155,6 @@ msgstr "Ressource"
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:8
 msgid "status"
 msgstr "Status"
-
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:27
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:27
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:29
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:27
-msgid "edit"
-msgstr "ändern"
 
 #: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:1
 msgid "matrix view"
@@ -1143,10 +1263,6 @@ msgstr "Benutzername"
 msgid "email"
 msgstr "E­‐Mail"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
-msgid "change email"
-msgstr "E-Mail-Adresse ändern"
-
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:7
 #, php-format
 msgid "change email for %s"
@@ -1165,10 +1281,6 @@ msgstr ""
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:44
 msgid "save"
 msgstr "speichern"
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
-msgid "change password"
-msgstr "Passwort ändern"
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:7
 #, php-format
@@ -1193,15 +1305,6 @@ msgstr "Benutzerprofil"
 msgid "Hallo"
 msgstr "Hallo"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
-msgid "logout"
-msgstr "abmelden"
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
-msgid "login"
-msgstr "anmelden"
-
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:32
 msgid "do not have an account?"
 msgstr "Sie haben noch keinen Zugang?"
@@ -1220,10 +1323,6 @@ msgid "registration is currently not available, please try again later"
 msgstr ""
 "Die Benutzerregistrierung ist im Moment leider nicht verfügbar. Bitte "
 "probieren sie es später erneut."
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:56
-msgid "register"
-msgstr "registrieren"
 
 #: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:1
 #, php-format

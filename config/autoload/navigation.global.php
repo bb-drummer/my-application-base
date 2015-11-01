@@ -290,14 +290,14 @@ return array(
 						'action' 		=> 'help',
 					),
 					array(
-						'label'			=> 'online support',
+						'label'			=> 'support',
 						'icon'			=> 'envelope',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
 						'action' 		=> 'support',
 					),
 					array(
-						'label' 		=> 'about MyApplication',
+						'label' 		=> 'about',
 						'icon'			=> 'info-circle',
 						'route'			=> 'application/default',
 						'controller'	=> 'index',
