@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-01 18:02+0100\n"
-"PO-Revision-Date: 2015-11-01 18:05+0100\n"
+"PO-Revision-Date: 2015-11-01 18:16+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -24,7 +24,7 @@ msgstr "Startseite"
 
 #: module/Application/language/navigation.msgIds.php:7
 msgid "details"
-msgstr ""
+msgstr "Details"
 
 #: module/Application/language/navigation.msgIds.php:8
 msgid "add"
@@ -732,7 +732,7 @@ msgstr "Hier kommt Ihre Anleitung…"
 #: module/Application/view/application/index/xhrtest.phtml:7
 #: module/Application/view/application/index/xhrtest.phtml:8
 msgid "AJAX test"
-msgstr ""
+msgstr "AJAX test"
 
 #: module/Application/view/application/setup/index.phtml:3
 #: themes/zf2-basic/view/application/setup/index.phtml:3
@@ -763,21 +763,21 @@ msgstr ""
 #: vendor/themes/zf2-basic/view/application/setup/index.phtml:8
 #, php-format
 msgid "Backup &nbsp; %s[==&gt;&gt;]%s"
-msgstr ""
+msgstr "Backup &nbsp; %s[==&gt;&gt;]%s"
 
 #: module/Application/view/application/setup/index.phtml:10
 #: themes/zf2-basic/view/application/setup/index.phtml:10
 #: vendor/themes/zf2-basic/view/application/setup/index.phtml:10
 #, php-format
 msgid "Installation &nbsp; %s[==&gt;&gt;]%s"
-msgstr ""
+msgstr "Installation &nbsp; %s[==&gt;&gt;]%s"
 
 #: module/Application/view/application/setup/index.phtml:12
 #: themes/zf2-basic/view/application/setup/index.phtml:12
 #: vendor/themes/zf2-basic/view/application/setup/index.phtml:12
 #, php-format
 msgid "Update &nbsp; %s[==&gt;&gt;]%s"
-msgstr ""
+msgstr "Update &nbsp; %s[==&gt;&gt;]%s"
 
 #: module/Application/view/application/setup/install.phtml:3
 #: themes/zf2-basic/view/application/setup/install.phtml:3
@@ -830,21 +830,21 @@ msgstr "%s[MyApplication]%s System - Optionen"
 #: vendor/themes/zf2-basic/view/application/system/index.phtml:5
 #, php-format
 msgid "System-Info &nbsp; %s==&gt;&gt;%s"
-msgstr ""
+msgstr "System-Info &nbsp; %s==&gt;&gt;%s"
 
 #: module/Application/view/application/system/index.phtml:7
 #: themes/zf2-basic/view/application/system/index.phtml:7
 #: vendor/themes/zf2-basic/view/application/system/index.phtml:7
 #, php-format
 msgid "Backup &nbsp; %s==&gt;&gt;%s"
-msgstr ""
+msgstr "Backup &nbsp; %s==&gt;&gt;%s"
 
 #: module/Application/view/application/system/index.phtml:10
 #: themes/zf2-basic/view/application/system/index.phtml:10
 #: vendor/themes/zf2-basic/view/application/system/index.phtml:10
 #, php-format
 msgid "Setup-Routines &nbsp; %s==&gt;&gt;%s"
-msgstr ""
+msgstr "Setup-Routines &nbsp; %s==&gt;&gt;%s"
 
 #: module/Application/view/application/system/info.phtml:3
 #: themes/zf2-basic/view/application/system/info.phtml:3
