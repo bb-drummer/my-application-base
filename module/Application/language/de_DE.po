@@ -2,9 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 23:45-0700\n"
-"PO-Revision-Date: 2015-10-31 22:22+0100\n"
-"Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-projets.net>\n"
+"POT-Creation-Date: 2015-11-01 01:32+0100\n"
+"PO-Revision-Date: 2015-11-01 01:39+0100\n"
+"Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
+"projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -14,138 +15,1284 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *themes*\n"
-"X-Poedit-SearchPathExcluded-1: *assets*\n"
-"X-Poedit-SearchPathExcluded-2: *.js\n"
-"X-Poedit-SearchPathExcluded-3: *.css\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: *.css\n"
 
-#: ../view/layout/layout.phtml:6 ../view/layout/layout.phtml:33
-msgid "Skeleton Application"
-msgstr "Basis-Anwendung"
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:158
+msgid "permission has been saved"
+msgstr "Die Berechtigung wurde gespeichert."
 
-#: ../view/layout/layout.phtml:36
-msgid "Home"
-msgstr "Startseite"
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:125
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:182
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:253
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:297
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:370
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:415
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:71
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:105
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:76
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:119
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:155
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:212
+msgid "missing parameters"
+msgstr "fehlende Parameter"
 
-#: ../view/layout/layout.phtml:50
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:193
+msgid "permission has been deleted"
+msgstr "Die Berechtigung wurde gelöscht."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:230
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:272
+msgid "role has been saved"
+msgstr "Die Rolle wurde gespeichert"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:308
+msgid "role has been deleted"
+msgstr "Die Rolle wurde gelöscht."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:347
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:389
+msgid "resource has been saved"
+msgstr "Die Ressource wurde gespeichert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:426
+msgid "resource has been deleted"
+msgstr "Die Ressource wurde gelöscht."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:53
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:90
+msgid "setting has been saved"
+msgstr "Die Einstellung wurde gespeichert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:116
+msgid "setting has been deleted"
+msgstr "Die Einstellung wurde gelöscht."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:58
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:104
+msgid "user has been saved"
+msgstr "Der Benutzer wurde gespeichert"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:130
+msgid "user has been deleted"
+msgstr "Der Benutzer wurde gelöscht."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:165
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:222
+msgid "user could not be found"
+msgstr "Benutzer konnte nicht gefunden werden"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:169
+msgid "confirmation token is invalid"
+msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:183
+#: vendor/my-application/module-admin/view/admin/users/confirm.phtml:6
+msgid "user's registration has been confirmed"
+msgstr "Die Benutzerregistrierung ist bestätigt worden."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:186
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:119
+msgid "admin has been notified for activation"
+msgstr "Der Administrator wurde zur Aktivierung informiert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:189
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:240
+#: vendor/my-application/module-admin/view/admin/users/activate.phtml:6
+msgid "user has been activated"
+msgstr "Das Benutzerkonto wurde aktiviert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:226
+msgid "activation token is invalid"
+msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:52
+msgid "login succeeded"
+msgstr "Anmeldung erfolgreich"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:114
+msgid "registration succeeded"
+msgstr "Registrierung erfolgreich"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:116
+msgid "you have been sent an email with further instructions to follow"
+msgstr "Sie erhalten in Kürze eine e-Mail mit weiteren Anweisungen."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:133
+msgid "registration and activation succeeded"
+msgstr "Registrierung und Aktivierung erfolgreich"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:6
+msgid "Username"
+msgstr "Benutzername"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:7
+msgid "Email"
+msgstr "E­‐Mail"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:8
+msgid "New Email"
+msgstr "Neue E-Mail"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:9
+msgid "Verify New Email"
+msgstr "E-Mail bestätigen"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:10
+msgid "Display Name"
+msgstr "Anzeigenname"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:11
+msgid "Password"
+msgstr "Passwort"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:12
+msgid "Password Verify"
+msgstr "Passwort-Bestätigung"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:13
+msgid "Current Password"
+msgstr "aktuelles Passwort"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:14
+msgid "Verify New Password"
+msgstr "Neues Passwort bestätigen"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:15
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:16
+msgid "Please type the following text"
+msgstr "Bitte geben Sie den folgenden Text ein:"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:17
+msgid "Submit"
+msgstr "Absenden"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:18
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:1
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:19
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/register.phtml:1
+msgid "Register"
+msgstr "Registrieren"
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:20
+msgid "No record matching the input was found"
+msgstr "Es wurde kein passender Eintrag gefunden."
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:21
+msgid "A record matching the input was found"
+msgstr "Es wurde ein passender Eintrag gefunden."
+
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:22
+msgid "Authentication failed. Please try again."
+msgstr "Authentifizierung fehlgeschlagen. Bitte versuche es erneut."
+
+#: module/Application/view/application/index/about.phtml:3
+#: themes/adminlte/view/application/index/about.phtml:3
+#: themes/zf2-basic/view/application/index/about.phtml:3
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:3
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:3
+#, php-format
+msgid "About %s[MyApplication]%s"
+msgstr "Über %s[MyApplication]%s"
+
+#: module/Application/view/application/index/about.phtml:5
+#: themes/adminlte/view/application/index/about.phtml:5
+#: themes/zf2-basic/view/application/index/about.phtml:5
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:5
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:5
+#, php-format
+msgid ""
+"This should serve as a fully functional basic ZendFramework2 application "
+"construct. Just do a checkout %sfrom our GitLab%s and adjust it to your "
+"needs."
+msgstr ""
+"Dies dient als ein voll funktionsfähiges grundlegendes ZendFramework2-"
+"Anwendung-Konstrukt. Einfach %svon unserem GitLab%s clonen und an Ihre "
+"Bedürfnisse anpassen."
+
+#: module/Application/view/application/index/about.phtml:7
+#: themes/adminlte/view/application/index/about.phtml:7
+#: themes/zf2-basic/view/application/index/about.phtml:7
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:7
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:7
+#, php-format
+msgid ""
+"Please, take a look into %sMyApplication User Help section%s to get some "
+"guidance around this application."
+msgstr ""
+"Bitte schauen Sie in den %sMyApplication Hilfe-Bereich%s um einige Hinweise "
+"rund um diese Anwendung zu erhalten."
+
+#: module/Application/view/application/index/about.phtml:9
+#: themes/adminlte/view/application/index/about.phtml:9
+#: themes/zf2-basic/view/application/index/about.phtml:9
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:9
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:9
+#, php-format
+msgid ""
+"If you need further assistance, please do not hesitate to contact "
+"%sMyApplication support%s."
+msgstr ""
+"Wenn Sie weitere Hilfe benötigen, zögern Sie nicht, an den %sMyApplication "
+"Support%s zu wenden."
+
+#: module/Application/view/application/index/about.phtml:14
+#: module/Application/view/application/system/index.phtml:15
+#: module/Application/view/application/system/info.phtml:6
+#: themes/adminlte/view/application/index/about.phtml:14
+#: themes/zf2-basic/view/application/index/about.phtml:14
+#: themes/zf2-basic/view/application/system/index.phtml:15
+#: themes/zf2-basic/view/application/system/info.phtml:6
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:14
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:14
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:15
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:6
+msgid "This application currently runs upon..."
+msgstr "Diese Anwendung läuft derzeit auf…"
+
+#: module/Application/view/application/index/about.phtml:15
+#: module/Application/view/application/setup/index.phtml:17
+#: module/Application/view/application/setup/install.phtml:12
+#: module/Application/view/application/setup/update.phtml:12
+#: module/Application/view/application/system/index.phtml:16
+#: module/Application/view/application/system/info.phtml:7
+#: themes/adminlte/view/application/index/about.phtml:15
+#: themes/zf2-basic/view/application/index/about.phtml:15
+#: themes/zf2-basic/view/application/setup/index.phtml:17
+#: themes/zf2-basic/view/application/setup/install.phtml:12
+#: themes/zf2-basic/view/application/setup/update.phtml:12
+#: themes/zf2-basic/view/application/system/index.phtml:16
+#: themes/zf2-basic/view/application/system/info.phtml:7
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:15
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:15
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:17
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:12
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:12
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:16
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:7
+#, php-format
+msgid "server: %s, %s"
+msgstr "Server: %s, %s"
+
+#: module/Application/view/application/index/about.phtml:16
+#: module/Application/view/application/setup/index.phtml:18
+#: module/Application/view/application/setup/install.phtml:13
+#: module/Application/view/application/setup/update.phtml:13
+#: module/Application/view/application/system/index.phtml:17
+#: module/Application/view/application/system/info.phtml:8
+#: themes/adminlte/view/application/index/about.phtml:16
+#: themes/zf2-basic/view/application/index/about.phtml:16
+#: themes/zf2-basic/view/application/setup/index.phtml:18
+#: themes/zf2-basic/view/application/setup/install.phtml:13
+#: themes/zf2-basic/view/application/setup/update.phtml:13
+#: themes/zf2-basic/view/application/system/index.phtml:17
+#: themes/zf2-basic/view/application/system/info.phtml:8
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:16
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:16
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:18
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:13
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:13
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:17
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:8
+#, php-format
+msgid "system: %s, %s"
+msgstr "System: %s, %s"
+
+#: module/Application/view/application/index/about.phtml:17
+#: module/Application/view/application/setup/index.phtml:19
+#: module/Application/view/application/setup/install.phtml:14
+#: module/Application/view/application/setup/update.phtml:14
+#: module/Application/view/application/system/index.phtml:18
+#: module/Application/view/application/system/info.phtml:9
+#: themes/adminlte/view/application/index/about.phtml:17
+#: themes/zf2-basic/view/application/index/about.phtml:17
+#: themes/zf2-basic/view/application/setup/index.phtml:19
+#: themes/zf2-basic/view/application/setup/install.phtml:14
+#: themes/zf2-basic/view/application/setup/update.phtml:14
+#: themes/zf2-basic/view/application/system/index.phtml:18
+#: themes/zf2-basic/view/application/system/info.phtml:9
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:17
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:17
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:19
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:14
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:14
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:18
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:9
+#, php-format
+msgid "php: v%s"
+msgstr "PHP: V%s"
+
+#: module/Application/view/application/index/about.phtml:18
+#: module/Application/view/application/setup/index.phtml:20
+#: module/Application/view/application/setup/install.phtml:15
+#: module/Application/view/application/setup/update.phtml:15
+#: module/Application/view/application/system/index.phtml:19
+#: module/Application/view/application/system/info.phtml:10
+#: themes/adminlte/view/application/index/about.phtml:18
+#: themes/zf2-basic/view/application/index/about.phtml:18
+#: themes/zf2-basic/view/application/setup/index.phtml:20
+#: themes/zf2-basic/view/application/setup/install.phtml:15
+#: themes/zf2-basic/view/application/setup/update.phtml:15
+#: themes/zf2-basic/view/application/system/index.phtml:19
+#: themes/zf2-basic/view/application/system/info.phtml:10
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:18
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:18
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:20
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:15
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:15
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:19
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:10
+#, php-format
+msgid "ZendFramework2: v%s"
+msgstr "ZendFramework2: v%s"
+
+#: module/Application/view/application/index/about.phtml:24
+#: themes/adminlte/view/application/index/about.phtml:24
+#: themes/zf2-basic/view/application/index/about.phtml:24
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:24
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:24
+msgid "Powered by..."
+msgstr "Powered by…"
+
+#: module/Application/view/application/index/about.phtml:31
+#: module/Application/view/application/system/info.phtml:23
+#: themes/adminlte/view/application/index/about.phtml:31
+#: themes/zf2-basic/view/application/index/about.phtml:31
+#: themes/zf2-basic/view/application/system/info.phtml:23
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:31
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:31
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:23
+msgid "If you are interested, please follow development on our GitLab..."
+msgstr ""
+"Wenn Sie interessiert sind, folgen Sie bitte der Entwicklung in unserem "
+"GitLab…"
+
+#: module/Application/view/application/index/about.phtml:35
+#: module/Application/view/application/system/info.phtml:27
+#: module/Application/view/layout/layout.phtml:70
+#: themes/adminlte/view/application/index/about.phtml:35
+#: themes/adminlte/view/layout/layout.phtml:165
+#: themes/remark/view/layout/layout.phtml:236
+#: themes/taurus/view/layout/layout.phtml:256
+#: themes/zf2-basic/view/application/index/about.phtml:35
+#: themes/zf2-basic/view/application/system/info.phtml:27
+#: themes/zf2-basic/view/layout/layout.phtml:81
+#: vendor/themes/zf2-adminlte/view/application/index/about.phtml:35
+#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:165
+#: vendor/themes/zf2-basic/view/application/index/about.phtml:35
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:27
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:81
+#: vendor/themes/zf2-remark/view/layout/layout.phtml:236
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:256
 msgid "All rights reserved."
 msgstr "Alle Rechte vorbehalten."
 
-#: ../view/application/index/index.phtml:2
-#, php-format
-msgid "Welcome to %sZend Framework 2%s"
-msgstr "Willkommen zu dem %sZend Framework 2%s"
-
-#: ../view/application/index/index.phtml:3
-#, php-format
-msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
-msgstr "Herzlichen Glückwunsch! Sie haben die %sZF2 Skeleton Application%s erfolgreich installiert und benutzen gerade die Version %s des Zend Frameworks. Dieses Gerüst kann Ihnen als Einstiegspunkt, für Ihre weitere Entwicklung, basierend auf dem Zend Framework 2, dienen."
-
-#: ../view/application/index/index.phtml:4
-msgid "Fork Zend Framework 2 on GitHub"
-msgstr "Fork Zend Framework 2 auf GitHub"
-
-#: ../view/application/index/index.phtml:10
+#: module/Application/view/application/index/development_info.phtml:6
+#: themes/zf2-basic/view/application/index/development_info.phtml:6
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:6
 msgid "Follow Development"
 msgstr "Folge der Entwicklung"
 
-#: ../view/application/index/index.phtml:11
+#: module/Application/view/application/index/development_info.phtml:9
+#: themes/zf2-basic/view/application/index/development_info.phtml:9
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:9
 #, php-format
-msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
-msgstr "Das Zend Framework 2 wird z.Z. aktiv weiterentwickelt.  Sollten Sie daran interessiert sein, die Entwicklung von ZF2 zu verfolgen, so bietet Ihnen die offizielle Webseite einen eigens für das Zend Framework 2 eingerichteten Bereich, auf der Sie Verlinkungen zum ZF2 %sWiki%s, %sEntwickler Blog%s, einem %sFehlerverfolgungssystem%s und noch vielem mehr finden. Dieser Bereich ist eine hervorragende Quelle um stets aktuell zu bleiben."
+msgid ""
+"%s[MyApplication]%s is under active development. If you are interested in "
+"following the development of %s[MyApplication]%s, there is a special portal "
+"on the official website which provides links to the %s[MyApplication]%s "
+"%swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great "
+"resource for staying up to date with the latest developments!"
+msgstr ""
+"%s[MyApplication]%s wird z.Z. aktiv weiterentwickelt.  Sollten Sie daran "
+"interessiert sein, die Entwicklung von %s[MyApplication]%s zu verfolgen, so "
+"bietet Ihnen die offizielle Webseite einen eigens für das Zend Framework 2 "
+"eingerichteten Bereich, auf der Sie Verlinkungen zum %s[MyApplication]%s "
+"%sWiki%s, %sEntwickler Blog%s, einem %sFehlerverfolgungssystem%s und noch "
+"vieles mehr finden. Dieser Bereich ist eine hervorragende Quelle um stets "
+"auf dem Laufenden zu bleiben."
 
-#: ../view/application/index/index.phtml:12
-msgid "ZF2 Development Portal"
-msgstr "ZF2 Entwickler Portal"
+#: module/Application/view/application/index/development_info.phtml:10
+#: themes/zf2-basic/view/application/index/development_info.phtml:10
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:10
+#, php-format
+msgid "%s[MyApplication]%s Development Portal"
+msgstr "%s[MyApplication]%s Entwickler Portal"
 
-#: ../view/application/index/index.phtml:16
+#: module/Application/view/application/index/development_info.phtml:19
+#: themes/zf2-basic/view/application/index/development_info.phtml:19
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:19
 msgid "Discover Modules"
 msgstr "Entdecken Sie Module"
 
-#: ../view/application/index/index.phtml:17
+#: module/Application/view/application/index/development_info.phtml:22
+#: themes/zf2-basic/view/application/index/development_info.phtml:22
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:22
 #, php-format
-msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
-msgstr "Die Community arbeitet momentan an einer Community Seite, welche als Galerie für ZF2 Module dient. Dieses Projekt ist %sauf GitHub%s verfügbar. Die Webseite ist bereits Online und enthält eine Liste mit schon veröffentlichten Modulen für das Zend Framework 2."
+msgid ""
+"We are working on developing a community site to serve as a repository and "
+"gallery for %s[MyApplication]%s modules. These projects are available %son "
+"our GitLab%s. The site is currently under development and will soon contain "
+"a list of some of the modules already available for this application."
+msgstr ""
+"Die Community arbeitet momentan an einer Community Seite, welche als Galerie "
+"für %s[MyApplication]%s Module dient. Dieses Projekt ist %sin unserem GitLab"
+"%s verfügbar. Die Webseite ist bereits Online und enthält eine Liste mit "
+"schon veröffentlichten Modulen."
 
-#: ../view/application/index/index.phtml:18
-msgid "Explore ZF2 Modules"
-msgstr "Erkunden Sie ZF2 Module"
+#: module/Application/view/application/index/development_info.phtml:23
+#: themes/zf2-basic/view/application/index/development_info.phtml:23
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:23
+#, php-format
+msgid "Explore %s[MyApplication]%s Modules"
+msgstr "%s[MyApplication]%s Module erkunden"
 
-#: ../view/application/index/index.phtml:22
+#: module/Application/view/application/index/development_info.phtml:32
+#: themes/zf2-basic/view/application/index/development_info.phtml:32
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:32
 msgid "Help &amp; Support"
 msgstr "Hilfe &amp; Support"
 
-#: ../view/application/index/index.phtml:23
+#: module/Application/view/application/index/development_info.phtml:35
+#: themes/zf2-basic/view/application/index/development_info.phtml:35
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:35
 #, php-format
-msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
-msgstr "Sollten Sie Hilfe jeglicher Art bei der Entwicklung mit dem Zend Framework 2 benötigen, kontaktieren Sie uns doch einfach über das IRC: %s#zftalk on Freenode%s. Wir freuen uns darauf, Ihnen bei Ihren Fragen zu helfen oder aber auch Ihre Meinung bezüglich der Beta Versionen zu hören. Alternativ können Sie auch die %smailing lists%s abonnieren und Ihre Fragen dort stellen."
+msgid ""
+"If you need any help or support while using and/or developing with "
+"%s[MyApplication]%s, you can take a look into %shelp section%s or you may "
+"reach us via our %ssupport channel%s. We'd love to hear any questions or "
+"feedback you may have regarding the beta releases. Alternatively, you may "
+"subscribe and post questions via the %scontact form%s."
+msgstr ""
+"Benötigen Sie Hilfe oder Unterstützung während der Nutzung und/oder "
+"Entwicklung mit %s[MyApplication]%s, Sie können einen Blick in %sHilfe-"
+"Bereich%s werfen oder erreichen uns über unser %sSupport-Kanal%s. Wir freuen "
+"uns über Ihre Fragen oder Feedback auch gerne zu den Beta-Versionen. "
+"Alternativ können Sie Fragen auch über das %sKontakt-Formular%s stellen."
 
-#: ../view/application/index/index.phtml:24
-msgid "Ping us on IRC"
-msgstr "Schreiben Sie uns im IRC an"
+#: module/Application/view/application/index/development_info.phtml:36
+#: themes/zf2-basic/view/application/index/development_info.phtml:36
+#: vendor/themes/zf2-basic/view/application/index/development_info.phtml:36
+msgid "Contact us"
+msgstr "Schreiben Sie uns"
 
-#: ../view/error/index.phtml:1
-msgid "An error occurred"
-msgstr "Ein Fehler ist aufgetreten"
+#: module/Application/view/application/index/help.phtml:3
+#: themes/zf2-basic/view/application/index/help.phtml:3
+#: vendor/themes/zf2-basic/view/application/index/help.phtml:3
+#, php-format
+msgid "Welcome to %s[MyApplication]%s User Help section"
+msgstr "Willkommen Sie bei %s[MyApplication]%s Benutzerhilfe Abschnitt"
 
-#: ../view/error/index.phtml:8
-msgid "Additional information"
-msgstr "Zusätzliche Information"
+#: module/Application/view/application/index/help.phtml:5
+#: themes/zf2-basic/view/application/index/help.phtml:5
+#: vendor/themes/zf2-basic/view/application/index/help.phtml:5
+msgid "here comes your user guidance content..."
+msgstr "Hier kommt Ihre Anleitung…"
 
-#: ../view/error/index.phtml:11 ../view/error/index.phtml:35
-msgid "File"
-msgstr "Datei"
+#: module/Application/view/application/index/help.phtml:7
+#: themes/zf2-basic/view/application/index/help.phtml:7
+#: vendor/themes/zf2-basic/view/application/index/help.phtml:7
+#, php-format
+msgid ""
+"If you need further assistance, please do not hesitate to contact "
+"%sMyApplication support%s.<br />"
+msgstr ""
+"Wenn Sie weitere Hilfe benötigen, zögern Sie nicht, an den %sMyApplication "
+"Support%s zu wenden."
 
-#: ../view/error/index.phtml:15 ../view/error/index.phtml:39
-msgid "Message"
-msgstr "Meldung"
+#: module/Application/view/application/index/index.phtml:3
+#: themes/zf2-basic/view/application/index/index.phtml:3
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:3
+#, php-format
+msgid "Welcome to %s[MyApplication]%s"
+msgstr "Willkommen bei %s[MyApplication]%s"
 
-#: ../view/error/index.phtml:19 ../view/error/index.phtml:43
-#: ../view/error/404.phtml:55
-msgid "Stack trace"
-msgstr "Stapelüberwachung"
+#: module/Application/view/application/index/index.phtml:5
+#: themes/zf2-basic/view/application/index/index.phtml:5
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:5
+#, php-format
+msgid ""
+"Congratulations! You have successfully installed the %sMyApplication "
+"application%s."
+msgstr ""
+"Herzlichen Glückwunsch! Anwendung %s[MyApplication]%s wurde erfolgreich "
+"installiert."
 
-#: ../view/error/index.phtml:29
-msgid "Previous exceptions"
-msgstr "Vorherige Ausnahme"
+#: module/Application/view/application/index/index.phtml:6
+#: themes/zf2-basic/view/application/index/index.phtml:6
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:6
+#, php-format
+msgid ""
+"You are currently running <b>Zend Framework version %s</b> with <b>php "
+"version %s</b>."
+msgstr ""
+"<b>Zend Framework Version %s</b> wird derzeit mit <b>PHP Version %s</b> "
+"ausgeführt."
 
-#: ../view/error/index.phtml:58
-msgid "No Exception available"
-msgstr "Es ist keine Ausnahme verfügbar"
+#: module/Application/view/application/index/index.phtml:7
+#: themes/zf2-basic/view/application/index/index.phtml:7
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:7
+msgid "This install is for demonstration purposes only."
+msgstr "Diese Installation dient nur zu Demonstrationszwecken."
 
-#: ../view/error/404.phtml:1
+#: module/Application/view/application/index/index.phtml:7
+#: themes/zf2-basic/view/application/index/index.phtml:7
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:7
+msgid ""
+"You are able to login with username \"sysadmin\" and password \"sysadmin\"."
+msgstr ""
+"Sie können Sich mit Benutzername „sysadmin“ und dem Passwort „sysadmin“ "
+"einloggen."
+
+#: module/Application/view/application/index/index.phtml:8
+#: themes/zf2-basic/view/application/index/index.phtml:8
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:8
+msgid "Database and sessions will be flushed every ten minutes."
+msgstr "Datenbanken und Sitzungen werden alle zehn Minuten zurückgesetzt."
+
+#: module/Application/view/application/index/index.phtml:10
+#: themes/zf2-basic/view/application/index/index.phtml:10
+#: vendor/themes/zf2-basic/view/application/index/index.phtml:10
+msgid "Follow on our GitLab"
+msgstr "Folgen Sie uns in unserem GitLab."
+
+#: module/Application/view/application/index/support.phtml:3
+#: themes/zf2-basic/view/application/index/support.phtml:3
+#: vendor/themes/zf2-basic/view/application/index/support.phtml:3
+#, php-format
+msgid "Welcome to %s[MyApplication]%s Support section"
+msgstr "Willkommen im %s[MyApplication]%s Support Bereich"
+
+#: module/Application/view/application/index/support.phtml:5
+#: themes/zf2-basic/view/application/index/support.phtml:5
+#: vendor/themes/zf2-basic/view/application/index/support.phtml:5
+#, php-format
+msgid ""
+"Please, take a look into %sMyApplication User Help section%s before you "
+"contact support.<br />"
+msgstr ""
+"Bitte, schauen Sie in %s[MyApplication] Hilfe-Bereich%s bevor Sie den "
+"Support kontaktieren.<br />"
+
+#: module/Application/view/application/index/support.phtml:7
+#: themes/zf2-basic/view/application/index/support.phtml:7
+#: vendor/themes/zf2-basic/view/application/index/support.phtml:7
+msgid "here comes your online support content..."
+msgstr "Hier kommt Ihre Anleitung…"
+
+#: module/Application/view/application/index/xhrtest.phtml:3
+#: module/Application/view/application/index/xhrtest.phtml:6
+#: module/Application/view/application/index/xhrtest.phtml:7
+#: module/Application/view/application/index/xhrtest.phtml:8
+msgid "AJAX test"
+msgstr ""
+
+#: module/Application/view/application/setup/index.phtml:3
+#: themes/zf2-basic/view/application/setup/index.phtml:3
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s setup"
+msgstr "%s[MyApplication]%s einrichten"
+
+#: module/Application/view/application/setup/index.phtml:5
+#: themes/zf2-basic/view/application/setup/index.phtml:5
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:5
+#, php-format
+msgid "Welcome to the %s[MyApplication]%s setup module..."
+msgstr "Willkommen im %s[MyApplication]%s Setup Modul"
+
+#: module/Application/view/application/setup/index.phtml:6
+#: themes/zf2-basic/view/application/setup/index.phtml:6
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:6
+msgid ""
+"Please select the setup method your desire. Maybe, you should consider "
+"creating a backup of the database first."
+msgstr ""
+"Bitte wählen Sie die Installationsmethode. Bedenken Sie bitte, dass zunächst "
+"gegebenenfalls ein Backup anfertigen."
+
+#: module/Application/view/application/setup/index.phtml:8
+#: themes/zf2-basic/view/application/setup/index.phtml:8
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:8
+#, php-format
+msgid "Backup &nbsp; %s[==&gt;&gt;]%s"
+msgstr ""
+
+#: module/Application/view/application/setup/index.phtml:10
+#: themes/zf2-basic/view/application/setup/index.phtml:10
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:10
+#, php-format
+msgid "Installation &nbsp; %s[==&gt;&gt;]%s"
+msgstr ""
+
+#: module/Application/view/application/setup/index.phtml:12
+#: themes/zf2-basic/view/application/setup/index.phtml:12
+#: vendor/themes/zf2-basic/view/application/setup/index.phtml:12
+#, php-format
+msgid "Update &nbsp; %s[==&gt;&gt;]%s"
+msgstr ""
+
+#: module/Application/view/application/setup/install.phtml:3
+#: themes/zf2-basic/view/application/setup/install.phtml:3
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s setup - Installation"
+msgstr "%s[MyApplication]%s einrichten - Installation"
+
+#: module/Application/view/application/setup/install.phtml:6
+#: themes/zf2-basic/view/application/setup/install.phtml:6
+#: vendor/themes/zf2-basic/view/application/setup/install.phtml:6
+msgid "here comes the installation module..."
+msgstr "Hier kommt das Modul Installation…"
+
+#: module/Application/view/application/setup/update.phtml:3
+#: themes/zf2-basic/view/application/setup/update.phtml:3
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s setup - Update"
+msgstr "%s[MyApplication]%s einrichten - Update"
+
+#: module/Application/view/application/setup/update.phtml:6
+#: themes/zf2-basic/view/application/setup/update.phtml:6
+#: vendor/themes/zf2-basic/view/application/setup/update.phtml:6
+msgid "here comes the update module..."
+msgstr "Hier kommt das Update-Modul…"
+
+#: module/Application/view/application/system/backup.phtml:3
+#: themes/zf2-basic/view/application/system/backup.phtml:3
+#: vendor/themes/zf2-basic/view/application/system/backup.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s system - backup"
+msgstr "%s[MyApplication]%s System - Backup"
+
+#: module/Application/view/application/system/backup.phtml:6
+#: themes/zf2-basic/view/application/system/backup.phtml:6
+#: vendor/themes/zf2-basic/view/application/system/backup.phtml:6
+msgid "here comes the backup module..."
+msgstr "Hier kommt das Backup-Modul…"
+
+#: module/Application/view/application/system/index.phtml:3
+#: themes/zf2-basic/view/application/system/index.phtml:3
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s system options"
+msgstr "%s[MyApplication]%s System - Optionen"
+
+#: module/Application/view/application/system/index.phtml:5
+#: themes/zf2-basic/view/application/system/index.phtml:5
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:5
+#, php-format
+msgid "System-Info &nbsp; %s==&gt;&gt;%s"
+msgstr ""
+
+#: module/Application/view/application/system/index.phtml:7
+#: themes/zf2-basic/view/application/system/index.phtml:7
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:7
+#, php-format
+msgid "Backup &nbsp; %s==&gt;&gt;%s"
+msgstr ""
+
+#: module/Application/view/application/system/index.phtml:10
+#: themes/zf2-basic/view/application/system/index.phtml:10
+#: vendor/themes/zf2-basic/view/application/system/index.phtml:10
+#, php-format
+msgid "Setup-Routines &nbsp; %s==&gt;&gt;%s"
+msgstr ""
+
+#: module/Application/view/application/system/info.phtml:3
+#: themes/zf2-basic/view/application/system/info.phtml:3
+#: vendor/themes/zf2-basic/view/application/system/info.phtml:3
+#, php-format
+msgid "%s[MyApplication]%s system - info"
+msgstr "%s[MyApplication]%s System - Info"
+
+#: module/Application/view/error/404.phtml:1
+#: themes/adminlte/view/error/404.phtml:1
+#: themes/zf2-basic/view/error/404.phtml:1
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:1
+#: vendor/themes/zf2-basic/view/error/404.phtml:1
 msgid "A 404 error occurred"
 msgstr "Es trat ein 404 Fehler auf"
 
-#: ../view/error/404.phtml:10
+#: module/Application/view/error/404.phtml:10
+#: themes/adminlte/view/error/404.phtml:10
+#: themes/zf2-basic/view/error/404.phtml:10
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:10
+#: vendor/themes/zf2-basic/view/error/404.phtml:10
 msgid "The requested controller was unable to dispatch the request."
-msgstr "Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
+msgstr ""
+"Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
 
-#: ../view/error/404.phtml:13
-msgid "The requested controller could not be mapped to an existing controller class."
-msgstr "Der angeforderte Controller konnte keiner Controller Klasse zugeordnet werden."
+#: module/Application/view/error/404.phtml:13
+#: themes/adminlte/view/error/404.phtml:13
+#: themes/zf2-basic/view/error/404.phtml:13
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:13
+#: vendor/themes/zf2-basic/view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+"Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
+"werden."
 
-#: ../view/error/404.phtml:16
+#: module/Application/view/error/404.phtml:16
+#: themes/adminlte/view/error/404.phtml:16
+#: themes/zf2-basic/view/error/404.phtml:16
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:16
+#: vendor/themes/zf2-basic/view/error/404.phtml:16
 msgid "The requested controller was not dispatchable."
 msgstr "Der angeforderte Controller ist nicht aufrufbar."
 
-#: ../view/error/404.phtml:19
+#: module/Application/view/error/404.phtml:19
+#: themes/adminlte/view/error/404.phtml:19
+#: themes/zf2-basic/view/error/404.phtml:19
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:19
+#: vendor/themes/zf2-basic/view/error/404.phtml:19
 msgid "The requested URL could not be matched by routing."
 msgstr "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden."
 
-#: ../view/error/404.phtml:22
+#: module/Application/view/error/404.phtml:22
+#: themes/adminlte/view/error/404.phtml:22
+#: themes/zf2-basic/view/error/404.phtml:22
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:22
+#: vendor/themes/zf2-basic/view/error/404.phtml:22
 msgid "We cannot determine at this time why a 404 was generated."
-msgstr "Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 Fehler aufgetreten ist."
+msgstr ""
+"Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
+"Fehler aufgetreten ist."
 
-#: ../view/error/404.phtml:34
+#: module/Application/view/error/404.phtml:34
+#: themes/adminlte/view/error/404.phtml:34
+#: themes/zf2-basic/view/error/404.phtml:34
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:34
+#: vendor/themes/zf2-basic/view/error/404.phtml:34
 msgid "Controller"
 msgstr "Controller"
 
-#: ../view/error/404.phtml:41
+#: module/Application/view/error/404.phtml:41
+#: themes/adminlte/view/error/404.phtml:41
+#: themes/zf2-basic/view/error/404.phtml:41
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:41
+#: vendor/themes/zf2-basic/view/error/404.phtml:41
 #, php-format
 msgid "resolves to %s"
 msgstr "wird aufgelöst in %s"
 
-#: ../view/error/404.phtml:51
-msgid "Exception"
-msgstr "Ausnahme"
+#: module/Application/view/error/404.phtml:53
+#: module/Application/view/error/index.phtml:8
+#: themes/adminlte/view/error/404.phtml:53
+#: themes/adminlte/view/error/index.phtml:8
+#: themes/zf2-basic/view/error/404.phtml:53
+#: themes/zf2-basic/view/error/index.phtml:8
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:53
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:8
+#: vendor/themes/zf2-basic/view/error/404.phtml:53
+#: vendor/themes/zf2-basic/view/error/index.phtml:8
+msgid "Additional information"
+msgstr "Zusätzliche Information"
+
+#: module/Application/view/error/404.phtml:56
+#: module/Application/view/error/404.phtml:80
+#: module/Application/view/error/index.phtml:11
+#: module/Application/view/error/index.phtml:35
+#: themes/adminlte/view/error/404.phtml:56
+#: themes/adminlte/view/error/404.phtml:80
+#: themes/adminlte/view/error/index.phtml:11
+#: themes/adminlte/view/error/index.phtml:35
+#: themes/zf2-basic/view/error/404.phtml:56
+#: themes/zf2-basic/view/error/404.phtml:80
+#: themes/zf2-basic/view/error/index.phtml:11
+#: themes/zf2-basic/view/error/index.phtml:35
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:56
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:80
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:11
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:35
+#: vendor/themes/zf2-basic/view/error/404.phtml:56
+#: vendor/themes/zf2-basic/view/error/404.phtml:80
+#: vendor/themes/zf2-basic/view/error/index.phtml:11
+#: vendor/themes/zf2-basic/view/error/index.phtml:35
+msgid "File"
+msgstr "Datei"
+
+#: module/Application/view/error/404.phtml:60
+#: module/Application/view/error/404.phtml:84
+#: module/Application/view/error/index.phtml:15
+#: module/Application/view/error/index.phtml:39
+#: themes/adminlte/view/error/404.phtml:60
+#: themes/adminlte/view/error/404.phtml:84
+#: themes/adminlte/view/error/index.phtml:15
+#: themes/adminlte/view/error/index.phtml:39
+#: themes/zf2-basic/view/error/404.phtml:60
+#: themes/zf2-basic/view/error/404.phtml:84
+#: themes/zf2-basic/view/error/index.phtml:15
+#: themes/zf2-basic/view/error/index.phtml:39
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:60
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:84
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:15
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:39
+#: vendor/themes/zf2-basic/view/error/404.phtml:60
+#: vendor/themes/zf2-basic/view/error/404.phtml:84
+#: vendor/themes/zf2-basic/view/error/index.phtml:15
+#: vendor/themes/zf2-basic/view/error/index.phtml:39
+msgid "Message"
+msgstr "Meldung"
+
+#: module/Application/view/error/404.phtml:64
+#: module/Application/view/error/404.phtml:88
+#: module/Application/view/error/index.phtml:19
+#: module/Application/view/error/index.phtml:43
+#: themes/adminlte/view/error/404.phtml:64
+#: themes/adminlte/view/error/404.phtml:88
+#: themes/adminlte/view/error/index.phtml:19
+#: themes/adminlte/view/error/index.phtml:43
+#: themes/zf2-basic/view/error/404.phtml:64
+#: themes/zf2-basic/view/error/404.phtml:88
+#: themes/zf2-basic/view/error/index.phtml:19
+#: themes/zf2-basic/view/error/index.phtml:43
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:64
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:88
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:19
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:43
+#: vendor/themes/zf2-basic/view/error/404.phtml:64
+#: vendor/themes/zf2-basic/view/error/404.phtml:88
+#: vendor/themes/zf2-basic/view/error/index.phtml:19
+#: vendor/themes/zf2-basic/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr "Stapelüberwachung"
+
+#: module/Application/view/error/404.phtml:74
+#: module/Application/view/error/index.phtml:29
+#: themes/adminlte/view/error/404.phtml:74
+#: themes/adminlte/view/error/index.phtml:29
+#: themes/zf2-basic/view/error/404.phtml:74
+#: themes/zf2-basic/view/error/index.phtml:29
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:74
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:29
+#: vendor/themes/zf2-basic/view/error/404.phtml:74
+#: vendor/themes/zf2-basic/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "Vorherige Ausnahme"
+
+#: module/Application/view/error/404.phtml:103
+#: module/Application/view/error/index.phtml:58
+#: themes/adminlte/view/error/404.phtml:103
+#: themes/adminlte/view/error/index.phtml:58
+#: themes/zf2-basic/view/error/404.phtml:103
+#: themes/zf2-basic/view/error/index.phtml:58
+#: vendor/themes/zf2-adminlte/view/error/404.phtml:103
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:58
+#: vendor/themes/zf2-basic/view/error/404.phtml:103
+#: vendor/themes/zf2-basic/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr "Es ist keine Ausnahme verfügbar"
+
+#: module/Application/view/error/index.phtml:1
+#: themes/adminlte/view/error/index.phtml:1
+#: themes/zf2-basic/view/error/index.phtml:1
+#: vendor/themes/zf2-adminlte/view/error/index.phtml:1
+#: vendor/themes/zf2-basic/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr "Ein Fehler ist aufgetreten"
+
+#: module/Application/view/layout/layout.phtml:5
+#: module/Application/view/layout/layout.phtml:34
+msgid "MyApplication"
+msgstr "MyApplication"
+
+#: module/Application/view/layout/layout.phtml:53
+#: module/Application/view/partial/breadcrumb.phtml:3
+msgid "Du bist hier :"
+msgstr "Sie sind hier :"
+
+#: themes/adminlte/view/layout/layout.phtml:149
+#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:149
+msgid "you are here"
+msgstr "Sie sind hier :"
+
+#: themes/remark/view/layout/layout.phtml:240
+#: themes/taurus/view/layout/layout.phtml:258
+#: themes/zf2-basic/view/layout/layout.phtml:83
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:83
+#: vendor/themes/zf2-remark/view/layout/layout.phtml:240
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:258
+msgid "Powered by"
+msgstr "Powered by"
+
+#: themes/taurus/view/layout/layout.phtml:160
+#: themes/zf2-basic/view/layout/layout.phtml:64
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:64
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:160
+msgid "you are here :"
+msgstr "Sie sind hier :"
+
+#: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:4
+#: vendor/my-application/module-admin/view/admin/settings/add.phtml:4
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:3
+msgid "add setting"
+msgstr "Einstellung hinzufügen"
+
+#: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:45
+#: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:26
+#: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:26
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:23
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:23
+#: vendor/my-application/module-admin/view/admin/acl/editacl.phtml:44
+#: vendor/my-application/module-admin/view/admin/acl/editresource.phtml:26
+#: vendor/my-application/module-admin/view/admin/acl/editrole.phtml:26
+#: vendor/my-application/module-admin/view/admin/settings/add.phtml:32
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:24
+#: vendor/my-application/module-admin/view/admin/settings/edit.phtml:39
+#: vendor/my-application/module-admin/view/admin/users/add.phtml:63
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:23
+#: vendor/my-application/module-admin/view/admin/users/edit.phtml:71
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
+msgid "cancel"
+msgstr "abbrechen"
+
+#: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:4
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:5
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:3
+msgid "add resource"
+msgstr "Neue Ressource hinzufügen"
+
+#: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:4
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:3
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:3
+msgid "add role"
+msgstr "Neue Rolle hinzufügen"
+
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:4
+msgid "delete resource"
+msgstr "Ressource entfernen"
+
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:8
+msgid "Do you really want to delete this resource?"
+msgstr "Möchten Sie wirklich diese Ressource löschen?"
+
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:24
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:29
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:29
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:23
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:31
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:22
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:29
+msgid "delete"
+msgstr "entfernen"
+
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:4
+msgid "delete role"
+msgstr "Rolle entfernen"
+
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:8
+msgid "Do you really want to delete this role"
+msgstr "Möchten Sie wirklich diese Rolle löschen?"
+
+#: vendor/my-application/module-admin/view/admin/acl/editacl.phtml:4
+msgid "change permission"
+msgstr "Berechtigung ändern"
+
+#: vendor/my-application/module-admin/view/admin/acl/editresource.phtml:4
+msgid "edit resource"
+msgstr "Ressource bearbeiten"
+
+#: vendor/my-application/module-admin/view/admin/acl/editrole.phtml:4
+msgid "edit role"
+msgstr "Rolle bearbeiten"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:1
+msgid "list view"
+msgstr "Listenansicht"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:6
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:6
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:17
+msgid "role"
+msgstr "Rolle"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:7
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:13
+msgid "resource"
+msgstr "Ressource"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:8
+msgid "status"
+msgstr "Status"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:27
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:27
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:29
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:27
+msgid "edit"
+msgstr "ändern"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:1
+msgid "matrix view"
+msgstr "Matrix-Ansicht"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:50
+msgid "allow"
+msgstr "erlauben"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:78
+msgid "deny"
+msgstr "verbieten"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:4
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:10
+msgid "manage roles"
+msgstr "Benutzerrollen verwalten"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:6
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:10
+msgid "manage resources"
+msgstr "Ressourcen verwalten "
+
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:13
+msgid "manage permissions"
+msgstr "Berechtigungen verwalten"
+
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:17
+msgid "resource slug"
+msgstr "Ressource-Slug"
+
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:18
+msgid "resource name"
+msgstr "Ressourcenname"
+
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:17
+msgid "role slug"
+msgstr "Rollen-Slug"
+
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:18
+msgid "role name"
+msgstr "Rollenname"
+
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:4
+msgid "delete setting"
+msgstr "Einstellung entfernen"
+
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:8
+msgid "Do you really want to delete this setting?"
+msgstr "Möchten Sie wirklich diese Einstellung löschen?"
+
+#: vendor/my-application/module-admin/view/admin/settings/edit.phtml:4
+msgid "edit setting"
+msgstr "Einstellung bearbeiten"
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:10
+msgid "manage settings"
+msgstr "Einstellungen verwalten"
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:17
+msgid "type"
+msgstr "Typ:"
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:18
+msgid "name"
+msgstr "Name"
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:19
+msgid "value"
+msgstr "Wert"
+
+#: vendor/my-application/module-admin/view/admin/users/activate.phtml:3
+msgid "activate user"
+msgstr "Benutzer aktivieren"
+
+#: vendor/my-application/module-admin/view/admin/users/add.phtml:3
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:3
+msgid "add user"
+msgstr "Neuen Benutzer hinzufügen"
+
+#: vendor/my-application/module-admin/view/admin/users/confirm.phtml:3
+msgid "confirm registration"
+msgstr "Registrierung bestätigen"
+
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:3
+msgid "delete user"
+msgstr "Benutzerkonto entfernen"
+
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:6
+msgid "Do you really want to delete this user?"
+msgstr "Möchten Sie wirklich diesen Benutzer löschen?"
+
+#: vendor/my-application/module-admin/view/admin/users/edit.phtml:3
+msgid "edit user"
+msgstr "Benutzer bearbeiten"
+
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:9
+msgid "manage users"
+msgstr "Benutzer verwalten"
+
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:15
+msgid "user name"
+msgstr "Benutzername"
+
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:16
+msgid "email"
+msgstr "E­‐Mail"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
+msgid "change email"
+msgstr "E-Mail-Adresse ändern"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:7
+#, php-format
+msgid "change email for %s"
+msgstr "Ändern Sie e-Mail für %s"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:9
+msgid "email address changed successfully"
+msgstr "Ihre Email-Adresse wurde erfolgreich geändert."
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:11
+msgid "unable to update your email address, please try again"
+msgstr ""
+"Es trat ein Fehler beim Ändern der E-Mail-Adresse auf. Bitte versuchen Sie "
+"es noch einmal."
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:44
+msgid "save"
+msgstr "speichern"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
+msgid "change password"
+msgstr "Passwort ändern"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:7
+#, php-format
+msgid "change Password for %s"
+msgstr "Passwort ändern für %s"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:9
+msgid "password changed successfully"
+msgstr "Ihr Passwort wurde erfolgreich geändert."
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:11
+msgid "unable to update your password, please try again"
+msgstr ""
+"Es trat ein Fehler beim Ändern der Passwortes auf. Bitte versuchen Sie es "
+"noch einmal."
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:3
+msgid "user profile"
+msgstr "Benutzerprofil"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
+msgid "Hallo"
+msgstr "Hallo"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
+msgid "logout"
+msgstr "abmelden"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
+msgid "login"
+msgstr "anmelden"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:32
+msgid "do not have an account?"
+msgstr "Sie haben noch keinen Zugang?"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:33
+msgid "register now!"
+msgstr "Jetzt registrieren!"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:4
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:13
+msgid "register user"
+msgstr "Benutzerregistrierung"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:7
+msgid "registration is currently not available, please try again later"
+msgstr ""
+"Die Benutzerregistrierung ist im Moment leider nicht verfügbar. Bitte "
+"probieren sie es später erneut."
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:56
+msgid "register"
+msgstr "registrieren"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:1
+#, php-format
+msgid "Change Email for %s"
+msgstr "Passwort ändern für %s"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:3
+msgid "Email address changed successfully."
+msgstr "Ihre Email-Adresse wurde erfolgreich geändert."
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:5
+msgid "Unable to update your email address. Please try again."
+msgstr ""
+"Es trat ein Fehler beim Ändern der E-Mail-Adresse auf. Bitte versuchen Sie "
+"es noch einmal."
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changepassword.phtml:1
+#, php-format
+msgid "Change Password for %s"
+msgstr "Passwort ändern für %s"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changepassword.phtml:3
+msgid "Password changed successfully."
+msgstr "Ihr Passwort wurde erfolgreich geändert."
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/changepassword.phtml:5
+msgid "Unable to update your password. Please try again."
+msgstr ""
+"Es trat ein Fehler beim Ändern der Passwortes auf. Bitte versuchen Sie es "
+"noch einmal."
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/index.phtml:2
+msgid "Hello"
+msgstr "Hallo"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/index.phtml:3
+msgid "Sign Out"
+msgstr "abmelden"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
+msgid "Not registered?"
+msgstr "Sie haben noch keinen Zugang?"
+
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
+msgid "Sign up!"
+msgstr "Jetzt registrieren!"
+
+#~ msgid "Home"
+#~ msgstr "Startseite"
+
+#~ msgid ""
+#~ "Congratulations! You have successfully installed the %sZF2 Skeleton "
+#~ "Application%s. You are currently running Zend Framework version %s. This "
+#~ "skeleton can serve as a simple starting point for you to begin building "
+#~ "your application on ZF2."
+#~ msgstr ""
+#~ "Herzlichen Glückwunsch! Sie haben die %sZF2 Skeleton Application%s "
+#~ "erfolgreich installiert und benutzen gerade die Version %s des Zend "
+#~ "Frameworks. Dieses Gerüst kann Ihnen als Einstiegspunkt, für Ihre weitere "
+#~ "Entwicklung, basierend auf dem Zend Framework 2, dienen."
+
+#~ msgid "Fork Zend Framework 2 on GitHub"
+#~ msgstr "Fork Zend Framework 2 auf GitHub"
+
+#~ msgid "Explore ZF2 Modules"
+#~ msgstr "Erkunden Sie ZF2 Module"
+
+#~ msgid "Ping us on IRC"
+#~ msgstr "Schreiben Sie uns im IRC an"
+
+#~ msgid "Exception"
+#~ msgstr "Ausnahme"
