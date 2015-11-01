@@ -13,10 +13,12 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'Application',
+    	'SlmLocale',
     	'Admin',
     	'TwitterBootstrapAPI',
     	'OrgHeiglPiwik',
         'ZeTheme',
+    	
     ),
 
     // These are various options for the listeners attached to the ModuleManager
