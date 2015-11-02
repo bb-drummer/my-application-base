@@ -41,3 +41,4 @@ translate("Value is required and can't be empty");
 translate('Captcha value is wrong');
 translate("The input is less than %s characters long");
 translate("The two given tokens do not match");
+translate("The input is not between '%s' and '%s', inclusively");

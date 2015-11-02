@@ -23,6 +23,8 @@ use ZfcUser\Controller\Plugin\ZfcUserAuthentication;
 class BaseActionController extends AbstractActionController implements Dispatchable, ServiceLocatorAwareInterface {
 	
     protected $services;
+	
+    protected $translator;
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
@@ -62,6 +64,34 @@ class BaseActionController extends AbstractActionController implements Dispatcha
         $sAclRole = $oUser->getAclrole();
         return ($sAclRole == 'admin');
     }
+    
+    
+	/**
+	 * @return \Zend\I18n\Translator\Translator
+	 */
+	public function getTranslator() {
+		if (!$this->translator) {
+			$this->setTranslator($this->getServiceLocator()->get('translator'));
+		}
+		return $this->translator;
+	}
+
+	/**
+	 * @param field_type $translator
+	 */
+	public function setTranslator($translator) {
+		$this->translator = $translator;
+		return ($this);
+	}
+
+	/**
+	 * @param string $translator
+	 * @param string $textdomain
+	 * @param string $locale
+	 */
+	public function translate($message, $textdomain = 'default', $locale = null) {
+		return ( $this->getTranslator()->translate($message, $textdomain, $locale) );
+	}
     
     
     
