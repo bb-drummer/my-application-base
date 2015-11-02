@@ -5,7 +5,7 @@
   "require" : {
     "php" : ">=5.3.3",
     "zendframework/zendframework" : "dev-master",
-    "slm/locale" : ">=0.1.0,<1.2.0-dev",
+    "slm/locale" : "dev-master",
     "zf-commons/zfc-user" : ">=1.2.2",
     "neilime/zf2-assets-bundle" : ">=3.4.1",
     "zendexperts/ze-theme" : "dev-master",

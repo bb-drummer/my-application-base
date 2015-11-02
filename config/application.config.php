@@ -10,10 +10,10 @@ return array(
 		
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+    	'SlmLocale',
         'ZfcBase',
         'ZfcUser',
         'Application',
-    	'SlmLocale',
     	'Admin',
     	'TwitterBootstrapAPI',
     	'OrgHeiglPiwik',
