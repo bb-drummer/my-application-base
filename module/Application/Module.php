@@ -60,6 +60,10 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 		/** @var $serviceManager \Zend\ServiceManager\ServiceManager */
 		$serviceManager = $application->getServiceManager();
 
+		// set (form) validator locale
+		$translator = $serviceManager->get('translator');
+		\Zend\Validator\AbstractValidator::setDefaultTranslator($translator, 'default');
+		
 		// override or add a view helper
 		// /** @var $pm \Zend\View\Helper\Navigation\PluginManager */
 		// $pm = $serviceManager->get('ViewHelperManager')->get('Navigation')->getPluginManager();

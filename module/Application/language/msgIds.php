@@ -19,7 +19,7 @@ translate('account');
 	translate('user confirmation');
 	translate('user activation');
 translate('admin');
-	translate('user');
+	translate('users');
 	translate('permissions');
 		translate('ACL');
 		translate('roles');
@@ -37,3 +37,7 @@ translate('help');
 
 // Admin
 translate('Authentication failed. Please try again.');
+translate("Value is required and can't be empty");
+translate('Captcha value is wrong');
+translate("The input is less than %s characters long");
+translate("The two given tokens do not match");

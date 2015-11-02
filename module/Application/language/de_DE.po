@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-01 18:02+0100\n"
-"PO-Revision-Date: 2015-11-01 18:16+0100\n"
+"POT-Creation-Date: 2015-11-02 02:18+0100\n"
+"PO-Revision-Date: 2015-11-02 02:18+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: *.css\n"
 
-#: module/Application/language/navigation.msgIds.php:6
+#: module/Application/language/msgIds.php:7
 msgid "home"
 msgstr "Startseite"
 
-#: module/Application/language/navigation.msgIds.php:7
+#: module/Application/language/msgIds.php:8
 msgid "details"
 msgstr "Details"
 
-#: module/Application/language/navigation.msgIds.php:8
+#: module/Application/language/msgIds.php:9
 msgid "add"
 msgstr "hinzufügen"
 
-#: module/Application/language/navigation.msgIds.php:9
+#: module/Application/language/msgIds.php:10
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:22
 #: vendor/my-application/module-admin/view/admin/acl/resources.phtml:27
 #: vendor/my-application/module-admin/view/admin/acl/roles.phtml:27
@@ -39,7 +39,7 @@ msgstr "hinzufügen"
 msgid "edit"
 msgstr "ändern"
 
-#: module/Application/language/navigation.msgIds.php:10
+#: module/Application/language/msgIds.php:11
 #: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
 #: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:24
@@ -52,111 +52,133 @@ msgstr "ändern"
 msgid "delete"
 msgstr "entfernen"
 
-#: module/Application/language/navigation.msgIds.php:11
+#: module/Application/language/msgIds.php:12
 msgid "overview"
 msgstr "Übersicht"
 
-#: module/Application/language/navigation.msgIds.php:12
+#: module/Application/language/msgIds.php:13
 msgid "account"
 msgstr "Profil"
 
-#: module/Application/language/navigation.msgIds.php:13
+#: module/Application/language/msgIds.php:14
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
 msgid "change email"
 msgstr "E-Mail-Adresse ändern"
 
-#: module/Application/language/navigation.msgIds.php:14
+#: module/Application/language/msgIds.php:15
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
 msgid "change password"
 msgstr "Passwort ändern"
 
-#: module/Application/language/navigation.msgIds.php:15
+#: module/Application/language/msgIds.php:16
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:56
 msgid "register"
 msgstr "registrieren"
 
-#: module/Application/language/navigation.msgIds.php:16
+#: module/Application/language/msgIds.php:17
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
 msgid "login"
 msgstr "anmelden"
 
-#: module/Application/language/navigation.msgIds.php:17
+#: module/Application/language/msgIds.php:18
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
 msgid "logout"
 msgstr "abmelden"
 
-#: module/Application/language/navigation.msgIds.php:18
+#: module/Application/language/msgIds.php:19
 msgid "user confirmation"
 msgstr "Bestätigung"
 
-#: module/Application/language/navigation.msgIds.php:19
+#: module/Application/language/msgIds.php:20
 msgid "user activation"
 msgstr "Aktivierung"
 
-#: module/Application/language/navigation.msgIds.php:20
+#: module/Application/language/msgIds.php:21
 msgid "admin"
 msgstr "Administration"
 
-#: module/Application/language/navigation.msgIds.php:21
-msgid "user"
+#: module/Application/language/msgIds.php:22
+msgid "users"
 msgstr "Benutzer"
 
-#: module/Application/language/navigation.msgIds.php:22
+#: module/Application/language/msgIds.php:23
 msgid "permissions"
 msgstr "Berechtigungen"
 
-#: module/Application/language/navigation.msgIds.php:23
+#: module/Application/language/msgIds.php:24
 msgid "ACL"
 msgstr "ACL"
 
-#: module/Application/language/navigation.msgIds.php:24
+#: module/Application/language/msgIds.php:25
 msgid "roles"
 msgstr "Rollen"
 
-#: module/Application/language/navigation.msgIds.php:25
+#: module/Application/language/msgIds.php:26
 msgid "resources"
 msgstr "Ressourcen"
 
-#: module/Application/language/navigation.msgIds.php:26
+#: module/Application/language/msgIds.php:27
 msgid "settings"
 msgstr "Einstellungen"
 
-#: module/Application/language/navigation.msgIds.php:27
+#: module/Application/language/msgIds.php:28
 msgid "system"
 msgstr "System"
 
-#: module/Application/language/navigation.msgIds.php:28
+#: module/Application/language/msgIds.php:29
 msgid "info"
 msgstr "Info"
 
-#: module/Application/language/navigation.msgIds.php:29
+#: module/Application/language/msgIds.php:30
 msgid "backup"
 msgstr "Backup"
 
-#: module/Application/language/navigation.msgIds.php:30
+#: module/Application/language/msgIds.php:31
 msgid "setup"
 msgstr "Einrichtung"
 
-#: module/Application/language/navigation.msgIds.php:31
+#: module/Application/language/msgIds.php:32
 msgid "install"
 msgstr "Installation"
 
-#: module/Application/language/navigation.msgIds.php:32
+#: module/Application/language/msgIds.php:33
 msgid "update"
 msgstr "Update"
 
-#: module/Application/language/navigation.msgIds.php:33
+#: module/Application/language/msgIds.php:34
 msgid "help"
 msgstr "Hilfe"
 
-#: module/Application/language/navigation.msgIds.php:34
+#: module/Application/language/msgIds.php:35
 msgid "support"
 msgstr "Support"
 
-#: module/Application/language/navigation.msgIds.php:35
+#: module/Application/language/msgIds.php:36
 msgid "about"
 msgstr "Über…"
+
+#: module/Application/language/msgIds.php:39
+#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:22
+msgid "Authentication failed. Please try again."
+msgstr "Authentifizierung fehlgeschlagen. Bitte versuche es erneut."
+
+#: module/Application/language/msgIds.php:40
+msgid "Value is required and can't be empty"
+msgstr "Eingabe wird benötigt."
+
+#: module/Application/language/msgIds.php:41
+msgid "Captcha value is wrong"
+msgstr "Captcha-Antwort ist falsch."
+
+#: module/Application/language/msgIds.php:42
+#, php-format
+msgid "The input is less than %s characters long"
+msgstr "Die Eingabe ist kürzer als %s Zeichen."
+
+#: module/Application/language/msgIds.php:43
+msgid "The two given tokens do not match"
+msgstr "Passwort und Bestätigung müssen übereinstimmen."
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:158
@@ -233,7 +255,7 @@ msgid "user's registration has been confirmed"
 msgstr "Die Benutzerregistrierung ist bestätigt worden."
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:186
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:119
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:123
 msgid "admin has been notified for activation"
 msgstr "Der Administrator wurde zur Aktivierung informiert."
 
@@ -247,19 +269,19 @@ msgstr "Das Benutzerkonto wurde aktiviert."
 msgid "activation token is invalid"
 msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:52
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:55
 msgid "login succeeded"
 msgstr "Anmeldung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:114
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:118
 msgid "registration succeeded"
 msgstr "Registrierung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:116
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:120
 msgid "you have been sent an email with further instructions to follow"
 msgstr "Sie erhalten in Kürze eine e-Mail mit weiteren Anweisungen."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:133
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:137
 msgid "registration and activation succeeded"
 msgstr "Registrierung und Aktivierung erfolgreich"
 
@@ -328,10 +350,6 @@ msgstr "Es wurde kein passender Eintrag gefunden."
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:21
 msgid "A record matching the input was found"
 msgstr "Es wurde ein passender Eintrag gefunden."
-
-#: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:22
-msgid "Authentication failed. Please try again."
-msgstr "Authentifizierung fehlgeschlagen. Bitte versuche es erneut."
 
 #: module/Application/view/application/index/about.phtml:3
 #: themes/adminlte/view/application/index/about.phtml:3
