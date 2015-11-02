@@ -3,6 +3,7 @@
  * navigation message-ids for poedit
  * @method translate()
  */
+// navigation
 translate('home');
 	translate('details');
 	translate('add');
@@ -33,3 +34,6 @@ translate('admin');
 translate('help');
 	translate('support');
 	translate('about');
+
+// Admin
+translate('Authentication failed. Please try again.');
