@@ -27,7 +27,11 @@ $settings = array(
 	'aliases' => array(
 			'de' => 'de_DE',
 			'en' => 'en_US',
-	),
+			'fr' => 'fr_FR',
+			'es' => 'es_ES',
+			'nl' => 'nl_NL',
+			'it' => 'it_IT',
+ 	),
 
     /**
      * Strategies
