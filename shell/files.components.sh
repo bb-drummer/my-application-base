@@ -52,4 +52,7 @@ cp -r vendor/tinymce/tinymce/plugins public/assets/themes/zf2-basic/js/tinymce/
 cp -r vendor/tinymce/tinymce/themes public/assets/themes/zf2-basic/js/tinymce/
 cp -r vendor/tinymce/tinymce/skins public/assets/themes/zf2-basic/css/tinymce/
 
+mkdir -p public/assets/themes/zf2-basic/js/datatables
+cp -r vendor/newerton/datatables/datatables/media/* public/assets/themes/zf2-basic/js/datatables/
+
 rm -rf components

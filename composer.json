@@ -21,6 +21,7 @@
     "fortawesome/font-awesome" : ">=4.4.0",
     "newerton/fancy-box" : "dev-master",
     "tinymce/tinymce" : ">=4.2.1",
+    "datatables/datatables" : "dev-master",
     "themes/zf2-basic" : "dev-master",
     "themes/zf2-adminlte" : "dev-master",
     "themes/zf2-remark" : "dev-master",
