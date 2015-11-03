@@ -10,15 +10,15 @@ return array(
 		
     // This should be an array of module namespaces used in the application.
     'modules' => array(
-    	'SlmLocale',
         'ZfcBase',
         'ZfcUser',
         'Application',
-    	'Admin',
+    	'SlmLocale',
     	'TwitterBootstrapAPI',
     	'OrgHeiglPiwik',
         'ZeTheme',
-    	
+
+    	'Admin',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

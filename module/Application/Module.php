@@ -13,7 +13,7 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use Application\Entity\User;
+//use Application\Entity\User;
 
 // navigation
 use Zend\View\HelperPluginManager;
@@ -48,6 +48,7 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 				$oController->layout('layout/layout');
 			}
 		});
+
 	}	
 	
 	public function onBootstrap(MvcEvent $e)
