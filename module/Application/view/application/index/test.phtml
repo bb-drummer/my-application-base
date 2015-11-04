@@ -1,8 +1,45 @@
 <?php 
+	/** @var \TwitterBootstrapAPI\View\Helper\Bootstrap $user **/
 	$oBootstrap = $this->Bootstrap();
+	/** @var \TwitterBootstrapAPI\View\Helper\Components $user **/
 	$oComponents = $this->Components();
-	
+	/** @var \Admin\Entity\User $user **/
+	$oUser = $this->zfcUserIdentity();
 ?>
+<div class="clearfix"><?php 
+	$body = $oComponents()->Void(array(
+			'tagname'	=> 'div',
+			'classnames'=> 'panel-body',
+	))->setContent("<pre>".
+		var_export( $oUser->getAclrole(), true ) . PHP_EOL . 
+		var_export( $this->isallowed('mvc:nouser'), true ) . PHP_EOL . 
+		var_export( $this->isallowed('mvc:admin'), true ) . PHP_EOL .  
+		var_export( $this->isdenied('mvc:nouser'), true ) . PHP_EOL . 
+		var_export( $this->isdenied('mvc:admin'), true )
+	."</pre>");
+	$header = $oComponents()->Void( 
+		array(
+			'tagname'		=> 'div',
+			'classnames'	=> 'panel-heading',
+			'content'		=> array(
+				'tagname'		=> 'h3',
+				'classnames'	=> 'panel-title',
+				'content'		=> 'debug display'
+			)
+		) 
+	);
+	$panel = $oComponents()->Panel()
+		->setHeader( $header
+		)
+		->setContent( array(
+			$body
+		) )
+	;
+ 	$panel->setTagname('section');
+	echo $panel->render();
+	
+?></div>
+
 <div class="clearfix"><?php echo $oComponents->Toolbar()->setContent("the toolbar content..."); ?></div>
 
 <div class="clearfix"><?php echo $oComponents->Dashboard(); ?></div>

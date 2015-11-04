@@ -35,7 +35,14 @@ translate('help');
 	translate('support');
 	translate('about');
 
-// Admin
+// ACL roles and resources
+translate('administrator');
+translate('user');
+translate('public');
+	
+translate('public');
+	
+// Admin/User module
 translate('Authentication failed. Please try again.');
 translate("Value is required and can't be empty");
 translate('Captcha value is wrong');
