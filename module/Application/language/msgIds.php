@@ -5,11 +5,12 @@
  */
 // navigation
 translate('home');
-	translate('details');
 	translate('add');
 	translate('edit');
 	translate('delete');
+	translate('details');
 	translate('overview');
+	translate('show');
 translate('account');
 	translate('change email');
 	translate('change password');
@@ -39,8 +40,9 @@ translate('help');
 translate('administrator');
 translate('user');
 translate('public');
-	
-translate('public');
+
+// links/buttons/forms
+translate('submit');
 	
 // Admin/User module
 translate('Authentication failed. Please try again.');
