@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-21 00:23+0100\n"
-"PO-Revision-Date: 2015-11-21 00:23+0100\n"
+"POT-Creation-Date: 2015-11-21 00:28+0100\n"
+"PO-Revision-Date: 2015-11-21 00:28+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
@@ -212,6 +212,10 @@ msgstr ""
 
 #: module/Application/language/msgIds.php:55
 msgid "set new password"
+msgstr ""
+
+#: module/Application/language/msgIds.php:56
+msgid "Email or Username"
 msgstr ""
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103

@@ -53,3 +53,4 @@ translate("The two given tokens do not match");
 translate("The input is not between '%s' and '%s', inclusively");
 translate("request password reset");
 translate("set new password");
+translate("Email or Username");
