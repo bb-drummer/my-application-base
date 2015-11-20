@@ -69,6 +69,20 @@ return array(
 						'route'			=> 'zfcuser/logout',
 						'resource'		=> 'mvc:user',
 					),
+
+					array(
+						'label'			=> 'reset password',
+						'icon'			=> 'life-ring',
+						'route'			=> 'userrequestpasswordreset',
+						'resource'		=> 'mvc:nouser',
+					),
+
+					array(
+						'label'			=> 'reset password',
+						'route'			=> 'userresetpassword',
+						'visible'		=> false,
+					),
+						
 					array(
 						'label'			=> 'user confirmation',
 						'route'			=> 'userconfirmation',
@@ -228,7 +242,7 @@ return array(
 						'label'			=> 'system',
 						'icon'			=> 'desktop',
 						'route'			=> 'system',
-						'action'	    => 'index',
+						'action'		=> 'index',
 						'resource'		=> 'mvc:admin',
 						'pages'			=> array(
 							array(

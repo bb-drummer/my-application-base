@@ -6,7 +6,17 @@
  * drop this config file in it and change the values as you wish.
  */
 $settings = array(
+
     /**
+     * Enable password reset
+     *
+     * Allows users to reset their password
+     *
+     * Accepted values: boolean true or false
+     */
+    'enable_passwordreset' => true,
+
+	/**
      * Zend\Db\Adapter\Adapter DI Alias
      *
      * Please specify the DI alias for the configured Zend\Db\Adapter\Adapter

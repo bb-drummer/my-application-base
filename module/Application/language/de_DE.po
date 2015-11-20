@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 02:18+0100\n"
-"PO-Revision-Date: 2015-11-02 02:18+0100\n"
+"POT-Creation-Date: 2015-11-20 22:23+0100\n"
+"PO-Revision-Date: 2015-11-20 22:26+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -23,162 +23,195 @@ msgid "home"
 msgstr "Startseite"
 
 #: module/Application/language/msgIds.php:8
-msgid "details"
-msgstr "Details"
-
-#: module/Application/language/msgIds.php:9
 msgid "add"
 msgstr "hinzufügen"
 
-#: module/Application/language/msgIds.php:10
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:27
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:27
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:29
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:27
+#: module/Application/language/msgIds.php:9
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:25
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:30
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:30
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:33
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:30
 msgid "edit"
 msgstr "ändern"
 
-#: module/Application/language/msgIds.php:11
+#: module/Application/language/msgIds.php:10
 #: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
 #: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:24
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:29
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:29
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:26
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:32
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:32
 #: vendor/my-application/module-admin/view/admin/settings/delete.phtml:23
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:31
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:35
 #: vendor/my-application/module-admin/view/admin/users/delete.phtml:22
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:29
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:32
 msgid "delete"
 msgstr "entfernen"
+
+#: module/Application/language/msgIds.php:11
+msgid "details"
+msgstr "Details"
 
 #: module/Application/language/msgIds.php:12
 msgid "overview"
 msgstr "Übersicht"
 
 #: module/Application/language/msgIds.php:13
+msgid "show"
+msgstr "anzeigen"
+
+#: module/Application/language/msgIds.php:14
 msgid "account"
 msgstr "Profil"
 
-#: module/Application/language/msgIds.php:14
+#: module/Application/language/msgIds.php:15
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
 msgid "change email"
 msgstr "E-Mail-Adresse ändern"
 
-#: module/Application/language/msgIds.php:15
+#: module/Application/language/msgIds.php:16
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
 msgid "change password"
 msgstr "Passwort ändern"
 
-#: module/Application/language/msgIds.php:16
+#: module/Application/language/msgIds.php:17
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:56
 msgid "register"
 msgstr "registrieren"
 
-#: module/Application/language/msgIds.php:17
+#: module/Application/language/msgIds.php:18
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
 msgid "login"
 msgstr "anmelden"
 
-#: module/Application/language/msgIds.php:18
+#: module/Application/language/msgIds.php:19
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
 msgid "logout"
 msgstr "abmelden"
 
-#: module/Application/language/msgIds.php:19
+#: module/Application/language/msgIds.php:20
 msgid "user confirmation"
 msgstr "Bestätigung"
 
-#: module/Application/language/msgIds.php:20
+#: module/Application/language/msgIds.php:21
 msgid "user activation"
 msgstr "Aktivierung"
 
-#: module/Application/language/msgIds.php:21
+#: module/Application/language/msgIds.php:22
 msgid "admin"
 msgstr "Administration"
 
-#: module/Application/language/msgIds.php:22
+#: module/Application/language/msgIds.php:23
 msgid "users"
 msgstr "Benutzer"
 
-#: module/Application/language/msgIds.php:23
+#: module/Application/language/msgIds.php:24
 msgid "permissions"
 msgstr "Berechtigungen"
 
-#: module/Application/language/msgIds.php:24
+#: module/Application/language/msgIds.php:25
 msgid "ACL"
 msgstr "ACL"
 
-#: module/Application/language/msgIds.php:25
+#: module/Application/language/msgIds.php:26
 msgid "roles"
 msgstr "Rollen"
 
-#: module/Application/language/msgIds.php:26
+#: module/Application/language/msgIds.php:27
 msgid "resources"
 msgstr "Ressourcen"
 
-#: module/Application/language/msgIds.php:27
+#: module/Application/language/msgIds.php:28
 msgid "settings"
 msgstr "Einstellungen"
 
-#: module/Application/language/msgIds.php:28
+#: module/Application/language/msgIds.php:29
 msgid "system"
 msgstr "System"
 
-#: module/Application/language/msgIds.php:29
+#: module/Application/language/msgIds.php:30
 msgid "info"
 msgstr "Info"
 
-#: module/Application/language/msgIds.php:30
+#: module/Application/language/msgIds.php:31
 msgid "backup"
 msgstr "Backup"
 
-#: module/Application/language/msgIds.php:31
+#: module/Application/language/msgIds.php:32
 msgid "setup"
 msgstr "Einrichtung"
 
-#: module/Application/language/msgIds.php:32
+#: module/Application/language/msgIds.php:33
 msgid "install"
 msgstr "Installation"
 
-#: module/Application/language/msgIds.php:33
+#: module/Application/language/msgIds.php:34
 msgid "update"
 msgstr "Update"
 
-#: module/Application/language/msgIds.php:34
+#: module/Application/language/msgIds.php:35
 msgid "help"
 msgstr "Hilfe"
 
-#: module/Application/language/msgIds.php:35
+#: module/Application/language/msgIds.php:36
 msgid "support"
 msgstr "Support"
 
-#: module/Application/language/msgIds.php:36
+#: module/Application/language/msgIds.php:37
 msgid "about"
 msgstr "Über…"
 
-#: module/Application/language/msgIds.php:39
+#: module/Application/language/msgIds.php:40
+msgid "administrator"
+msgstr "Administrator"
+
+#: module/Application/language/msgIds.php:41
+msgid "user"
+msgstr "Benutzer"
+
+#: module/Application/language/msgIds.php:42
+msgid "public"
+msgstr "Jeder"
+
+#: module/Application/language/msgIds.php:45
+msgid "submit"
+msgstr "senden"
+
+#: module/Application/language/msgIds.php:48
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:22
 msgid "Authentication failed. Please try again."
 msgstr "Authentifizierung fehlgeschlagen. Bitte versuche es erneut."
 
-#: module/Application/language/msgIds.php:40
+#: module/Application/language/msgIds.php:49
 msgid "Value is required and can't be empty"
 msgstr "Eingabe wird benötigt."
 
-#: module/Application/language/msgIds.php:41
+#: module/Application/language/msgIds.php:50
 msgid "Captcha value is wrong"
 msgstr "Captcha-Antwort ist falsch."
 
-#: module/Application/language/msgIds.php:42
+#: module/Application/language/msgIds.php:51
 #, php-format
 msgid "The input is less than %s characters long"
 msgstr "Die Eingabe ist kürzer als %s Zeichen."
 
-#: module/Application/language/msgIds.php:43
+#: module/Application/language/msgIds.php:52
 msgid "The two given tokens do not match"
 msgstr "Passwort und Bestätigung müssen übereinstimmen."
+
+#: module/Application/language/msgIds.php:53
+#, php-format
+msgid "The input is not between '%s' and '%s', inclusively"
+msgstr "Die Eingabe muss zwischen ‚%s’ und ‚%s’ Zeichen lang sein"
+
+#: module/Application/language/msgIds.php:54
+msgid "request password reset"
+msgstr "Passwort zurücksetzen"
+
+#: module/Application/language/msgIds.php:55
+msgid "set new password"
+msgstr "Passwort neu setzen"
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:158
@@ -196,7 +229,7 @@ msgstr "Die Berechtigung wurde gespeichert."
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:76
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:119
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:155
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:212
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:208
 msgid "missing parameters"
 msgstr "fehlende Parameter"
 
@@ -241,7 +274,7 @@ msgid "user has been deleted"
 msgstr "Der Benutzer wurde gelöscht."
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:165
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:222
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:218
 msgid "user could not be found"
 msgstr "Benutzer konnte nicht gefunden werden"
 
@@ -260,12 +293,12 @@ msgid "admin has been notified for activation"
 msgstr "Der Administrator wurde zur Aktivierung informiert."
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:189
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:240
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:236
 #: vendor/my-application/module-admin/view/admin/users/activate.phtml:6
 msgid "user has been activated"
 msgstr "Das Benutzerkonto wurde aktiviert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:226
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:222
 msgid "activation token is invalid"
 msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
 
@@ -534,21 +567,21 @@ msgstr ""
 
 #: module/Application/view/application/index/about.phtml:35
 #: module/Application/view/application/system/info.phtml:27
-#: module/Application/view/layout/layout.phtml:70
+#: module/Application/view/layout/layout.phtml:91
 #: themes/adminlte/view/application/index/about.phtml:35
-#: themes/adminlte/view/layout/layout.phtml:165
-#: themes/remark/view/layout/layout.phtml:236
-#: themes/taurus/view/layout/layout.phtml:256
+#: themes/adminlte/view/layout/layout.phtml:173
+#: themes/remark/view/layout/layout.phtml:244
+#: themes/taurus/view/layout/layout.phtml:264
 #: themes/zf2-basic/view/application/index/about.phtml:35
 #: themes/zf2-basic/view/application/system/info.phtml:27
-#: themes/zf2-basic/view/layout/layout.phtml:81
+#: themes/zf2-basic/view/layout/layout.phtml:92
 #: vendor/themes/zf2-adminlte/view/application/index/about.phtml:35
-#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:165
+#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:173
 #: vendor/themes/zf2-basic/view/application/index/about.phtml:35
 #: vendor/themes/zf2-basic/view/application/system/info.phtml:27
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:81
-#: vendor/themes/zf2-remark/view/layout/layout.phtml:236
-#: vendor/themes/zf2-taurus/view/layout/layout.phtml:256
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:92
+#: vendor/themes/zf2-remark/view/layout/layout.phtml:244
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:264
 msgid "All rights reserved."
 msgstr "Alle Rechte vorbehalten."
 
@@ -1058,40 +1091,36 @@ msgstr "Es ist keine Ausnahme verfügbar"
 msgid "An error occurred"
 msgstr "Ein Fehler ist aufgetreten"
 
-#: module/Application/view/layout/layout.phtml:5
-#: module/Application/view/layout/layout.phtml:34
-msgid "MyApplication"
-msgstr "MyApplication"
+#: module/Application/view/layout/layout.phtml:74
+#: themes/taurus/view/layout/layout.phtml:168
+#: themes/zf2-basic/view/layout/layout.phtml:75
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:75
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:168
+msgid "you are here :"
+msgstr "Sie sind hier :"
 
-#: module/Application/view/layout/layout.phtml:53
+#: module/Application/view/layout/layout.phtml:93
+#: themes/remark/view/layout/layout.phtml:248
+#: themes/taurus/view/layout/layout.phtml:266
+#: themes/zf2-basic/view/layout/layout.phtml:94
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:94
+#: vendor/themes/zf2-remark/view/layout/layout.phtml:248
+#: vendor/themes/zf2-taurus/view/layout/layout.phtml:266
+msgid "Powered by"
+msgstr "Powered by"
+
 #: module/Application/view/partial/breadcrumb.phtml:3
 msgid "Du bist hier :"
 msgstr "Sie sind hier :"
 
-#: themes/adminlte/view/layout/layout.phtml:149
-#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:149
+#: themes/adminlte/view/layout/layout.phtml:157
+#: vendor/themes/zf2-adminlte/view/layout/layout.phtml:157
 msgid "you are here"
-msgstr "Sie sind hier :"
-
-#: themes/remark/view/layout/layout.phtml:240
-#: themes/taurus/view/layout/layout.phtml:258
-#: themes/zf2-basic/view/layout/layout.phtml:83
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:83
-#: vendor/themes/zf2-remark/view/layout/layout.phtml:240
-#: vendor/themes/zf2-taurus/view/layout/layout.phtml:258
-msgid "Powered by"
-msgstr "Powered by"
-
-#: themes/taurus/view/layout/layout.phtml:160
-#: themes/zf2-basic/view/layout/layout.phtml:64
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:64
-#: vendor/themes/zf2-taurus/view/layout/layout.phtml:160
-msgid "you are here :"
 msgstr "Sie sind hier :"
 
 #: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:4
 #: vendor/my-application/module-admin/view/admin/settings/add.phtml:4
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:3
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:10
 msgid "add setting"
 msgstr "Einstellung hinzufügen"
 
@@ -1116,14 +1145,15 @@ msgid "cancel"
 msgstr "abbrechen"
 
 #: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:4
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:5
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:3
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:9
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:9
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:9
 msgid "add resource"
 msgstr "Neue Ressource hinzufügen"
 
 #: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:4
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:3
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:3
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:7
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:9
 msgid "add role"
 msgstr "Neue Rolle hinzufügen"
 
@@ -1159,18 +1189,18 @@ msgstr "Rolle bearbeiten"
 msgid "list view"
 msgstr "Listenansicht"
 
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:6
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:7
 #: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:6
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:17
 msgid "role"
 msgstr "Rolle"
 
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:7
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:8
 #: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:13
 msgid "resource"
 msgstr "Ressource"
 
-#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:8
+#: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:9
 msgid "status"
 msgstr "Status"
 
@@ -1186,19 +1216,19 @@ msgstr "erlauben"
 msgid "deny"
 msgstr "verbieten"
 
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:4
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:10
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:3
+msgid "manage permissions"
+msgstr "Berechtigungen verwalten"
+
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:8
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:4
 msgid "manage roles"
 msgstr "Benutzerrollen verwalten"
 
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:6
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:10
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:10
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:4
 msgid "manage resources"
 msgstr "Ressourcen verwalten "
-
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:13
-msgid "manage permissions"
-msgstr "Berechtigungen verwalten"
 
 #: vendor/my-application/module-admin/view/admin/acl/resources.phtml:17
 msgid "resource slug"
@@ -1228,19 +1258,19 @@ msgstr "Möchten Sie wirklich diese Einstellung löschen?"
 msgid "edit setting"
 msgstr "Einstellung bearbeiten"
 
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:10
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:4
 msgid "manage settings"
 msgstr "Einstellungen verwalten"
 
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:17
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:18
 msgid "type"
 msgstr "Typ:"
 
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:18
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:19
 msgid "name"
 msgstr "Name"
 
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:19
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:20
 msgid "value"
 msgstr "Wert"
 
@@ -1249,7 +1279,7 @@ msgid "activate user"
 msgstr "Benutzer aktivieren"
 
 #: vendor/my-application/module-admin/view/admin/users/add.phtml:3
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:3
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:7
 msgid "add user"
 msgstr "Neuen Benutzer hinzufügen"
 
@@ -1269,7 +1299,7 @@ msgstr "Möchten Sie wirklich diesen Benutzer löschen?"
 msgid "edit user"
 msgstr "Benutzer bearbeiten"
 
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:9
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:3
 msgid "manage users"
 msgstr "Benutzer verwalten"
 
@@ -1387,6 +1417,9 @@ msgstr "Sie haben noch keinen Zugang?"
 #: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
 msgid "Sign up!"
 msgstr "Jetzt registrieren!"
+
+#~ msgid "MyApplication"
+#~ msgstr "MyApplication"
 
 #~ msgid "Home"
 #~ msgstr "Startseite"
