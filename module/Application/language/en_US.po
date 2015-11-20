@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-20 22:26+0100\n"
-"PO-Revision-Date: 2015-11-20 22:27+0100\n"
+"POT-Creation-Date: 2015-11-21 00:23+0100\n"
+"PO-Revision-Date: 2015-11-21 00:23+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
@@ -61,8 +61,9 @@ msgid "show"
 msgstr ""
 
 #: module/Application/language/msgIds.php:14
+#, fuzzy
 msgid "account"
-msgstr ""
+msgstr "Profil"
 
 #: module/Application/language/msgIds.php:15
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
@@ -288,7 +289,8 @@ msgid "user's registration has been confirmed"
 msgstr ""
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:186
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:123
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:125
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:209
 msgid "admin has been notified for activation"
 msgstr ""
 
@@ -302,19 +304,22 @@ msgstr ""
 msgid "activation token is invalid"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:55
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:57
 msgid "login succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:118
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:120
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:204
 msgid "registration succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:120
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:122
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:206
 msgid "you have been sent an email with further instructions to follow"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:137
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:139
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:223
 msgid "registration and activation succeeded"
 msgstr ""
 
@@ -1099,6 +1104,7 @@ msgstr ""
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
+#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:30
 msgid "cancel"
 msgstr ""
 
@@ -1322,6 +1328,29 @@ msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:7
 msgid "registration is currently not available, please try again later"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:3
+msgid "reset password"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:7
+msgid ""
+"To set a new password enter your username or email used for registration. "
+"You will recieve a mail with a link to set your new password."
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:7
+msgid "Enter your new password and verify."
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:9
+msgid "password set successfully"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:11
+msgid "unable to set your password, please try again"
 msgstr ""
 
 #: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:1
