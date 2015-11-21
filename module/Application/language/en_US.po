@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-21 00:28+0100\n"
-"PO-Revision-Date: 2015-11-21 00:28+0100\n"
+"POT-Creation-Date: 2015-11-21 17:23+0100\n"
+"PO-Revision-Date: 2015-11-21 17:23+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
@@ -207,6 +207,7 @@ msgid "The input is not between '%s' and '%s', inclusively"
 msgstr ""
 
 #: module/Application/language/msgIds.php:54
+#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:27
 msgid "request password reset"
 msgstr ""
 
@@ -1105,10 +1106,12 @@ msgstr ""
 #: vendor/my-application/module-admin/view/admin/users/add.phtml:63
 #: vendor/my-application/module-admin/view/admin/users/delete.phtml:23
 #: vendor/my-application/module-admin/view/admin/users/edit.phtml:71
-#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:46
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:46
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
-#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
-#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:30
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:58
+#: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:28
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:39
 msgid "cancel"
 msgstr ""
 
@@ -1294,6 +1297,12 @@ msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:44
 msgid "save"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
+msgid "reset"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:7
