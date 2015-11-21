@@ -4,7 +4,7 @@
 
 This should serve as a fully functional basic ZendFramework2 application construct. 
 Just do a checkout from our GitLab and modify and/or extend it to your needs.
-This Construct is bases upon ZF2s skeleton application and ZF-Commons' ZFC-User module.
+This Construct is based upon ZF2s skeleton application and ZF-Commons' ZFC-User module.
 This very basic application includes modules to manage users and ACL settings, login, logout and user registration, a name/type based and maintainable options list.
 
 Please, take a look into the application's User Help section to get some guidance around this application.
