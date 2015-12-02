@@ -7,7 +7,53 @@
  */
 $settings = array(
 
-    /**
+	/**
+	 * registration redirect route to go upon successful user registration, 
+	 * user's confirmation and admin's activation
+	 **/
+    'zfcuser_registration_redirect_route' => 'home', 
+		
+	/**
+	 * user must confirm new registration via mail
+	 **/
+    'zfcuser_user_must_confirm' => true, 
+		
+	/**
+	 * email adress to send confirmation mail from
+	 **/
+    'zfcuser_admin_from_email' => "no-reply@dragon-projects.net",
+		
+	/**
+	 * email subject for confirmation mail
+	 **/
+    'zfcuser_confirm_subject' => "[myApplication] Benutzer-Bestätigung",
+		
+	/**
+	 * admin must active new user via notification mail
+	 **/
+    'zfcuser_admin_must_activate' => true,
+		
+	/**
+	 * admin's email adress to recieve activation mail
+	 **/
+    'zfcuser_admin_to_email' => "bartels@dragon-projects.net",
+		
+	/**
+	 * email subject for confirmation mail
+	 **/
+    'zfcuser_activate_subject' => "[myApplication] Benutzer-Aktivierung",
+		
+	/**
+	 * email subject for confirmation mail
+	 **/
+    'zfcuser_resetpassword_subject' => "[myApplication] Passwort zurücksetzen",
+		
+	/**
+	 * HTTP basepath in email links
+	 */
+    'zfcuser_mail_http_basepath' => "http://".$_SERVER["HTTP_HOST"],
+		
+	/**
      * Enable password reset
      *
      * Allows users to reset their password
@@ -16,6 +62,12 @@ $settings = array(
      */
     'enable_passwordreset' => true,
 
+		
+	//
+	// zfc-user options...
+	//	
+		
+		
 	/**
      * Zend\Db\Adapter\Adapter DI Alias
      *
