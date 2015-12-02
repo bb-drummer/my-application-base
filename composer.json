@@ -3,7 +3,7 @@
   "description" : "My Web-Application (http://my-application.net)",
   "version" : "1.0.0.1",
   "require" : {
-    "php" : ">=5.3.3",
+    "php" : ">=5.5",
     "zendframework/zendframework" : "dev-master",
     "slm/locale" : "dev-master",
     "zf-commons/zfc-user" : ">=1.2.2",
@@ -27,11 +27,6 @@
     "themes/zf2-remark" : "dev-master",
     "themes/zf2-taurus" : "dev-master"
   },
-  "extra" : {
-    "branch-alias" : {
-      "dev-master" : "master"
-    }
-  },
   "repositories" : [ {
     "type" : "git",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
@@ -53,6 +48,11 @@
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "master"
+    }
+  },
   "type" : "project",
   "scripts" : {
     "post-install-cmd" : [ "chmod -R ugoa+rx ./shell", "./shell/files.components.sh", "./shell/files.themes.sh" ],
