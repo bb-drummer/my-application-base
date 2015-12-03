@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-21 17:22+0100\n"
-"PO-Revision-Date: 2015-11-21 17:22+0100\n"
+"POT-Creation-Date: 2015-12-03 02:36+0100\n"
+"PO-Revision-Date: 2015-12-03 02:40+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -203,7 +203,7 @@ msgstr "Passwort und Bestätigung müssen übereinstimmen."
 #: module/Application/language/msgIds.php:53
 #, php-format
 msgid "The input is not between '%s' and '%s', inclusively"
-msgstr "Die Eingabe muss zwischen ‚%s’ und ‚%s’ Zeichen lang sein"
+msgstr "Die Eingabe muss zwischen ‚%s’ und ‚%s’ Zeichen lang sein."
 
 #: module/Application/language/msgIds.php:54
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:27
@@ -218,114 +218,131 @@ msgstr "Passwort neu setzen"
 msgid "Email or Username"
 msgstr "E-Mail oder Benutzername"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:103
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:158
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:102
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:157
 msgid "permission has been saved"
 msgstr "Die Berechtigung wurde gespeichert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:125
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:182
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:253
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:297
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:370
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:415
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:71
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:105
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:76
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:119
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:155
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:208
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:124
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:181
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:252
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:296
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:369
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:414
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:70
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:104
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:75
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:118
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:154
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:207
 msgid "missing parameters"
 msgstr "fehlende Parameter"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:193
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:192
 msgid "permission has been deleted"
 msgstr "Die Berechtigung wurde gelöscht."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:230
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:272
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:229
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:271
 msgid "role has been saved"
 msgstr "Die Rolle wurde gespeichert"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:308
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:307
 msgid "role has been deleted"
 msgstr "Die Rolle wurde gelöscht."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:347
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:389
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:346
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:388
 msgid "resource has been saved"
 msgstr "Die Ressource wurde gespeichert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:426
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:425
 msgid "resource has been deleted"
 msgstr "Die Ressource wurde gelöscht."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:53
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:90
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:52
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:89
 msgid "setting has been saved"
 msgstr "Die Einstellung wurde gespeichert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:116
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:115
 msgid "setting has been deleted"
 msgstr "Die Einstellung wurde gelöscht."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:58
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:104
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:57
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:103
 msgid "user has been saved"
-msgstr "Der Benutzer wurde gespeichert"
+msgstr "Der Benutzer wurde gespeichert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:130
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:129
 msgid "user has been deleted"
 msgstr "Der Benutzer wurde gelöscht."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:165
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:218
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:164
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:217
 msgid "user could not be found"
-msgstr "Benutzer konnte nicht gefunden werden"
+msgstr "Benutzer konnte nicht gefunden werden."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:169
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:168
 msgid "confirmation token is invalid"
 msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:183
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:182
 #: vendor/my-application/module-admin/view/admin/users/confirm.phtml:6
 msgid "user's registration has been confirmed"
 msgstr "Die Benutzerregistrierung ist bestätigt worden."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:186
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:125
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:209
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:185
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:130
 msgid "admin has been notified for activation"
 msgstr "Der Administrator wurde zur Aktivierung informiert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:189
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:236
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:188
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:235
 #: vendor/my-application/module-admin/view/admin/users/activate.phtml:6
 msgid "user has been activated"
 msgstr "Das Benutzerkonto wurde aktiviert."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:222
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:221
 msgid "activation token is invalid"
 msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:57
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:60
 msgid "login succeeded"
 msgstr "Anmeldung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:120
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:204
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:125
 msgid "registration succeeded"
 msgstr "Registrierung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:122
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:206
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
 msgid "you have been sent an email with further instructions to follow"
 msgstr "Sie erhalten in Kürze eine e-Mail mit weiteren Anweisungen."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:139
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:223
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:144
 msgid "registration and activation succeeded"
 msgstr "Registrierung und Aktivierung erfolgreich"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:210
+#, php-format
+msgid "user '%s' not found"
+msgstr "Benutzer ‚%s’ konnte nicht gefunden werden."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:222
+#, php-format
+msgid "password reset email has been sent to user '%s'"
+msgstr "Ein Link zum Zurücksetzen des Passworts wurde an ‚%s‘ gesendet."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:272
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:279
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:310
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:319
+msgid "invalid request"
+msgstr "Ungültige Anfrage"
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:348
+msgid "password has been set"
+msgstr "Neues Passwort wurde festgelegt."
 
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:6
 msgid "Username"
@@ -583,12 +600,12 @@ msgstr ""
 #: themes/taurus/view/layout/layout.phtml:264
 #: themes/zf2-basic/view/application/index/about.phtml:35
 #: themes/zf2-basic/view/application/system/info.phtml:27
-#: themes/zf2-basic/view/layout/layout.phtml:92
+#: themes/zf2-basic/view/layout/layout.phtml:93
 #: vendor/themes/zf2-adminlte/view/application/index/about.phtml:35
 #: vendor/themes/zf2-adminlte/view/layout/layout.phtml:173
 #: vendor/themes/zf2-basic/view/application/index/about.phtml:35
 #: vendor/themes/zf2-basic/view/application/system/info.phtml:27
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:92
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:93
 #: vendor/themes/zf2-remark/view/layout/layout.phtml:244
 #: vendor/themes/zf2-taurus/view/layout/layout.phtml:264
 msgid "All rights reserved."
@@ -1102,8 +1119,8 @@ msgstr "Ein Fehler ist aufgetreten!"
 
 #: module/Application/view/layout/layout.phtml:74
 #: themes/taurus/view/layout/layout.phtml:168
-#: themes/zf2-basic/view/layout/layout.phtml:75
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:75
+#: themes/zf2-basic/view/layout/layout.phtml:76
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:76
 #: vendor/themes/zf2-taurus/view/layout/layout.phtml:168
 msgid "you are here :"
 msgstr "Sie sind hier :"
@@ -1111,8 +1128,8 @@ msgstr "Sie sind hier :"
 #: module/Application/view/layout/layout.phtml:93
 #: themes/remark/view/layout/layout.phtml:248
 #: themes/taurus/view/layout/layout.phtml:266
-#: themes/zf2-basic/view/layout/layout.phtml:94
-#: vendor/themes/zf2-basic/view/layout/layout.phtml:94
+#: themes/zf2-basic/view/layout/layout.phtml:95
+#: vendor/themes/zf2-basic/view/layout/layout.phtml:95
 #: vendor/themes/zf2-remark/view/layout/layout.phtml:248
 #: vendor/themes/zf2-taurus/view/layout/layout.phtml:266
 msgid "Powered by"
@@ -1152,7 +1169,7 @@ msgstr "Einstellung hinzufügen"
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:58
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:28
-#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:39
+#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:34
 msgid "cancel"
 msgstr "abbrechen"
 
@@ -1407,16 +1424,6 @@ msgstr ""
 msgid "Enter your new password and verify."
 msgstr "Geben Sie Ihr neues Passwort ein, und bestätigen Sie."
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:9
-msgid "password set successfully"
-msgstr "Ihr Passwort wurde erfolgreich festgelegt."
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:11
-msgid "unable to set your password, please try again"
-msgstr ""
-"Es trat ein Fehler beim Ändern der Passwortes auf. Bitte versuchen Sie es "
-"noch einmal."
-
 #: vendor/zf-commons/zfc-user/view/zfc-user/user/changeemail.phtml:1
 #, php-format
 msgid "Change Email for %s"
@@ -1462,6 +1469,14 @@ msgstr "Sie haben noch keinen Zugang?"
 #: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
 msgid "Sign up!"
 msgstr "Jetzt registrieren!"
+
+#~ msgid "password set successfully"
+#~ msgstr "Ihr Passwort wurde erfolgreich festgelegt."
+
+#~ msgid "unable to set your password, please try again"
+#~ msgstr ""
+#~ "Es trat ein Fehler beim Ändern der Passwortes auf. Bitte versuchen Sie es "
+#~ "noch einmal."
 
 #~ msgid "MyApplication"
 #~ msgstr "MyApplication"
