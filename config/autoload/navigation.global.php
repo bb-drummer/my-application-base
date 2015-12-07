@@ -52,6 +52,14 @@ return array(
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
+						'label'			=> 'edit profile',
+						'icon'			=> 'edit',
+						'route'			=> 'admin/default',
+						'controller'	=> 'user',
+						'action'		=> 'edituserprofile',
+						'resource'		=> 'mvc:user',
+					),
+					array(
 						'label'			=> 'change email',
 						'icon'			=> 'envelope',
 						'route'			=> 'zfcuser/changeemail',
