@@ -28,22 +28,22 @@
     "themes/zf2-taurus" : "dev-master"
   },
   "repositories" : [ {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
   }, {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-adminlte.git"
   }, {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-remark.git"
   }, {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-taurus.git"
   }, {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/zf2/module-admin.git"
   }, {
-    "type" : "vcs",
+    "type" : "gitlab",
     "url" : "http://gitlab.dragon-projects.de:81/zf2/module-twbs-api.git"
   } ],
   "license" : "BSD-3-Clause",
