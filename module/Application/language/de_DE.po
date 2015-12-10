@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 00:57+0100\n"
-"PO-Revision-Date: 2015-12-08 00:58+0100\n"
+"POT-Creation-Date: 2015-12-10 23:40+0100\n"
+"PO-Revision-Date: 2015-12-10 23:44+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -66,13 +66,13 @@ msgstr "Profil"
 
 #: module/Application/language/msgIds.php:15
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
 msgid "change email"
 msgstr "E-Mail-Adresse ändern"
 
 #: module/Application/language/msgIds.php:16
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:10
 msgid "change password"
 msgstr "Passwort ändern"
 
@@ -88,7 +88,7 @@ msgid "login"
 msgstr "anmelden"
 
 #: module/Application/language/msgIds.php:19
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:10
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:11
 msgid "logout"
 msgstr "abmelden"
 
@@ -169,7 +169,7 @@ msgid "administrator"
 msgstr "Administrator"
 
 #: module/Application/language/msgIds.php:41
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:22
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:23
 msgid "user"
 msgstr "Benutzer"
 
@@ -220,6 +220,11 @@ msgstr "Passwort neu setzen"
 #: module/Application/language/msgIds.php:56
 msgid "Email or Username"
 msgstr "E-Mail oder Benutzername"
+
+#: module/Application/language/msgIds.php:57
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:91
+msgid "mobile"
+msgstr "Mobil"
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:102
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:157
@@ -296,7 +301,7 @@ msgid "user's registration has been confirmed"
 msgstr "Die Benutzerregistrierung ist bestätigt worden."
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:185
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:130
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:132
 msgid "admin has been notified for activation"
 msgstr "Der Administrator wurde zur Aktivierung informiert."
 
@@ -310,42 +315,58 @@ msgstr "Das Benutzerkonto wurde aktiviert."
 msgid "activation token is invalid"
 msgstr "Die Sitzung ist abgelaufen oder der Auth-Token ist ungültig."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:60
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:62
 msgid "login succeeded"
 msgstr "Anmeldung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:125
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
 msgid "registration succeeded"
 msgstr "Registrierung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:129
 msgid "you have been sent an email with further instructions to follow"
 msgstr "Sie erhalten in Kürze eine e-Mail mit weiteren Anweisungen."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:144
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:146
 msgid "registration and activation succeeded"
 msgstr "Registrierung und Aktivierung erfolgreich"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:210
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:212
 #, php-format
 msgid "user '%s' not found"
 msgstr "Benutzer ‚%s’ konnte nicht gefunden werden."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:222
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:224
 #, php-format
 msgid "password reset email has been sent to user '%s'"
 msgstr "Ein Link zum Zurücksetzen des Passworts wurde an ‚%s‘ gesendet."
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:272
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:279
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:310
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:319
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:274
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:281
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:312
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:321
 msgid "invalid request"
 msgstr "Ungültige Anfrage"
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:348
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:350
 msgid "password has been set"
 msgstr "Neues Passwort wurde festgelegt."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:450
+msgid "user data has been changed"
+msgstr "Benutzerdaten wurde geändert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:454
+msgid "user data could not be changed"
+msgstr "Benutzerdaten konnten nicht geändert werden."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:516
+msgid "user profile data has been changed"
+msgstr "Benutzerprofildaten wurde geändert."
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:520
+msgid "user profile data could not be changed"
+msgstr "Benutzerprofildaten konnten nicht geändert werden."
 
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:6
 msgid "Username"
@@ -1169,6 +1190,8 @@ msgstr "Einstellung hinzufügen"
 #: vendor/my-application/module-admin/view/admin/users/edit.phtml:71
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:46
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:46
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:20
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:57
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:58
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:28
@@ -1224,7 +1247,7 @@ msgstr "Listenansicht"
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:7
 #: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:6
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:17
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:27
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:28
 msgid "role"
 msgstr "Rolle"
 
@@ -1365,6 +1388,8 @@ msgstr "speichern"
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:19
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:56
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
 msgid "reset"
 msgstr "zurücksetzen"
@@ -1384,6 +1409,16 @@ msgstr ""
 "Es trat ein Fehler beim Ändern der Passwortes auf. Bitte versuchen Sie es "
 "noch einmal."
 
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
+msgid "edit userdata"
+msgstr "Benutzerdaten bearbeiten"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:7
+msgid "edit profile"
+msgstr "Profil bearbeiten"
+
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:3
 msgid "user profile"
 msgstr "Benutzerprofil"
@@ -1392,23 +1427,43 @@ msgstr "Benutzerprofil"
 msgid "user profile actions"
 msgstr "Benutzerprofil-Aktionen"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:7
-msgid "edit profile"
-msgstr "Profil bearbeiten"
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:19
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:20
 msgid "Hallo"
 msgstr "Hallo"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:32
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:42
+msgid "messengers"
+msgstr "Messenger"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:49
+msgid "Twitter"
+msgstr "Twitter"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:53
+msgid "Facebook"
+msgstr "Facebook"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:57
+msgid "Skype"
+msgstr "Skype"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:61
+msgid "ICQ"
+msgstr "ICQ"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:72
+msgid "address"
+msgstr "Adresse"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:79
 msgid "street"
 msgstr "Straße"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:36
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:83
 msgid "city"
 msgstr "Ort"
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:40
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:87
 msgid "phone"
 msgstr "Telefon"
 

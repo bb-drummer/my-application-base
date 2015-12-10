@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-08 00:56+0100\n"
-"PO-Revision-Date: 2015-12-08 00:56+0100\n"
+"POT-Creation-Date: 2015-12-10 23:42+0100\n"
+"PO-Revision-Date: 2015-12-10 23:43+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
@@ -66,13 +66,13 @@ msgstr ""
 
 #: module/Application/language/msgIds.php:15
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
 msgid "change email"
 msgstr ""
 
 #: module/Application/language/msgIds.php:16
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:9
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:10
 msgid "change password"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgid "login"
 msgstr ""
 
 #: module/Application/language/msgIds.php:19
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:10
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:11
 msgid "logout"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgid "administrator"
 msgstr ""
 
 #: module/Application/language/msgIds.php:41
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:22
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:23
 msgid "user"
 msgstr ""
 
@@ -219,6 +219,11 @@ msgstr ""
 
 #: module/Application/language/msgIds.php:56
 msgid "Email or Username"
+msgstr ""
+
+#: module/Application/language/msgIds.php:57
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:91
+msgid "mobile"
 msgstr ""
 
 #: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:102
@@ -296,7 +301,7 @@ msgid "user's registration has been confirmed"
 msgstr ""
 
 #: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:185
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:130
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:132
 msgid "admin has been notified for activation"
 msgstr ""
 
@@ -310,41 +315,57 @@ msgstr ""
 msgid "activation token is invalid"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:60
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:62
 msgid "login succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:125
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
 msgid "registration succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:129
 msgid "you have been sent an email with further instructions to follow"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:144
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:146
 msgid "registration and activation succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:210
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:212
 #, php-format
 msgid "user '%s' not found"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:222
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:224
 #, php-format
 msgid "password reset email has been sent to user '%s'"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:272
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:279
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:310
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:319
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:274
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:281
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:312
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:321
 msgid "invalid request"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:348
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:350
 msgid "password has been set"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:450
+msgid "user data has been changed"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:454
+msgid "user data could not be changed"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:516
+msgid "user profile data has been changed"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:520
+msgid "user profile data could not be changed"
 msgstr ""
 
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:6
@@ -1127,6 +1148,8 @@ msgstr ""
 #: vendor/my-application/module-admin/view/admin/users/edit.phtml:71
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:46
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:46
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:20
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:57
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:58
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:28
@@ -1182,7 +1205,7 @@ msgstr ""
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:7
 #: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:6
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:17
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:27
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:28
 msgid "role"
 msgstr ""
 
@@ -1321,6 +1344,8 @@ msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:45
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:19
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:56
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
 msgid "reset"
 msgstr ""
@@ -1338,6 +1363,16 @@ msgstr ""
 msgid "unable to update your password, please try again"
 msgstr ""
 
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
+msgid "edit userdata"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:7
+msgid "edit profile"
+msgstr ""
+
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:3
 msgid "user profile"
 msgstr ""
@@ -1346,23 +1381,43 @@ msgstr ""
 msgid "user profile actions"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:7
-msgid "edit profile"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:19
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:20
 msgid "Hallo"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:32
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:42
+msgid "messengers"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:49
+msgid "Twitter"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:53
+msgid "Facebook"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:57
+msgid "Skype"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:61
+msgid "ICQ"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:72
+msgid "address"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:79
 msgid "street"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:36
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:83
 msgid "city"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:40
+#: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:87
 msgid "phone"
 msgstr ""
 
