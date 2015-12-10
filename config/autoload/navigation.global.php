@@ -52,6 +52,12 @@ return array(
 						'resource'		=> 'mvc:nouser',
 					),
 					array(
+						'label'			=> 'user profile',
+						'icon'			=> 'photo',
+						'route'			=> 'zfcuser',
+						'resource'		=> 'mvc:user',
+					),
+					array(
 						'label'			=> 'edit profile',
 						'icon'			=> 'edit',
 						'route'			=> 'zfcuser/edituserprofile',
