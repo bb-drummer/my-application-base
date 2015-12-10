@@ -54,9 +54,13 @@ return array(
 					array(
 						'label'			=> 'edit profile',
 						'icon'			=> 'edit',
-						'route'			=> 'admin/default',
-						'controller'	=> 'user',
-						'action'		=> 'edituserprofile',
+						'route'			=> 'zfcuser/edituserprofile',
+						'resource'		=> 'mvc:user',
+					),
+					array(
+						'label'			=> 'edit userdata',
+						'icon'			=> 'user',
+						'route'			=> 'zfcuser/edituserdata',
 						'resource'		=> 'mvc:user',
 					),
 					array(
