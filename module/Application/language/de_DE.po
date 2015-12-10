@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-10 23:40+0100\n"
-"PO-Revision-Date: 2015-12-10 23:44+0100\n"
+"POT-Creation-Date: 2015-12-11 00:18+0100\n"
+"PO-Revision-Date: 2015-12-11 00:19+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
@@ -1474,6 +1474,14 @@ msgstr "Sie haben noch keinen Zugang?"
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:33
 msgid "register now!"
 msgstr "Jetzt registrieren!"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:37
+msgid "forgot your credentials?"
+msgstr "Passwort vergessen?"
+
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:38
+msgid "reset your password"
+msgstr "(Zurücksetzen Ihres Passwortes)"
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:4
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:13
