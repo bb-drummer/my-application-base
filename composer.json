@@ -59,5 +59,11 @@
     "post-update-cmd" : [ "chmod -R ugoa+rx ./shell", "./shell/files.components.sh", "./shell/files.themes.sh" ],
     "never-to-be-executed" : [ "rm -rf components" ]
   },
-  "homepage" : "http://dragon-projects.net/"
+  "homepage" : "http://dragon-projects.net/",
+  "autoload" : {
+    "psr-0" : {
+      "Application" : "./module/Application/src/"
+    },
+    "classmap" : [ "./module/" ]
+  }
 }
