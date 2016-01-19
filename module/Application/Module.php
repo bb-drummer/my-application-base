@@ -23,9 +23,10 @@ use Zend\Permissions\Acl\Resource\GenericResource;
 
 // service locator
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\ServiceLocatorAwareInterface;
 
 
-class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInterface
+class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterface
 {
 	protected $Acl;
 	protected $AclTable;
@@ -86,11 +87,19 @@ class Module implements AutoloaderProviderInterface //, ServiceLocatorAwareInter
 				array_merge_recursive($localConfigs, include $filepath);
 			}
 		}
+		
+		// load setting from DB...
+		
 		return array_merge_recursive(
 			( is_readable($applicationGlobalConfigFile) ? include $applicationGlobalConfigFile : array() ),
 			( is_readable($genericGlobalConfigFile) ? include $genericGlobalConfigFile : array() ),
 			$localConfigs
 		);
+	}
+
+	public function loadConfigFromDB ()
+	{
+		
 	}
 
 	public function getConfig()
