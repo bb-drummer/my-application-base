@@ -6,6 +6,13 @@ return array(
 		'favicon'			=> 'img/favicon.ico',
 		'apple_touch_icon'	=> 'img/apple-touch-icon.png',
 		'logo'				=> 'img/zf2-logo.png',
+
+	    'css' => array(
+	    	
+	    ),
+	    'js' => array(
+	    	
+	    ),
 	),
 		
     // This should be an array of module namespaces used in the application.
