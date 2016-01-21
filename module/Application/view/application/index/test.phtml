@@ -11,7 +11,7 @@
 			'tagname'	=> 'div',
 			'classnames'=> 'panel-body',
 	))->setContent("<pre>".
-		var_export( $oUser->getAclrole(), true ) . PHP_EOL . 
+		($oUser ? var_export( $oUser->getAclrole(), true ) : 'public') . PHP_EOL . 
 		var_export( $this->isallowed('mvc:nouser'), true ) . PHP_EOL . 
 		var_export( $this->isallowed('mvc:admin'), true ) . PHP_EOL .  
 		var_export( $this->isdenied('mvc:nouser'), true ) . PHP_EOL . 
