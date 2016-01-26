@@ -102,6 +102,17 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		return ( $this->getTranslator()->translate($message, $textdomain, $locale) );
 	}
     
-    
-    
+    /**
+     * fetch request parameters
+     */
+    public function setTemplateVars () {
+		return (array_merge( 
+			$this->params()->fromRoute(), 
+			$this->params()->fromPost(),
+			array(
+				"isXHR" => $this->getRequest()->isXmlHttpRequest()
+			)
+		));
+		
+    }
 }
