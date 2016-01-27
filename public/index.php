@@ -13,7 +13,7 @@
  * @copyright	copyright (c) 2016 Björn Bartels [dragon-projects.net] <info@dragon-projects.net>
  */
 
-ini_set('error_reporting', E_ALL);
+ini_set('error_reporting', E_ALL & ~E_STRICT);
 //ini_set('error_log', '/var/www/vhosts/system/dev.swim-db.de/logs/error_log');
 ini_set('log_errors', 'On');
 ini_set('display_errors', 'On');
