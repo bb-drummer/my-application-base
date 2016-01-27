@@ -105,7 +105,7 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     /**
      * fetch request parameters
      */
-    public function getTemplateVars ( $vars ) {
+    public function getTemplateVars ( $vars = array() ) {
 		$result = (array_merge( 
 			$this->params()->fromRoute(), 
 			$this->params()->fromPost(),
