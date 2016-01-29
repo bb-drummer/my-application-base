@@ -181,8 +181,8 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	{
 		return array(
 			'factories' => array(
-				'ApplicationAcl' =>	function($sm) {
-					return $this->getAcl();
+				'ApplicationAcl' =>	function( $oServiceManager ) {
+					return \Application\Model\Callbacks::initACL($oServiceManager); // $this->getAcl();
 				},
 			),
 		);

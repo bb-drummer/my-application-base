@@ -54,15 +54,16 @@ class Callbacks
 	/**
 	 * load and initialize (global) ACL
 	 * 
-	 * @param	$oServiceManager	\Zend\ServiceManager\ServiceManager
+	 * @param	$oEvent	\Zend\Mvc\Mvcevent
 	 * @return	\Zend\Permissions\Acl\Acl
 	 */
-	public static function initACL ( $oServiceManager )
+	public static function initACL ( $oServiceManager ) // \Zend\Mvc\Mvcevent $oEvent )
 	{
-		$oACL = new ZendAcl();
-		$oAcls = $oServiceManager->get('\Admin\Model\AclTable');
-		$oRoles = $oServiceManager->get('Admin\Model\AclroleTable');
-		$oResources = $oServiceManager->get('\Admin\Model\AclresourceTable');
+		//$oServiceManager	= $oEvent->getApplication()->getServiceManager();
+		$oACL				= new ZendAcl();
+		$oAcls				= $oServiceManager->get('\Admin\Model\AclTable');
+		$oRoles				= $oServiceManager->get('Admin\Model\AclroleTable');
+		$oResources			= $oServiceManager->get('\Admin\Model\AclresourceTable');
 		
 		$aRoles = $oRoles->fetchAll()->toArray();
 		foreach ($aRoles as $key => $role) {
@@ -99,6 +100,43 @@ class Callbacks
 		));
 		
 		return ($oACL);
+	}
+	
+	/**
+	 * check request/route for ACL permit or denial
+	 * adjust response(-code) on denial
+	 * 
+	 * @param	\Zend\Mvc\MvcEvent $oEvent
+	 * @return	void
+	 */
+	public static function checkACL (\Zend\Mvc\Mvcevent $oEvent ) {
+		$oServiceManager = $oEvent->getApplication()->getServiceManager();
+		$oAcl = $oEvent->getViewModel()->acl;
+		if (!$oAcl) {
+			$oAcl = self::initACL($oServiceManager);
+			$oEvent->getViewModel()->acl = $oAcl;
+		}
+		
+		$sAclRole = 'public';
+		$oAuth = $oServiceManager->get('zfcuser_auth_service');
+		if ( $oAuth->hasIdentity() ) {
+			$oUser = $oAuth->getIdentity();
+			$sAclRole = $oUser->getAclrole();
+		}
+
+		$oNavigation = $oServiceManager->get('navigation');
+		$activePage = $oNavigation->findBy('active', 1);
+		if ($activePage) {
+			$sAclResource = $activePage->getResource();
+			if (!empty($sAclResource) && $oAcl->hasResource($sAclResource)) {
+				if ( !$oAcl->isAllowed($sAclRole, $sAclResource) ) {
+					$response = $oEvent->getResponse();
+					//location to page or what ever
+					$response->getHeaders()->addHeaderLine('Location', $oEvent->getRequest()->getBaseUrl() . '/user/login?redirect=' . $oEvent->getRequest()->getRequestUri() );
+					$response->setStatusCode(301);
+				}
+			}
+		}
 	}
 	
 }
