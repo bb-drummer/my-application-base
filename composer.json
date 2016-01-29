@@ -1,9 +1,10 @@
 {
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
-  "version" : "1.0.0.1",
+  "version" : "1.0.1",
   "require" : {
     "php" : ">=5.5",
+    "phpunit/phpunit" : ">=5.1.4",
     "zendframework/zendframework" : "dev-master",
     "slm/locale" : "dev-master",
     "zf-commons/zfc-user" : ">=1.2.2",

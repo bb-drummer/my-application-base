@@ -128,6 +128,7 @@ return array(
 			'error/index'	=> __DIR__ . '/../view/error/index.phtml',
             'layout/ajax'	=> __DIR__ . '/../view/layout/ajax.phtml',
             'layout/json'	=> __DIR__ . '/../view/layout/json.phtml',
+            'layout/modal'	=> __DIR__ . '/../view/layout/modal.phtml',
 		),
 		'template_path_stack' => array(
 			__DIR__ . '/../view',

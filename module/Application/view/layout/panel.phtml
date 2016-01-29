@@ -1,0 +1,20 @@
+<?php 
+/** @var \TwitterBootstrapAPI\View\Helper\Bootstrap $user **/
+$oBootstrap = $this->Bootstrap();
+/** @var \TwitterBootstrapAPI\View\Helper\Components $user **/
+$oComponents = $this->Components();
+/** @var \Admin\Entity\User $user **/
+$oUser = $this->zfcUserIdentity();
+
+$panelLayout = $oComponents->Panel()
+	->setHeader( $this->translate("delete user") )
+	->setContent(
+		array(
+			'tagname' => 'div',
+			'classnames' => 'modal-body alert-wrap',
+			'content' => $messages . $this->content,
+		)
+	)
+;
+
+echo $panelLayout . $this->inlineScript();
