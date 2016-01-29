@@ -19,8 +19,6 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-//use Application\Entity\User;
-use Application\Model\Callbacks as AppCallbacks;
 
 // navigation
 use Zend\View\HelperPluginManager;
@@ -41,10 +39,11 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	protected $AclresourceTable;
 	protected $serviceLocator;
 
-	public function init(ModuleManager $mm)
+	public function init(ModuleManager $oModuleManager)
 	{
-		$AppCallbacks = new AppCallbacks();
-		$mm->getEventManager()
+		// init layout
+		$oModuleManager
+			->getEventManager()
 			->getSharedManager()
 			->attach(
 				__NAMESPACE__, 
@@ -52,27 +51,6 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 				('Application\Model\Callbacks::initLayout') 
 			)
 		;
-		/* $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
-			$oController = $e->getTarget();
-			$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
-			if ( $oController->getRequest()->isXmlHttpRequest() ) {
-				if ( strpos($sAccept, 'text/html') !== false ) {
-					$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
-					echo '<!-- '.print_r($sLayout, true).' -->';
-					if ( strpos($sLayout, 'modal') !== false ) {
-						$oController->layout('layout/modal');
-					} else if ( strpos($sLayout, 'panel') !== false ) {
-						$oController->layout('layout/panel');
-					} else {
-						$oController->layout('layout/ajax');
-					}
-				} else {
-					$oController->layout('layout/json');
-				}
-			} else {
-				$oController->layout('layout/layout');
-			}
-		}); */
 
 	}	
 	
@@ -155,7 +133,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 			'factories' => array(
 				'navigation' => function(HelperPluginManager $pm) {
 					$this->setServiceLocator($pm->getServiceLocator());
-					$acl = $this->getAcl(); 
+					$acl = \Application\Model\Callbacks::initACL($pm->getServiceLocator());
 					
 					$navigation = $pm->get('Zend\View\Helper\Navigation');
 					$navigation->setAcl($acl);
@@ -212,7 +190,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	
 	// table getters
 	
-	public function getAcl()
+	/*public function getAcl()
 	{
 		$sm = $this->getServiceLocator();
 		$acl = new Acl();
@@ -284,6 +262,6 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 			$this->AclresourceTable = $sm->get('\Admin\Model\AclresourceTable');
 		}
 		return $this->AclresourceTable;
-	}
+	} */
 	
 }
