@@ -7,7 +7,7 @@ $oComponents = $this->Components();
 $oUser = $this->zfcUserIdentity();
 
 $modalLayout = $oComponents->Modal()
-	->setHeader( $this->translate("delete user") )
+	->setHeader( (isset($this->title) ? $this->title : "") )
 	->setContent(
 		array(
 			'tagname' => 'div',
