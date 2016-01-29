@@ -30,7 +30,7 @@ class Callbacks
 			if ( $oController->getRequest()->isXmlHttpRequest() ) {
 				if ( strpos($sAccept, 'text/html') !== false ) {
 					$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
-					echo '<!-- '.print_r($sLayout, true).' -->';
+					//echo '<!-- '.print_r($sLayout, true).' -->';
 					if ( strpos($sLayout, 'modal') !== false ) {
 						$oController->layout('layout/modal');
 					} else if ( strpos($sLayout, 'panel') !== false ) {
