@@ -20,6 +20,7 @@ use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 //use Application\Entity\User;
+use Application\Model\Callbacks as AppCallbacks;
 
 // navigation
 use Zend\View\HelperPluginManager;
@@ -42,7 +43,16 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 
 	public function init(ModuleManager $mm)
 	{
-		$mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
+		$AppCallbacks = new AppCallbacks();
+		$mm->getEventManager()
+			->getSharedManager()
+			->attach(
+				__NAMESPACE__, 
+				'dispatch', 
+				('Application\Model\Callbacks::initLayout') 
+			)
+		;
+		/* $mm->getEventManager()->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
 			$oController = $e->getTarget();
 			$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
 			if ( $oController->getRequest()->isXmlHttpRequest() ) {
@@ -62,7 +72,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 			} else {
 				$oController->layout('layout/layout');
 			}
-		});
+		}); */
 
 	}	
 	
