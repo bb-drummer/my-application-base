@@ -129,6 +129,7 @@ return array(
             'layout/ajax'	=> __DIR__ . '/../view/layout/ajax.phtml',
             'layout/json'	=> __DIR__ . '/../view/layout/json.phtml',
             'layout/modal'	=> __DIR__ . '/../view/layout/modal.phtml',
+            'layout/panel'	=> __DIR__ . '/../view/layout/panel.phtml',
 		),
 		'template_path_stack' => array(
 			__DIR__ . '/../view',
