@@ -32,6 +32,7 @@ class Callbacks
 	{
 		$oController = $oEvent->getTarget();
 		$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+		echo '<!-- '.print_r($sAccept, true).' -->';
 		if ( $oController->getRequest()->isXmlHttpRequest() ) {
 			if ( strpos($sAccept, 'text/html') !== false ) {
 				$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
