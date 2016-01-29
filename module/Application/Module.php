@@ -47,13 +47,14 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 			$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
 			if ( $oController->getRequest()->isXmlHttpRequest() ) {
 				if ( strpos($sAccept, 'text/html') !== false ) {
-					$aLayoutHeader = (split(":", $oController->getRequest()->getHeaders()->get('X-layout')->toString(), 2)); 
-					$sLayout = $aLayoutHeader[1];
-					switch ($sLayout) {
-						case "modal": $oController->layout('layout/modal'); break;
-						case "panel":
-						case "default": $oController->layout('layout/panel'); break;
-						default: $oController->layout('layout/ajax'); break;
+					$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
+					echo '<!-- '.print_r($sLayout, true).' -->';
+					if ( strpos($sLayout, 'modal') !== false ) {
+						$oController->layout('layout/modal');
+					} else if ( strpos($sLayout, 'panel') !== false ) {
+						$oController->layout('layout/panel');
+					} else {
+						$oController->layout('layout/ajax');
 					}
 				} else {
 					$oController->layout('layout/json');
