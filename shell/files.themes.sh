@@ -1,3 +1,4 @@
+## ZF2 theme : Taurus (from themeforest)
 mkdir -p public/assets/themes/taurus
 mkdir -p themes/taurus
 rm -rf public/assets/themes/taurus/*
@@ -9,6 +10,8 @@ mkdir -p public/assets/themes/taurus/css/fontawesome
 cp -r vendor/fortawesome/font-awesome/css public/assets/themes/taurus/css/fontawesome/
 cp -r vendor/fortawesome/font-awesome/fonts public/assets/themes/taurus/css/fontawesome/
 #rm -rf vendor/themes/zf2-taurus
+
+## ZF2 theme : Remark (from themeforest)
 
 mkdir -p public/assets/themes/remark
 mkdir -p themes/remark
@@ -22,6 +25,7 @@ cp -r vendor/fortawesome/font-awesome/css public/assets/themes/remark/css/fontaw
 cp -r vendor/fortawesome/font-awesome/fonts public/assets/themes/remark/css/fontawesome/
 #rm -rf vendor/themes/zf2-remark
 
+## ZF2 theme : AdminLTE
 mkdir -p public/assets/themes/adminlte
 mkdir -p themes/adminlte
 rm -rf public/assets/themes/adminlte/*
