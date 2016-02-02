@@ -41,14 +41,14 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 
 	public function init(ModuleManager $oModuleManager)
 	{
-		// init layout
+		// init layout, leave out "__NAMESPACE__" parameter to set layout for all modules
 		$oModuleManager
 			->getEventManager()
 			->getSharedManager()
 			->attach(
 				__NAMESPACE__, 
 				'dispatch', 
-				('Application\Model\Callbacks::initLayout') 
+				('Application\Module::initLayout') 
 			)
 		;
 
@@ -133,7 +133,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 			'factories' => array(
 				'navigation' => function(HelperPluginManager $pm) {
 					$this->setServiceLocator($pm->getServiceLocator());
-					$acl = \Application\Model\Callbacks::initACL($pm->getServiceLocator());
+					$acl = \Admin\Module::initACL($pm->getServiceLocator());
 					
 					$navigation = $pm->get('Zend\View\Helper\Navigation');
 					$navigation->setAcl($acl);
@@ -181,87 +181,38 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	{
 		return array(
 			'factories' => array(
-				'ApplicationAcl' =>	function( $oServiceManager ) {
-					return \Application\Model\Callbacks::initACL($oServiceManager); // $this->getAcl();
-				},
 			),
 		);
 	}
 	
-	// table getters
-	
-	/*public function getAcl()
+	/**
+	 * switches the main response layout according to request headers
+	 * 
+	 * @param	$oEvent	\Zend\Mvc\Event
+	 * @return	void
+	 */
+	public static function initLayout ( $oEvent )
 	{
-		$sm = $this->getServiceLocator();
-		$acl = new Acl();
-		$oAcls = $sm->get('\Admin\Model\AclTable');
-		$oRoles =	$sm->get('\Admin\Model\AclroleTable'); //$this->getAclroleTable();
-		$aRoles = $oRoles->fetchAll()->toArray();
-		foreach ($aRoles as $key => $role) {
-			$acl->addRole(new GenericRole($role['roleslug']));
-		}
-		$oResources = $sm->get('\Admin\Model\AclresourceTable');
-		$aResources = $oResources->fetchAll()->toArray();
-		foreach ($aResources as $key => $resource) {
-			$acl->addResource(new GenericResource($resource['resourceslug']));
-		}
-
-		foreach ($aRoles as $key => $role) {
-			foreach ($aResources as $key => $resource) {
-				$oAcl = $oAcls->getAclByRoleResource($role['aclroles_id'], $resource['aclresources_id']);
-				if ( $oAcl && !empty($oAcl->state) ) {
-					if ( ($oAcl->state == 'allow') ) {
-						$acl->allow(
-							$role['roleslug'], 
-							array($resource['resourceslug'])
-						);
-					} else if ( ($oAcl->state == 'deny') ) {
-						$acl->deny(
-							$role['roleslug'], 
-							array($resource['resourceslug'])
-						);
-					}
+		$oController = $oEvent->getTarget();
+		$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+		echo '<!-- '.print_r($sAccept, true).' -->';
+		if ( $oController->getRequest()->isXmlHttpRequest() ) {
+			if ( strpos($sAccept, 'text/html') !== false ) {
+				$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
+				//echo '<!-- '.print_r($sLayout, true).' -->';
+				if ( strpos($sLayout, 'modal') !== false ) {
+					$oController->layout('layout/modal');
+				} else if ( strpos($sLayout, 'panel') !== false ) {
+					$oController->layout('layout/panel');
+				} else {
+					$oController->layout('layout/ajax');
 				}
+			} else {
+				$oController->layout('layout/json');
 			}
+		} else {
+			$oController->layout('layout/layout');
 		}
-		
-		// whatever happens before, allow all actions to 'admin' and 'nouser' actions to public viewers
-		$acl->allow('admin', null);
-		$acl->deny('admin', array(
-			'mvc:nouser',
-		));
-		$acl->allow('public', array(
-			'mvc:nouser',
-		));
-		
-		return $acl;
 	}
 
-	public function getAclTable()
-	{
-		if (!$this->AclTable) {
-			$sm = $this->getServiceLocator();
-			$this->AclTable = $sm->get('\Admin\Model\AclTable');
-		}
-		return $this->AclTable;
-	}
-
-	public function getAclroleTable()
-	{
-		if (!$this->AclroleTable) {
-			$sm = $this->getServiceLocator();
-			$this->AclroleTable = $sm->get('\Admin\Model\AclroleTable');
-		}
-		return $this->AclroleTable;
-	}
-
-	public function getAclresourceTable()
-	{
-		if (!$this->AclresourceTable) {
-			$sm = $this->getServiceLocator();
-			$this->AclresourceTable = $sm->get('\Admin\Model\AclresourceTable');
-		}
-		return $this->AclresourceTable;
-	} */
-	
 }
