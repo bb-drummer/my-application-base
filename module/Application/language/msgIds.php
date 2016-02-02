@@ -21,6 +21,7 @@ translate('account');
 	translate('user activation');
 translate('admin');
 	translate('users');
+	translate('clients');
 	translate('permissions');
 		translate('ACL');
 		translate('roles');

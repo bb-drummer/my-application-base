@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 00:20+0100\n"
-"PO-Revision-Date: 2015-12-11 00:20+0100\n"
+"POT-Creation-Date: 2016-02-02 01:09+0100\n"
+"PO-Revision-Date: 2016-02-02 01:10+0100\n"
 "Last-Translator: Björn Bartels, [dargon-projects.net] <bartels@dragon-"
 "projets.net>\n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
@@ -27,23 +27,38 @@ msgid "add"
 msgstr ""
 
 #: module/Application/language/msgIds.php:9
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:93
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:115
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:139
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:37
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:37
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:41
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:25
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:30
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:30
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:33
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:34
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:34
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:30
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:34
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:30
 msgid "edit"
 msgstr ""
 
 #: module/Application/language/msgIds.php:10
-#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:22
-#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:22
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:95
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:117
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:141
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:39
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:39
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:43
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:23
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:23
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:26
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:32
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:32
-#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:23
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:35
-#: vendor/my-application/module-admin/view/admin/users/delete.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:36
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:36
+#: vendor/my-application/module-admin/view/admin/clients/delete.phtml:23
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:32
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:25
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:36
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:25
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:32
 msgid "delete"
 msgstr ""
@@ -83,7 +98,7 @@ msgstr ""
 
 #: module/Application/language/msgIds.php:18
 #: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:3
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:24
 msgid "login"
 msgstr ""
 
@@ -109,262 +124,374 @@ msgid "users"
 msgstr ""
 
 #: module/Application/language/msgIds.php:24
-msgid "permissions"
+msgid "clients"
 msgstr ""
 
 #: module/Application/language/msgIds.php:25
-msgid "ACL"
+msgid "permissions"
 msgstr ""
 
 #: module/Application/language/msgIds.php:26
-msgid "roles"
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:12
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:12
+msgid "ACL"
 msgstr ""
 
 #: module/Application/language/msgIds.php:27
-msgid "resources"
+msgid "roles"
 msgstr ""
 
 #: module/Application/language/msgIds.php:28
-msgid "settings"
+msgid "resources"
 msgstr ""
 
 #: module/Application/language/msgIds.php:29
-msgid "system"
+msgid "settings"
 msgstr ""
 
 #: module/Application/language/msgIds.php:30
-msgid "info"
+msgid "system"
 msgstr ""
 
 #: module/Application/language/msgIds.php:31
-msgid "backup"
+msgid "info"
 msgstr ""
 
 #: module/Application/language/msgIds.php:32
-msgid "setup"
+msgid "backup"
 msgstr ""
 
 #: module/Application/language/msgIds.php:33
-msgid "install"
+msgid "setup"
 msgstr ""
 
 #: module/Application/language/msgIds.php:34
-msgid "update"
+msgid "install"
 msgstr ""
 
 #: module/Application/language/msgIds.php:35
-msgid "help"
+msgid "update"
 msgstr ""
 
 #: module/Application/language/msgIds.php:36
-msgid "support"
+msgid "help"
 msgstr ""
 
 #: module/Application/language/msgIds.php:37
+msgid "support"
+msgstr ""
+
+#: module/Application/language/msgIds.php:38
 msgid "about"
 msgstr ""
 
-#: module/Application/language/msgIds.php:40
+#: module/Application/language/msgIds.php:41
 msgid "administrator"
 msgstr ""
 
-#: module/Application/language/msgIds.php:41
+#: module/Application/language/msgIds.php:42
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:23
 msgid "user"
 msgstr ""
 
-#: module/Application/language/msgIds.php:42
+#: module/Application/language/msgIds.php:43
 msgid "public"
 msgstr ""
 
-#: module/Application/language/msgIds.php:45
+#: module/Application/language/msgIds.php:46
 msgid "submit"
 msgstr ""
 
-#: module/Application/language/msgIds.php:48
+#: module/Application/language/msgIds.php:49
 #: vendor/zf-commons/zfc-user/src/ZfcUser/language/msgIds.php:22
 msgid "Authentication failed. Please try again."
 msgstr ""
 
-#: module/Application/language/msgIds.php:49
+#: module/Application/language/msgIds.php:50
 msgid "Value is required and can't be empty"
 msgstr ""
 
-#: module/Application/language/msgIds.php:50
+#: module/Application/language/msgIds.php:51
 msgid "Captcha value is wrong"
 msgstr ""
 
-#: module/Application/language/msgIds.php:51
+#: module/Application/language/msgIds.php:52
 #, php-format
 msgid "The input is less than %s characters long"
 msgstr ""
 
-#: module/Application/language/msgIds.php:52
+#: module/Application/language/msgIds.php:53
 msgid "The two given tokens do not match"
 msgstr ""
 
-#: module/Application/language/msgIds.php:53
+#: module/Application/language/msgIds.php:54
 #, php-format
 msgid "The input is not between '%s' and '%s', inclusively"
 msgstr ""
 
-#: module/Application/language/msgIds.php:54
+#: module/Application/language/msgIds.php:55
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:27
 msgid "request password reset"
 msgstr ""
 
-#: module/Application/language/msgIds.php:55
+#: module/Application/language/msgIds.php:56
 msgid "set new password"
 msgstr ""
 
-#: module/Application/language/msgIds.php:56
+#: module/Application/language/msgIds.php:57
 msgid "Email or Username"
 msgstr ""
 
-#: module/Application/language/msgIds.php:57
+#: module/Application/language/msgIds.php:58
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:91
 msgid "mobile"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:102
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:157
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:90
+msgid "add acl"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:167
+msgid "add permission"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:195
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:254
 msgid "permission has been saved"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:124
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:181
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:252
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:296
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:369
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:414
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:70
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:104
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:75
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:118
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:154
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:207
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:218
+msgid "change permission"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:221
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:282
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:361
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:407
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:489
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:538
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:96
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:139
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:96
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:139
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:116
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:165
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:204
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:257
 msgid "missing parameters"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:192
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:279
+msgid "delete permission"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:295
 msgid "permission has been deleted"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:229
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:271
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:321
+#: vendor/my-application/module-admin/view/admin/acl/acllist.phtml:7
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:7
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:9
+msgid "add role"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:334
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:378
 msgid "role has been saved"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:307
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:350
+msgid "edit role"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:404
+msgid "delete role"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:420
 msgid "role has been deleted"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:346
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:388
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:448
+#: vendor/my-application/module-admin/view/admin/acl/acllist.phtml:9
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:9
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:9
+msgid "add resource"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:462
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:508
 msgid "resource has been saved"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:425
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:486
+msgid "edit resource"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:535
+msgid "delete resource"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/AclController.php:551
 msgid "resource has been deleted"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:52
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:89
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:56
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:59
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:7
+msgid "add client"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:72
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:113
+msgid "client has been saved"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:90
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:93
+msgid "edit client"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:133
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:136
+msgid "delete client"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/ClientsController.php:153
+msgid "client has been deleted"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:56
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:59
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:7
+msgid "add setting"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:72
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:113
 msgid "setting has been saved"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:115
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:90
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:93
+msgid "edit setting"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:133
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:136
+msgid "delete setting"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/SettingsController.php:153
 msgid "setting has been deleted"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:57
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:103
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:68
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:71
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:7
+msgid "add user"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:91
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:139
 msgid "user has been saved"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:129
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:110
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:113
+msgid "edit user"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:159
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:162
+#: module/Application/view/layout/panel.phtml:16
+msgid "delete user"
+msgstr ""
+
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:179
 msgid "user has been deleted"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:164
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:217
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:214
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:267
 msgid "user could not be found"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:168
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:218
 msgid "confirmation token is invalid"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:182
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:232
 #: vendor/my-application/module-admin/view/admin/users/confirm.phtml:6
 msgid "user's registration has been confirmed"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:185
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:132
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:235
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:141
 msgid "admin has been notified for activation"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:188
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:235
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:238
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:285
 #: vendor/my-application/module-admin/view/admin/users/activate.phtml:6
 msgid "user has been activated"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:221
+#: vendor/my-application/module-admin/src/Admin/Controller/UsersController.php:271
 msgid "activation token is invalid"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:62
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:71
 msgid "login succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:127
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:136
 msgid "registration succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:129
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:138
 msgid "you have been sent an email with further instructions to follow"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:146
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:155
 msgid "registration and activation succeeded"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:212
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:221
 #, php-format
 msgid "user '%s' not found"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:224
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:233
 #, php-format
 msgid "password reset email has been sent to user '%s'"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:274
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:281
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:312
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:283
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:290
 #: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:321
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:330
 msgid "invalid request"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:350
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:359
 msgid "password has been set"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:450
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:461
 msgid "user data has been changed"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:454
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:465
 msgid "user data could not be changed"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:516
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:553
 msgid "user profile data has been changed"
 msgstr ""
 
-#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:520
+#: vendor/my-application/module-admin/src/Admin/Controller/ZfcuserController.php:557
 msgid "user profile data could not be changed"
 msgstr ""
 
@@ -1126,76 +1253,59 @@ msgstr ""
 msgid "you are here"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:4
-#: vendor/my-application/module-admin/view/admin/settings/add.phtml:4
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:10
-msgid "add setting"
+#: vendor/my-application/module-admin/view/admin/acl/acllist.phtml:3
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:3
+msgid "manage permissions"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:45
-#: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:26
-#: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:26
-#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:23
-#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:23
-#: vendor/my-application/module-admin/view/admin/acl/editacl.phtml:44
-#: vendor/my-application/module-admin/view/admin/acl/editresource.phtml:26
-#: vendor/my-application/module-admin/view/admin/acl/editrole.phtml:26
-#: vendor/my-application/module-admin/view/admin/settings/add.phtml:32
-#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:24
-#: vendor/my-application/module-admin/view/admin/settings/edit.phtml:39
-#: vendor/my-application/module-admin/view/admin/users/add.phtml:63
-#: vendor/my-application/module-admin/view/admin/users/delete.phtml:23
-#: vendor/my-application/module-admin/view/admin/users/edit.phtml:71
+#: vendor/my-application/module-admin/view/admin/acl/acllist.phtml:8
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:8
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:13
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:4
+msgid "manage roles"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/acl/acllist.phtml:10
+#: vendor/my-application/module-admin/view/admin/acl/index.phtml:10
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:4
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:13
+msgid "manage resources"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/acl/addacl.phtml:36
+#: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:22
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:24
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:24
+#: vendor/my-application/module-admin/view/admin/acl/editacl.phtml:46
+#: vendor/my-application/module-admin/view/admin/acl/editresource.phtml:29
+#: vendor/my-application/module-admin/view/admin/acl/editrole.phtml:29
+#: vendor/my-application/module-admin/view/admin/clients/add.phtml:27
+#: vendor/my-application/module-admin/view/admin/clients/delete.phtml:24
+#: vendor/my-application/module-admin/view/admin/clients/edit.phtml:33
+#: vendor/my-application/module-admin/view/admin/settings/add.phtml:25
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:26
+#: vendor/my-application/module-admin/view/admin/settings/edit.phtml:31
+#: vendor/my-application/module-admin/view/admin/users/add.phtml:28
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:26
+#: vendor/my-application/module-admin/view/admin/users/edit.phtml:35
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:46
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:46
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:20
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:57
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:26
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:24
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:61
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:25
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:58
 #: vendor/my-application/module-admin/view/admin/zfcuser/requestpasswordreset.phtml:28
 #: vendor/my-application/module-admin/view/admin/zfcuser/resetpassword.phtml:34
 msgid "cancel"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/addresource.phtml:4
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:9
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:9
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:9
-msgid "add resource"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/addrole.phtml:4
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:7
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:9
-msgid "add role"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:4
-msgid "delete resource"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:8
+#: vendor/my-application/module-admin/view/admin/acl/deleteresource.phtml:15
 msgid "Do you really want to delete this resource?"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:4
-msgid "delete role"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:8
-msgid "Do you really want to delete this role"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/editacl.phtml:4
-msgid "change permission"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/editresource.phtml:4
-msgid "edit resource"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/editrole.phtml:4
-msgid "edit role"
+#: vendor/my-application/module-admin/view/admin/acl/deleterole.phtml:15
+msgid "Do you really want to delete this role?"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:1
@@ -1210,7 +1320,7 @@ msgid "role"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/acl/index.list.phtml:8
-#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:13
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:12
 msgid "resource"
 msgstr ""
 
@@ -1226,65 +1336,69 @@ msgstr ""
 msgid "allow"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:78
+#: vendor/my-application/module-admin/view/admin/acl/index.matrix.phtml:79
 msgid "deny"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:3
-msgid "manage permissions"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:8
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:4
-msgid "manage roles"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/index.phtml:10
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:4
-msgid "manage resources"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:17
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:21
 msgid "resource slug"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:18
+#: vendor/my-application/module-admin/view/admin/acl/resources.phtml:22
 msgid "resource name"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:17
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:21
 msgid "role slug"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:18
+#: vendor/my-application/module-admin/view/admin/acl/roles.phtml:22
 msgid "role name"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:4
-msgid "delete setting"
+#: vendor/my-application/module-admin/view/admin/clients/delete.phtml:15
+msgid "Do you really want to delete this client?"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:8
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:3
+msgid "manage clients"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:15
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:18
+msgid "name"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:16
+#: vendor/my-application/module-admin/view/admin/users/index.phtml:16
+msgid "email"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/clients/index.phtml:17
+msgid "contact"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/settings/delete.phtml:15
 msgid "Do you really want to delete this setting?"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/settings/edit.phtml:4
-msgid "edit setting"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:4
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:3
 msgid "manage settings"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:18
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:15
+msgid "scope"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:16
+msgid "reference"
+msgstr ""
+
+#: vendor/my-application/module-admin/view/admin/settings/index.phtml:17
 msgid "type"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/settings/index.phtml:19
-msgid "name"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/settings/index.phtml:20
 msgid "value"
 msgstr ""
 
@@ -1292,25 +1406,12 @@ msgstr ""
 msgid "activate user"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/users/add.phtml:3
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:7
-msgid "add user"
-msgstr ""
-
 #: vendor/my-application/module-admin/view/admin/users/confirm.phtml:3
 msgid "confirm registration"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/users/delete.phtml:3
-msgid "delete user"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/users/delete.phtml:6
+#: vendor/my-application/module-admin/view/admin/users/delete.phtml:16
 msgid "Do you really want to delete this user?"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/users/edit.phtml:3
-msgid "edit user"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:3
@@ -1319,10 +1420,6 @@ msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/users/index.phtml:15
 msgid "user name"
-msgstr ""
-
-#: vendor/my-application/module-admin/view/admin/users/index.phtml:16
-msgid "email"
 msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:7
@@ -1344,8 +1441,8 @@ msgstr ""
 
 #: vendor/my-application/module-admin/view/admin/zfcuser/changeemail.phtml:45
 #: vendor/my-application/module-admin/view/admin/zfcuser/changepassword.phtml:45
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:19
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:56
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:23
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:60
 #: vendor/my-application/module-admin/view/admin/zfcuser/register.phtml:57
 msgid "reset"
 msgstr ""
@@ -1363,12 +1460,12 @@ msgstr ""
 msgid "unable to update your password, please try again"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserdata.phtml:6
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:8
 msgid "edit userdata"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:3
+#: vendor/my-application/module-admin/view/admin/zfcuser/edituserprofile.phtml:6
 #: vendor/my-application/module-admin/view/admin/zfcuser/index.phtml:7
 msgid "edit profile"
 msgstr ""
@@ -1421,19 +1518,19 @@ msgstr ""
 msgid "phone"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:32
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:31
 msgid "do not have an account?"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:33
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:32
 msgid "register now!"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:37
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:36
 msgid "forgot your credentials?"
 msgstr ""
 
-#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:38
+#: vendor/my-application/module-admin/view/admin/zfcuser/login.phtml:37
 msgid "reset your password"
 msgstr ""
 
@@ -1495,10 +1592,10 @@ msgstr ""
 msgid "Sign Out"
 msgstr ""
 
-#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:14
 msgid "Not registered?"
 msgstr ""
 
-#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:32
+#: vendor/zf-commons/zfc-user/view/zfc-user/user/login.phtml:14
 msgid "Sign up!"
 msgstr ""
