@@ -27,7 +27,7 @@ class Callbacks
 	 * 
 	 * @param	$oEvent	\Zend\Mvc\Event
 	 * @return	void
-	 */
+	 * /
 	public static function initLayout ( $oEvent )
 	{
 		$oController = $oEvent->getTarget();
@@ -57,7 +57,7 @@ class Callbacks
 	 * 
 	 * @param	$oEvent	\Zend\Mvc\Mvcevent
 	 * @return	\Zend\Permissions\Acl\Acl
-	 */
+	 * /
 	public static function initACL ( $oServiceManager ) // \Zend\Mvc\Mvcevent $oEvent )
 	{
 		//$oServiceManager	= $oEvent->getApplication()->getServiceManager();
@@ -109,7 +109,7 @@ class Callbacks
 	 * 
 	 * @param	\Zend\Mvc\MvcEvent $oEvent
 	 * @return	void
-	 */
+	 * /
 	public static function checkACL (\Zend\Mvc\Mvcevent $oEvent ) {
 		$oServiceManager = $oEvent->getApplication()->getServiceManager();
 		$oAcl = $oEvent->getViewModel()->acl;
@@ -140,4 +140,5 @@ class Callbacks
 		}
 	}
 	
+	... */
 }
