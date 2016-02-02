@@ -14,14 +14,14 @@
  */
 
 return array(
-	'navigation' => array(
+	/*'navigation' => array(
 		'default' => array(
 			array(
 				'label' => 'home',
 				'icon'	=> 'home',
 				'route' => 'home',
 				'pages'			=> array(
-					array(
+					'testpage' => array(
 						'label'			=> 'test page',
 						'icon'			=> 'exclamation-triangle',
 						'route'			=> 'application/default',
@@ -382,5 +382,5 @@ return array(
 				),
 			),
 		),
-	),
+	),*/
 );

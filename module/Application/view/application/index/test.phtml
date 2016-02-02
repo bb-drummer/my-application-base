@@ -105,13 +105,31 @@
 	
 ?></div>
 
-<div class="clearfix"><?php echo $oComponents->Nav(); ?></div>
+<div class="clearfix well"><?php echo $oComponents->Button(); ?></div>
 
-<div class="clearfix"><?php echo $oComponents->Breadcrumbs(); ?></div>
+<div class="clearfix well"><?php 
 
-<div class="clearfix"><?php echo $oComponents->Button(); ?></div>
+$btn1 = $oComponents->Button(array('label' => 'button 1', 'type' => 'primary'))->render();
+$btn2 = $oComponents->Button(array('label' => 'button 2', 'tagname' => 'button'))->render();
+$btn3 = $oComponents->Button(array('label' => 'button 3', 'disabled' => 'disabled'))->render();
 
-<div class="clearfix"><?php echo $oComponents->ButtonGroup(); ?></div>
+echo $oComponents->ButtonGroup(array(
+	'buttons' => array( 
+		$btn1, $btn2, $btn3, 
+	)	
+)); 
+
+ ?></div>
+ 
+<div class="clearfix well"><?php echo $oComponents->ButtonGroup(array(
+	'block' => true,
+	'vertical' => true,
+	'buttons' => array( 
+		$oComponents->Button(array('label' => 'button 1', 'type' => 'warning')), 
+		$oComponents->Button(array('label' => 'button 2', 'tagname' => 'button', 'disabled' => 'disabled')),
+		$oComponents->Button(array('label' => 'button 3', 'block' => true)), 
+	)	
+)); ?></div>
 
 
 <?php //echo $oComponents->Void(); /* this really does nothing, it is just a view helper plugin default :D */ ?>
