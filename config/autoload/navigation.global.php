@@ -16,23 +16,23 @@
 return array(
 	'navigation' => array(
 		'default' => array(
-			array(
+			'home' => array(
 				'label' => 'home',
 				'icon'	=> 'home',
 				'route' => 'home',
 				'order' => 0,
 				'pages'			=> array(
-					'testpage' => array(
+					/*'testpage' => array(
 						'label'			=> 'test page',
 						'icon'			=> 'exclamation-triangle',
 						'route'			=> 'application/default',
 						'controller' 	=> 'index',
 						'action' 		=> 'test',
 						'resource'		=> 'mvc:admin',
-					),
+					),*/
 				),
 			),
-			array(
+			'help' => array(
 				'label'			=> 'help',
 				'icon'			=> 'question-circle',
 				'route'			=> 'application/default',

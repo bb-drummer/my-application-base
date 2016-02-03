@@ -152,4 +152,22 @@ return array(
 		),
 	),
 
+
+	'navigation' => array(
+		'default' => array(
+			'home' => array(
+				'pages'			=> array(
+					'testpage' => array(
+						'label'			=> 'test page',
+						'icon'			=> 'exclamation-triangle',
+						'route'			=> 'application/default',
+						'controller' 	=> 'index',
+						'action' 		=> 'test',
+						'resource'		=> 'mvc:admin',
+					),
+				),
+			),
+		),
+	),
+
 );
