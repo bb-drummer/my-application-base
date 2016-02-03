@@ -22,14 +22,6 @@ return array(
 				'route' => 'home',
 				'order' => 0,
 				'pages'			=> array(
-					/*'testpage' => array(
-						'label'			=> 'test page',
-						'icon'			=> 'exclamation-triangle',
-						'route'			=> 'application/default',
-						'controller' 	=> 'index',
-						'action' 		=> 'test',
-						'resource'		=> 'mvc:admin',
-					),*/
 				),
 			),
 			'help' => array(
