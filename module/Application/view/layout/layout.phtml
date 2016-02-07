@@ -1,7 +1,9 @@
 <?php 
-var_dump($this); die();
 	echo $this->doctype(); 
+	/** @var \TwitterBootstrapAPI\View\Helper\Bootstrap $oTwitterBootstrap **/
 	$oTwitterBootstrap = $this->bootstrap();
+	/** @var \TwitterBootstrapAPI\View\Helper\Components $oComponents **/
+	$oComponents = $this->Components();
 ?>
 <html lang="<?php echo \Locale::getPrimaryLanguage(null) ?>">
     <head>
@@ -18,6 +20,7 @@ var_dump($this); die();
         			'rel' => 'shortcut icon', 
         			'type' => 'image/vnd.microsoft.icon', 
         			'href' => $this->basePath($themePath . $oTwitterBootstrap->AppFavicon())
+        			//'href' => '/'.$oTwitterBootstrap->AppFavicon()
      			))
 				->appendStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap.min.css'))
 				->appendStylesheet($this->basePath($themePath . 'css/bootstrap/css/bootstrap-theme.min.css'))
@@ -35,6 +38,7 @@ var_dump($this); die();
             }
         	echo $this->headLink();
 		?>
+		<?php echo $this->headScript() ?>
     </head>
     <body>
         <nav class="navbar navbar-inverse" role="navigation">
@@ -84,7 +88,28 @@ var_dump($this); die();
 				echo $this->flashMessenger()->render('info', array('info alert flashmessages'));
 			?>
 			<?php
-				echo $this->content;
+				$params = $this->getHelperPluginManager()
+					->getServiceLocator()
+					->get('Application')
+					->getMvcEvent()
+					->getRouteMatch()
+					->getParams();
+				if ($params["action"] == "index") {
+					echo $this->content;
+				} else {
+					$panelLayout = $oComponents->Panel()
+					->setHeader( (isset($this->title) ? $this->title : "") )
+					->setContent(
+							array(
+									'tagname' => 'div',
+									'classnames' => 'panel-body alert-wrap',
+									'content' => $this->content,
+							)
+							)
+							;
+					
+					echo $panelLayout;
+				}
 			?>
             <hr>
             <footer>
@@ -104,11 +129,12 @@ var_dump($this); die();
         <?php 
         	$this->inlineScript()
 				->appendFile($this->basePath($themePath . 'js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+				->appendFile($this->basePath($themePath . 'js/modernizr/modernizr.js'))
 				->appendFile($this->basePath($themePath . 'js/jquery/jquery.min.js'))
 				->appendFile($this->basePath($themePath . 'js/fancy-box/source/jquery.fancybox.pack.js'))
 				->appendFile($this->basePath($themePath . 'js/bootstrap/bootstrap.min.js'))
-				//->appendFile($this->basePath($themePath . 'js/datatables/js/jquery.dataTables.min.js'))
-				->appendFile($this->basePath($themePath . 'js/datatables/js/dataTables.bootstrap.min.js'))
+				->appendFile($this->basePath($themePath . 'js/datatables/js/jquery.dataTables.js'))
+				->appendFile($this->basePath($themePath . 'js/datatables/js/dataTables.bootstrap.js'))
 				//->appendFile('//cdn.datatables.net/1.10.9/js/jquery.dataTables.js')
 				->appendFile($this->basePath($themePath . 'js/app.js'))
 			;
