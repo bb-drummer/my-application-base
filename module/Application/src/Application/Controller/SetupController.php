@@ -105,7 +105,7 @@ class SetupController extends BaseActionController
         		$dbConnection->beginTransaction();
 	        	foreach ($compareResult as $updateSql) {
 	        		if ($be_verbose) echo 'current sql: ' . PHP_EOL . $updateSql . PHP_EOL;
-	        		$dbupdate = $db->query($updatesql);
+	        		$dbupdate = $db->query($updateSql);
 	        	}
         		$dbConnection->commit();
         	} catch (\Exception $ex) {
