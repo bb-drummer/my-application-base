@@ -98,14 +98,15 @@ class SetupController extends BaseActionController
         	echo 'testing mode...' . PHP_EOL;
         	echo 'detected sql update statements:' . PHP_EOL;
         	echo  implode(";\n", $compareResult).";" . PHP_EOL;
-        	
         } else {
         	try {
         		$dbConnection = $db->getDriver()->getConnection();
         		$dbConnection->beginTransaction();
 	        	foreach ($compareResult as $updateSql) {
-	        		if ($be_verbose) echo 'current sql: ' . PHP_EOL . $updateSql . PHP_EOL;
+	        		if ($be_verbose) echo 'executing sql: ' . $updateSql . PHP_EOL;
 	        		$dbupdate = $db->query($updateSql);
+	        		$updateResult = $dbupdate->execute();
+	        		if ($be_verbose) echo '...done' . PHP_EOL;
 	        	}
         		$dbConnection->commit();
         	} catch (\Exception $ex) {
