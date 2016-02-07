@@ -21,7 +21,7 @@ $settings = array(
 	/**
 	 * email adress to send confirmation mail from
 	 **/
-    'zfcuser_admin_from_email' => "no-reply@dragon-projects.net",
+    'zfcuser_admin_from_email' => "no-reply@example.com",
 		
 	/**
 	 * email subject for confirmation mail
@@ -36,7 +36,7 @@ $settings = array(
 	/**
 	 * admin's email adress to recieve activation mail
 	 **/
-    'zfcuser_admin_to_email' => "bartels@dragon-projects.net",
+    'zfcuser_admin_to_email' => "accounts@example.com",
 		
 	/**
 	 * email subject for confirmation mail
@@ -51,7 +51,7 @@ $settings = array(
 	/**
 	 * HTTP basepath in email links
 	 */
-    'zfcuser_mail_http_basepath' => "http://".$_SERVER["HTTP_HOST"],
+    'zfcuser_mail_http_basepath' => "http://example.com",
 		
 	/**
      * Enable password reset

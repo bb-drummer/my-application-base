@@ -15,7 +15,9 @@
 
 namespace Application;
 
+use Zend\Console\Adapter\AdapterInterface as Console;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -31,7 +33,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
 
 
-class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterface
+class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterface, ConsoleUsageProviderInterface
 {
 	protected $Acl;
 	protected $AclTable;
@@ -194,6 +196,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	public static function initLayout ( $oEvent )
 	{
 		$oController = $oEvent->getTarget();
+		if (!$oController->getRequest() instanceof ConsoleRequest) { return; }
 		$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
 		echo '<!-- '.print_r($sAccept, true).' -->';
 		if ( $oController->getRequest()->isXmlHttpRequest() ) {
@@ -215,4 +218,15 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 		}
 	}
 
+    public function getConsoleUsage(Console $console)
+    {
+        return array(
+            // Describe available commands
+            'update-db [--test] [--verbose|-v]'    => 'update database structure',
+
+            // Describe expected parameters
+            array( '--test',		'(optional) testing mode, no changes are written to database' ),
+            array( '--verbose|-v',	'(optional) turn on verbose mode' ),
+        );
+    }
 }

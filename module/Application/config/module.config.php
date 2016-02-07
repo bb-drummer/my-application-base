@@ -92,6 +92,25 @@ return array(
 			),
 		),
 	),
+    // Placeholder for console routes
+	'console' => array(
+		'router' => array(
+			'routes' => array(
+				'update-db' => array(
+					//'type'	=> 'simple',
+					'options' => array(
+						'route'	=> 'update-db [--test] [--verbose|-v]:verbose',
+						'defaults' => array(
+					        'controller' => 'Application\Controller\Setup',
+						    'action'     => 'updatedb',
+						),
+					),
+				),
+			),
+		),
+	),
+
+
 	'service_manager' => array(
 		'abstract_factories' => array(
 			'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
@@ -144,15 +163,6 @@ return array(
 	    ),
 	),
 		
-    // Placeholder for console routes
-	'console' => array(
-		'router' => array(
-			'routes' => array(
-			),
-		),
-	),
-
-
 	'navigation' => array(
 		'default' => array(
 			'home' => array(
