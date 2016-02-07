@@ -196,8 +196,10 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	public static function initLayout ( $oEvent )
 	{
 		$oController = $oEvent->getTarget();
-		if ($oController->getRequest() instanceof ConsoleRequest) { return; }
+		$oRequest = $oController->getRequest();
+		if ($oRequest instanceof ConsoleRequest) { return; }
 		$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+		$sAccept = $oRequest->getHeaders()->get('Accept')->toString();
 		echo '<!-- '.print_r($sAccept, true).' -->';
 		if ( $oController->getRequest()->isXmlHttpRequest() ) {
 			if ( strpos($sAccept, 'text/html') !== false ) {
