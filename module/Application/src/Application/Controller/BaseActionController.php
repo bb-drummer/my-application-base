@@ -34,6 +34,17 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     protected $services;
 	
     protected $translator;
+    
+    protected $actionTitles = array();
+    
+
+    public function onDispatch(MvcEvent $e)
+    {
+    	$action = $this->getRequest()->getParam('action', 'index');
+    	$this->layout()->setVariable("title", $this->getActionTitle($action));
+    	$result = parent::onDispatch($e);
+    	return $result;
+    }
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
@@ -120,4 +131,37 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		}
 		return ($result);
     }
+    
+	/**
+	 * @return the $actionTitles
+	 */
+	public function getActionTitles() {
+		return $this->actionTitles ;
+	}
+
+	/**
+	 * @param array $actionTitles
+	 */
+	public function setActionTitles($actionTitles = array()) {
+		$this->actionTitles = $actionTitles;
+		return $this;
+	}
+
+	/**
+	 * @return the $actionTitles
+	 */
+	public function getActionTitle($action) {
+		return ($this->actionTitles[$action] ?: '');
+	}
+	
+	/**
+	 * @param string $action
+	 * @param string $title
+	 */
+	public function setActionTitle($action, $title) {
+		$this->actionTitles[$action] = $title;
+		return $this;
+	}
+    
+    
 }
