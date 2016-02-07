@@ -197,13 +197,13 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 	{
 		$oController = $oEvent->getTarget();
 		$oRequest = $oController->getRequest();
-		if ($oRequest instanceof ConsoleRequest) { return; }
-		$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
+		if ( ($oRequest instanceof ConsoleRequest) || !method_exists($oRequest, "getHeaders") ) { return; }
+		//$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
 		$sAccept = $oRequest->getHeaders()->get('Accept')->toString();
 		echo '<!-- '.print_r($sAccept, true).' -->';
-		if ( $oController->getRequest()->isXmlHttpRequest() ) {
+		if ( $oRequest->isXmlHttpRequest() ) {
 			if ( strpos($sAccept, 'text/html') !== false ) {
-				$sLayout = $oController->getRequest()->getHeaders()->get('X-layout')->toString(); 
+				$sLayout = $oRequest->getHeaders()->get('X-layout')->toString(); 
 				//echo '<!-- '.print_r($sLayout, true).' -->';
 				if ( strpos($sLayout, 'modal') !== false ) {
 					$oController->layout('layout/modal');
