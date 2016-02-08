@@ -41,7 +41,7 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 
     public function onDispatch(MvcEvent $e)
     {
-    	$action = $this->getRequest()->getParam('action', 'index');
+    	$action = $e->getRouteMatch()->getParam('action'); // $this->get->getParam('action', 'index');
     	$this->layout()->setVariable("title", $this->getActionTitle($action));
     	$result = parent::onDispatch($e);
     	return $result;
