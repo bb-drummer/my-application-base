@@ -61,8 +61,12 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     	$action = $e->getRouteMatch()->getParam('action'); // $this->get->getParam('action', 'index');
     	
     	$this->layout()->setVariable("title", $this->getActionTitle($action));
-    	$this->layout()->setVariable("toolbar", $this->getToolbarItem($action));
-    	 
+		
+		$serviceManager = $this->getServiceLocator();
+		$toolbarNav = $serviceManager->get('toolbarnavigation');
+		$toolbarNav->setConfig($this->getToolbarItem($action));
+		$this->layout()->setVariable("toolbar", $toolbarNav); // ->getPages($serviceManager));
+    	
     	$result = parent::onDispatch($e);
     	return $result;
     }
