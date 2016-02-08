@@ -113,3 +113,7 @@ please see LICENCE file in project's root directory
 ## COPYRIGHT
 
 &copy; 2015 [dragon-projects.net], info@dragon-projects.net, all rights reserved.
+
+
+## current build status
+[![build status](http://gitlab.dragon-projects.de:81/gitlabci/projects/1/status.png?ref=master)](http://gitlab.dragon-projects.de:81/gitlabci/projects/1?ref=master)

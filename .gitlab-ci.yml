@@ -1,5 +1,6 @@
 # Select image from https://hub.docker.com/_/php/
 image: php:5.6
+stage: deploy
 
 # Select what we should cache
 cache:
@@ -8,6 +9,7 @@ cache:
 
 before_script:
 # Install git, the php image doesn't have installed
+- docker info
 - apt-get update -yqq
 - apt-get install git -yqq
 
@@ -38,4 +40,9 @@ test:php7:mysql:
   image: php:7
   script:
   - vendor/bin/phpunit --configuration phpunit_mysql.xml --coverage-text
-  allow_failure: true
+  allow_failure: false
+
+build_image:
+  script:
+    - docker build -t my-docker-image .
+    - docker run my-docker-image /script/to/run/tests
