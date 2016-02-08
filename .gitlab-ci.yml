@@ -1,5 +1,6 @@
 # Select image from https://hub.docker.com/_/php/
 image: php:5.6
+stage: deploy
 
 # Select what we should cache
 cache:
