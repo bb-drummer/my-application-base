@@ -21,7 +21,17 @@ use Application\Controller\BaseActionController;
 class SystemController extends BaseActionController
 {
     
-    public function indexAction()
+    public function onDispatch(\Zend\Mvc\MvcEvent $e)
+    {
+    	$this->setActionTitles(array(
+    		'index' => $this->translate("system"),
+    		'info' => $this->translate("info"),
+    		'backup' => $this->translate("backup"),
+    	));
+    	return parent::onDispatch($e);
+    }
+	
+	public function indexAction()
     {
         return new ViewModel();
     }

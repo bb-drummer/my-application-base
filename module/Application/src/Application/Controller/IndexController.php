@@ -23,6 +23,16 @@ use Application\Controller\BaseActionController;
 class IndexController extends BaseActionController
 {
 	
+    public function onDispatch(\Zend\Mvc\MvcEvent $e)
+    {
+    	$this->setActionTitles(array(
+    		'index' => $this->translate("home"),
+    		'help' => $this->translate("help"),
+    		'support' => $this->translate("support"),
+    		'about' => $this->translate("about"),
+    	));
+    	return parent::onDispatch($e);
+    }
 	public function indexAction()
 	{
 		return new ViewModel();

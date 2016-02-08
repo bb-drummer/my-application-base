@@ -23,7 +23,17 @@ use Application\Model\DbStructUpdater;
 class SetupController extends BaseActionController
 {
     
-    public function indexAction()
+    public function onDispatch(\Zend\Mvc\MvcEvent $e)
+    {
+    	$this->setActionTitles(array(
+    		'index' => $this->translate("setup"),
+    		'install' => $this->translate("install"),
+    		'update' => $this->translate("update"),
+    		'updatedb' => $this->translate("update database structure"),
+    	));
+    	return parent::onDispatch($e);
+    }
+	public function indexAction()
     {
         return new ViewModel();
     }
