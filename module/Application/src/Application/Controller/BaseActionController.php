@@ -37,12 +37,32 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     protected $translator;
     
     protected $actionTitles = array();
+
+    protected $toolbarItems = array();
     
+    
+    public function defineActionTitles () {
+    	$this->setActionTitles(array(
+    	));
+    	return $this;
+    }
+
+    public function defineToolbarItems () {
+    	$this->setToolbarItems(array(
+    	));
+    	return $this;
+    }
 
     public function onDispatch(MvcEvent $e)
     {
+    	$this->defineActionTitles();
+    	$this->defineToolbarItems();
+    	
     	$action = $e->getRouteMatch()->getParam('action'); // $this->get->getParam('action', 'index');
+    	
     	$this->layout()->setVariable("title", $this->getActionTitle($action));
+    	$this->layout()->setVariable("toolbar", $this->getToolbarItem($action));
+    	 
     	$result = parent::onDispatch($e);
     	return $result;
     }
@@ -133,7 +153,10 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		return ($result);
     }
     
-	/**
+    
+	// //   action titles
+
+    /**
 	 * @return the $actionTitles
 	 */
 	public function getActionTitles() {
@@ -164,5 +187,39 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		return $this;
 	}
     
-    
+	
+	// //   toolbar items
+
+	/**
+	 * @return the $toolbarItems
+	 */
+	public function getToolbarItems() {
+		return $this->toolbarItems ;
+	}
+	
+	/**
+	 * @param array $toolbarItems
+	 */
+	public function setToolbarItems($toolbarItems = array()) {
+		$this->toolbarItems = $toolbarItems;
+		return $this;
+	}
+	
+	/**
+	 * @return the $actionTitles
+	 */
+	public function getToolbarItem($name) {
+		return (isset($this->toolbarItems[$action]) ? $this->toolbarItems[$action] : '');
+	}
+	
+	/**
+	 * @param string $action
+	 * @param string $title
+	 */
+	public function setToolbarItem($name, $item) {
+		$this->toolbarItems[$action] = $title;
+		return $this;
+	}
+	
+	
 }
