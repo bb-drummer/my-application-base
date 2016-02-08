@@ -152,7 +152,7 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 	 * @return the $actionTitles
 	 */
 	public function getActionTitle($action) {
-		return ($this->actionTitles[$action] ?: '');
+		return (isset($this->actionTitles[$action]) ? $this->actionTitles[$action] : '');
 	}
 	
 	/**

@@ -30,6 +30,8 @@ class IndexController extends BaseActionController
     		'help' => $this->translate("help"),
     		'support' => $this->translate("support"),
     		'about' => $this->translate("about"),
+    		'test' => $this->translate("test page"),
+    		'xhrtest' => $this->translate("xhr test action"),
     	));
     	return parent::onDispatch($e);
     }
