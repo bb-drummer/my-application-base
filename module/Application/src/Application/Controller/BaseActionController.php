@@ -55,18 +55,24 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 
     public function onDispatch(MvcEvent $e)
     {
-    	$this->defineActionTitles();
-    	$this->defineToolbarItems();
-    	
-    	$action = $e->getRouteMatch()->getParam('action'); // $this->get->getParam('action', 'index');
-    	
-    	$this->layout()->setVariable("title", $this->getActionTitle($action));
-		
+		/** @var $serviceManager \Zend\ServiceManager\ServiceManager */
 		$serviceManager = $this->getServiceLocator();
-		$toolbarNav = $serviceManager->get('toolbarnavigation');
-		$toolbarNav->setConfig($this->getToolbarItem($action));
-		$this->layout()->setVariable("toolbar", $toolbarNav); // ->getPages($serviceManager));
-    	
+		
+		\Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
+		$this->defineActionTitles();
+    	$this->defineToolbarItems();
+
+    	$action = $e->getRouteMatch()->getParam('action');
+		$this->layout()->setVariable("title", $this->getActionTitle($action));
+		
+		$toolbarItems = $this->getToolbarItem($action);
+		if ($toolbarItems) {
+			$toolbarNav = new \TwitterBootstrapAPI\Navigation\Service\ToolbarNavigationFactory( $toolbarItems );
+			//$toolbarNav = $serviceManager->get('toolbarnavigation'); $toolbarNav->addPages($toolbarItems);
+			//echo '<pre>';var_dump($toolbarNav);echo '</pre>'; //die;
+			$this->layout()->setVariable("toolbar", $toolbarNav->getPages($serviceManager)); 
+		}
+		
     	$result = parent::onDispatch($e);
     	return $result;
     }
@@ -212,16 +218,16 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 	/**
 	 * @return the $actionTitles
 	 */
-	public function getToolbarItem($name) {
-		return (isset($this->toolbarItems[$action]) ? $this->toolbarItems[$action] : '');
+	public function getToolbarItem($action) {
+		return (isset($this->toolbarItems[$action]) ? $this->toolbarItems[$action] : null);
 	}
 	
 	/**
 	 * @param string $action
 	 * @param string $title
 	 */
-	public function setToolbarItem($name, $item) {
-		$this->toolbarItems[$action] = $title;
+	public function setToolbarItem($action, $item) {
+		$this->toolbarItems[$action] = $item;
 		return $this;
 	}
 	
