@@ -38,7 +38,7 @@ test_php5:
   script:
   - echo "testing php5.x ..."
   - pwd
-  - phpunit --configuration tests/phpunit.xml --coverage-text
+  - phpunit -v --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
 # testing with php 7.x job
@@ -48,7 +48,7 @@ test_php7:
   script:
   - echo "testing php7.x ..."
   - pwd
-  - phpunit --configuration tests/phpunit.xml --coverage-text
+  - phpunit -v --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
 # deploy job
