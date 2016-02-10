@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="[MyApplication] application base - Test Suite">
+            <directory>./</directory>
+        </testsuite>
+        <testsuite name="[MyApplication] admin module - Test Suite">
+            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
+        </testsuite>
+        <testsuite name="[MyApplication] TwitterBootstrap component API - Test Suite">
+            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
+            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+            <exclude>
+                <directory>./</directory>
+	            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
+	            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

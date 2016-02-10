@@ -9,9 +9,9 @@
 
 namespace ApplicationTest;
 
-use PHPUnit_Framework_TestCase;
+//use PHPUnit_Framework_TestCase;
 
-class ApplicationTest  extends PHPUnit_Framework_TestCase
+class ApplicationTest extends Framework\TestCase
 {
 
 	public function testThisIsTrue()
@@ -23,16 +23,4 @@ class ApplicationTest  extends PHPUnit_Framework_TestCase
 	{
 		$this->assertFalse(false, 'this is "false"... ^^' );
 	}
-	
-    public static $locator;
-
-    public static function setLocator($locator)
-    {
-        self::$locator = $locator;
-    }
-
-    public function getLocator()
-    {
-        return self::$locator;
-    }
 }

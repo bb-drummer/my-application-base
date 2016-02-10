@@ -63,7 +63,7 @@
   "homepage" : "http://dragon-projects.net/",
   "autoload" : {
     "psr-0" : {
-      "Application" : "./module/Application/src/"
+      "Application" : [ "./module/Application/src/" ]
     },
     "classmap" : [ "./module/" ]
   }
