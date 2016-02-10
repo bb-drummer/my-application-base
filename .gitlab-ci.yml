@@ -1,48 +1,68 @@
 # Select image from https://hub.docker.com/_/php/
 image: php:5.6
-stage: deploy
 
 # Select what we should cache
-cache:
-  paths:
-  - vendor/
+#cache:
+#  paths:
+#  - vendor/
 
+# prepare gitlab-ci
 before_script:
-# Install git, the php image doesn't have installed
-- docker info
-- apt-get update -yqq
-- apt-get install git -yqq
+- bash shell/gitlab-ci-setup.sh
 
-# Install mysql driver
-- docker-php-ext-install pdo_mysql
-
-# Install composer
-- curl -sS https://getcomposer.org/installer | php
-
-# Install all project dependencies
-- php composer.phar install
-
+# include services
 services:
 - mysql
 
-variables:
-  # Configure mysql service (https://hub.docker.com/_/mysql/)
-  MYSQL_DATABASE: hello_world_test
-  MYSQL_ROOT_PASSWORD: mysql
+# define types/stages
+types:
+- build
+- cleanup_build
+- test
+- deploy
+- cleanup
 
-# We test PHP5.6 (the default) with MySQL
-test:mysql:
-  script:
-  - vendor/bin/phpunit --configuration phpunit_mysql.xml --coverage-text
+# define jobs
 
-# We test PHP7 with MySQL, but we allow it to fail
-test:php7:mysql:
-  image: php:7
+# build job
+build_job:
+  type: build
   script:
-  - vendor/bin/phpunit --configuration phpunit_mysql.xml --coverage-text
+  - bash echo "building ..."
+  - bash pwd
+
+# testing with php 5.x job
+test_php5:
+  type: test
+  image: php:5.6
+  script:
+  - bash echo "testing php5.x ..."
+  - bash pwd
+  - phpunit --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
-build_image:
+# testing with php 7.x job
+test_php7:
+  type: test
+  image: php:7.0
   script:
-    - docker build -t my-docker-image .
-    - docker run my-docker-image /script/to/run/tests
+  - bash echo "testing php7.x ..."
+  - bash pwd
+  - phpunit --configuration tests/phpunit.xml --coverage-text
+  allow_failure: false
+
+# deploy job
+deploy_job:
+  type: deploy
+  script:
+  - bash echo "deploying ..."
+  - pwd
+
+# clean up job
+cleanup_job:
+  type: cleanup
+  script:
+  - bash echo "clean up after builds ..."
+  - bash pwd
+  #when: always
+
