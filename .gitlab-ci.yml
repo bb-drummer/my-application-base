@@ -12,7 +12,7 @@ before_script:
 
 # include services
 services:
-- mysql
+#- mysql
 
 # define types/stages
 types:
