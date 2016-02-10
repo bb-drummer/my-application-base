@@ -199,8 +199,9 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 		$oRequest = $oController->getRequest();
 		if ( ($oRequest instanceof ConsoleRequest) || !method_exists($oRequest, "getHeaders") ) { return; }
 		//$sAccept = $oController->getRequest()->getHeaders()->get('Accept')->toString();
-		$sAccept = $oRequest->getHeaders()->get('Accept')->toString();
-		echo '<!-- '.print_r($sAccept, true).' -->';
+		$oAccept = $oRequest->getHeaders()->get('Accept');
+		$sAccept = ($oAccept) ? $oAccept->toString() : '';
+		//echo '<!-- '.print_r($sAccept, true).' -->';
 		if ( $oRequest->isXmlHttpRequest() ) {
 			if ( strpos($sAccept, 'text/html') !== false ) {
 				$sLayout = $oRequest->getHeaders()->get('X-layout')->toString(); 

@@ -1,27 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="./bootstrap.php" colors="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.2/phpunit.xsd"
+         backupGlobals="true"
+         backupStaticAttributes="false"
+         cacheTokens="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         mapTestClassNameToCoveredClassName="true"
+         printerClass="PHPUnit_TextUI_ResultPrinter"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         stopOnRisky="false"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         timeoutForSmallTests="1"
+         timeoutForMediumTests="10"
+         timeoutForLargeTests="60"
+         verbose="true" 
+         bootstrap="./bootstrap.php">
+    <!--testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"-->
     <testsuites>
         <testsuite name="[MyApplication] application base - Test Suite">
-            <directory>./</directory>
+            <directory suffix=".php">./</directory>
         </testsuite>
         <testsuite name="[MyApplication] admin module - Test Suite">
-            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
         </testsuite>
         <testsuite name="[MyApplication] TwitterBootstrap component API - Test Suite">
-            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
-        <whitelist>
-            <directory>./</directory>
-            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
-            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../src/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-admin/src/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/src/</directory>
             <exclude>
-                <directory>./</directory>
-	            <directory>../../../vendor/my-application/zf2-admin/tests/</directory>
-	            <directory>../../../vendor/my-application/zf2-twbs-api/tests/</directory>
+                <directory suffix=".php">./</directory>
+            	<directory suffix=".php">../Examples/</directory>
+	            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
+	            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
             </exclude>
         </whitelist>
     </filter>
+    
+    <logging>
+		<log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+	</logging>
 </phpunit>
