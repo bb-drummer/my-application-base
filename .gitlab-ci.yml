@@ -23,9 +23,9 @@ test-php5_job:
   - echo "testing application-base php-5.6 ..."
   - php -v
   - pwd
-  - ./phpunit -d memory_limit=-1 -v --configuration ./module/Application/test --coverage-text
-  - ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-admin/tests --coverage-text
-  - ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-twbs-api/tests --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./module/Application/test --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-admin/tests --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-twbs-api/tests --coverage-text
   allow_failure: false
 
 # testing with php 7.x jobs
@@ -37,9 +37,9 @@ test-php7_job:
   - echo "testing application-base php-7.0 ..."
   - php -v
   - pwd
-  - ./phpunit -d memory_limit=-1 -v --configuration ./module/Application/test --coverage-text
-  - ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-admin/tests --coverage-text
-  - ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-twbs-api/tests --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./module/Application/test --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-admin/tests --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration ./vender/my-application/module-twbs-api/tests --coverage-text
   allow_failure: false
 
 # build job
