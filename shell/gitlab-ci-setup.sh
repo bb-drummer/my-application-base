@@ -20,8 +20,8 @@ chmod +x ./phpunit
 apt-get update -yqq
 apt-get install -yqq phpunit php5-mysql
 
-
 # Install composer
 curl -sS https://getcomposer.org/installer | php
 # Install all project dependencies
 php -d memory_limit=-1 composer.phar install
+php -d memory_limit=-1 composer.phar update

@@ -2,9 +2,8 @@
 image: php:5.6
 
 # Select what we should cache
-#cache:
-#  paths:
-#  - vendor/
+cache:
+- vendor/
 
 # prepare gitlab-ci
 before_script:
@@ -40,7 +39,7 @@ test_php5:
   - echo "testing php5.x ..."
   - php -v
   - pwd
-  - ./phpunit -d memory_limit=-1 -v --configuration tests/phpunit.xml --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
 # testing with php 7.x job
@@ -51,7 +50,7 @@ test_php7:
   - echo "testing php7.x ..."
   - php -v
   - pwd
-  - ./phpunit -d memory_limit=-1 -v --configuration tests/phpunit.xml --coverage-text
+  - php ./phpunit -d memory_limit=-1 -v --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
 # deploy job
