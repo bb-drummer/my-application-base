@@ -58,25 +58,23 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		/** @var $serviceManager \Zend\ServiceManager\ServiceManager */
 		$serviceManager = $this->getServiceLocator();
 		
-		\Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
-		$this->defineActionTitles();
+    	\Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
+    	$this->defineActionTitles();
     	$this->defineToolbarItems();
-
+    	
     	$action = $e->getRouteMatch()->getParam('action');
 		$this->layout()->setVariable("title", $this->getActionTitle($action));
-		
+
 		$toolbarItems = $this->getToolbarItem($action);
 		if ($toolbarItems) {
-			$toolbarNav = new \TwitterBootstrapAPI\Navigation\Service\ToolbarNavigationFactory( $toolbarItems );
-			//$toolbarNav = $serviceManager->get('toolbarnavigation'); $toolbarNav->addPages($toolbarItems);
-			//echo '<pre>';var_dump($toolbarNav);echo '</pre>'; //die;
-			$this->layout()->setVariable("toolbar", $toolbarNav->getPages($serviceManager)); 
+			$toolbarNav = $serviceManager->get('toolbarnavigation');
+			$toolbarNav->addPages($toolbarItems);
 		}
 		
-    	$result = parent::onDispatch($e);
-    	return $result;
-    }
-
+		$result = parent::onDispatch($e);
+		return $result;
+	}
+    
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
         $this->services = $serviceLocator;
