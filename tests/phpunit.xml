@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="./bootstrap.php" colors="true">
-    <php>
-        <var name="db_dsn" value="mysql:dbname=$MYSQL_DATABASE:$MYSQL_PORT;host=$MYSQL_HOST"/>
-        <var name="db_username" value="$MYSQL_USER"/>
-        <var name="db_password" value="$MYSQL_PASSWORD"/>
-    </php>
     <testsuites>
-        <testsuite name="ApplicationTest Test Suite">
+        <testsuite name="[MyApplication] Test Suite">
             <directory>./</directory>
         </testsuite>
     </testsuites>
