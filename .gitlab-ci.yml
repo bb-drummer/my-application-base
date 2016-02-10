@@ -28,16 +28,16 @@ types:
 build_job:
   type: build
   script:
-  - bash echo "building ..."
-  - bash pwd
+  - echo "building ..."
+  - pwd
 
 # testing with php 5.x job
 test_php5:
   type: test
   image: php:5.6
   script:
-  - bash echo "testing php5.x ..."
-  - bash pwd
+  - echo "testing php5.x ..."
+  - pwd
   - phpunit --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
@@ -46,8 +46,8 @@ test_php7:
   type: test
   image: php:7.0
   script:
-  - bash echo "testing php7.x ..."
-  - bash pwd
+  - echo "testing php7.x ..."
+  - pwd
   - phpunit --configuration tests/phpunit.xml --coverage-text
   allow_failure: false
 
@@ -55,14 +55,14 @@ test_php7:
 deploy_job:
   type: deploy
   script:
-  - bash echo "deploying ..."
+  - echo "deploying ..."
   - pwd
 
 # clean up job
 cleanup_job:
   type: cleanup
   script:
-  - bash echo "clean up after builds ..."
-  - bash pwd
+  - echo "clean up after builds ..."
+  - pwd
   #when: always
 
