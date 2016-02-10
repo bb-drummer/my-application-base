@@ -1,8 +1,13 @@
 # Select image from https://hub.docker.com/_/php/
 image: php:5.6
 
+services:
+- cache
+- mysql
+
 # Select what we should cache
 cache:
+  paths:
   - vendor/
 
 # prepare gitlab-ci
@@ -10,9 +15,6 @@ before_script:
 - bash shell/gitlab-ci-setup.sh
 
 # include services
-services:
-- mysql
-
 # define types/stages
 types:
 - build
