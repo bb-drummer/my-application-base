@@ -2,9 +2,9 @@
 image: php:5.6
 
 # Select what we should cache
-#cache:
-#  paths:
-#  - vendor/
+cache:
+  paths:
+  - vendor/
 
 # prepare gitlab-ci
 before_script:
@@ -12,7 +12,7 @@ before_script:
 
 # include services
 services:
-#- mysql
+- mysql
 
 # define types/stages
 types:

@@ -9,11 +9,26 @@
 
 namespace ApplicationTest;
 
-class ApplicationTest extends Framework\TestCase
+use PHPUnit_Framework_TestCase;
+
+class ApplicationTest  extends PHPUnit_Framework_TestCase
 {
 
     public function testApplication()
     {
-        $this->assertInstanceOf('Zend\Di\LocatorInterface', $this->getLocator());
+    	$this->assertTrue(true, 'this is "true"... ^^' );
+        $this->assertInstanceOf('Zend_Di_LocatorInterface', $this->getLocator());
+    }
+    
+    public static $locator;
+
+    public static function setLocator($locator)
+    {
+        self::$locator = $locator;
+    }
+
+    public function getLocator()
+    {
+        return self::$locator;
     }
 }
