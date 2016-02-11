@@ -1,4 +1,7 @@
 #!/bin/bash
+export PATH='./:/usr/local/bin:$PATH'
+
+echo 'current paths: $PATH'
 
 # We need to install dependencies only for Docker
 #[[ ! -e /.dockerinit ]] && exit 0
@@ -12,8 +15,8 @@ apt-get update -yqq
 apt-get install git -yqq
 
 # Install phpunit, the tool that we will use for testing
-curl -o ./phpunit https://phar.phpunit.de/phpunit.phar
-chmod +x ./phpunit
+curl -o /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
+chmod +x /usr/local/bin/phpunit
 
 # Install mysql driver
 # Here you can install any other extension that you need
@@ -25,3 +28,7 @@ curl -sS https://getcomposer.org/installer | php
 # Install all project dependencies
 php -d memory_limit=-1 composer.phar install
 #php -d memory_limit=-1 composer.phar update
+
+php -v
+php composer.phar --version
+phpunit -v
