@@ -9,28 +9,26 @@
 
 #set -xe
 
-#docker info
+# php info
+apt-get update -yqq
+apt-get install -yqq php5-mysql
+php -v
+php -m
 
 # Install git (the php image doesn't have it) which is required by composer
-apt-get update -yqq
-apt-get install git -yqq
-
-# Install phpunit, the tool that we will use for testing
-curl -o phpunit.phar https://phar.phpunit.de/phpunit.phar
-chmod +x phpunit.phar
-
 # Install mysql driver
-# Here you can install any other extension that you need
 apt-get update -yqq
-apt-get install -yqq phpunit php5-mysql
-
-php -v
-php composer.phar --version
-php phpunit.phar --version
-
+apt-get install -yqq git
 # Install composer
 curl -sS https://getcomposer.org/installer | php
 # Install all project dependencies
 php -d memory_limit=-1 composer.phar install
 #php -d memory_limit=-1 composer.phar update
+php composer.phar --version
+
+# Install phpunit, the tool that we will use for testing
+apt-get install -yqq phpunit
+curl -o ./phpunit.phar https://phar.phpunit.de/phpunit.phar
+chmod +x ./phpunit.phar
+php ./phpunit.phar --version
 
