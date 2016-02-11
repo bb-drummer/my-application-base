@@ -31,5 +31,5 @@ php composer.phar --version
 apt-get install -yqq phpunit
 curl -o ./phpunit.phar https://phar.phpunit.de/phpunit.phar
 chmod +x ./phpunit.phar
-php ./phpunit.phar --version
+
 
