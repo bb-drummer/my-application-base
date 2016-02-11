@@ -2,8 +2,8 @@
 
 # prepare gitlab-ci
 before_script:
-- bash shell/gitlab-ci-setup.sh
-- bash php -d memory_limit=-1 composer.phar install
+- shell/gitlab-ci-setup.sh
+- php -d memory_limit=-1 composer.phar install
 
 # include services
 # define types/stages
