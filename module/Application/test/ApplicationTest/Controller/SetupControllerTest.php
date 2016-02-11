@@ -84,7 +84,7 @@ class SetupControllerTest extends AbstractHttpControllerTestCase
 		$this->assertModuleName('Application');
 		$this->assertControllerName('Application\Controller\Setup');
 		$this->assertControllerClass('SetupController');
-		$this->assertMatchedRouteName('home');
+		$this->assertMatchedRouteName('setup');
 	}
 
 	/**

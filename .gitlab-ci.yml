@@ -21,7 +21,6 @@ test-php5_job:
   image: php:5.6
   script:
   - echo "testing application-base php-5.6 ..."
-  - ./phpunit --version
   - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
   #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-admin/tests/phpunit.xml --coverage-text
   #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-twbs-api/tests/phpunit.xml --coverage-text
@@ -33,7 +32,6 @@ test-php5_job:
 #  image: php:7.0
 #  script:
 #  - echo "testing application-base php-7.0 ..."
-#  - ./phpunit --version
 #  - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
 #  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-admin/tests/phpunit.xml --coverage-text
 #  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-twbs-api/tests/phpunit.xml --coverage-text

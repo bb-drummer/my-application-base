@@ -84,7 +84,7 @@ class SystemControllerTest extends AbstractHttpControllerTestCase
 		$this->assertModuleName('Application');
 		$this->assertControllerName('Application\Controller\System');
 		$this->assertControllerClass('SystemController');
-		$this->assertMatchedRouteName('home');
+		$this->assertMatchedRouteName('system');
 	}
 
 	/**
