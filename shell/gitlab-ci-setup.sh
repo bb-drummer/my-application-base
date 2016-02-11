@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PATH='$PATH:/usr/local/bin'
+#PATH='$PATH:/usr/local/bin'
 
-echo 'current paths: $PATH'
+#echo 'current paths: $PATH'
 
 # We need to install dependencies only for Docker
 #[[ ! -e /.dockerinit ]] && exit 0
