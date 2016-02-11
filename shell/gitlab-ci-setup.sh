@@ -24,4 +24,4 @@ apt-get install -yqq phpunit php5-mysql
 curl -sS https://getcomposer.org/installer | php
 # Install all project dependencies
 php -d memory_limit=-1 composer.phar install
-php -d memory_limit=-1 composer.phar update
+#php -d memory_limit=-1 composer.phar update
