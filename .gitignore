@@ -19,6 +19,7 @@ vendor*
 themes/
 data/
 components/
+public/test-coverage
 public/assets
 public/js/*/*
 public/css/*/*
