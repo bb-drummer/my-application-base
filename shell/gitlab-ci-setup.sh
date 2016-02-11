@@ -1,5 +1,6 @@
 #!/bin/bash
-export PATH='./:/usr/local/bin:$PATH'
+
+PATH='./:/usr/local/bin:$PATH'
 
 echo 'current paths: $PATH'
 
