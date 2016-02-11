@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATH='./:/usr/local/bin:$PATH'
+PATH='$PATH:/usr/local/bin'
 
 echo 'current paths: $PATH'
 
