@@ -9,5 +9,5 @@ curl -sS https://getcomposer.org/installer | php
 php composer.phar --version
 
 # Install phpunit, the tool that we will use for testing
-curl -v -o ./phpunit.phar https://phar.phpunit.de/phpunit.phar
+curl -v -o ./phpunit.phar https://phar.phpunit.de/phpunit-5.2.3.phar
 chmod +x ./phpunit.phar
