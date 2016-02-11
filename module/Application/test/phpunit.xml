@@ -42,7 +42,6 @@
             <directory suffix=".php">../../../vendor/my-application/zf2-admin/src/</directory>
             <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/src/</directory>
             <exclude>
-                <directory suffix=".php">./</directory>
             	<directory suffix=".php">../Examples/</directory>
 	            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
 	            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
