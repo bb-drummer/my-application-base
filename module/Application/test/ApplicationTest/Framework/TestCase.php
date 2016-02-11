@@ -25,4 +25,8 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         return self::$locator;
     }
+    
+    public function testFoo () {
+    	$this->assertTrue(true);
+    }
 }

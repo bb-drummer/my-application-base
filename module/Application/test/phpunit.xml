@@ -27,12 +27,12 @@
     <testsuites>
         <testsuite name="[MyApplication] application base - Test Suite">
             <directory suffix=".php">./</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
         </testsuite>
         <testsuite name="[MyApplication] admin module - Test Suite">
-            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
         </testsuite>
         <testsuite name="[MyApplication] TwitterBootstrap component API - Test Suite">
-            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
         </testsuite>
     </testsuites>
 
@@ -41,15 +41,15 @@
             <directory suffix=".php">../src/</directory>
             <directory suffix=".php">../../../vendor/my-application/zf2-admin/src/</directory>
             <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/src/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
+            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
             <exclude>
             	<directory suffix=".php">../Examples/</directory>
-	            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
-	            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
             </exclude>
         </whitelist>
     </filter>
     
     <logging>
-		<log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+		<log type="coverage-html" target="../../../public/test-coverage" showUncoveredFiles="true"/>
 	</logging>
 </phpunit>
