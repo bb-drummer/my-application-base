@@ -116,4 +116,4 @@ please see LICENCE file in project's root directory
 
 
 ## current build status
-[![build status](http://gitlab.dragon-projects.de:81/gitlabci/projects/1/status.png?ref=master)](http://gitlab.dragon-projects.de:81/gitlabci/projects/1?ref=master)
+[![build status](http://gitlab.dragon-projects.de:81/gitlabci/projects/1/status.png?ref=master)](http://gitlab.dragon-projects.de:81/gitlabci/projects/1)
