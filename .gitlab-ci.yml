@@ -43,7 +43,7 @@ build_job:
   script:
   - shell/gitlab-ci-setup.sh
   - echo "building ..."
-  - php ./vendor/bin/phpunit.phar --version
+  - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
 
 # build job
