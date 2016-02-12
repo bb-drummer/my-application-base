@@ -11,6 +11,9 @@ namespace ApplicationTest\Framework;
 
 use PHPUnit_Framework_TestCase;
 
+/**
+ * @coversNothing
+ */
 class TestCase extends PHPUnit_Framework_TestCase
 {
 

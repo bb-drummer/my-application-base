@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.2/phpunit.xsd"
-         backupGlobals="true"
+         backupGlobals="false"
          backupStaticAttributes="false"
          cacheTokens="false"
          colors="true"
@@ -27,29 +27,20 @@
     <testsuites>
         <testsuite name="[MyApplication] application base - Test Suite">
             <directory suffix=".php">./</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
-        </testsuite>
-        <testsuite name="[MyApplication] admin module - Test Suite">
-        </testsuite>
-        <testsuite name="[MyApplication] TwitterBootstrap component API - Test Suite">
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">../src/</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-admin/src/</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/src/</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-admin/tests/</directory>
-            <directory suffix=".php">../../../vendor/my-application/zf2-twbs-api/tests/</directory>
             <exclude>
-            	<directory suffix=".php">../Examples/</directory>
+            	<directory suffix=".php">../src/Examples/</directory>
+            	<directory suffix=".php">./ApplicationTest/Framework/</directory>
             </exclude>
         </whitelist>
     </filter>
     
     <logging>
-		<log type="coverage-html" target="../../../public/test-coverage" showUncoveredFiles="true"/>
+		<log type="coverage-html" target="/Volumes/Development/resources/php/test-coverage/zf2-application-base" reltarget="../../../public/test-coverage" showUncoveredFiles="true"/>
 	</logging>
 </phpunit>
