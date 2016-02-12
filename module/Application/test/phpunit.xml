@@ -41,6 +41,11 @@
     </filter>
     
     <logging>
-		<log type="coverage-html" local-target="/Volumes/Development/resources/php/test-coverage/zf2-application-base" target="../../../public/test-coverage" showUncoveredFiles="true"/>
+		<log
+			type="coverage-html" 
+		    local-target="/Volumes/Development/resources/php/test-coverage/zf2-application-base" 
+		    target="../../../public/test-coverage" 
+		    showUncoveredFiles="true"
+		/>
 	</logging>
 </phpunit>
