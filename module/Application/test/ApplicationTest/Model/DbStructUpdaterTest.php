@@ -131,7 +131,8 @@ class DbStructUpdaterTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new DbStructUpdater;
+		$this->markTestSkipped('external library');
+    	$this->object = new DbStructUpdater;
     }
 
     /**
