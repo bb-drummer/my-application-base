@@ -32,37 +32,37 @@ use ZfcUser\Controller\Plugin\ZfcUserAuthentication;
  */
 class BaseActionController extends AbstractActionController implements Dispatchable, ServiceLocatorAwareInterface {
 	
-    protected $services;
+	protected $services;
 	
-    protected $translator;
-    
-    protected $actionTitles = array();
+	protected $translator;
+	
+	protected $actionTitles = array();
 
-    protected $toolbarItems = array();
-    
-    
-    public function defineActionTitles () {
-    	$this->setActionTitles(array(
-    	));
-    	return $this;
-    }
+	protected $toolbarItems = array();
+	
+	
+	public function defineActionTitles () {
+		$this->setActionTitles(array(
+		));
+		return $this;
+	}
 
-    public function defineToolbarItems () {
-    	$this->setToolbarItems(array(
-    	));
-    	return $this;
-    }
+	public function defineToolbarItems () {
+		$this->setToolbarItems(array(
+		));
+		return $this;
+	}
 
-    public function onDispatch(MvcEvent $e)
-    {
+	public function onDispatch(MvcEvent $e)
+	{
 		/** @var $serviceManager \Zend\ServiceManager\ServiceManager */
 		$serviceManager = $this->getServiceLocator();
 		
-    	\Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
-    	$this->defineActionTitles();
-    	$this->defineToolbarItems();
-    	
-    	$action = $e->getRouteMatch()->getParam('action');
+		\Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
+		$this->defineActionTitles();
+		$this->defineToolbarItems();
+		
+		$action = $e->getRouteMatch()->getParam('action');
 		$this->layout()->setVariable("title", $this->getActionTitle($action));
 
 		$toolbarItems = $this->getToolbarItem($action);
@@ -74,47 +74,47 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		$result = parent::onDispatch($e);
 		return $result;
 	}
-    
-    public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
-    {
-        $this->services = $serviceLocator;
-    }
+	
+	public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
+	{
+		$this->services = $serviceLocator;
+	}
 
-    public function getServiceLocator()
-    {
-        return $this->services;
-    }
+	public function getServiceLocator()
+	{
+		return $this->services;
+	}
 
-    /**
-     * 
-     * @return \Zend\Permissions\Acl\Acl
-     */
-    public function getAcl() {
-    	return $this->getServiceLocator()->get('\Admin\Model\AclService');
-    }
+	/**
+	 * 
+	 * @return \Zend\Permissions\Acl\Acl
+	 */
+	public function getAcl() {
+		return $this->getServiceLocator()->get('\Admin\Model\AclService');
+	}
 
-    /**
-     * @return ZfcUserAuthentication
-     */
-    public function getUser() {
+	/**
+	 * @return ZfcUserAuthentication
+	 */
+	public function getUser() {
 
-    	$oAuth = $this->getServiceLocator()->get('zfcuser_auth_service');
-    	if ( $oAuth->hasIdentity() ) {
-    		return $oAuth->getIdentity();
-    	}
-    	return null;
-    }
-    
-    /**
-     * @return boolean
-     */
-    public function isAdminUser() {
-    	$oUser = $this->getUser();
-        $sAclRole = $oUser->getAclrole();
-        return ($sAclRole == 'admin');
-    }
-    
-    
+		$oAuth = $this->getServiceLocator()->get('zfcuser_auth_service');
+		if ( $oAuth->hasIdentity() ) {
+			return $oAuth->getIdentity();
+		}
+		return null;
+	}
+	
+	/**
+	 * @return boolean
+	 */
+	public function isAdminUser() {
+		$oUser = $this->getUser();
+		$sAclRole = $oUser->getAclrole();
+		return ($sAclRole == 'admin');
+	}
+	
+	
 	/**
 	 * @return \Zend\I18n\Translator\Translator
 	 */
@@ -141,11 +141,11 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 	public function translate($message, $textdomain = 'default', $locale = null) {
 		return ( $this->getTranslator()->translate($message, $textdomain, $locale) );
 	}
-    
-    /**
-     * fetch request parameters
-     */
-    public function getTemplateVars ( $vars = array() ) {
+	
+	/**
+	 * fetch request parameters
+	 */
+	public function getTemplateVars ( $vars = array() ) {
 		$result = (array_merge( 
 			$this->params()->fromRoute(), 
 			$this->params()->fromPost(),
@@ -159,12 +159,12 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 			));
 		}
 		return ($result);
-    }
-    
-    
+	}
+	
+	
 	// //   action titles
 
-    /**
+	/**
 	 * @return the $actionTitles
 	 */
 	public function getActionTitles() {
@@ -194,7 +194,7 @@ class BaseActionController extends AbstractActionController implements Dispatcha
 		$this->actionTitles[$action] = $title;
 		return $this;
 	}
-    
+	
 	
 	// //   toolbar items
 

@@ -2,10 +2,10 @@
 namespace ApplicationTest\Framework;
 
 use \ApplicationTest\Bootstrap as AppTestsBootstrap,
-    Zend\Http\Request,
-    Zend\Http\Response,
-    Zend\Mvc\MvcEvent,
-    Zend\Mvc\Router\RouteMatch,
+	Zend\Http\Request,
+	Zend\Http\Response,
+	Zend\Mvc\MvcEvent,
+	Zend\Mvc\Router\RouteMatch,
 	Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 /**
@@ -14,19 +14,19 @@ use \ApplicationTest\Bootstrap as AppTestsBootstrap,
 class ActionControllerTestCase extends AbstractHttpControllerTestCase
 {
 
-    /**
-     * dummy test
-     * @coversNothing
-     */
+	/**
+	 * dummy test
+	 * @coversNothing
+	 */
 	public function testTest() {
 		$this->assertTrue(true);
-    }
-    
-    //
-    // basic test setup
-    //
-    
-    /**
+	}
+	
+	//
+	// basic test setup
+	//
+	
+	/**
 	 * @var \Zend\Mvc\Controller
 	 */
 	protected $controller;
@@ -51,33 +51,33 @@ class ActionControllerTestCase extends AbstractHttpControllerTestCase
 	 */
 	protected $event;
  
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    public function setUp()
-    {
+	/**
+	 * Sets up the fixture, for example, opens a network connection.
+	 * This method is called before a test is executed.
+	 */
+	public function setUp()
+	{
 		$this->setApplicationConfig( include 'config/application.config.php' );
-        parent::setUp();
-        
-    	if (method_exists($this, 'setupController')) {
+		parent::setUp();
+		
+		if (method_exists($this, 'setupController')) {
 			$this->setupController();
 		}
 		
-    }
-    
-    public function setupController() {
-    }
-    
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
+	}
+	
+	public function setupController() {
+	}
+	
+	/**
+	 * Tears down the fixture, for example, closes a network connection.
+	 * This method is called after a test is executed.
+	 */
+	protected function tearDown()
+	{
 		// parent::tearDown();
-    }
-    
+	}
+	
 	/**
 	 * @return \Zend\Mvc\Controller $controller
 	 */

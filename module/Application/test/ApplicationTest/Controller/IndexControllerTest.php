@@ -3,11 +3,11 @@ namespace ApplicationTest\Controller;
 
 use \Application\Controller\IndexController,
 	\ApplicationTest\Framework\ActionControllerTestCase,
-    Zend\Http\Request,
-    Zend\Http\Response,
-    Zend\Http\Router,
-    Zend\Mvc\MvcEvent,
-    Zend\Mvc\Router\RouteMatch,
+	Zend\Http\Request,
+	Zend\Http\Response,
+	Zend\Http\Router,
+	Zend\Mvc\MvcEvent,
+	Zend\Mvc\Router\RouteMatch,
 	Zend\Mvc\Router\Http\TreeRouteStack as HttpRouter
 ;
 
@@ -24,7 +24,7 @@ class IndexControllerTest extends BaseActionControllerTest
 	{
 		$this->setController( new IndexController() );
 		$this->getController()->setServiceLocator($this->getApplicationServiceLocator());
-        $this->setRequest( new Request() );
+		$this->setRequest( new Request() );
 		$this->setRouteMatch(new RouteMatch(array('controller' => '\Application\Controller\Index', 'action' => 'index')));
 		$this->setEvent( new MvcEvent() );
 		$config = $this->getApplicationServiceLocator()->get('Config');

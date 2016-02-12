@@ -221,15 +221,15 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 		}
 	}
 
-    public function getConsoleUsage(Console $console)
-    {
-        return array(
-            // Describe available commands
-            'update-db [--test] [--verbose|-v]'    => 'update database structure',
+	public function getConsoleUsage(Console $console)
+	{
+		return array(
+			// Describe available commands
+			'update-db [--test] [--verbose|-v]'	=> 'update database structure',
 
-            // Describe expected parameters
-            array( '--test',		'(optional) testing mode, no changes are written to database' ),
-            array( '--verbose|-v',	'(optional) turn on verbose mode' ),
-        );
-    }
+			// Describe expected parameters
+			array( '--test',		'(optional) testing mode, no changes are written to database' ),
+			array( '--verbose|-v',	'(optional) turn on verbose mode' ),
+		);
+	}
 }

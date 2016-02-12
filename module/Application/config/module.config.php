@@ -58,7 +58,7 @@ return array(
 								'action'	 => '[a-zA-Z][a-zA-Z0-9_-]*',
 							),
 							'defaults' => array(
-						        'controller' => 'Application\Controller\Iindex',
+								'controller' => 'Application\Controller\Iindex',
 							),
 						),
 					),
@@ -72,8 +72,8 @@ return array(
 						'action'	 => '[a-zA-Z][a-zA-Z0-9_-]*',
 					),
 					'defaults' => array(
-				        'controller' => 'Application\Controller\System',
-					    'action'     => 'index',
+						'controller' => 'Application\Controller\System',
+						'action'	 => 'index',
 					),
 				),
 			),
@@ -85,14 +85,14 @@ return array(
 						'action'	 => '[a-zA-Z][a-zA-Z0-9_-]*',
 					),
 					'defaults' => array(
-				        'controller' => 'Application\Controller\Setup',
-					    'action'     => 'index',
+						'controller' => 'Application\Controller\Setup',
+						'action'	 => 'index',
 					),
 				),
 			),
 		),
 	),
-    // Placeholder for console routes
+	// Placeholder for console routes
 	'console' => array(
 		'router' => array(
 			'routes' => array(
@@ -101,8 +101,8 @@ return array(
 					'options' => array(
 						'route'	=> 'update-db [--test] [--verbose|-v]:verbose',
 						'defaults' => array(
-					        'controller' => 'Application\Controller\Setup',
-						    'action'     => 'updatedb',
+							'controller' => 'Application\Controller\Setup',
+							'action'	 => 'updatedb',
 						),
 					),
 				),
@@ -118,7 +118,7 @@ return array(
 		),
 		'factories' => array(
 			'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-            //'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+			//'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
 		),
 		'aliases' => array(
 			'translator' => 'MvcTranslator',
@@ -145,10 +145,10 @@ return array(
 			//'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
 			'error/404'		=> __DIR__ . '/../view/error/404.phtml',
 			'error/index'	=> __DIR__ . '/../view/error/index.phtml',
-            'layout/ajax'	=> __DIR__ . '/../view/layout/ajax.phtml',
-            'layout/json'	=> __DIR__ . '/../view/layout/json.phtml',
-            'layout/modal'	=> __DIR__ . '/../view/layout/modal.phtml',
-            'layout/panel'	=> __DIR__ . '/../view/layout/panel.phtml',
+			'layout/ajax'	=> __DIR__ . '/../view/layout/ajax.phtml',
+			'layout/json'	=> __DIR__ . '/../view/layout/json.phtml',
+			'layout/modal'	=> __DIR__ . '/../view/layout/modal.phtml',
+			'layout/panel'	=> __DIR__ . '/../view/layout/panel.phtml',
 		),
 		'template_path_stack' => array(
 			__DIR__ . '/../view',
@@ -157,10 +157,10 @@ return array(
 	),
 		
 	'navigation_helpers' => array (
-	    'invokables' => array(
-	    	// override or add a view helper
-	        //'menu' => '\Application\View\Helper\Navigation\Menu',
-	    ),
+		'invokables' => array(
+			// override or add a view helper
+			//'menu' => '\Application\View\Helper\Navigation\Menu',
+		),
 	),
 		
 	'navigation' => array(

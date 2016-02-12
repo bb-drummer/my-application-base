@@ -120,27 +120,27 @@ class DbStructUpdaterTest extends \PHPUnit_Framework_TestCase
 	// basic test setup
 	//
 	
-    /**
-     * @var DbStructUpdater
-     */
-    protected $object;
+	/**
+	 * @var DbStructUpdater
+	 */
+	protected $object;
 
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
+	/**
+	 * Sets up the fixture, for example, opens a network connection.
+	 * This method is called before a test is executed.
+	 */
+	protected function setUp()
+	{
 		$this->markTestSkipped('external library');
-    	$this->object = new DbStructUpdater;
-    }
+		$this->object = new DbStructUpdater;
+	}
 
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-    }
-    
+	/**
+	 * Tears down the fixture, for example, closes a network connection.
+	 * This method is called after a test is executed.
+	 */
+	protected function tearDown()
+	{
+	}
+	
 }

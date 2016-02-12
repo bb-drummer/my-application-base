@@ -10,7 +10,7 @@ namespace Application\Model;
  * @DONE: skippen commas inside definitions like this one: FULLTEXT KEY `name` (`name`,`comment`,`placeName`) - inside brackets
  * @DONE: breaks table definition on commas and brackets, not newlines
  * @DONE: handles `database`.`table` in CREATE TABLE string (but does not add database to result sql for a while - and if it
- *        should? as same tables struct in 2 DBs compared is also a case)
+ *		should? as same tables struct in 2 DBs compared is also a case)
  * @DONE: handles double (and more) spaces in CREATE TABLE string
  * @DONE: add filter option (fields: MODIFY, ADD, DROP, tables: CREATE, DROP)
  * @DONE: make it work also with comments

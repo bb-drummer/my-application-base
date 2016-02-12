@@ -20,29 +20,29 @@ use Application\Controller\BaseActionController;
 
 class SystemController extends BaseActionController
 {
-    
-    public function onDispatch(\Zend\Mvc\MvcEvent $e)
-    {
-    	$this->setActionTitles(array(
-    		'index' => $this->translate("system"),
-    		'info' => $this->translate("info"),
-    		'backup' => $this->translate("backup"),
-    	));
-    	return parent::onDispatch($e);
-    }
+	
+	public function onDispatch(\Zend\Mvc\MvcEvent $e)
+	{
+		$this->setActionTitles(array(
+			'index' => $this->translate("system"),
+			'info' => $this->translate("info"),
+			'backup' => $this->translate("backup"),
+		));
+		return parent::onDispatch($e);
+	}
 	
 	public function indexAction()
-    {
-        return new ViewModel();
-    }
-    
-    public function infoAction()
-    {
-        return new ViewModel();
-    }
-    
-    public function backupAction()
-    {
-        return new ViewModel();
-    }
+	{
+		return new ViewModel();
+	}
+	
+	public function infoAction()
+	{
+		return new ViewModel();
+	}
+	
+	public function backupAction()
+	{
+		return new ViewModel();
+	}
 }
