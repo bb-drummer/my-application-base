@@ -16,13 +16,13 @@ types:
 # define jobs
 
 # testing with php 5.x jobs
-#test-php5_job:
-#  type: test
-#  image: php:5.6
-#  script:
-#  - echo "testing application-base php-5.6 ..."
-#  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
-#  allow_failure: false
+test-php5_job:
+  type: test
+  image: php:5.6
+  script:
+  - echo "testing application-base php-5.6 ..."
+  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
+  allow_failure: false
 
 # build job
 build_job:
