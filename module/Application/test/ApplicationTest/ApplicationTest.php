@@ -23,4 +23,9 @@ class ApplicationTest extends Framework\TestCase
 	{
 		$this->assertFalse(false, 'this is "false"... ^^' );
 	}
+
+	public function testTest()
+	{
+		$this->assertFalse(false, 'this is a test... ' );
+	}
 }
