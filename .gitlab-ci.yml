@@ -16,25 +16,12 @@ types:
 # define jobs
 
 # testing with php 5.x jobs
-test-php5_job:
-  type: test
-  image: php:5.6
-  script:
-  - echo "testing application-base php-5.6 ..."
-  - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
-  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-admin/tests/phpunit.xml --coverage-text
-  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-twbs-api/tests/phpunit.xml --coverage-text
-  allow_failure: false
-
-# testing with php 7.x jobs
-#test-php7_job:
+#test-php5_job:
 #  type: test
-#  image: php:7.0
+#  image: php:5.6
 #  script:
-#  - echo "testing application-base php-7.0 ..."
-#  - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
-#  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-admin/tests/phpunit.xml --coverage-text
-#  #- ./phpunit -d memory_limit=-1 -vvv --configuration ./vendor/my-application/module-twbs-api/tests/phpunit.xml --coverage-text
+#  - echo "testing application-base php-5.6 ..."
+#  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
 #  allow_failure: false
 
 # build job
@@ -43,21 +30,5 @@ build_job:
   script:
   - shell/gitlab-ci-setup.sh
   - echo "building ..."
-  - ./phpunit -d memory_limit=-1 -vvv --configuration ./module/Application/test/phpunit.xml --coverage-text
+  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
-
-# build job
-#deploy_job:
-#  type: build
-#  script:
-#  - echo "deploying ..."
-#  - pwd
-#  - php -v
-
-# clean up job
-#cleanup_whatever_is_left_job:
-#  type: cleanup
-#  script:
-#  - echo "clean up after builds ..."
-#  #when: always
-
