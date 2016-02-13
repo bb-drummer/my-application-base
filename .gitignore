@@ -62,4 +62,5 @@ Icon
 *.bak
 *.tmp
 *.save
-*.report
+*.report*
+
