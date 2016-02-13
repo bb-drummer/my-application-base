@@ -1,0 +1,39 @@
+
+PHP CODE SNIFFER INFORMATION REPORT
+----------------------------------------------------------------------
+Class has doc comment: yes [11/16, 68.75%]
+	no => 5 (31.25%)
+
+Class opening brace placement: new line [16/16, 100%]
+
+Control structure defined inline: no [149/149, 100%]
+
+EOL char: \n [18/18, 100%]
+
+File has doc comment: yes [10/18, 55.56%]
+	no => 8 (44.44%)
+
+Function has doc comment: yes [104/147, 70.75%]
+	no => 43 (29.25%)
+
+Function opening brace placement: new line [147/148, 99.32%]
+	same line => 1 (0.68%)
+
+Inline comment style: // ... [158/159, 99.37%]
+	/* ... */ => 1 (0.63%)
+
+Line indent: spaces [2479/2479, 100%]
+
+Line length: 80 or less [2698/2836, 95.13%]
+	81-120 => 125 (4.41%)
+	121-150 => 10 (0.35%)
+	151 or more => 3 (0.11%)
+
+PHP constant case: lower [102/102, 100%]
+
+PHP short open tag used: no [18/18, 100%]
+
+Private method prefixed with underscore: no [7/7, 100%]
+
+----------------------------------------------------------------------
+

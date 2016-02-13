@@ -7,7 +7,7 @@ LOCAL_REPORT_PATH="./public/.reports"
 
 # purge old reports in wiki
 clear
-mkdir -p $LOCAL_REPORT_PATH
+mkdir -p $LOCAL_REPORT_PATH	
 rm -rf $LOCAL_REPORT_PATH/*
 
 # code beautifier & fixer

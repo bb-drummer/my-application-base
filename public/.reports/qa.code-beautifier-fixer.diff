@@ -1,0 +1,32 @@
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/config
+Processing module.config.php [PHP => 1149 tokens in 183 lines]... DONE in 31ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/language
+Processing msgIds.php [PHP => 332 tokens in 59 lines]... DONE in 14ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application
+Processing Module.php [PHP => 1621 tokens in 237 lines]... DONE in 68ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/src/Application/Controller
+Processing BaseActionController.php [PHP => 1507 tokens in 256 lines]... DONE in 59ms (0 fixable violations)
+Processing IndexController.php [PHP => 402 tokens in 70 lines]... DONE in 14ms (0 fixable violations)
+Processing SetupController.php [PHP => 1084 tokens in 138 lines]... DONE in 38ms (0 fixable violations)
+Processing SystemController.php [PHP => 283 tokens in 50 lines]... DONE in 9ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/src/Application/Model
+Processing DbStructUpdater.php [PHP => 5466 tokens in 723 lines]... DONE in 201ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/src/Examples/Controller
+Processing JsonResultController.php [PHP => 735 tokens in 118 lines]... DONE in 29ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest
+Processing ApplicationTest.php [PHP => 142 tokens in 31 lines]... DONE in 5ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest/Controller
+Processing BaseActionControllerTest.php [PHP => 1153 tokens in 256 lines]... DONE in 36ms (0 fixable violations)
+Processing IndexControllerTest.php [PHP => 1295 tokens in 207 lines]... DONE in 56ms (0 fixable violations)
+Processing SetupControllerTest.php [PHP => 561 tokens in 76 lines]... DONE in 24ms (0 fixable violations)
+Processing SystemControllerTest.php [PHP => 561 tokens in 76 lines]... DONE in 21ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest/Framework
+Processing ActionControllerTestCase.php [PHP => 1051 tokens in 194 lines]... DONE in 36ms (0 fixable violations)
+Processing TestCase.php [PHP => 159 tokens in 36 lines]... DONE in 6ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest/Model
+Processing DbStructUpdaterTest.php [PHP => 730 tokens in 161 lines]... DONE in 27ms (0 fixable violations)
+Changing into directory /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test
+Processing bootstrap.php [PHP => 667 tokens in 104 lines]... DONE in 33ms (0 fixable violations)
+No fixable errors were found
+Time: 743ms; Memory: 10Mb
+

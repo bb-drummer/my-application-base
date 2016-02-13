@@ -1,0 +1,44 @@
+
+PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+SOURCE                                                           COUNT
+----------------------------------------------------------------------
+PEAR.Commenting.FunctionComment.MissingReturn                    80
+Generic.Commenting.DocComment.MissingShort                       63
+PEAR.ControlStructures.ControlSignature                          63
+PEAR.Commenting.FunctionComment.Missing                          43
+PEAR.Commenting.FunctionComment.MissingParamTag                  18
+Generic.Commenting.DocComment.ShortNotCapital                    17
+PEAR.Commenting.FunctionComment.MissingParamComment              16
+PEAR.Commenting.FileComment.DuplicatePackageTag                  14
+PEAR.Commenting.FileComment.InvalidPackage                       14
+PEAR.Commenting.ClassComment.MissingCategoryTag                  10
+PEAR.Commenting.ClassComment.MissingLicenseTag                   10
+PEAR.Commenting.ClassComment.MissingPackageTag                   10
+PEAR.Commenting.FileComment.MissingCategoryTag                   10
+PEAR.Commenting.ClassComment.MissingLinkTag                      10
+PEAR.Commenting.FileComment.IncompleteCopyright                  9
+PEAR.Commenting.FileComment.CopyrightTagOrder                    9
+Generic.Commenting.DocComment.NonParamGroup                      9
+PEAR.Commenting.ClassComment.MissingAuthorTag                    8
+Generic.Commenting.DocComment.ParamGroup                         8
+PEAR.Commenting.FileComment.Missing                              8
+PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore     7
+PEAR.Commenting.FileComment.LinkTagOrder                         7
+PEAR.Commenting.ClassComment.Missing                             5
+PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps       4
+PEAR.Commenting.FileComment.MissingPackageTag                    3
+PEAR.Commenting.FileComment.MissingAuthorTag                     3
+PEAR.Commenting.FunctionComment.ParamNameNoMatch                 2
+PEAR.Commenting.FunctionComment.MissingParamName                 1
+PEAR.Commenting.FileComment.MissingLicenseTag                    1
+PEAR.Commenting.ClassComment.EmptyVersionTag                     1
+Generic.Commenting.DocComment.LongNotCapital                     1
+PEAR.Commenting.ClassComment.EmptyAuthorTag                      1
+PEAR.Commenting.FileComment.MissingLinkTag                       1
+PEAR.Commenting.ClassComment.WrongStyle                          1
+----------------------------------------------------------------------
+A TOTAL OF 467 SNIFF VIOLATIONS WERE FOUND IN 34 SOURCES
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,28 @@
+
+PHP CODE SNIFFER REPORT SUMMARY
+----------------------------------------------------------------------
+FILE                                                  ERRORS  WARNINGS
+----------------------------------------------------------------------
+...seApp/module/Application/config/module.config.php  8       0
+...ZF2BaseApp/module/Application/language/msgIds.php  6       0
+...2BaseApp/ZF2BaseApp/module/Application/Module.php  26      0
+...c/Application/Controller/BaseActionController.php  59      0
+...on/src/Application/Controller/IndexController.php  16      0
+...on/src/Application/Controller/SetupController.php  19      0
+...n/src/Application/Controller/SystemController.php  13      0
+...ication/src/Application/Model/DbStructUpdater.php  109     0
+.../src/Examples/Controller/JsonResultController.php  23      0
+...lication/test/ApplicationTest/ApplicationTest.php  9       0
+...ationTest/Controller/BaseActionControllerTest.php  33      0
+...pplicationTest/Controller/IndexControllerTest.php  22      0
+...pplicationTest/Controller/SetupControllerTest.php  11      0
+...plicationTest/Controller/SystemControllerTest.php  11      0
+...cationTest/Framework/ActionControllerTestCase.php  37      0
+...ation/test/ApplicationTest/Framework/TestCase.php  14      0
+...est/ApplicationTest/Model/DbStructUpdaterTest.php  40      0
+.../ZF2BaseApp/module/Application/test/bootstrap.php  11      0
+----------------------------------------------------------------------
+A TOTAL OF 467 ERRORS AND 0 WARNINGS WERE FOUND IN 18 FILES
+----------------------------------------------------------------------
+
+

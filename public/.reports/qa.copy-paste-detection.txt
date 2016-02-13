@@ -1,0 +1,10 @@
+phpcpd 2.0.2 by Sebastian Bergmann.
+
+Found 1 exact clones with 45 duplicated lines in 2 files:
+
+  -	/Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest/Controller/SetupControllerTest.php:29-74
+ 	/Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp/module/Application/test/ApplicationTest/Controller/SystemControllerTest.php:29-74
+ 
+1.51% duplicated lines out of 2972 total lines of code.
+
+Time: 105 ms, Memory: 6.00Mb
