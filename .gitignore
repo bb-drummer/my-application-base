@@ -56,3 +56,10 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# others
+*.swp
+*.bak
+*.tmp
+*.save
+
