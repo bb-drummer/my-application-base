@@ -6,6 +6,7 @@
     "php" : ">=5.5",
     "phpunit/phpunit" : ">=5.1.4",
     "zendframework/zendframework" : "dev-master",
+    "composer/installers": "~1.0",
     "slm/locale" : "dev-master",
     "zf-commons/zfc-user" : ">=1.2.2",
     "neilime/zf2-assets-bundle" : ">=3.4.1",
