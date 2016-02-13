@@ -47,5 +47,5 @@ mkdir -p $LOCAL_REPORT_PATH/phpunit
 vendor/bin/phpunit --verbose --debug --configuration $SOURCE_PATH/Application/test/phpunit.xml --coverage-html $LOCAL_REPORT_PATH/phpunit --coverage-text=$LOCAL_REPORT_PATH/qa.phpunit.txt
 
 # phpunit (all found from one level above)
-touch $LOCAL_REPORT_PATH/qa.phpunit.all.txt;
-find $SOURCE_PATH/../ -name "phpunit.xml" -exec vendor/bin/phpunit $PHPERRORS --verbose --debug --configuration {} >> $LOCAL_REPORT_PATH/qa.phpunit.all.txt \;
+#touch $LOCAL_REPORT_PATH/qa.phpunit.all.txt;
+#find $SOURCE_PATH/../ -name "phpunit.xml" -exec vendor/bin/phpunit $PHPERRORS --verbose --debug --configuration {} >> $LOCAL_REPORT_PATH/qa.phpunit.all.txt \;
