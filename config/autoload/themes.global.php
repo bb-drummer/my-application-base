@@ -1,10 +1,10 @@
 <?php
 return array(
 	'ze_theme' => array(
-		'default_theme' => "zf2-basic",
+		'default_theme' => "basic",
 		'custom_theme_path' => true,
 		'theme_paths' => array(
-			__DIR__ . "/../../themes/{theme}/",
+			__DIR__ . "/../../public/themes/{theme}/",
 		),
 		'routes' => array(
 			// 'theme_name' => array('route_names'),

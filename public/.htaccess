@@ -1,12 +1,20 @@
-Options +Indexes +MultiViews
+Options +Indexes +MultiViews +ExecCGI +FollowSymLinks
 
 RewriteEngine On
+
+# redirect illegal requests to raw theme/view files (for now)
+RewriteRule ^themes/(.*)/view/(.*) [404,]
+
 # The following rule tells Apache that if the requested filename
 # exists, simply serve it.
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
+# remember: ^.ht*$ is disabled by server configuration!
 RewriteRule ^.*$ - [NC,L]
+
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
 # The following rewrites all other queries to index.php. The 
 # condition ensures that if you are using Apache aliases to do

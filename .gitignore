@@ -24,6 +24,8 @@ public/assets
 public/js/*/*
 public/css/*/*
 *.local.php
+module/module-*
+extras*
 
 ## 
 ## ignore (php) composer files
