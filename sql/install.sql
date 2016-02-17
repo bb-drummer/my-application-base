@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `acl` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`acl_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=67 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `aclresource` (
   `aclresources_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `aclresource` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`aclresources_id`),
   UNIQUE KEY `resourceslug` (`resourceslug`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `aclrole` (
   `aclroles_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `aclrole` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`aclroles_id`),
   UNIQUE KEY `roleslug` (`roleslug`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `applications` (
   `application_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `applications` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`application_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `clients` (
   `clients_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`clients_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=82 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 CREATE TABLE IF NOT EXISTS `userprofile` (
   `user_id` bigint(10) NOT NULL AUTO_INCREMENT,
@@ -99,4 +99,13 @@ CREATE TABLE IF NOT EXISTS `userprofile` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
+
+CREATE TABLE IF NOT EXISTS `user_provider` (
+  `user_id` bigint(10) NOT NULL,
+  `provider_id` varchar(50) NOT NULL,
+  `provider` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`,`provider_id`),
+  UNIQUE KEY (`provider_id`,`provider`),
+  FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB;

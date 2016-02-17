@@ -112,6 +112,9 @@ return array(
 
 
     'service_manager' => array(
+        'invokables' => array(
+            'Zend\Session\SessionManager' => 'Zend\Session\SessionManager',
+        ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
@@ -173,7 +176,7 @@ return array(
                         'route'            => 'application/default',
                         'controller'     => 'index',
                         'action'         => 'test',
-                        'resource'        => 'mvc:admin',
+                        'resource'        => 'mvc:user',
                     ),
                 ),
             ),

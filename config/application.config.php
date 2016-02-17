@@ -31,14 +31,17 @@ return array(
 		
 	// This should be an array of module namespaces used in the application.
 	'modules' => array(
+		// (composer) modules/packages
+		'Application',
+        'ScnSocialAuth',
 		'ZfcBase',
 		'ZfcUser',
-		'Application',
 		'SlmLocale',
-		'TwitterBootstrapAPI',
 		'OrgHeiglPiwik',
 		'ZeTheme',
-
+		// custom libraries
+		'TwitterBootstrapAPI',
+		// custom modules
 		'Admin',
 	),
 
@@ -105,5 +108,6 @@ return array(
 			'message_separator_string' => '</span><br /><span>'
 		)
 	),
-		
+
+
 );
