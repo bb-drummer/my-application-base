@@ -16,9 +16,9 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Index'  => 'Application\Controller\IndexController',
             'Application\Controller\System' => 'Application\Controller\SystemController',
-            'Application\Controller\Setup' => 'Application\Controller\SetupController',
+            'Application\Controller\Setup'  => 'Application\Controller\SetupController',
         ),
     ),
     'router' => array(
@@ -113,7 +113,7 @@ return array(
 
     'service_manager' => array(
         'invokables' => array(
-            'Zend\Session\SessionManager' => 'Zend\Session\SessionManager',
+            //'Zend\Session\SessionManager' => 'Zend\Session\SessionManager',
         ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
@@ -169,14 +169,14 @@ return array(
     'navigation' => array(
         'default' => array(
             'home' => array(
-                'pages'            => array(
+                'pages' => array(
                     'testpage' => array(
-                        'label'            => 'test page',
-                        'icon'            => 'exclamation-triangle',
-                        'route'            => 'application/default',
+                        'label'          => 'test page',
+                        'icon'           => 'exclamation-triangle',
+                        'route'          => 'application/default',
                         'controller'     => 'index',
                         'action'         => 'test',
-                        'resource'        => 'mvc:user',
+                        'resource'       => 'mvc:user',
                     ),
                 ),
             ),
