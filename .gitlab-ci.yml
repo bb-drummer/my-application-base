@@ -32,3 +32,4 @@ build_job:
   - echo "building ..."
   - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
+
