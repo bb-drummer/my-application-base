@@ -65,4 +65,5 @@ Icon
 *.tmp
 *.save
 *.report*
+*.vagrant
 
