@@ -42,7 +42,7 @@ vagrantfile:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
             vflsf_fyoycqbj4gmw:
-                source: /Volumes/BB.DATA.MOBILE.01/applications/ZF2BaseApp/ZF2BaseApp
+                source: ./
                 target: /var/www/html
                 sync_type: default
                 smb:
@@ -193,7 +193,7 @@ apache:
             servername: my-app.devel.local
             serveraliases:
                 - my-app.devel.local
-            docroot: /var/www/public
+            docroot: /var/www/html/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -354,7 +354,7 @@ mysql:
     databases:
         mysqlnd_puwac9axmlp0:
             name: dbmyapplication
-            sql: /var/www/sql/install.sql
+            sql: /var/www/html/sql/install.sql
     grants:
         mysqlng_hpwfvzzhcc4j:
             user: dbuser
