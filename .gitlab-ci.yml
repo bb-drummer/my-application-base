@@ -5,7 +5,7 @@ before_script:
 - shell/gitlab-ci-setup.sh
 - php -d memory_limit=-1 composer.phar install
 - cp config/autoload/database.local.dist.php config/autoload/database.local.php
-- echo 'connect DB to: $MYSQL_USER @ $MYSQL_HOST'
+- echo 'DB... $MYSQL_USER @ $MYSQL_HOST'
 - replace "_MYSQL_HOST_" "$MYSQL_HOST" -- config/autoload/database.local.php
 - replace "_MYSQL_DATABASE_" "$MYSQL_DATABASE" -- config/autoload/database.local.php
 - replace "_MYSQL_USER_" "$MYSQL_USER" -- config/autoload/database.local.php
