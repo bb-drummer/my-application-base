@@ -22,7 +22,7 @@ $settings = array(
 	 *
 	 * Accepted is something else
 	 */
-	'supported' => array('de_DE', 'en_US'),
+	'supported' => array('de_DE', 'en_US', 'fr_FR'),
 
 	'aliases' => array(
 			'de' => 'de_DE',
@@ -45,13 +45,13 @@ $settings = array(
 			'name'	=> 'host',
 			'options' => array(
 				'domain'  => 'www.example.:locale',
-				'aliases' => array('com' => 'en-US', 'co.uk' => 'en-GB'),
+				'aliases' => array('com' => 'en_US', 'net' => 'en_US', 'de' => 'de_DE'),
 			),
-		),*/
+		), */
 		array(
 			'name'	 => 'uripath',
 			'options'  => array(
-				'aliases' => array('de' => 'de_DE', 'en' => 'en_US'),
+				'aliases' => array('de' => 'de_DE', 'en' => 'en_US', 'fr' => 'fr_FR'),
 			),
 			'priority' => 1
 		),

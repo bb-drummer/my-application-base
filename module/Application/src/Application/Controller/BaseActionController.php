@@ -43,19 +43,19 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     
     public function defineActionTitles() 
     {
-        $this->setActionTitles(
+        /*$this->setActionTitles(
             array(
             )
-        );
+        );*/
         return $this;
     }
 
     public function defineToolbarItems() 
     {
-        $this->setToolbarItems(
+        /*$this->setToolbarItems(
             array(
             )
-        );
+        );*/
         return $this;
     }
 

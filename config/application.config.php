@@ -31,20 +31,17 @@ return array(
 		
 	// This should be an array of module namespaces used in the application.
 	'modules' => array(
-		// (composer) modules/packages
 		'Application',
-        'ScnSocialAuth',
 		'ZfcBase',
 		'ZfcUser',
 		'SlmLocale',
 		'OrgHeiglPiwik',
 		'ZeTheme',
-		// custom libraries
+
 		'TwitterBootstrapAPI',
-		// custom modules
 		'Admin',
 	),
-
+		
 	// These are various options for the listeners attached to the ModuleManager
 	'module_listener_options' => array(
 		// This should be an array of paths in which modules reside.
@@ -52,6 +49,7 @@ return array(
 		// namespace, the value of that key the specific path to that module's
 		// Module class.
 		'module_paths' => array(
+			'./public/themes',
 			'./module',
 			'./vendor',
 		),

@@ -31,16 +31,18 @@ class Bootstrap
 
         // use ModuleManager to load this module and it's dependencies
         $config = array(
-        'module_listener_options' => array(
-        'module_paths' => $zf2ModulePaths,
-        ),
-        'modules' => array(
-        'Application',
-        'Admin',
-        'TwitterBootstrapAPI',
-        )
+	        'module_listener_options' => array(
+		        'module_paths' => $zf2ModulePaths,
+	        ),
+	        'modules' => array(
+		        'Application',
+		        'Admin',
+		        'TwitterBootstrapAPI',
+	        )
         );
 
+        $config = array_merge_recursive(static::getApplicationConfig(), $config);
+        
         $serviceManager = new ServiceManager(new ServiceManagerConfig());
         $serviceManager->setService('ApplicationConfig', $config);
         $serviceManager->get('ModuleManager')->loadModules();
@@ -74,12 +76,12 @@ class Bootstrap
 
         AutoloaderFactory::factory(
             array(
-            'Zend\Loader\StandardAutoloader' => array(
-            'autoregister_zf' => true,
-            'namespaces' => array(
-            __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,
-            ),
-            ),
+	            'Zend\Loader\StandardAutoloader' => array(
+		            'autoregister_zf' => true,
+		            'namespaces' => array(
+		       	     __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,
+		            ),
+	            ),
             )
         );
     }
@@ -96,6 +98,30 @@ class Bootstrap
             $previousDir = $dir;
         }
         return $dir . '/' . $path;
+    }
+
+    protected static function getApplicationConfig()
+    {
+        $applicationGlobalConfigFile    = __DIR__ . '/../../../config/application.config.php';
+        $genericGlobalConfigFile    = __DIR__ . '/../../../config/autoload/global.php';
+        
+        $localConfigs = array();
+        $files = scandir(__DIR__ . '/../../../config/autoload/');
+        
+        foreach ($files as $key => $filename) {
+            $filepath = __DIR__ . '/../../../config/autoload/' . $filename ;
+            if ((strpos($filename, 'local.php') !== false) && is_readable($filepath) ) { 
+                array_merge_recursive($localConfigs, include $filepath);
+            }
+        }
+        
+        // load setting from DB...
+        
+        return array_merge_recursive(
+            ( is_readable($applicationGlobalConfigFile) ? include $applicationGlobalConfigFile : array() ),
+            ( is_readable($genericGlobalConfigFile) ? include $genericGlobalConfigFile : array() ),
+            $localConfigs
+        );
     }
 }
 

@@ -57,17 +57,26 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     
     public function onBootstrap(MvcEvent $e)
     {
+        /**
+         * @var $eventManager \Zend\EventManager\EventManager
+         */
         $eventManager        = $e->getApplication()->getEventManager();
+        /**
+         * @var $moduleRouteListener \Zend\Mvc\ModuleRouteListener
+         */
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
-
+        /**
+         * @var $application \Zend\Mvc\Application
+         */
         $application = $e->getApplication();
         /**
- * @var $serviceManager \Zend\ServiceManager\ServiceManager 
-*/
+         * @var $serviceManager \Zend\ServiceManager\ServiceManager 
+         */
         $serviceManager = $application->getServiceManager();
-
-        // set (form) validator locale
+        /**
+         * @var $translator \Zend\I18n\Translator\Translator
+         */
         $translator = $serviceManager->get('translator');
         \Zend\Validator\AbstractValidator::setDefaultTranslator($translator, 'default');
         

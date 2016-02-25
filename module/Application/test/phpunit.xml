@@ -48,4 +48,8 @@
 			showUncoveredFiles="true"
 		/>
 	</logging>
+	<listeners>
+		<listener class="MyListener" file="./MyListener.php">
+		</listener>
+	</listeners>
 </phpunit>

@@ -7,6 +7,15 @@
 	$oUser = $this->zfcUserIdentity();
 ?>
 <div class="clearfix"><?php 
+	$body = $oComponents()->Panel()->setContent(
+		"<pre>".
+			var_export( $this->clients, true )
+		."</pre>"
+	);
+	echo $body;
+?></div>
+		
+<div class="clearfix"><?php 
 	$body = $oComponents()->Void(array(
 			'tagname'	=> 'div',
 			'classnames'=> 'panel-body',
@@ -40,7 +49,7 @@
 	
 ?></div>
 
-<div class="clearfix"><?php echo $oComponents->Toolbar()->setContent("the toolbar content..."); ?></div>
+<div class="clearfix"><?php echo $oComponents->Toolbar() //->setContent("the toolbar content..."); ?></div>
 
 <div class="clearfix"><?php echo $oComponents->Dashboard(); ?></div>
 
