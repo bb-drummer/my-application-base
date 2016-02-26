@@ -120,8 +120,7 @@ CREATE TABLE IF NOT EXISTS `user_provider` (
   `user_id` bigint(10) NOT NULL,
   `provider_id` varchar(50) COLLATE utf8_bin NOT NULL,
   `provider` varchar(255) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`user_id`,`provider_id`),
-  UNIQUE KEY `provider_id` (`provider_id`,`provider`)
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
