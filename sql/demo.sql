@@ -172,8 +172,8 @@ INSERT INTO `acl` (`acl_id`, `aclroles_id`, `aclresources_id`, `state`, `applica
 -- Daten für Tabelle `user`
 --
 
-INSERT INTO `user` (`user_id`, `display_name`, `username`, `email`, `street`, `city`, `phone`, `password`, `state`, `aclrole`, `token`, `application_id`, `client_id`, `created`, `modified`) VALUES
-(1, 'System-Administrator', 'sysadmin', 'webmaster@myapplication.tld', '', '', '', '$2y$14$aNr/FPiS.Kbw8/ZYiOaXpum/4RrX7AGMaxA5vV6OIHUi1kr.w6GgC', 1, 'admin', '', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `user` (`user_id`, `display_name`, `username`, `email`, `password`, `state`, `aclrole`, `token`, `application_id`, `client_id`, `created`, `modified`) VALUES
+(1, 'System-Administrator', 'sysadmin', 'webmaster@myapplication.tld', '$2y$14$aNr/FPiS.Kbw8/ZYiOaXpum/4RrX7AGMaxA5vV6OIHUi1kr.w6GgC', 1, 'admin', '', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Daten für Tabelle `settings`
