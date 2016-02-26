@@ -59,11 +59,13 @@ class IndexController extends BaseActionController
     
     public function testAction()
     {
-    	$clientsTable = $this->getServiceLocator()->get('AdminClientsTable');
-    	$clients = $clientsTable->fetchAll()->toArray();
-        return new ViewModel(array(
-        	'clients' => $clients,
-        ));
+        $clientsTable = $this->getServiceLocator()->get('AdminClientsTable');
+        $clients = $clientsTable->fetchAll()->toArray();
+        return new ViewModel(
+            array(
+            'clients' => $clients,
+            )
+        );
     }
     
     public function xhrtestAction()

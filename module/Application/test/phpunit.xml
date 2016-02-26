@@ -43,8 +43,8 @@
 	<logging>
 		<log
 			type="coverage-html" 
-			target="/Volumes/Development/resources/php/test-coverage/zf2-application-base/phpunit/" 
-			relative-target="../../../public/test-coverage" 
+			live-target="/Volumes/Development/resources/php/test-coverage/zf2-application-base/phpunit/" 
+			target="../../../public/.reports/phpunit/" 
 			showUncoveredFiles="true"
 		/>
 	</logging>

@@ -31,14 +31,14 @@ class Bootstrap
 
         // use ModuleManager to load this module and it's dependencies
         $config = array(
-	        'module_listener_options' => array(
-		        'module_paths' => $zf2ModulePaths,
-	        ),
-	        'modules' => array(
-		        'Application',
-		        'Admin',
-		        'TwitterBootstrapAPI',
-	        )
+            'module_listener_options' => array(
+                'module_paths' => $zf2ModulePaths,
+            ),
+            'modules' => array(
+                'Application',
+                'Admin',
+                'TwitterBootstrapAPI',
+            )
         );
 
         $config = array_merge_recursive(static::getApplicationConfig(), $config);
@@ -76,12 +76,12 @@ class Bootstrap
 
         AutoloaderFactory::factory(
             array(
-	            'Zend\Loader\StandardAutoloader' => array(
-		            'autoregister_zf' => true,
-		            'namespaces' => array(
-		       	     __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,
-		            ),
-	            ),
+                'Zend\Loader\StandardAutoloader' => array(
+                    'autoregister_zf' => true,
+                    'namespaces' => array(
+                        __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,
+                    ),
+                ),
             )
         );
     }
