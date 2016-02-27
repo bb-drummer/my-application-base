@@ -27,7 +27,7 @@ test-php5_job:
   image: php:5.6
   script:
 #  - echo "testing application-base php-5.6 ..."
-  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
+  - php -d memory_limit=-1 ./phpunit --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
 
 # build job
@@ -36,6 +36,6 @@ build_job:
   script:
 #  - shell/gitlab-ci-setup.sh
   - echo "building ..."
-  - ./phpunit -d memory_limit=-1 --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
+  - php -d memory_limit=-1 ./phpunit --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
 
