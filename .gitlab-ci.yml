@@ -27,7 +27,7 @@ test-php5_job:
   image: php:5.6
   script:
 #  - echo "testing application-base php-5.6 ..."
-  - php -d memory_limit=-1 vender/bin/phpunit --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
+  - php -d memory_limit=-1 vendor/bin/phpunit --colors --debug --configuration ./module/Application/test/phpunit.xml --coverage-text
   allow_failure: false
 
 # build job
