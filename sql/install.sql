@@ -174,3 +174,17 @@ INSERT INTO `settings` (`settings_id`, `scope`, `ref_id`, `type`, `name`, `value
 (1, '', 0, 'system', 'lang', 'de_DE', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, '', 0, 'user', 'lang', 'de_DE', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (7, 'application', 0, 'app', 'var', 'value test', 0, 0, '0000-00-00 00:00:00', '2016-01-29 20:37:59');
+
+--
+-- Daten für Tabelle `clients`
+--
+
+INSERT INTO `clients` (`clients_id`, `name`, `extraname`, `homepage`, `email`, `contact`, `phone`, `statistics`, `created`, `modified`) VALUES
+(1, 'Example Client Inc.', '', 'https://example.com', 'email@example.com', 'Mr. Sample Client', '', 1, '0000-00-00 00:00:00', '2016-02-08 13:32:31');
+
+--
+-- Dumping data for table `applications`
+--
+
+INSERT INTO `applications` (`application_id`, `name`, `shortname`, `path`, `url`, `email`, `client_id`, `created`, `modified`) VALUES
+(1, 'example-app', 'example application', '/var/www/app', 'http://app.example.com', 'app@example.com', 1, '0000-00-00 00:00:00', '2016-02-23 23:49:27');
