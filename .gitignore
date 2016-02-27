@@ -12,7 +12,7 @@ deployment.properties
 deployment.xml
 
 ## 
-## ignore ZendFramework(2) files and folders
+## ignore sone project related and ZendFramework(2) files and folders
 ##
 *cache*
 vendor*
@@ -25,7 +25,10 @@ public/js/*/*
 public/css/*/*
 *.local.php
 module/module-*
+module/Admin*
+module/TwitterBootstrapAPI*
 extras*
+
 
 ## 
 ## ignore (php) composer files
