@@ -40,7 +40,7 @@ phpmd $SOURCE_PATH html "cleancode,codesize,controversial,design,naming,unusedco
 phpmetrics --report-html=$LOCAL_REPORT_PATH/qa.phpmetrics.html $SOURCE_PATH
 
 # phpunit
-composer update; 
+#composer update; 
 mkdir -p $LOCAL_REPORT_PATH/phpunit
 
 # phpunit (only application)

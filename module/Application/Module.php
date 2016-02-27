@@ -25,8 +25,8 @@ use Zend\Mvc\MvcEvent;
 // navigation
 use Zend\View\HelperPluginManager;
 use Zend\Permissions\Acl\Acl;
-use Zend\Permissions\Acl\Role\GenericRole;
-use Zend\Permissions\Acl\Resource\GenericResource;
+//use Zend\Permissions\Acl\Role\GenericRole;
+//use Zend\Permissions\Acl\Resource\GenericResource;
 
 // service locator
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -39,7 +39,10 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     protected $AclTable;
     protected $AclroleTable;
     protected $AclresourceTable;
+    
     protected $serviceLocator;
+    
+    protected static $services;
 
     public function init(ModuleManager $oModuleManager)
     {
@@ -74,6 +77,13 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
          * @var $serviceManager \Zend\ServiceManager\ServiceManager 
          */
         $serviceManager = $application->getServiceManager();
+        static::$services = $serviceManager;
+        /*$serviceManager->addInitializer(function ($instance) use ($serviceManager) {
+        	if ($instance instanceof ServiceLocatorAwareInterface) {
+        		$instance->setServiceLocator($serviceManager);
+        	}
+        });*/
+        
         /**
          * @var $translator \Zend\I18n\Translator\Translator
          */
@@ -184,7 +194,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     public function getServiceLocator()
     {
         if (!$this->serviceLocator) {
-            $this->serviceLocator = new \Zend\Di\ServiceLocator();
+            //$this->serviceLocator = new \Zend\Di\ServiceLocator();
         }
         return $this->serviceLocator;
     }
@@ -192,8 +202,8 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     public function getServiceConfig()
     {
         return array(
-        'factories' => array(
-        ),
+            'factories' => array(
+            ),
         );
     }
     
@@ -230,6 +240,12 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
         } else {
             $oController->layout('layout/layout');
         }
+    }
+
+    public static function getService($name) 
+    {
+        $serviceManager = static::$services;
+        return $serviceManager->get($name);
     }
 
     public function getConsoleUsage(Console $console)

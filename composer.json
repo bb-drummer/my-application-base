@@ -56,6 +56,8 @@
       "dev-master" : "master"
     },
     "installer-paths" : {
+    	"module/Admin" : ["my-application/module-admin"],
+    	"module/TwitterBootstrapAPI" : ["my-application/module-twbs-api"],
     	"public/themes/{$name}" : ["my-application/zf2-theme-basic", "my-application/zf2-theme-adminlte", "my-application/zf2-theme-remark", "my-application/zf2-theme-taurus"],
     	"public/themes/basic/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],
     	"public/themes/basic/assets/css/{$name}" : ["components/normalize.css", "twitter/bootstrap", "fortawesome/font-awesome"]

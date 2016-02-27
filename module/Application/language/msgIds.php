@@ -6,38 +6,38 @@
  */
 // navigation
 translate('home');
-	translate('add');
-	translate('edit');
-	translate('delete');
-	translate('details');
-	translate('overview');
-	translate('show');
+    translate('add');
+    translate('edit');
+    translate('delete');
+    translate('details');
+    translate('overview');
+    translate('show');
 translate('account');
-	translate('change email');
-	translate('change password');
-	translate('register');
-	translate('login');
-	translate('logout');
-	translate('user confirmation');
-	translate('user activation');
+    translate('change email');
+    translate('change password');
+    translate('register');
+    translate('login');
+    translate('logout');
+    translate('user confirmation');
+    translate('user activation');
 translate('admin');
-	translate('users');
-	translate('clients');
-	translate('applications');
-	translate('permissions');
-		translate('ACL');
-		translate('roles');
-		translate('resources');
-	translate('settings');
+    translate('users');
+    translate('clients');
+    translate('applications');
+    translate('permissions');
+        translate('ACL');
+        translate('roles');
+        translate('resources');
+    translate('settings');
 translate('system');
-	translate('info');
-	translate('backup');
-	translate('setup');
-		translate('install');
-		translate('update');
+    translate('info');
+    translate('backup');
+    translate('setup');
+        translate('install');
+        translate('update');
 translate('help');
-	translate('support');
-	translate('about');
+    translate('support');
+    translate('about');
 
 // ACL roles and resources
 translate('administrator');
@@ -46,7 +46,7 @@ translate('public');
 
 // links/buttons/forms
 translate('submit');
-	
+    
 // Admin/User module
 translate('Authentication failed. Please try again.');
 translate("Value is required and can't be empty");

@@ -33,4 +33,73 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(true);
     }
+    
+
+    //
+    // data/mock helpers
+    //
+    
+    
+    /**
+     *  set mock for ZfcUserAuthentication
+     */
+    private function setZfcUserValidAuthMock() 
+    {
+        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        
+        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getId')
+            ->will($this->returnValue('1'));
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getToken')
+            ->will($this->returnValue('valid-password-reset-token'));
+        
+        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        
+        $authMock->expects($this->any())
+            ->method('hasIdentity')
+            -> will($this->returnValue(true));  
+        
+        $authMock->expects($this->any())
+            ->method('getIdentity')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $this->getController()->getPluginManager()
+            ->setService('zfcUserAuthentication', $authMock);
+    }
+    
+    /**
+     *  set mock for ZfcUserAuthentication
+     */
+    private function setZfcUserNoAuthMock() 
+    {
+        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        
+        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+
+        $ZfcUserMock->expects($this->any())
+            ->method('getId')
+            ->will($this->returnValue(0));
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getToken')
+            ->will($this->returnValue('valid-password-reset-token'));
+        
+        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        
+        $authMock->expects($this->any())
+            ->method('hasIdentity')
+            -> will($this->returnValue(false));  
+        
+        $authMock->expects($this->any())
+            ->method('getIdentity')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $this->getController()->getPluginManager()
+            ->setService('zfcUserAuthentication', $authMock);
+    }
+
 }

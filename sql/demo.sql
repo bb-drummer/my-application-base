@@ -1,6 +1,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+DROP TABLE IF EXISTS `acl`;
 CREATE TABLE IF NOT EXISTS `acl` (
   `acl_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `aclroles_id` bigint(10) NOT NULL,
@@ -13,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `acl` (
   PRIMARY KEY (`acl_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `aclresource`;
 CREATE TABLE IF NOT EXISTS `aclresource` (
   `aclresources_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `resourceslug` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -25,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `aclresource` (
   UNIQUE KEY `resourceslug` (`resourceslug`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `aclrole`;
 CREATE TABLE IF NOT EXISTS `aclrole` (
   `aclroles_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `roleslug` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -37,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `aclrole` (
   UNIQUE KEY `roleslug` (`roleslug`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `applications`;
 CREATE TABLE IF NOT EXISTS `applications` (
   `application_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `name` text COLLATE utf8_bin NOT NULL,
@@ -50,6 +54,7 @@ CREATE TABLE IF NOT EXISTS `applications` (
   PRIMARY KEY (`application_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `clients`;
 CREATE TABLE IF NOT EXISTS `clients` (
   `clients_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `name` text COLLATE utf8_bin NOT NULL,
@@ -64,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   PRIMARY KEY (`clients_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `settings`;
 CREATE TABLE IF NOT EXISTS `settings` (
   `settings_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `scope` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -79,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   UNIQUE KEY `type_name` (`type`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `display_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -95,6 +102,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `userprofile`;
 CREATE TABLE IF NOT EXISTS `userprofile` (
   `user_id` bigint(10) NOT NULL AUTO_INCREMENT,
   `street` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -113,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `userprofile` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+DROP TABLE IF EXISTS `user_provider`;
 CREATE TABLE IF NOT EXISTS `user_provider` (
   `user_id` bigint(10) NOT NULL,
   `provider_id` varchar(50) COLLATE utf8_bin NOT NULL,

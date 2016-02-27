@@ -28,14 +28,20 @@
 		<testsuite name="[MyApplication] application base - Test Suite">
 			<directory suffix=".php">./</directory>
 		</testsuite>
+		<testsuite name="[MyApplication] admin base - Test Suite">
+			<directory suffix=".php">../../Admin/test/</directory>
+		</testsuite>
 	</testsuites>
 
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">../src/</directory>
+			<directory suffix=".php">../../Admin/src/</directory>
 			<exclude>
 				<directory suffix=".php">../src/Examples/</directory>
 				<directory suffix=".php">./ApplicationTest/Framework/</directory>
+				<directory suffix=".php">../../Admin/test/AdminTest/Framework/</directory>
+				<directory suffix=".php">../../Admin/src/Examples/</directory>
 			</exclude>
 		</whitelist>
 	</filter>
@@ -43,8 +49,8 @@
 	<logging>
 		<log
 			type="coverage-html" 
-			target="/Volumes/Development/resources/php/test-coverage/zf2-application-base/phpunit/" 
-			relative-target="../../../public/test-coverage" 
+			live-target="/Volumes/Development/resources/php/test-coverage/zf2-application-base/phpunit/" 
+			target="../../../public/.reports/phpunit/" 
 			showUncoveredFiles="true"
 		/>
 	</logging>
