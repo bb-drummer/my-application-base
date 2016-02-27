@@ -191,4 +191,110 @@ class ActionControllerTestCase extends AbstractHttpControllerTestCase
         return ($this);
     }
 
+    
+    
+    //
+    // data/mock helpers
+    //
+    
+    
+    /**
+     *  set mock for ZfcUserAuthentication
+     */
+    public function setZfcUserValidAuthMock() 
+    {
+        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        
+        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getId')
+            ->will($this->returnValue('1'));
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getToken')
+            ->will($this->returnValue('valid-password-reset-token'));
+        
+        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        
+        $authMock->expects($this->any())
+            ->method('hasIdentity')
+            -> will($this->returnValue(true));  
+        
+        $authMock->expects($this->any())
+            ->method('getIdentity')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $this->getController()->getPluginManager()
+            ->setService('zfcUserAuthentication', $authMock);
+    }
+    
+    /**
+     *  set mock for ZfcUserAuthentication
+     */
+    public function setZfcUserNoAuthMock() 
+    {
+        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        
+        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+
+        $ZfcUserMock->expects($this->any())
+            ->method('getId')
+            ->will($this->returnValue(0));
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getToken')
+            ->will($this->returnValue('valid-password-reset-token'));
+        
+        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        
+        $authMock->expects($this->any())
+            ->method('hasIdentity')
+            -> will($this->returnValue(false));  
+        
+        $authMock->expects($this->any())
+            ->method('getIdentity')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $this->getController()->getPluginManager()
+            ->setService('zfcUserAuthentication', $authMock);
+    }
+    
+    /**
+     *  set mock for ZfcUserAuthentication
+     */
+    public  function setZfcUserMapperFindByIdMock() 
+    {
+        // user/auth entity
+        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+
+        $ZfcUserMock->expects($this->any())
+            ->method('getId')
+            ->will($this->returnValue(1));
+        
+        $ZfcUserMock->expects($this->any())
+            ->method('getToken')
+            ->will($this->returnValue('valid-password-reset-token'));
+        
+        // mapper
+        $mockMapper = $this->getMock('ZfcUser\Mapper\User');
+        
+        $mockMapper->expects($this->any())
+            ->method('findById')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $mockMapper->expects($this->any())
+            ->method('findByUsername')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $mockMapper->expects($this->any())
+            ->method('findByEmail')
+            ->will($this->returnValue($ZfcUserMock));
+        
+        $this->getApplication()
+            ->getServiceManager()
+            ->setAllowOverride(true)
+            ->setService('zfcuser_user_mapper', $mockMapper);
+    }
+
 }

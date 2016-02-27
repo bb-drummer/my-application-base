@@ -39,6 +39,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     protected $AclTable;
     protected $AclroleTable;
     protected $AclresourceTable;
+    
     protected $serviceLocator;
     
     protected static $services;
@@ -193,7 +194,7 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     public function getServiceLocator()
     {
         if (!$this->serviceLocator) {
-            $this->serviceLocator = new \Zend\Di\ServiceLocator();
+            //$this->serviceLocator = new \Zend\Di\ServiceLocator();
         }
         return $this->serviceLocator;
     }

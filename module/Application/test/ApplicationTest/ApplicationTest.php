@@ -11,7 +11,10 @@ namespace ApplicationTest;
 
 //use PHPUnit_Framework_TestCase;
 
-class ApplicationTest extends Framework\TestCase
+/**
+ * @coversNothing
+ */
+class ApplicationTest extends \ApplicationTest\Framework\TestCase
 {
 
     public function testThisIsTrue()

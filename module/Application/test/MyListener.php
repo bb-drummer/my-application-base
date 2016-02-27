@@ -1,4 +1,7 @@
 <?php
+/**
+ * @coversNothing
+ */
 class MyListener implements PHPUnit_Framework_TestListener
 {
     public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
