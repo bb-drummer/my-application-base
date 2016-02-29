@@ -5,7 +5,7 @@
   "require" : {
     "composer/installers": "~1.0",
     "php" : "^5.5 || ^7.0",
-    "zendframework/zendframework" : "2.5.0",
+    "zendframework/zendframework" : "dev-master",
     "phpunit/phpunit" : ">=5.1.4",
     "slm/locale" : "dev-master",
     "zf-commons/zfc-user" : ">=1.2.2",
@@ -20,7 +20,7 @@
     "my-application/zf2-theme-adminlte" : "dev-master",
     "my-application/zf2-theme-remark" : "dev-master",
     "my-application/zf2-theme-taurus" : "dev-master",
-    "robloach/component-installer" : ">=0.0.1",
+    "robloach/component-installer" : ">=0.2.3",
     "components/normalize.css" : ">=1.1.0",
     "components/modernizr" : ">=2.8.0",
     "twitter/bootstrap" : ">=v3.3.5",
@@ -28,7 +28,7 @@
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "tinymce/tinymce" : ">=4.2.1",
-    "datatables/datatables" : "dev-master"
+    "datatables/datatables" : ">=1.10"
   },
   "repositories" : [ {
     "type" : "git",
