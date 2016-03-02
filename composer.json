@@ -2,6 +2,7 @@
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
   "version" : "0.0.1",
+  "secure-only" : false,
   "require" : {
     "composer/installers": "~1.0",
     "php" : "^5.5 || ^7.0",
