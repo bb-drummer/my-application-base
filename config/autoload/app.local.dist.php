@@ -18,7 +18,7 @@ return array(
 	 **/
 	'db' => array( 
 			'driver'	=> 'PdoMysql',
-			'hostname'  => 'database.host', // with some system configurations use IP instead of a hostname
+			'hostname'  => 'database.host', // with some system configurations try IP instead of a hostname
 			'database'  => 'dbname',
 			'username'  => 'dbuser',
 			'password'  => 'dbpassword',
@@ -30,9 +30,9 @@ return array(
 	),
 		
 	/**
-	 * cache configuration
+	 * cache configuration, un-comment when enabled in your system/php/host-setup
 	 **/
-	'caches' => array(
+	/*'caches' => array(
     	'CacheService' => array(
             'adapter' => array(
                 'name'     =>'memcached',
@@ -59,7 +59,7 @@ return array(
                 ),
             ),
         ),
-	),
+	),*/
 		
 	/**
 	 * SMTP configuration

@@ -244,8 +244,12 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 
     public static function getService($name) 
     {
-        $serviceManager = static::$services;
-        return $serviceManager->get($name);
+    	try {
+    		$serviceManager = static::$services;
+    		return $serviceManager->get($name);
+    	} catch (\Exception $e) {
+    	}
+    	return (null);
     }
 
     public function getConsoleUsage(Console $console)
