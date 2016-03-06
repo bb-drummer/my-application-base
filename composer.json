@@ -33,22 +33,22 @@
   },
   "repositories" : [ {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
+    "url" : "https://gitlab.bjoernbartels.earth/themes/zf2-basic.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-adminlte.git"
+    "url" : "https://gitlab.bjoernbartels.earth/themes/zf2-adminlte.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-remark.git"
+    "url" : "https://gitlab.bjoernbartels.earth/themes/zf2-remark.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-taurus.git"
+    "url" : "https://gitlab.bjoernbartels.earth/themes/zf2-taurus.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-admin.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-admin.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-twbs-api.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-twbs-api.git"
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
