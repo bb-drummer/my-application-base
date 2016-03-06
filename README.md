@@ -112,6 +112,6 @@ please see LICENCE file in project's root directory
 
 ## COPYRIGHT
 
-&copy; 2015 [dragon-projects.net], info@dragon-projects.net, all rights reserved.
+&copy; 2015 [Björn Bartels], coding@bjoernbartels.earth, all rights reserved.
 
 
