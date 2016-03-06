@@ -40,7 +40,7 @@ and use `composer` to install dependencies:
     curl -s https://getcomposer.org/installer | php --
     
     cd my/project/dir
-    git clone http://gitlab.dragon-projects.de:81/zf2/application-base.git
+    git clone https://gitlab.bjoernbartels.earth/zf2/application-base.git
     cd application-base
     php composer.phar self-update
     php composer.phar install
@@ -52,7 +52,7 @@ Another alternative for downloading the project is to grab it via `curl`, and
 then pass it to `tar`:
 
     cd my/project/dir
-    curl -#L http://gitlab.dragon-projects.de:81/zf2/application-base/repository/archive.tar.gz?ref=master | tar xz --strip-components=1
+    curl -#L https://gitlab.bjoernbartels.earth/zf2/application-base/repository/archive.tar.gz?ref=master | tar xz --strip-components=1
 
 You would then invoke `composer` to install dependencies per the previous
 example.
@@ -116,4 +116,4 @@ please see LICENCE file in project's root directory
 
 
 ## current build status
-[![build status](http://gitlab.dragon-projects.de:81/gitlabci/projects/1/status.png?ref=master)](http://gitlab.dragon-projects.de:81/gitlabci/projects/1)
+[![build status](https://gitlab.bjoernbartels.earth/gitlabci/projects/1/status.png?ref=master)](https://gitlab.bjoernbartels.earth/gitlabci/projects/1)
