@@ -45,6 +45,8 @@ cp -r vendor/tinymce/tinymce/skins public/themes/bootstrap/assets/css/tinymce/
 ## datatables
 mkdir -p public/themes/bootstrap/assets/js/datatables
 cp -r vendor/datatables/datatables/media/* public/themes/bootstrap/assets/js/datatables/
+mkdir -p public/themes/foundation/assets/js/datatables
+cp -r vendor/datatables/datatables/media/* public/themes/foundation/assets/js/datatables/
 
 ## font-awesome
 mkdir -p public/themes/bootstrap/assets/css/fontawesome
