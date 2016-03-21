@@ -17,11 +17,14 @@
     "org_heigl/piwik" : ">=1.0",
     "visualappeal/php-auto-update": "^0.9.2",
     "my-application/application-assets" : "dev-master",
+    "my-application/module-admin" : "dev-master",
+    "my-application/module-uicomponents" : "dev-master",
     "my-application/theme-bootstrap" : "dev-master",
     "my-application/theme-foundation" : "dev-master",
     "my-application/theme-adminlte" : "dev-master",
     "my-application/theme-remark" : "dev-master",
     "my-application/theme-taurus" : "dev-master",
+    "my-application/theme-lcars" : "dev-master",
     "robloach/component-installer" : ">=0.2.3",
     "components/normalize.css" : ">=1.1.0",
     "components/modernizr" : ">=2.8.0",
@@ -52,10 +55,13 @@
     "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-taurus.git"
   }, {
     "type" : "git",
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-lcars.git"
+  }, {
+    "type" : "git",
     "url" : "https://gitlab.bjoernbartels.earth/zf2/module-admin.git"
   }, {
     "type" : "git",
-    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-twbs-api.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-uicomponents.git"
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
@@ -65,9 +71,9 @@
     },
     "installer-paths" : {
     	"module/Admin" : ["my-application/module-admin"],
-    	"module/TwitterBootstrapAPI" : ["my-application/module-twbs-api"],
+    	"module/UIComponents" : ["my-application/module-uicomponents"],
     	"public/{$name}" : ["my-application/application-assets"],
-    	"public/themes/{$name}" : ["my-application/theme-bootstrap", "my-application/theme-foundation", "my-application/theme-adminlte", "my-application/theme-remark", "my-application/theme-taurus"],
+    	"public/themes/{$name}" : ["my-application/theme-bootstrap", "my-application/theme-foundation", "my-application/theme-lcars", "my-application/theme-adminlte", "my-application/theme-remark", "my-application/theme-taurus"],
     	"public/themes/bootstrap/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],
     	"public/themes/bootstrap/assets/css/{$name}" : ["components/normalize.css", "twitter/bootstrap", "fortawesome/font-awesome"],
     	"public/themes/foundation/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],

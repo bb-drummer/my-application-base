@@ -38,7 +38,7 @@ return array(
 		'OrgHeiglPiwik',
 		'ZeTheme',
 
-		'TwitterBootstrapAPI',
+		'UIComponents',
 		'Admin',
 	),
 		
@@ -53,7 +53,7 @@ return array(
 			'./module',
 			'./vendor',
 
-			//'TwitterBootstrapAPI' => '../module-twbs-api/',
+			//'UIComponents' => '../module-uicomponents/',
 			//'Admin' => '../module-admin/',
 			
 		),
@@ -105,7 +105,7 @@ return array(
    // 'service_manager' => array(),
 	'view_helper_config' => array(
 		'flashmessenger' => array(
-			'message_open_format'	  => '<div%s><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>',
+			'message_open_format'	  => '<div%s><button type="button" class="close-button close" data-dismiss="alert" aria-hidden="true">&times;</button><span>',
 			'message_close_string'	 => '</span></div>',
 			'message_separator_string' => '</span><br /><span>'
 		)
