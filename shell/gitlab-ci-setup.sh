@@ -1,4 +1,5 @@
 #!/bin/bash
+whoami
 
 # php info
 php -v
