@@ -2,7 +2,8 @@
 
 # php info
 php -v
-php -m
+which php
+#php -m
 
 # Install composer
 curl -sS https://getcomposer.org/installer | php
