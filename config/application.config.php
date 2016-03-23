@@ -7,10 +7,10 @@
  * @package		[MyApplication]
  * @package		BB's Zend Framework 2 Components
  * @package		BaseApp
- * @author		Björn Bartels [dragon-projects.net] <info@dragon-projects.net>
- * @link		http://gitlab.dragon-projects.de:81/groups/zf2
+ * @author		Björn Bartels <development@bjoernbartels.earth>
+ * @link		https://gitlab.bjoernbartels.earth/groups/zf2
  * @license		http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
- * @copyright	copyright (c) 2016 Björn Bartels [dragon-projects.net] <info@dragon-projects.net>
+ * @copyright	copyright (c) 2016 Björn Bartels <development@bjoernbartels.earth>
  */
 
 return array(
@@ -38,7 +38,7 @@ return array(
 		'OrgHeiglPiwik',
 		'ZeTheme',
 
-		'TwitterBootstrapAPI',
+		'UIComponents',
 		'Admin',
 	),
 		
@@ -52,6 +52,10 @@ return array(
 			'./public/themes',
 			'./module',
 			'./vendor',
+
+			//'UIComponents' => '../module-uicomponents/',
+			//'Admin' => '../module-admin/',
+			
 		),
 
 		// An array of paths from which to glob configuration files after
@@ -101,7 +105,7 @@ return array(
    // 'service_manager' => array(),
 	'view_helper_config' => array(
 		'flashmessenger' => array(
-			'message_open_format'	  => '<div%s><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>',
+			'message_open_format'	  => '<div%s><button type="button" class="close-button close" data-dismiss="alert" aria-hidden="true">&times;</button><span>',
 			'message_close_string'	 => '</span></div>',
 			'message_separator_string' => '</span><br /><span>'
 		)

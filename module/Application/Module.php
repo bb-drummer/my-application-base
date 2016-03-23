@@ -7,10 +7,10 @@
  * @package   [MyApplication]
  * @package   BB's Zend Framework 2 Components
  * @package   BaseApp
- * @author    Björn Bartels [dragon-projects.net] <info@dragon-projects.net>
- * @link      http://gitlab.dragon-projects.de:81/groups/zf2
+ * @author    Björn Bartels <development@bjoernbartels.earth>
+ * @link      https://gitlab.bjoernbartels.earth/groups/zf2
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
- * @copyright copyright (c) 2016 Björn Bartels [dragon-projects.net] <info@dragon-projects.net>
+ * @copyright copyright (c) 2016 Björn Bartels <development@bjoernbartels.earth>
  */
 
 namespace Application;
@@ -244,8 +244,12 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
 
     public static function getService($name) 
     {
-        $serviceManager = static::$services;
-        return $serviceManager->get($name);
+    	try {
+    		$serviceManager = static::$services;
+    		return $serviceManager->get($name);
+    	} catch (\Exception $e) {
+    	}
+    	return (null);
     }
 
     public function getConsoleUsage(Console $console)

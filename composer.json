@@ -2,6 +2,8 @@
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
   "version" : "0.0.1",
+  "disable-tls" : "false",
+  "secure-http" : "true",
   "require" : {
     "composer/installers": "~1.0",
     "php" : "^5.5 || ^7.0",
@@ -14,13 +16,16 @@
     "dudapiotr/zftable" : ">=3.1",
     "org_heigl/piwik" : ">=1.0",
     "visualappeal/php-auto-update": "^0.9.2",
+    "my-application/application-assets" : "dev-master",
     "my-application/module-admin" : "dev-master",
-    "my-application/module-twbs-api" : "dev-master",
-    "my-application/zf2-theme-basic" : "dev-master",
-    "my-application/zf2-theme-adminlte" : "dev-master",
-    "my-application/zf2-theme-remark" : "dev-master",
-    "my-application/zf2-theme-taurus" : "dev-master",
-    "robloach/component-installer" : ">=0.0.1",
+    "my-application/module-uicomponents" : "dev-master",
+    "my-application/theme-bootstrap" : "dev-master",
+    "my-application/theme-foundation" : "dev-master",
+    "my-application/theme-adminlte" : "dev-master",
+    "my-application/theme-remark" : "dev-master",
+    "my-application/theme-taurus" : "dev-master",
+    "my-application/theme-lcars" : "dev-master",
+    "robloach/component-installer" : ">=0.2.3",
     "components/normalize.css" : ">=1.1.0",
     "components/modernizr" : ">=2.8.0",
     "twitter/bootstrap" : ">=v3.3.5",
@@ -28,26 +33,35 @@
     "components/jquery" : ">=1.11.3",
     "components/jqueryui" : ">=1.11.4",
     "tinymce/tinymce" : ">=4.2.1",
-    "datatables/datatables" : "dev-master"
+    "datatables/datatables" : ">=1.10"
   },
   "repositories" : [ {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-basic.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/application-assets.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-adminlte.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-bootstrap.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-remark.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-foundation.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/themes/zf2-taurus.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-adminlte.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-admin.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-remark.git"
   }, {
     "type" : "git",
-    "url" : "http://gitlab.dragon-projects.de:81/zf2/module-twbs-api.git"
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-taurus.git"
+  }, {
+    "type" : "git",
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-lcars.git"
+  }, {
+    "type" : "git",
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-admin.git"
+  }, {
+    "type" : "git",
+    "url" : "https://gitlab.bjoernbartels.earth/zf2/module-uicomponents.git"
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
@@ -57,21 +71,29 @@
     },
     "installer-paths" : {
     	"module/Admin" : ["my-application/module-admin"],
-    	"module/TwitterBootstrapAPI" : ["my-application/module-twbs-api"],
-    	"public/themes/{$name}" : ["my-application/zf2-theme-basic", "my-application/zf2-theme-adminlte", "my-application/zf2-theme-remark", "my-application/zf2-theme-taurus"],
-    	"public/themes/basic/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],
-    	"public/themes/basic/assets/css/{$name}" : ["components/normalize.css", "twitter/bootstrap", "fortawesome/font-awesome"]
+    	"module/UIComponents" : ["my-application/module-uicomponents"],
+    	"public/{$name}" : ["my-application/application-assets"],
+    	"public/themes/{$name}" : ["my-application/theme-bootstrap", "my-application/theme-foundation", "my-application/theme-lcars", "my-application/theme-adminlte", "my-application/theme-remark", "my-application/theme-taurus"],
+    	"public/themes/bootstrap/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],
+    	"public/themes/bootstrap/assets/css/{$name}" : ["components/normalize.css", "twitter/bootstrap", "fortawesome/font-awesome"],
+    	"public/themes/foundation/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],
+    	"public/themes/foundation/assets/css/{$name}" : ["components/normalize.css", "twitter/bootstrap", "fortawesome/font-awesome"]
     }
   },
   "type" : "project",
   "scripts" : {
-    "pre-install-cmd" : [ "mkdir -p public/themes/basic/assets/js; mkdir -p public/themes/basic/assets/css; chmod -R ugoa+r ./public" ],
+    "pre-install-cmd" : [ "mkdir -p public/themes/bootstrap/assets/js; mkdir -p public/themes/bootstrap/assets/css; mkdir -p public/themes/foundation/assets/js; mkdir -p public/themes/foundation/assets/css; chmod -R ugoa+r ./public" ],
     "post-install-cmd" : [ "chmod -R ugoa+rx ./shell; chmod -R ugoa+r ./public; ./shell/files.components.sh" ],
-    "pre-update-cmd" : [ "mkdir -p public/themes/basic/assets/js; mkdir -p public/themes/basic/assets/css; chmod -R ugoa+r ./public" ],
+    "pre-update-cmd" : [ "mkdir -p public/themes/bootstrap/assets/js; mkdir -p public/themes/bootstrap/assets/css; mkdir -p public/themes/foundation/assets/js; mkdir -p public/themes/foundation/assets/css; chmod -R ugoa+r ./public" ],
     "post-update-cmd" : [ "chmod -R ugoa+rx ./shell; chmod -R ugoa+r ./public; ./shell/files.components.sh" ],
     "never-to-be-executed" : [ "rm -rf components" ]
   },
   "homepage" : "http://my-application.net/",
+  "authors" : [ {
+    "name" : "Björn Bartels",
+    "email" : "development@bjoernbartels.earth",
+    "homepage" : "https://bjoernbartels.earth"
+  } ],
   "autoload" : {
     "psr-0" : {
       "Application" : [ "./module/Application/src/" ]

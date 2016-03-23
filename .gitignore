@@ -21,12 +21,13 @@ data/
 components/
 public/test-coverage
 public/assets
+public/application-assets
 public/js/*/*
 public/css/*/*
 *.local.php
 module/module-*
 module/Admin*
-module/TwitterBootstrapAPI*
+module/UIComponents*
 extras*
 
 
