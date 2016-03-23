@@ -1,9 +1,9 @@
 #!/bin/bash
-whoami
+#whoami
 
 # php info
 php -v
-which php
+#which php
 #php -m
 
 # Install composer
