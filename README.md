@@ -105,6 +105,12 @@ project and you should be ready to go! It should look something like below:
 
 
 
+## Status
+
+[![Build Status](https://scrutinizer-ci.com/gp/my-application/badges/build.png?b=scrutinizer-ci&s=25220d7512eda160963cae929e05c8fd38a07492)](https://scrutinizer-ci.com/gp/my-application/build-status/scrutinizer-ci)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/gp/my-application/badges/quality-score.png?b=scrutinizer-ci&s=2b681dc578ffee5a89ccfd0866b3a66411252fae)](https://scrutinizer-ci.com/gp/my-application/?branch=scrutinizer-ci)
+
 ## LICENCE
 
 please see LICENCE file in project's root directory
