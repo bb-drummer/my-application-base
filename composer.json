@@ -36,28 +36,28 @@
   },
   "repositories" : [ {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/application-assets.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/application-assets.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/theme-bootstrap.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/theme-bootstrap.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/theme-foundation.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/theme-foundation.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/theme-adminlte.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/theme-adminlte.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/theme-remark.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/theme-remark.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/theme-taurus.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/theme-taurus.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/module-admin.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/module-admin.git"
   }, {
     "type" : "git",
-    "url" : "git@gitlab.bjoernbartels.earth/zf2/module-uicomponents.git"
+    "url" : "git@gitlab.bjoernbartels.earth:zf2/module-uicomponents.git"
   } ],
   "license" : "BSD-3-Clause",
   "keywords" : [ "myapplication", "application", "framework", "zf2" ],
