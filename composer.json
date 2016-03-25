@@ -34,7 +34,6 @@
     "tinymce/tinymce" : ">=4.2.1",
     "datatables/datatables" : ">=1.10"
   },
-  git@gitlab.bjoernbartels.earth:zf2/application-base.git
   "repositories" : [ {
     "type" : "git",
     "url" : "git@gitlab.bjoernbartels.earth/zf2/application-assets.git"
