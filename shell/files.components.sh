@@ -63,3 +63,6 @@ cp -r vendor/fortawesome/font-awesome/css public/themes/taurus/assets/css/fontaw
 cp -r vendor/fortawesome/font-awesome/fonts public/themes/taurus/assets/css/fontawesome/
 
 rm -rf components vendor/components vendor/datatables vendor/fortawesome vendor/tinymce vendor/twitter
+
+echo "Check directory contents";
+ls -la module/
