@@ -115,9 +115,9 @@ project and you should be ready to go! It should look something like below:
 
 
 
-## LICENCE
+## LICENSE
 
-please see LICENCE file in project's root directory
+please see LICENSE file in project's root directory
 
 
 ## COPYRIGHT
