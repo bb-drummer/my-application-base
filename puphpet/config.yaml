@@ -22,7 +22,7 @@ vagrantfile:
                     vflm_fqfz5n9pt4ry:
                         id: ubuntu1
                         network:
-                            private_network: 192.168.56.101
+                            private_network: 192.168.56.102
                             forwarded_port:
                                 vflmnfp_nlb0iw8ll4if:
                                     host: '9745'
@@ -30,7 +30,7 @@ vagrantfile:
                                 vflmnfp_geugos8c3d11:
                                     host: '8081'
                                     guest: '80'
-                        hostname: my-host.devel.local
+                        hostname: my-host2.devel.local
                         memory: '512'
                         cpus: '2'
         provision:
@@ -190,9 +190,9 @@ apache:
         - rewrite
     vhosts:
         av_tuynq7lfjnkz:
-            servername: my-app.devel.local
+            servername: my-app2.devel.local
             serveraliases:
-                - my-app.devel.local
+                - my-app2.devel.local
             docroot: /var/www/html/public
             port: '80'
             setenv:
@@ -209,7 +209,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_7k9ds75kezul:
-                    path: /var/www/public
+                    path: /var/www/html/public
                     options:
                         - Indexes
                         - FollowSymlinks
