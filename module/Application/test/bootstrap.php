@@ -7,7 +7,7 @@ use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\ServiceManager\ServiceManager;
 use RuntimeException;
 
-error_reporting(E_ALL | E_STRICT);
+//error_reporting(E_ALL | E_STRICT);
 chdir(__DIR__);
 
 /**
@@ -26,6 +26,12 @@ class Bootstrap
         if (($path = static::findParentPath('module')) !== $zf2ModulePaths[0]) {
             $zf2ModulePaths[] = $path;
         }
+        
+		$pathUp = "";
+		
+        //'SlmLocale' => '../SlmLocale/',
+        $zf2ModulePaths[] = $pathUp . '../module-uicomponents/'; // 'UIComponents'
+        $zf2ModulePaths[] = $pathUp . '../module-admin/'; // 'Admin'
 
         static::initAutoloader();
 
@@ -42,7 +48,7 @@ class Bootstrap
         );
 
         $config = array_merge_recursive(static::getApplicationConfig(), $config);
-        
+        //$config = static::getApplicationConfig();
         $serviceManager = new ServiceManager(new ServiceManagerConfig());
         $serviceManager->setService('ApplicationConfig', $config);
         $serviceManager->get('ModuleManager')->loadModules();

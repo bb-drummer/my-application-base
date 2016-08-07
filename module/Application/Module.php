@@ -7,10 +7,10 @@
  * @package   [MyApplication]
  * @package   BB's Zend Framework 2 Components
  * @package   BaseApp
- * @author    Björn Bartels <development@bjoernbartels.earth>
+ * @author    Björn Bartels <coding@bjoernbartels.earth>
  * @link      https://gitlab.bjoernbartels.earth/groups/zf2
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
- * @copyright copyright (c) 2016 Björn Bartels <development@bjoernbartels.earth>
+ * @copyright copyright (c) 2016 Björn Bartels <coding@bjoernbartels.earth>
  */
 
 namespace Application;
@@ -141,36 +141,36 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
     public function getAutoloaderConfig()
     {
         return array(
-        'Zend\Loader\StandardAutoloader' => array(
-        'namespaces' => array(
-        __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-        ),
-        ),
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
         );
     }
     
     public function getViewHelperConfig()
     {
         return array(
-        'factories' => array(
-        'navigation' => function (HelperPluginManager $pm) {
-            $this->setServiceLocator($pm->getServiceLocator());
-            $acl = \Admin\Module::initACL($pm->getServiceLocator());
-                    
-            $navigation = $pm->get('Zend\View\Helper\Navigation');
-            $navigation->setAcl($acl);
-                    
-            $oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
-            if ($oAuth->hasIdentity() ) {
-                $oUser = $oAuth->getIdentity();
-                $navigation->setRole($oUser->getAclrole());
-            } else {
-                $navigation->setRole('public');
-            }
-                    
-            return $navigation;
-        },
-        )
+            'factories' => array(
+                'navigation' => function (HelperPluginManager $pm) {
+                    $this->setServiceLocator($pm->getServiceLocator());
+                    $acl = \Admin\Module::initACL($pm->getServiceLocator());
+
+                    $navigation = $pm->get('Zend\View\Helper\Navigation');
+                    $navigation->setAcl($acl);
+
+                    $oAuth = $pm->getServiceLocator()->get('zfcuser_auth_service');
+                    if ($oAuth->hasIdentity() ) {
+                        $oUser = $oAuth->getIdentity();
+                        $navigation->setRole($oUser->getAclrole());
+                    } else {
+                        $navigation->setRole('public');
+                    }
+
+                    return $navigation;
+                },
+            )
         );
     }
     

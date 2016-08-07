@@ -7,20 +7,23 @@
  * @package   [MyApplication]
  * @package   BB's Zend Framework 2 Components
  * @package   BaseApp
- * @author    Björn Bartels <development@bjoernbartels.earth>
+ * @author    Björn Bartels <coding@bjoernbartels.earth>
  * @link      https://gitlab.bjoernbartels.earth/groups/zf2
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
- * @copyright copyright (c) 2016 Björn Bartels <development@bjoernbartels.earth>
+ * @copyright copyright (c) 2016 Björn Bartels <coding@bjoernbartels.earth>
  */
 
 namespace Application\Controller;
 
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\ServiceManager\ServiceLocatorAwareInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\ServiceLocatorAwareTrait;
 use Zend\Stdlib\DispatchableInterface as Dispatchable;
 use ZfcUser\Controller\Plugin\ZfcUserAuthentication;
+use Application\Controller\Traits\ControllerTranslatorTrait;
+use Application\Controller\Traits\ControllerActiontitlesTrait;
+use Application\Controller\Traits\ControllerToolbarTrait;
 
 /**
  * BaseController
@@ -29,71 +32,91 @@ use ZfcUser\Controller\Plugin\ZfcUserAuthentication;
  *
  * @version
  */
-class BaseActionController extends AbstractActionController implements Dispatchable, ServiceLocatorAwareInterface
+class BaseActionController extends AbstractActionController implements Dispatchable
 {
+	//use ServiceLocatorAwareTrait;
+	use ControllerTranslatorTrait;
+	use ControllerActiontitlesTrait;
+	use ControllerToolbarTrait;
     
-    protected $services;
+    //protected $serviceLocator;
     
-    protected $translator;
-    
-    protected $actionTitles = array();
 
-    protected $toolbarItems = array();
+    /**
+     * basic constructor injecting global service manager/locator
+     * @return self
+     */
+    public function __construct( ServiceLocatorInterface $serviceLocator )
+    {
+    	if ( $serviceLocator ) {
+    		$this->setServiceLocator($serviceLocator);
+    	}
+    }
     
-    
+    /**
+     * set current action titles
+     * @return self
+     */
     public function defineActionTitles() 
     {
-        /*$this->setActionTitles(
-            array(
-            )
-        );*/
+        /*
+         * set a title for each action via a key/value array
+         * $this->setActionTitles(
+         *   array(
+         *      'index' => '...',
+         *      ...
+         *   )
+         * );
+         * 
+         */
         return $this;
     }
 
+    /**
+     * set current toolbar items
+     * @return self
+     */
     public function defineToolbarItems() 
     {
-        /*$this->setToolbarItems(
-            array(
-            )
-        );*/
+        /*
+         * set a page/def for each action via a key/value array
+         * $this->setToolbarItems(
+         *   array(
+         *   	array("controller"=>"...", "action"=>"...", "label" =>...),
+         *      $myZendMvcPage,
+         *      ...
+         *   )
+         * );
+         * 
+         */
         return $this;
     }
 
+    /**
+     * initialize titles and toolbar items
+     * 
+     * {@inheritDoc}
+     * @see \Zend\Mvc\Controller\AbstractActionController::onDispatch()
+     */
     public function onDispatch(MvcEvent $e)
     {
-        /**
- * @var $serviceManager \Zend\ServiceManager\ServiceManager 
-*/
-        $serviceManager = $this->getServiceLocator();
-        
-        \Zend\Navigation\Page\Mvc::setDefaultRouter($serviceManager->get('router'));
-        $this->defineActionTitles();
-        $this->defineToolbarItems();
-        
-        $action = $e->getRouteMatch()->getParam('action');
-        $this->layout()->setVariable("title", $this->getActionTitle($action));
-
-        $toolbarItems = $this->getToolbarItem($action);
-        if ($toolbarItems) {
-            $toolbarNav = $serviceManager->get('componentnavigationhelper');
-            $toolbarNav->addPages($toolbarItems);
-        }
-        
-        $result = parent::onDispatch($e);
+        $oEvent = $this->applyToolbarOnDispatch($e);
+        $result = parent::onDispatch($oEvent);
         return $result;
     }
     
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
-        $this->services = $serviceLocator;
+        $this->serviceLocator = $serviceLocator;
     }
 
     public function getServiceLocator()
     {
-        return $this->services;
+        return $this->serviceLocator;
     }
 
     /**
+     * retrieve current ACL
      * 
      * @return \Zend\Permissions\Acl\Acl
      */
@@ -103,6 +126,8 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     }
 
     /**
+     * retrieve current user
+     * 
      * @return ZfcUserAuthentication
      */
     public function getUser() 
@@ -116,9 +141,31 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     }
     
     /**
+     * determine if we have a AJAX request
+     * 
      * @return boolean
      */
-    public function isAdminUser() 
+    public function isXHR()
+    {
+    	/**
+    	 * @var \Zend\Http\PhpEnvironment\Request|\Zend\Http\Request $request
+    	 */
+    	$request = $this->getRequest();
+    	if ( 
+    		($request instanceof \Zend\Http\PhpEnvironment\Request) ||
+    		($request instanceof \Zend\Http\Request) 
+    	) {
+    		return ( $request->isXmlHttpRequest() );
+    	}
+    	return (false);
+    }
+    
+    /**
+     * determine if current user has admin role set
+     * 
+     * @return boolean
+     */
+    public function isAdminUser()
     {
         $oUser = $this->getUser();
         $sAclRole = $oUser->getAclrole();
@@ -127,37 +174,10 @@ class BaseActionController extends AbstractActionController implements Dispatcha
     
     
     /**
-     * @return \Zend\I18n\Translator\Translator
-     */
-    public function getTranslator() 
-    {
-        if (!$this->translator) {
-            $this->setTranslator($this->getServiceLocator()->get('translator'));
-        }
-        return $this->translator;
-    }
-
-    /**
-     * @param field_type $translator
-     */
-    public function setTranslator($translator) 
-    {
-        $this->translator = $translator;
-        return ($this);
-    }
-
-    /**
-     * @param string $translator
-     * @param string $textdomain
-     * @param string $locale
-     */
-    public function translate($message, $textdomain = 'default', $locale = null) 
-    {
-        return ( $this->getTranslator()->translate($message, $textdomain, $locale) );
-    }
-    
-    /**
      * fetch request parameters
+     * 
+     * @param array $vars [optional] additional variables
+     * @return array
      */
     public function getTemplateVars( $vars = array() ) 
     {
@@ -175,82 +195,5 @@ class BaseActionController extends AbstractActionController implements Dispatcha
         }
         return ($result);
     }
-    
-    
-    // //   action titles
 
-    /**
-     * @return the $actionTitles
-     */
-    public function getActionTitles() 
-    {
-        return $this->actionTitles ;
-    }
-
-    /**
-     * @param array $actionTitles
-     */
-    public function setActionTitles($actionTitles = array()) 
-    {
-        $this->actionTitles = $actionTitles;
-        return $this;
-    }
-
-    /**
-     * @return the $actionTitles
-     */
-    public function getActionTitle($action) 
-    {
-        return (isset($this->actionTitles[$action]) ? $this->actionTitles[$action] : '');
-    }
-    
-    /**
-     * @param string $action
-     * @param string $title
-     */
-    public function setActionTitle($action, $title) 
-    {
-        $this->actionTitles[$action] = $title;
-        return $this;
-    }
-    
-    
-    // //   toolbar items
-
-    /**
-     * @return the $toolbarItems
-     */
-    public function getToolbarItems() 
-    {
-        return $this->toolbarItems ;
-    }
-    
-    /**
-     * @param array $toolbarItems
-     */
-    public function setToolbarItems($toolbarItems = array()) 
-    {
-        $this->toolbarItems = $toolbarItems;
-        return $this;
-    }
-    
-    /**
-     * @return the $actionTitles
-     */
-    public function getToolbarItem($action) 
-    {
-        return (isset($this->toolbarItems[$action]) ? $this->toolbarItems[$action] : null);
-    }
-    
-    /**
-     * @param string $action
-     * @param string $title
-     */
-    public function setToolbarItem($action, $item) 
-    {
-        $this->toolbarItems[$action] = $item;
-        return $this;
-    }
-    
-    
 }

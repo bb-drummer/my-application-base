@@ -40,10 +40,13 @@ composer.phar
 ##
 ## ignore nodeJS stuff
 ##
-node_modules/
-build/
-build-js/
-merge/
+node_modules
+npm-debug.log
+bower_components
+dist
+build
+build-js
+merge
 
 ##
 ## ignore some apple stuff
