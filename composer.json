@@ -2,8 +2,8 @@
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
   "version" : "0.0.1",
-  "disable-tls" : "true",
-  "secure-http" : "false",
+  "disable-tls" : "false",
+  "secure-http" : "true",
   "require" : {
     "composer/installers": "~1.0",
     "php" : "^5.5 || ^7.0",
