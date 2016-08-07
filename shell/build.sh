@@ -28,9 +28,9 @@ echo 'copying files into build directory...';
 
 # 'rsync' version
 #
-rsync -a --inplace --delete --exclude='.git*' config module public shell sql $BUILD_TARGET/
-rsync -a --inplace --delete --exclude='.git*' LICENSE.txt README.md init_autoloader.php .gitlab-ci.yml .scrutinizer.yml $BUILD_TARGET/
-rsync -a --inplace --delete --exclude='.git*' composer.build.json $BUILD_TARGET/composer.json
+rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' config module public shell sql $BUILD_TARGET/
+rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' LICENSE.txt README.md init_autoloader.php .gitlab-ci.yml .scrutinizer.yml $BUILD_TARGET/
+rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' composer.build.json $BUILD_TARGET/composer.json
 
 
 #
