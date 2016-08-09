@@ -29,7 +29,6 @@
     "my-application/theme-adminlte" : "dev-master",
     "my-application/theme-remark" : "dev-master",
     "my-application/theme-taurus" : "dev-master",
-    "my-application/theme-lcars" : "dev-master",
     "robloach/component-installer" : ">=0.2.3",
     "components/normalize.css" : ">=1.1.0",
     "components/modernizr" : ">=2.8.0",
