@@ -2,8 +2,12 @@
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
   "version" : "0.0.1",
-  "disable-tls" : "false",
-  "secure-http" : "true",
+  "config" : {
+    "disable-tls" : false,
+    "secure-http" : true
+  },
+  "disable-tls" : false,
+  "secure-http" : true,
   "require" : {
     "composer/installers": "~1.0",
     "php" : "^5.5 || ^7.0",
@@ -11,7 +15,7 @@
     "zendframework/zendservice-recaptcha": "*",
     "phpunit/phpunit" : ">=5.1.4",
     "slm/locale" : "dev-master",
-    "zf-commons/zfc-user" : ">=1.4.4",
+    "zf-commons/zfc-user" : ">=1",
     "neilime/zf2-assets-bundle" : ">=3.4.1",
     "zendexperts/ze-theme" : "dev-master",
     "dudapiotr/zftable" : ">=3.1",
@@ -77,6 +81,7 @@
     "installer-paths" : {
     	"module/Admin" : ["my-application/module-admin"],
     	"module/UIComponents" : ["my-application/module-uicomponents"],
+        "module/SlmLocale" : ["slm/locale"],
     	"public/{$name}" : ["my-application/application-assets"],
     	"public/themes/{$name}" : ["my-application/theme-bootstrap", "my-application/theme-foundation", "my-application/theme-lcars", "my-application/theme-adminlte", "my-application/theme-remark", "my-application/theme-taurus"],
     	"public/themes/bootstrap/assets/js/{$name}" : ["components/modernizr", "components/jquery", "components/jqueryui", "tinymce/tinymce", "datatables/datatables"],

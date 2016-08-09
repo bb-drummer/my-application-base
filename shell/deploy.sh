@@ -31,6 +31,8 @@ echo 'syncronizing files from build directory...';
 #
 rsync -v -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' $CDIR/$BUILD_SRC/ ./
 
+cp -v -p $CDIR/$BUILD_SRC/.gitlab-ci.yml ./
+
 
 #
 # commit changes to repo...
@@ -44,7 +46,8 @@ echo 'commiting files to release repository...';
 git add .
 git commit -m "new release build"
 git pull
-git push --set-upstream origin master
+git push --all -u
+#git push --set-upstream origin master
 
 
 # going back to where we came from...

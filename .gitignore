@@ -28,6 +28,7 @@ public/css/*/*
 module/module-*
 module/Admin*
 module/UIComponents*
+module/SlmLocale*
 extras*
 
 
