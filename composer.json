@@ -27,8 +27,6 @@
     "my-application/theme-bootstrap" : "dev-master",
     "my-application/theme-foundation" : "dev-master",
     "my-application/theme-adminlte" : "dev-master",
-    "my-application/theme-remark" : "dev-master",
-    "my-application/theme-taurus" : "dev-master",
     "robloach/component-installer" : ">=0.2.3",
     "components/normalize.css" : ">=1.1.0",
     "components/modernizr" : ">=2.8.0",
@@ -51,12 +49,6 @@
   }, {
     "type" : "git",
     "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-adminlte.git"
-  }, {
-    "type" : "git",
-    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-remark.git"
-  }, {
-    "type" : "git",
-    "url" : "https://gitlab.bjoernbartels.earth/zf2/theme-taurus.git"
   }, {
     "type" : "git",
     "url" : "https://gitlab.bjoernbartels.earth/zf2/module-admin.git"
