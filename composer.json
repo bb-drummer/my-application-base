@@ -1,7 +1,6 @@
 {
   "name" : "my-application/application-base",
   "description" : "My Web-Application (http://my-application.net)",
-  "version" : "0.0.1",
   "config" : {
     "disable-tls" : false,
     "secure-http" : true
@@ -10,7 +9,7 @@
   "secure-http" : true,
   "require" : {
     "composer/installers": "~1.0",
-    "php" : "^5.5 || ^7.0",
+    "php" : "^5.6 || ^7.0",
     "zendframework/zendframework" : "~2.5",
     "zendframework/zendservice-recaptcha": "*",
     "phpunit/phpunit" : ">=5.1.4",
