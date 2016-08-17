@@ -45,9 +45,9 @@ class TestCase extends PHPUnit_Framework_TestCase
      */
     private function setZfcUserValidAuthMock() 
     {
-        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        $mockAuth = $this->createMock('ZfcUser\Entity\UserInterface');
         
-        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+        $ZfcUserMock = $this->createMock('Admin\Entity\User');  
         
         $ZfcUserMock->expects($this->any())
             ->method('getId')
@@ -57,7 +57,7 @@ class TestCase extends PHPUnit_Framework_TestCase
             ->method('getToken')
             ->will($this->returnValue('valid-password-reset-token'));
         
-        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        $authMock = $this->createMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
         
         $authMock->expects($this->any())
             ->method('hasIdentity')
@@ -76,9 +76,9 @@ class TestCase extends PHPUnit_Framework_TestCase
      */
     private function setZfcUserNoAuthMock() 
     {
-        $mockAuth = $this->getMock('ZfcUser\Entity\UserInterface');
+        $mockAuth = $this->createMock('ZfcUser\Entity\UserInterface');
         
-        $ZfcUserMock = $this->getMock('Admin\Entity\User');  
+        $ZfcUserMock = $this->createMock('Admin\Entity\User');  
 
         $ZfcUserMock->expects($this->any())
             ->method('getId')
@@ -88,7 +88,7 @@ class TestCase extends PHPUnit_Framework_TestCase
             ->method('getToken')
             ->will($this->returnValue('valid-password-reset-token'));
         
-        $authMock = $this->getMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
+        $authMock = $this->createMock('ZfcUser\Controller\Plugin\ZfcUserAuthentication');
         
         $authMock->expects($this->any())
             ->method('hasIdentity')

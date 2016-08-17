@@ -204,7 +204,7 @@ class ActionControllerTestCase extends AbstractHttpControllerTestCase
     public function setZfcUserValidAuthMock() 
     {
         $mockAuth = $this->createMock('ZfcUser\Entity\UserInterface'); 
-        //  $this->getMock('ZfcUser\Entity\UserInterface');
+        //  $this->createMock('ZfcUser\Entity\UserInterface');
         
         
         $ZfcUserMock = $this->createMock('Admin\Entity\User');  
