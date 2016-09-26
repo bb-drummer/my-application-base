@@ -28,15 +28,19 @@
 		<testsuite name="[MyApplication] application base - Test Suite">
 			<directory suffix=".php">./</directory>
 		</testsuite>
-		<testsuite name="[MyApplication] admin base - Test Suite">
-			<directory suffix=".php">../../Admin/test/</directory>
-		</testsuite>
+        <testsuite name="[MyApplication] admin base module - Test Suite">
+            <directory suffix=".php">../../Admin/test/</directory>
+        </testsuite>
+        <testsuite name="[MyApplication] UI components module - Test Suite">
+            <directory suffix=".php">../../UIComponents/test/</directory>
+        </testsuite>
 	</testsuites>
 
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">../src/</directory>
-			<directory suffix=".php">../../Admin/src/</directory>
+            <directory suffix=".php">../../Admin/src/</directory>
+            <directory suffix=".php">../../UIComponents/src/</directory>
 			<exclude>
 				<directory suffix=".php">../src/Examples/</directory>
 				<directory suffix=".php">./ApplicationTest/Framework/</directory>

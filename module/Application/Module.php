@@ -252,6 +252,11 @@ class Module implements AutoloaderProviderInterface, ServiceLocatorAwareInterfac
         return (null);
     }
 
+    public static function getGlobalServiceLocator() 
+    {
+        return static::$services;
+    }
+
     public function getConsoleUsage(Console $console)
     {
         return array(

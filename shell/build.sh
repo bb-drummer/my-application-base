@@ -27,7 +27,7 @@ echo 'copying files into build directory...';
 
 # application files
 rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' config module public shell sql $BUILD_TARGET/
-rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' --include='.gitlab*' LICENSE.txt README.md init_autoloader.php .gitlab* .scrutinizer.yml .travis-ci.yml $BUILD_TARGET/
+rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' --include='.gitlab*' LICENSE.txt README.md init_autoloader.php .gitlab* .scrutinizer.yml .travis.yml $BUILD_TARGET/
 rsync -a --inplace --delete --exclude='.git*' --exclude='.vagrant*' --exclude='.report*' composer.build.json $BUILD_TARGET/composer.json
 
 cp -v -p .gitlab-ci.yml build/
@@ -87,6 +87,6 @@ rm -rf $BUILD_TARGET/public/themes/taurus
 
 # other clean up
 echo 'clean up...';
-rm -rf $BUILD_TARGET/module/UIComponents/tests
+#rm -rf $BUILD_TARGET/module/UIComponents/tests
 
 exit

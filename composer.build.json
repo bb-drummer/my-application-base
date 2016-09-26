@@ -1,0 +1,56 @@
+{
+  "name" : "my-application/my-application",
+  "description" : "ZendFramework2 -ready to go- application base '[my-application]'",
+  "version" : "0.0.1",
+  "config": {
+    "disable-tls" : true,
+    "secure-http": false
+  },
+  "disable-tls" : false,
+  "secure-http" : true,
+  "require" : {
+    "composer/installers": "~1.0",
+    "php" : "^5.5 || ^7.0",
+    "zendframework/zendframework" : ">=2.5",
+    "zendframework/zendservice-recaptcha": "*",
+    "phpunit/phpunit" : ">=5.1.4",
+    "zf-commons/zfc-user" : ">=1",
+    "neilime/zf2-assets-bundle" : ">=3.4.1",
+    "zendexperts/ze-theme" : "dev-master",
+    "dudapiotr/zftable" : ">=3.1",
+    "org_heigl/piwik" : ">=1.0",
+    "visualappeal/php-auto-update": "^0.9.2",
+    "robloach/component-installer" : ">=0.2.3"
+  },
+  "repositories" : [ {
+    "type" : "git",
+    "url" : "https://gitlab.com/my-application.bjoernbartels.earth/SlmLocale.git"
+  } ],
+  "license" : "Apache2.0",
+  "keywords" : [ "my-application", "application", "base", "zend", "framework", "zf2" ],
+  "extra" : {
+    "branch-alias" : {
+      "master" : "master-dev",
+      "0.0.1" : "1.0.x-dev"
+    }
+  },
+  "scripts" : {
+    "pre-install-cmd" : [ "curl http://ipinfo.io/ip", "ifconfig", "wget http://ipinfo.io/ip -qO -" ]
+  },
+  "type" : "project",
+  "homepage" : "http://my-application.net/",
+  "authors" : [ {
+    "name" : "Björn Bartels",
+    "email" : "coding@bjoernbartels.earth",
+    "homepage" : "https://bjoernbartels.earth",
+    "role" : "Developer"
+  } ],
+  "autoload" : {
+    "psr-0" : {
+      "Application" : [ "./module/Application/src/" ],
+      "UIComponents" : [ "./module/UIComponents/src/" ],
+      "Admin" : [ "./module/Admin/src/" ]
+    },
+    "classmap" : [ "./module/" ]
+  }
+}
